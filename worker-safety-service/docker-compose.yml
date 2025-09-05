@@ -1,0 +1,266 @@
+version: "3"
+
+volumes:
+  wss-pgdata:
+  wss-supersetdb:
+
+networks:
+  wss_network:
+
+services:
+  graphql:
+    build:
+      context: .
+      target: uvicorn
+    ports:
+      - "8001:8000"
+    command: --reload worker_safety_service.graphql.main:app
+    volumes:
+      - ./:/app/
+      - ./support/uvicorn/mute.logging.conf:/app/uvicorn.logging.conf
+    environment:
+      - APP_APM_ENABLED=False
+      - WORKER_SAFETY_SERVICE_URL=http://localhost:8001
+      - CORS_ORIGINS=["http://localhost", "http://localhost:3000","https://studio.apollographql.com"]
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/.google-dev-service-account.json
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DISABLE_JIT=true
+      - KEYCLOAK_BASE_URL=http://keycloak:8080
+      - LOG_DEV_CONSOLE=true
+      - AUDIT_TRAIL_URL=http://rest:7001
+      - REDIS_HOST=redis
+      - LAUNCH_DARKLY_MOBILE_KEY=launch_darkly_mobile_key
+      - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+    depends_on:
+      - postgres
+      - redis
+    tty: true
+    stdin_open: true
+    networks:
+      - wss_network
+
+  rest:
+    build:
+      context: .
+      target: uvicorn
+    ports:
+      - "8000:8000"
+    command: --reload worker_safety_service.rest.main:app
+    volumes:
+      - ./:/app/
+      - ./support/uvicorn/mute.logging.conf:/app/uvicorn.logging.conf
+    environment:
+      - APP_APM_ENABLED=False
+      - WORKER_SAFETY_SERVICE_URL=http://127.0.0.1:8000
+      - NOTIFICATION_SERVICE_URL=http://127.0.0.1:8002
+      - CORS_ORIGINS=["http://localhost", "http://localhost:3001", "https://urbint.stoplight.io", "http://localhost:3000", "http://127.0.0.1:8002", "http://127.0.0.1:5001"]
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/.google-dev-service-account.json
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - KEYCLOAK_BASE_URL=http://keycloak:8080
+      - LOG_DEV_CONSOLE=true
+      - REDIS_HOST=redis
+      - LAUNCH_DARKLY_MOBILE_KEY=launch_darkly_mobile_key
+      - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - wss_network
+
+  notifications:
+    profiles:
+      - notifications
+    build:
+      context: .
+      target: uvicorn
+    ports:
+      - "8002:8000"
+    command: --reload worker_safety_service.notifications.main:app
+    volumes:
+      - ./worker_safety_service:/app/worker_safety_service
+      - ./support/uvicorn/mute.logging.conf:/app/uvicorn.logging.conf
+    environment:
+      - APP_APM_ENABLED=False
+      - WORKER_SAFETY_SERVICE_URL=http://127.0.0.1:8000
+      - NOTIFICATION_SERVICE_URL=http://127.0.0.1:8002
+      - CORS_ORIGINS=["http://localhost", "http://localhost:3001", "https://urbint.stoplight.io", "http://localhost:3000"]
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - KEYCLOAK_BASE_URL=http://keycloak:8080
+      - LOG_DEV_CONSOLE=true
+      - LAUNCH_DARKLY_MOBILE_KEY=launch_darkly_mobile_key
+      - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+    depends_on:
+      - postgres
+    networks:
+      - wss_network
+
+  risk-model-worker:
+    profiles:
+      - with-risks
+    build:
+      context: .
+      target: runtime
+    command:
+      - bash
+      - -c
+      - /venv/bin/wss risk-model recalculate --update-incident-data --update-library-data && /venv/bin/wss risk-model worker
+    volumes:
+      - ./worker_safety_service:/app/worker_safety_service
+    environment:
+      - APP_APM_ENABLED=False
+      - CORS_ORIGINS=["http://localhost", "http://localhost:3001"]
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - KEYCLOAK_BASE_URL=http://keycloak:8080
+      - LOG_DEV_CONSOLE=true
+      - REDIS_HOST=redis
+      - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - wss_network
+
+  postgres:
+    build:
+      context: ./support/docker/postgres-dev
+      dockerfile: Dockerfile
+    platform: linux/amd64
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - type: volume
+        source: wss-pgdata
+        target: /var/lib/postgresql/data
+      - .:/app
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 3s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - wss_network
+
+  alembic:
+    container_name: wss-alembic
+    build:
+      context: .
+      target: migrations
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+    command: upgrade head
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    volumes:
+      - ./migrations:/app/migrations
+      - ./worker_safety_service:/app/worker_safety_service
+      - ./alembic.ini:/app/alembic.ini
+    networks:
+      - wss_network
+
+  prism:
+    profiles:
+      - pwc-maximo-integration
+    image: stoplight/prism:4
+    command: "mock -h 0.0.0.0 /tmp/pwc_maximo_integration.yml"
+    volumes:
+      - ./support/stoplight/pwc_maximo_integration.yml:/tmp/pwc_maximo_integration.yml:ro
+    ports:
+      - "8010:4010"
+    networks:
+      - wss_network
+
+  keycloak:
+    build:
+      context: "https://github.com/keycloak/keycloak-containers.git#16.1.0:server"
+    volumes:
+      - ./support/keycloak-dev/realms:/realms
+    environment:
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_PASSWORD: password
+      DB_SCHEMA: public
+      DB_USER: postgres
+      DB_VENDOR: POSTGRES
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_USER: admin
+      KEYCLOAK_IMPORT: /realms/asgard.json,/realms/olympus.json
+    ports:
+      - 8080:8080
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - wss_network
+
+  redis:
+    image: redis:6
+    ports:
+      - 6379:6379
+    networks:
+      - wss_network
+
+  superset:
+    profiles:
+      - superset
+    platform: linux/amd64
+    image: apache/superset:1.5.0
+    environment:
+      SUPERSET_SECRET_KEY: keylimepie
+      SUPERSET_DB: "postgresql://superset:superset@supersetdb:5432/superset"
+      # use `15` so we do not conflict with the graphql app db `0`
+      REDIS_DB: 15
+      SUPERSET_SA: superset
+      SUPERSET_SA_SECRET: superset
+    ports:
+      - 8090:8088
+    command: /usr/bin/init_superset.sh
+    volumes:
+      - ./support/superset/superset_config.py:/app/pythonpath/superset_config.py
+      - ./support/superset/init_superset.sh:/usr/bin/init_superset.sh
+    depends_on:
+      - supersetdb
+      - redis
+    networks:
+      - wss_network
+
+  supersetdb:
+    profiles:
+      - superset
+    image: postgres:latest
+    platform: linux/amd64
+    environment:
+      POSTGRES_PASSWORD: superset
+      POSTGRES_DB: superset
+      POSTGRES_USER: superset
+    volumes:
+      - type: volume
+        source: wss-supersetdb
+        target: /var/lib/postgresql/data
+    healthcheck:
+      test: pg_isready -U superset
+      interval: 3s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    networks:
+      - wss_network

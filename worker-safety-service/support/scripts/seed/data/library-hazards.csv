@@ -1,0 +1,47 @@
+id,name,for_tasks,for_site_conditions,archived_at,energy_type,energy_level,image_url
+46c34c31-2f88-4885-94d2-f973cd3aa963,Improper use of equipment or tools,false,false,,Mechanical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+da8308c5-37ef-4895-993d-bd0f6679c796,Steam,true,true,,Temperature,High Energy,https://storage.googleapis.com/worker-safety-public-icons/Steam.svg
+78f5391a-d554-45ff-b13a-de230817806c,Fall from elevation (>4'),true,true,,Gravity,High Energy,https://storage.googleapis.com/worker-safety-public-icons/FallFromElevation.svg
+6f63f138-c0b6-4dca-8cde-e4e1b882fadc,Lightning,false,true,,Electrical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+894c82ea-4cc4-476d-8eb4-555f53686f7b,Fire with sustained fuel source,true,false,,Temperature,High Energy,https://storage.googleapis.com/worker-safety-public-icons/FireWithSustainedFuelSource.svg
+17e26f9f-a273-478e-9b51-097c3f84ea94,Explosion,true,true,,Pressure,High Energy,https://storage.googleapis.com/worker-safety-public-icons/Vector%2035-Explosion.svg
+bb5c5324-d3bc-45da-bfff-5ea78aed8dba,High dose of toxic chemical or radiation,true,true,,Radiation,High Energy,https://storage.googleapis.com/worker-safety-public-icons/HighDoseOfToxicChemicalOrRadiation.svg
+016a66cb-ed49-469f-a494-facf0fddbeba,High surface temperature (>150F),true,true,,Temperature,High Energy,https://storage.googleapis.com/worker-safety-public-icons/HighTemperature.svg
+c320a9da-bb14-4d0b-8998-97ca037cc30e,Motor vehicle incident (occupant) >30mph,true,true,,Motion,High Energy,https://storage.googleapis.com/worker-safety-public-icons/MotorVehicleIncident.svg
+0622d75e-245c-4853-8f0a-9a2c440c2a2f,People in work site,true,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+10dcd38c-60e9-46dc-99cf-5931b343d68d,Emissions or pollution,true,true,,Biological,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+dcf1f3c6-4e43-40da-b8cd-b9094b06cf2f,Flying debris or other objects,true,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+e0221f7e-6724-4af3-98e1-00ac35ba351f,"Bears, mountain lions",true,true,,Biological,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+1e49583a-08c8-4ea7-9ff7-4a81b166a753,Blinding light,true,true,,Radiation,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+b3237aaf-122e-4770-a05e-dc7025a01fb6,Collapse,true,true,,Gravity,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+7884ef7d-98bc-4a8d-ab38-1bf3db70eef8,Confined space,true,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+d450fd01-39a6-443e-9b04-2c0eaaa1e99f,Equipment failure,true,true,,Electrical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+36fdf5a9-f004-4aa0-bfe4-65fab97e7f22,Oxygen deficient environment,true,true,,Chemical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+7bb2cd72-bc6d-4db4-ad4e-0f84bb7cbe16,Snakes,true,true,,Biological,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+8327577b-961d-441c-9471-1595ce0ebefe,Residual gas in pipe,true,true,,Chemical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+3c3e7da5-5a46-4ad8-a12c-533555359614,Arc flash,true,false,,Electrical,High Energy,https://storage.googleapis.com/worker-safety-public-icons/ArchFlash.svg
+63256499-6af9-4600-8afd-3e9c24b3ea63,Excavation or trench (>5ft),true,false,,Pressure,High Energy,https://storage.googleapis.com/worker-safety-public-icons/ExcavationOfTrench.svg
+cc751338-928a-499a-b1dd-87b9ecc573fd,Heavy rotating equipment,true,true,,Mechanical,High Energy,https://storage.googleapis.com/worker-safety-public-icons/HeavyRotatingEquipment.svg
+5075adf0-dc06-485a-9943-113e770334c1,Cuts and lacerations,true,false,,Mechanical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+79548b0a-9a11-4a9f-bd66-e1aa601a77d8,"Ergonomic, repetitive motion hazards",true,false,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+25a02bff-ad3c-4291-8f57-b7cff5018a88,Inadequate access and egress,true,false,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+affd787b-1e6c-4c9d-a2d4-42d38e9c72b8,Pinch points,true,false,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+23041379-366e-4ab2-a0db-a18b569bdafb,"Slips, trips, and falls",true,true,,Gravity,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+604bab16-64c3-4870-bd2e-52ea93e73e9e,Extreme heat,true,true,,Temperature,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+29ba89ae-b023-4799-a333-acce29102862,Fine particulate and dust (e.g. silica),true,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+0db44d38-fa65-4aa5-99bd-ab4a7ec0c880,"Insects, animals, or poisonous plants",true,true,,Biological,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+7924f0e9-090a-4121-9e67-ad1e0a9d5998,"Sharp objects (e.g. rebar, nails, metal debris, etc.)",true,true,,Gravity,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+be591329-a272-4e0f-8277-98df369fc821,Static discharge,true,true,,Electrical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+2330705c-290e-4010-9be4-62e7cb5d0477,Contact with buried utilities,true,true,,Electrical,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+064e56c8-0024-4cf5-8b11-8acce96c67da,Dropped object or equipment,true,true,,Gravity,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+98c1f174-ca8d-4c5a-98d7-827ebfc2a1c8,Release of stored energy,true,true,,Pressure,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+5a7861e6-948f-451e-8f2e-0c4fc1a2aced,Electric contact with source (>50V),true,false,,Electrical,High Energy,https://storage.googleapis.com/worker-safety-public-icons/ElectricContactWithSource.svg
+a12b15fd-d553-4eb5-86a6-3d4af789f5c3,Mobile equipment and workers on foot,true,true,,Motion,High Energy,https://storage.googleapis.com/worker-safety-public-icons/MobileEquipmentAndWorkersOnFoot.svg
+6cf6a4fc-b8f9-4335-97c8-c3c8347643d8,Drowning,false,true,,Gravity,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+b8ad2b92-18e3-4ba4-a833-cbad42648f0b,Suspended loads,true,false,,Gravity,High Energy,https://storage.googleapis.com/worker-safety-public-icons/SuspendedLoad.svg
+e1ae99cc-ffd7-46cc-8bdd-2e6bffa37b8a,Exposure to sub-zero temperatures,false,true,,Temperature,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+9413f34f-91f8-4ae6-b7bc-c56916977337,High crime area,false,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+b19331ea-a0ce-4a98-9002-1b60c4b48ec6,Extremely low surface temperature,true,true,,Temperature,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+23b011d4-4cb2-4526-9761-e247d506557a,High dB,true,true,,Sound,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+b1b09768-2194-493f-ab23-1dc0db20ddc0,Injury requiring medical intervention,true,true,,Motion,Low Energy,https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg
+561ebed2-b9b4-4719-83be-b6771429d4f1,Other,true,true,,Not Defined,High Energy,https://storage.googleapis.com/worker-safety-public-icons/other.svg

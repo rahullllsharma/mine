@@ -1,0 +1,237 @@
+openapi: 3.1.0
+x-stoplight:
+  id: y0kr1kw87omud
+info:
+  title: PwC Integration Spec
+  version: '1.0'
+  description: PwC Integration Spec
+  contact:
+    name: Urbint
+    url: 'https://www.urbint.com/'
+    email: brent.henderson@urbint.com
+servers:
+  - url: 'https://ue-workorders-api.us-e1.cloudhub.io'
+paths:
+  /workorders/updateRiskSummaries:
+    post:
+      tags:
+        - Work Packages and Locations
+      summary: Update Work Package or Location Risk Summaries
+      operationId: post-wo-loc-risk-summaries
+      responses:
+        '202':
+          description: Accepted
+        '406':
+          description: Not Acceptable
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              minItems: 1
+              maxItems: 20
+              items:
+                anyOf:
+                  - $ref: '#/components/schemas/workPackageRiskSummary'
+                  - $ref: '#/components/schemas/locationRiskSummary'
+            examples:
+              Example Work Orders:
+                value:
+                  - workOrderId: 5753|8440
+                    ueRiskScore: HIGH
+                    ueRiskSourceSys: URBINT
+                    ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c251
+                    ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+              Example Locations:
+                value:
+                  - multiId: 5754|8440
+                    ueRiskScore: HIGH
+                    ueRiskSourceSys: URBINT
+                    ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c254
+                    ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+        description: Array of RiskScoreSummaries
+      description: Send updated Work Package or Location risk summaries
+      parameters:
+        - $ref: '#/components/parameters/Content-Type'
+        - $ref: '#/components/parameters/Source-System'
+        - $ref: '#/components/parameters/Target-System'
+        - $ref: '#/components/parameters/client_id'
+        - $ref: '#/components/parameters/client_secret'
+    parameters: []
+  /activities/updateRiskSummaries:
+    post:
+      tags:
+        - Activities
+      summary: Update Activity Risk Summaries
+      operationId: post-activity-risk-summaries
+      responses:
+        '202':
+          description: Accepted
+        '400':
+          description: Bad Request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              minItems: 1
+              items:
+                $ref: '#/components/schemas/activitySummary'
+            examples:
+              Example 1:
+                value:
+                  - workOrderId: 5755|8440
+                    ueRiskScore: LOW
+                    ueRiskSourceSys: URBINT
+                    ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c255
+                    ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+                  - workOrderId: 5756|8440
+                    ueRiskScore: HIGH
+                    ueRiskSourceSys: URBINT
+                    ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c256
+                    ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+        description: Array of ActivityRiskScoreSummaries
+      description: Send updated Activity risk score summaries
+      parameters:
+        - $ref: '#/components/parameters/Content-Type'
+        - $ref: '#/components/parameters/Source-System'
+        - $ref: '#/components/parameters/Target-System'
+        - $ref: '#/components/parameters/client_id'
+        - $ref: '#/components/parameters/client_secret'
+    parameters: []
+components:
+  schemas:
+    locationRiskSummary:
+      allOf:
+        - type: object
+          properties:
+            multiId:
+              type: string
+              example: 1394|8440
+              description: applicable for MULTIASSETLOCCI risk summary updates. Identifies the Maximo MULTIASSETLOCCI record. Concatenated MULTIID | SITEID
+        - $ref: '#/components/schemas/entityRiskSummary'
+      title: Location Risk Summary
+      examples:
+        - multiId: 1394|8440
+          ueRiskScore: HIGH
+          ueRiskSourceSys: URBINT
+          ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c251
+          ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+    workPackageRiskSummary:
+      allOf:
+        - type: object
+          properties:
+            workOrderId:
+              type: string
+              example: 5753|8440
+              description: applicable for WORKORDER risk summary updates. Identifies the Maximo WORKORDER record. Concatenated WONUM | SITEID
+        - $ref: '#/components/schemas/entityRiskSummary'
+      title: Work Package Risk Summary
+      examples:
+        - workOrderId: 5753|8440
+          ueRiskScore: HIGH
+          ueRiskSourceSys: URBINT
+          ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c251
+          ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+    activitySummary:
+      title: Activity Risk Summary
+      description: TODO
+      allOf:
+        - type: object
+          properties:
+            workOrderId:
+              type: string
+              example: 1395|8440
+              description: identifies the Maximo WOACTIVITY record. Concatenated WONUM | SITEID
+          required:
+            - workOrderId
+        - $ref: '#/components/schemas/entityRiskSummary'
+      x-stoplight:
+        id: e47136a0ba8bb
+    entityRiskSummary:
+      title: EntityRiskSummary
+      type: object
+      description: TODO
+      examples:
+        - ueRiskScore: HIGH
+          ueRiskSourceSys: URBINT
+          ueRiskSourceId: 86336862-da11-4001-b383-6e50fb73c251
+          ueRiskSourceURL: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+      x-stoplight:
+        id: 2463bd02fce7b
+      properties:
+        ueRiskScore:
+          type: string
+          enum:
+            - HIGH
+            - MEDIUM
+            - LOW
+            - UNKNOWN
+          example: HIGH
+          description: Risk Category
+        ueRiskSourceSys:
+          type: string
+          example: URBINT
+          enum:
+            - URBINT
+          description: Our System Id
+        ueRiskSourceId:
+          type: string
+          format: uuid
+          example: 86336862-da11-4001-b383-6e50fb73c251
+          description: Entity Id in the Worker Safety App
+        ueRiskSourceURL:
+          type: string
+          format: uri
+          example: 'https://pwc.ws.dev.urbinternal.com/projects/fcd7e76b-11a6-401b-b841-acbc90c44d3e?location=86336862-da11-4001-b383-6e50fb73c251&source=map'
+          description: Link to the entity in the Worker Safety App
+      required:
+        - ueRiskScore
+        - ueRiskSourceSys
+        - ueRiskSourceId
+        - ueRiskSourceURL
+  securitySchemes: {}
+  parameters:
+    Content-Type:
+      name: Content-Type
+      in: header
+      required: true
+      schema:
+        type: string
+        example: application/json
+      description: specifies the content type
+    Source-System:
+      name: Source-System
+      in: header
+      required: true
+      schema:
+        type: string
+        example: Urbint
+      description: specifies the source system sending the updates
+    Target-System:
+      name: Target-System
+      in: header
+      required: true
+      schema:
+        type: string
+        example: Maximo
+      description: specifies the target system receiving the updates
+    client_id:
+      name: client_id
+      in: header
+      required: true
+      schema:
+        type: string
+        example: '123'
+      description: specifies the client ID used to authenticate the request
+    client_secret:
+      name: client_secret
+      in: header
+      required: true
+      schema:
+        type: string
+        example: '456'
+      description: specifies the client secret used to authenticate the request
+tags:
+  - name: Work Packages and Locations
+  - name: Activities

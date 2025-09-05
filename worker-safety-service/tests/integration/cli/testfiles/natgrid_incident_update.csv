@@ -1,0 +1,3 @@
+IncidentID,IncidentTypes,IncDate,IncEmpType,IncReportByDeptID,CompanyName,IncLocName,IncLocAddress1,IncLocAddress2,IncLocCity,IncLocState,OrgDescription02,OrgDescription03,OrgDescription04,Environmental_Outcome,OSHASeverity,MotorVehicle_Outcome,Public_Outcome,ProcessSafety_Outcome,Asset_Outcome,TaskTxt,IncDescription
+111111,Good Catch,3/01/2022,Employee,95019012,AccuWeld Technologies Inc,MALDEN,1 Street,,Malden,MA,NE COO Gas,NE Gas Asset Engineering Compl,NE Gas Capital Projects,NA,NA,NA,NA,NA,NA,,"incident incident incident"
+111112,Good Catch,3/01/2022,Employee,95019012,AccuWeld Technologies Inc,MALDEN,1 Street,,Malden,MA,NE COO Gas,NE Gas Asset Engineering Compl,NE Gas Capital Projects,NA,NA,NA,NA,NA,NA,,"incident incident incident"

@@ -1,0 +1,17 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+             {
+               "appIDs": [ "V2X3GY37LK.com.urbint.workersafety-dev", "V2X3GY37LK.com.urbint.workersafety-int" ,"V2X3GY37LK.com.urbint.workersafety"],
+               "components": [
+
+                 {
+                    "/": "/?login"
+                 }
+
+               ]
+             }
+         ]
+    }
+}

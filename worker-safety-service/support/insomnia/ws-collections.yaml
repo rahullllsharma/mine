@@ -1,0 +1,1932 @@
+_type: export
+__export_format: 4
+__export_date: 2022-03-02T21:09:44.084Z
+__export_source: insomnia.desktop.app:v2021.7.2
+resources:
+  - _id: req_f5c52fd0ca054ca8bd08b003c3285164
+    parentId: fld_97fc41fe989c4af7a2cd88f096c8e5a6
+    modified: 1645445162907
+    created: 1644318661004
+    url: "{{ _.services.world_data.urls.base }}location"
+    name: Get Location
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_e54957725de74cc0936917a86c106370
+        name: lat
+        value: "{{ _.current_lat }}"
+        description: ""
+      - id: pair_4d97d06a42b34ca382b7db5b5294fb13
+        name: lon
+        value: "{{ _.current_lon }}"
+        description: ""
+      - id: pair_0e762b5011dd452088d2192fe53becc7
+        name: datetime
+        value: "{{ _.current_time }}"
+        description: ""
+      - id: pair_cd301e0a04b8457292f3d2c77a1cba2d
+        name: include
+        value: building
+        description: ""
+        disabled: false
+      - id: pair_0ef3951415254aec956c8d68cdc39caf
+        name: radius
+        value: "200"
+        description: ""
+        disabled: true
+    headers: []
+    authentication: {}
+    metaSortKey: -1644318661004
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_97fc41fe989c4af7a2cd88f096c8e5a6
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1644504601749
+    created: 1644318653656
+    name: World Data
+    description: ""
+    environment:
+      current_lat: "{{ _.services.world_data.locations.with_storms.lat }}"
+      current_lon: "{{ _.services.world_data.locations.with_storms.lon }}"
+      current_time: 2022-02-10T12:00:00Z
+    environmentPropertyOrder:
+      "&":
+        - current_lat
+        - current_lon
+        - current_time
+    metaSortKey: -1644318653656
+    _type: request_group
+  - _id: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    parentId: null
+    modified: 1641566652275
+    created: 1641566652275
+    name: Worker Safety
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_064f760b2f79481da39732f3964f6dac
+    parentId: fld_97fc41fe989c4af7a2cd88f096c8e5a6
+    modified: 1644405420893
+    created: 1644320382569
+    url: "{{ _.services.world_data.urls.base }}weather"
+    name: Get Weather
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_e54957725de74cc0936917a86c106370
+        name: lat
+        value: "{{ _.current_lat }}"
+        description: ""
+      - id: pair_4d97d06a42b34ca382b7db5b5294fb13
+        name: lon
+        value: "{{ _.current_lon }}"
+        description: ""
+      - id: pair_0e762b5011dd452088d2192fe53becc7
+        name: datetime
+        value: "{{ _.current_time }}"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1644111881975.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_ec88250a287e44d28c691dc8d532b398
+    parentId: fld_97fc41fe989c4af7a2cd88f096c8e5a6
+    modified: 1644339128772
+    created: 1644336917395
+    url: "{{ _.services.world_data.urls.base }}airQuality"
+    name: Get AirQuality
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_e54957725de74cc0936917a86c106370
+        name: lat
+        value: "{{ _.current_lat }}"
+        description: ""
+      - id: pair_4d97d06a42b34ca382b7db5b5294fb13
+        name: lon
+        value: "{{ _.current_lon }}"
+        description: ""
+      - id: pair_0e762b5011dd452088d2192fe53becc7
+        name: datetime
+        value: "{{ _.current_time }}"
+        description: ""
+    headers: []
+    authentication: {}
+    metaSortKey: -1644008492461.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8ca716123ca04050bc07150d1787901d
+    parentId: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    modified: 1645193896757
+    created: 1645193862432
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/protocol/openid-connect/token"
+    name: Get Custom Token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ad68e16bd21b48d4b66ec563caa7ea57
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_af2a06b9338f428cb4308cf2e0920782
+          name: client_id
+          value: "{{ _.current_client_id }}"
+          description: ""
+        - id: pair_2430d489b8824744a5d8fef25dc9e494
+          name: client_secret
+          value: "{{ _.current_client_secret }}"
+          description: ""
+        - id: pair_b092e6b93fed4722baed2f5c1f07a180
+          name: scope
+          value: openid
+          description: ""
+        - id: pair_55f298b431bd48448b07f06c528c8b2c
+          name: username
+          value: "{{ _.services.keycloak.realms.asgard.logins.custom.username }}"
+          description: ""
+        - id: pair_3d6c0a382d1c4828b09439c585700c24
+          name: password
+          value: "{{ _.services.keycloak.realms.asgard.logins.custom.password }}"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_0ab56f1f65054a8c9ccbf04cf5dbd4ec
+      - id: pair_116a22841e364b539f69df11244beb24
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1642422709515
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    parentId: fld_46d9923638d941159ea1374b365faa43
+    modified: 1642422065480
+    created: 1642421306945
+    name: Auth
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642422042195
+    _type: request_group
+  - _id: fld_46d9923638d941159ea1374b365faa43
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1643824174942
+    created: 1642421290341
+    name: Keycloak API
+    description: ""
+    environment:
+      current_realm: "{{ _.services.keycloak.realms.asgard.name }}"
+      current_client_id: "{{ _.services.keycloak.realms.asgard.client_id }}"
+      current_client_secret: "{{ _.services.keycloak.realms.asgard.client_secret }}"
+    environmentPropertyOrder:
+      "&":
+        - current_realm
+        - current_client_id
+        - current_client_secret
+    metaSortKey: -1642421290341
+    _type: request_group
+  - _id: req_b7148c83e0594101824ee0e2efc4b80f
+    parentId: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    modified: 1645444982661
+    created: 1642422709465
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/protocol/openid-connect/token"
+    name: Get Admin Token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ad68e16bd21b48d4b66ec563caa7ea57
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_af2a06b9338f428cb4308cf2e0920782
+          name: client_id
+          value: "{{ _.current_client_id }}"
+          description: ""
+        - id: pair_2430d489b8824744a5d8fef25dc9e494
+          name: client_secret
+          value: "{{ _.current_client_secret }}"
+          description: ""
+        - id: pair_b092e6b93fed4722baed2f5c1f07a180
+          name: scope
+          value: openid
+          description: ""
+        - id: pair_55f298b431bd48448b07f06c528c8b2c
+          name: username
+          value: "{{ _.services.keycloak.realms.asgard.logins.admin.username }}"
+          description: ""
+        - id: pair_3d6c0a382d1c4828b09439c585700c24
+          name: password
+          value: "{{ _.services.keycloak.realms.asgard.logins.admin.password }}"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_0ab56f1f65054a8c9ccbf04cf5dbd4ec
+      - id: pair_116a22841e364b539f69df11244beb24
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1642422709465
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6462af4c4e10408c932a413b46d571dd
+    parentId: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    modified: 1645445040881
+    created: 1642783472652
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/protocol/openid-connect/token"
+    name: Get Manager Token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ad68e16bd21b48d4b66ec563caa7ea57
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_af2a06b9338f428cb4308cf2e0920782
+          name: client_id
+          value: "{{ _.current_client_id }}"
+          description: ""
+        - id: pair_2430d489b8824744a5d8fef25dc9e494
+          name: client_secret
+          value: "{{ _.current_client_secret }}"
+          description: ""
+        - id: pair_b092e6b93fed4722baed2f5c1f07a180
+          name: scope
+          value: openid
+          description: ""
+        - id: pair_55f298b431bd48448b07f06c528c8b2c
+          name: username
+          value: "{{ _.services.keycloak.realms.asgard.logins.manager.username }}"
+          description: ""
+        - id: pair_3d6c0a382d1c4828b09439c585700c24
+          name: password
+          value: "{{ _.services.keycloak.realms.asgard.logins.manager.password }}"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_0ab56f1f65054a8c9ccbf04cf5dbd4ec
+      - id: pair_116a22841e364b539f69df11244beb24
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1642422375805
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_3235d6ff03e8473fa87cf08763b74d87
+    parentId: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    modified: 1645445052446
+    created: 1642783479535
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/protocol/openid-connect/token"
+    name: Get Supervisor Token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ad68e16bd21b48d4b66ec563caa7ea57
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_af2a06b9338f428cb4308cf2e0920782
+          name: client_id
+          value: "{{ _.current_client_id }}"
+          description: ""
+        - id: pair_2430d489b8824744a5d8fef25dc9e494
+          name: client_secret
+          value: "{{ _.current_client_secret }}"
+          description: ""
+        - id: pair_b092e6b93fed4722baed2f5c1f07a180
+          name: scope
+          value: openid
+          description: ""
+        - id: pair_55f298b431bd48448b07f06c528c8b2c
+          name: username
+          value: "{{ _.services.keycloak.realms.asgard.logins.supervisor.username }}"
+          description: ""
+        - id: pair_3d6c0a382d1c4828b09439c585700c24
+          name: password
+          value: "{{ _.services.keycloak.realms.asgard.logins.supervisor.password }}"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_0ab56f1f65054a8c9ccbf04cf5dbd4ec
+      - id: pair_116a22841e364b539f69df11244beb24
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1642422208975
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_280e5bc1a7bd495cb85dd3573a082ea1
+    parentId: fld_9bb64f9fa5ad4a0c9dab87a7e26f2636
+    modified: 1645445071366
+    created: 1642783486605
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/protocol/openid-connect/token"
+    name: Get Viewer Token
+    description: ""
+    method: POST
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params:
+        - id: pair_ad68e16bd21b48d4b66ec563caa7ea57
+          name: grant_type
+          value: password
+          description: ""
+        - id: pair_af2a06b9338f428cb4308cf2e0920782
+          name: client_id
+          value: "{{ _.current_client_id }}"
+          description: ""
+        - id: pair_2430d489b8824744a5d8fef25dc9e494
+          name: client_secret
+          value: "{{ _.current_client_secret }}"
+          description: ""
+        - id: pair_b092e6b93fed4722baed2f5c1f07a180
+          name: scope
+          value: openid
+          description: ""
+        - id: pair_55f298b431bd48448b07f06c528c8b2c
+          name: username
+          value: "{{ _.services.keycloak.realms.asgard.logins.viewer.username }}"
+          description: ""
+        - id: pair_3d6c0a382d1c4828b09439c585700c24
+          name: password
+          value: "{{ _.services.keycloak.realms.asgard.logins.viewer.password }}"
+          description: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/x-www-form-urlencoded
+        id: pair_0ab56f1f65054a8c9ccbf04cf5dbd4ec
+      - id: pair_116a22841e364b539f69df11244beb24
+        name: ""
+        value: ""
+        description: ""
+    authentication: {}
+    metaSortKey: -1642422125560
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_29d301f95be84cd9a46bee42186e0e03
+    parentId: fld_46d9923638d941159ea1374b365faa43
+    modified: 1642762307075
+    created: 1642762234184
+    url: "{{ _.services.keycloak.urls.base }}auth/realms/{{ _.current_realm
+      }}/.well-known/openid-configuration"
+    name: Get OpenId Config
+    description: ""
+    method: GET
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params: []
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1642253935263.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b651bbba0a2442559a2ef42858b9fa33
+    parentId: fld_46d9923638d941159ea1374b365faa43
+    modified: 1642767369651
+    created: 1642767278028
+    url: "{% response 'body', 'req_29d301f95be84cd9a46bee42186e0e03',
+      'b64::JC5qd2tzX3VyaQ==::46b', 'always', 60 %}"
+    name: Get JWKs Config
+    description: ""
+    method: GET
+    body:
+      mimeType: application/x-www-form-urlencoded
+      params: []
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1642169881822.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_60fee9db058b4877a63a1acd5e0b59cc
+    parentId: fld_50c285b5b9ff48fda27bff4a6aaa841f
+    modified: 1643890409677
+    created: 1643212809042
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Me
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query me{\n\tme
+        {\n\t\tid\n\t\tfirstName\n\t\tlastName\n\t\tname\n\t}\n}","operationName":"me"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+      - id: pair_a3003d4187da46059c5dce61df9bc0e7
+        name: HTTP_ORIGIN
+        value: https://{{ _.current_realm }}.ws.urbint.com/
+        description: ""
+        disabled: false
+      - id: pair_db6ba6b16e6643aba9cf9ae9dac93fc3
+        name: Authorization
+        value: Bearer {{ _.current_auth_token }}
+        description: ""
+        disabled: false
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+      disabled: true
+      prefix: ""
+    metaSortKey: -1642074161311
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_50c285b5b9ff48fda27bff4a6aaa841f
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1643212793584
+    created: 1643212793584
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1643212793584
+    _type: request_group
+  - _id: fld_46bec79f84ea409a8a0f8fee26079f6c
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1643824663207
+    created: 1642421282789
+    name: GraphQL API
+    description: ""
+    environment:
+      current_auth_token: "{{ _.services.keycloak.realms.asgard.logins.admin.token }}"
+      current_realm: "{{ _.services.keycloak.realms.asgard.name }}"
+    environmentPropertyOrder:
+      "&":
+        - current_auth_token
+        - current_realm
+    metaSortKey: -1642421282790
+    _type: request_group
+  - _id: req_0773df64f6214d0484a58969988eff31
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1644868931293
+    created: 1644863552376
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Managers
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query managers {\n\tmanagers
+        {\n\t\tid\n\t\tfirstName\n\t\tlastName\n\t}\n}\t","operationName":"managers"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642083553522.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_3936ec31bc284445bb066112d14b21cc
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1642679475346
+    created: 1642679475346
+    name: Library
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642679475346
+    _type: request_group
+  - _id: req_969afd896f984a65a08a76f5d83cc84e
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1644868953371
+    created: 1644868944328
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Supervisors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query supervisors {\n\tsupervisors
+        {\n\t\tid\n\t\tfirstName\n\t\tlastName\n\t}\n}","operationName":"supervisors"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642083553497.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c8e749c383e24d19966704efb6e1b4ca
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1644876361255
+    created: 1644876095122
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Contractors
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query contractors {\n\tcontractors
+        {\n\t\tid\n\t\tname\n\t}\n}","operationName":"contractors"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642083553485
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_039d52097588421f8c819e79d6454348
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1646175731154
+    created: 1642074161336
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Hazards Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query hazards($id: UUID, $libraryTaskId:UUID, $orderBy:
+        [OrderBy!]){\n\t\thazardsLibrary (id: $id, libraryTaskId:
+        $libraryTaskId, orderBy: $orderBy)
+        {\n\t\tid\n\t\tname\n\t\tisApplicable\n\t\tcontrols (orderBy: $orderBy)
+        {\n\t\t\tid\n\t\t\tname\n\t\t\tisApplicable\n\t\t}\n\t\t__typename\n\t}\n}
+        ","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"hazards"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+      - id: pair_a3003d4187da46059c5dce61df9bc0e7
+        name: HTTP_ORIGIN
+        value: https://{{ _.current_realm }}.ws.urbint.com/
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+      disabled: false
+      prefix: ""
+    metaSortKey: -1642083553478.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e8371dee7fa149088ec1e3a93eafd76a
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1644965680304
+    created: 1644955805798
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Controls Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query controls($id: UUID, $libraryTaskId:UUID, $orderBy:
+        [OrderBy!]){\n\t\tcontrolsLibrary (id: $id, libraryTaskId:
+        $libraryTaskId, orderBy: $orderBy)
+        {\n\t\tid\n\t\tname\n\t\tisApplicable\n\t}\n}
+        ","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"controls"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+      - id: pair_a3003d4187da46059c5dce61df9bc0e7
+        name: HTTP_ORIGIN
+        value: https://{{ _.current_realm }}.ws.urbint.com/
+        description: ""
+        disabled: true
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+      disabled: false
+      prefix: ""
+    metaSortKey: -1642083553463.125
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_771bf7725c8e4cd2b1470602d6ad2bc4
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1644964947385
+    created: 1642679304438
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Tasks Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query tasksLibrary ($taskOrderBy: [TaskOrderBy!], $orderBy:
+        [OrderBy!]) {\n\ttasksLibrary (orderBy: $taskOrderBy)
+        {\n\t\tid\n\t\tname\n\t\tcategory\n\t\thazards (orderBy: $orderBy)
+        {\n\t\t\tid\n\t\t\tname\n\t\t\tisApplicable\n\t\t\tcontrols (orderBy:
+        $orderBy)
+        {\n\t\t\t\tid\n\t\t\t\tname\n\t\t\t\tisApplicable\n\t\t\t}\n\t\t}\n\t}\n}","variables":{"taskOrderBy":[{"field":"CATEGORY","direction":"ASC"},{"field":"NAME","direction":"ASC"}],"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"tasksLibrary"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642074161286
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_5c19a460dad14d6285c54070fe7edc49
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1646175737864
+    created: 1643904762571
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Site Conditions Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query siteConditionsLibrary ($orderBy: [OrderBy!])
+        {\n\tsiteConditionsLibrary (orderBy: $orderBy)
+        {\n\t\tname\n\t\tid\n\t\thazards (orderBy: $orderBy)
+        {\n\t\t\tid\n\t\t\tname\n\t\t\ttype\n\t\t\tisApplicable\n\t\t\tcontrols
+        (orderBy: $orderBy)
+        {\n\t\t\t\tid\n\t\t\t\tname\n\t\t\t\ttype\n\t\t\t\tisApplicable\n\t\t\t}\n\t\t}\n\t}\n}","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"siteConditionsLibrary"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642074161286
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_c0a4dd013a184286886fbe5764de9c63
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1646175819656
+    created: 1646175752613
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Divisions Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query divisionsLibrary ($orderBy: [OrderBy!])
+        {\n\tdivisionsLibrary (orderBy: $orderBy)
+        {\n\t\tname\n\t\tid\n\t}\n}","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"divisionsLibrary"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642074161236
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cdd2025968f54c2f9b1819a51dff986e
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1646175848141
+    created: 1646175823646
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Regions Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query regionsLibrary ($orderBy: [OrderBy!]) {\n\tregionsLibrary
+        (orderBy: $orderBy)
+        {\n\t\tname\n\t\tid\n\t}\n}","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"regionsLibrary"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642074161186
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_752979d9e503480895d89f5335d5d12f
+    parentId: fld_3936ec31bc284445bb066112d14b21cc
+    modified: 1646175862578
+    created: 1646175854551
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Project Types Library
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query projectTypesLibrary ($orderBy: [OrderBy!])
+        {\n\tprojectTypesLibrary (orderBy: $orderBy)
+        {\n\t\tname\n\t\tid\n\t}\n}","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"projectTypesLibrary"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_8b1bfe6285a543709aa20f7fc864be66
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642074161136
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cc0bd1641f59475d8497045cd1f9861a
+    parentId: fld_343e123b0ec7471092e6693721a294ea
+    modified: 1644938662150
+    created: 1642688924347
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Project Locations
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"query projectLocations ($id: UUID, $taskOrderBy:
+        [TaskOrderBy!], $orderBy: [OrderBy!]) {\\n\\tprojectLocations (id: $id,
+        orderBy: $orderBy) {\\n\\t\\ttasks (orderBy: $taskOrderBy)
+        {\\n\\t\\t\\tname\\n\\t\\t\\tlibraryTask
+        {\\n\\t\\t\\t\\tcategory\\n\\t\\t\\t}\\n\\t\\t\\thazards (orderBy:
+        $orderBy)
+        {\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\",\"variables\":{\
+        \"id\":\"{% response 'body', 'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QubG9jYXRpb25zWzBdLmlk::46b',
+        'no-history', 60
+        %}\",\"taskOrderBy\":[{\"field\":\"CATEGORY\",\"direction\":\"ASC\"},{\
+        \"field\":\"NAME\",\"direction\":\"ASC\"}],\"orderBy\":[{\"field\":\"NA\
+        ME\",\"direction\":\"ASC\"}]},\"operationName\":\"projectLocations\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642085828382
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_343e123b0ec7471092e6693721a294ea
+    parentId: fld_b9000bc26ebc42cb89d14498e03d1283
+    modified: 1642688908646
+    created: 1642688897542
+    name: Locations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642085828407
+    _type: request_group
+  - _id: fld_b9000bc26ebc42cb89d14498e03d1283
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1642421301523
+    created: 1642083553285
+    name: Projects
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642083553385
+    _type: request_group
+  - _id: req_f335f91482984ee3a33ef759f33a635c
+    parentId: fld_a23a29cc7414420bbd8078d6f8b6c0f6
+    modified: 1646175881893
+    created: 1642083560778
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Create Project
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation createProject($project: CreateProjectInput!)
+        {\\n\\tcreateProject(project: $project)
+        {\\n\\t\\tid\\n\\t\\tname\\n\\t\\triskLevel\\n\\t\\tstartDate\\n\\t\\te\
+        ndDate\\n\\t\\tstatus\\n\\t\\tmanager
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tsupervisor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tadditionalSupervisors
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tcontractor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tlocations
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t\\tsupervisor
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\tadditiona\
+        lSupervisors
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\ttasks{\\n\
+        \\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\\n\
+        \",\"variables\":{\"project\":{\"name\":\"{% faker 'lorem', '',
+        'product', '', '', '', '', '', '', '', 'word', '', '', '', '', '', 'en'
+        %}\",\"number\":\"123\",\"libraryRegionId\":\"{% response 'body',
+        'req_cdd2025968f54c2f9b1819a51dff986e',
+        'b64::JC5kYXRhLnJlZ2lvbnNMaWJyYXJ5WzBdLmlk::46b', 'no-history', 60
+        %}\",\"libraryDivisionId\":\"{% response 'body',
+        'req_c0a4dd013a184286886fbe5764de9c63',
+        'b64::JC5kYXRhLmRpdmlzaW9uc0xpYnJhcnlbMF0uaWQ=::46b', 'no-history', 60
+        %}\",\"libraryProjectTypeId\":\"{% response 'body',
+        'req_752979d9e503480895d89f5335d5d12f',
+        'b64::JC5kYXRhLnByb2plY3RUeXBlc0xpYnJhcnlbMF0uaWQ=::46b', 'no-history',
+        60 %}\",\"locations\":[{\"latitude\":\"{% faker 'address', 'latitude',
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'en'
+        %}\",\"longitude\":\"{% faker 'address', 'longitude', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', 'en' %}\",\"name\":\"{% faker
+        'address', 'streetName', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', 'en' %}\",\"supervisorId\":\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"additionalSupervisors\":[\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzFdLmlk::46b', 'no-history', 60
+        %}\"]}],\"startDate\":\"2022-01-01\",\"endDate\":\"2022-01-01\",\"status\
+        \":\"PENDING\",\"managerId\":\"{% response 'body',
+        'req_0773df64f6214d0484a58969988eff31',
+        'b64::JC5kYXRhLm1hbmFnZXJzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"supervisorId\":\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"additionalSupervisors\":[\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzFdLmlk::46b', 'no-history', 60
+        %}\"],\"contractorId\":\"{% response 'body',
+        'req_c8e749c383e24d19966704efb6e1b4ca',
+        'b64::JC5kYXRhLmNvbnRyYWN0b3JzWzBdLmlk::46b', 'no-history', 60
+        %}\"}},\"operationName\":\"createProject\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642083560778
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_a23a29cc7414420bbd8078d6f8b6c0f6
+    parentId: fld_b9000bc26ebc42cb89d14498e03d1283
+    modified: 1642085828357
+    created: 1642085828357
+    name: Mutations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642085828357
+    _type: request_group
+  - _id: req_17a1a0d202244cf99b5eb8bbfb6cf8fa
+    parentId: fld_a23a29cc7414420bbd8078d6f8b6c0f6
+    modified: 1646175701149
+    created: 1642085935544
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Edit Project
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation editProject($project: EditProjectInput!)
+        {\\n\\teditProject(project: $project)
+        {\\n\\t\\tid\\n\\t\\tname\\n\\t\\triskLevel\\n\\t\\tstartDate\\n\\t\\te\
+        ndDate\\n\\t\\tstatus\\n\\t\\tmanager
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tsupervisor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tadditionalSupervisors
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tcontractor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tlocations
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t\\tsupervisor
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\tadditiona\
+        lSupervisors
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\
+        \\n\",\"variables\":{\"project\":{\"id\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QuaWQ=::46b', 'never', 60
+        %}\",\"name\":\"{% faker 'lorem', '', 'product', '', '', '', '', '', '',
+        '', 'word', '', '', '', '', '', 'en'
+        %}\",\"locations\":[{\"latitude\":\"{% faker 'address', 'latitude', '',
+        '', '', '', '', '', '', '', '', '', '', '', '', '', 'en'
+        %}\",\"longitude\":\"{% faker 'address', 'longitude', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', 'en' %}\",\"name\":\"{% faker
+        'address', 'streetName', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', 'en' %}\",\"supervisorId\":\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"additionalSupervisors\":[\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzFdLmlk::46b', 'no-history', 60
+        %}\"]}],\"startDate\":\"2022-01-01\",\"endDate\":\"2022-01-01\",\"status\
+        \":\"PENDING\",\"managerId\":\"{% response 'body',
+        'req_0773df64f6214d0484a58969988eff31',
+        'b64::JC5kYXRhLm1hbmFnZXJzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"supervisorId\":\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"additionalSupervisors\":[\"{% response 'body',
+        'req_969afd896f984a65a08a76f5d83cc84e',
+        'b64::JC5kYXRhLnN1cGVydmlzb3JzWzFdLmlk::46b', 'no-history', 60
+        %}\"],\"contractorId\":\"{% response 'body',
+        'req_c8e749c383e24d19966704efb6e1b4ca',
+        'b64::JC5kYXRhLmNvbnRyYWN0b3JzWzBdLmlk::46b', 'no-history', 60
+        %}\"}},\"operationName\":\"editProject\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642082385847.75
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d3108b1b1dc942d1891f3f550264916e
+    parentId: fld_b9000bc26ebc42cb89d14498e03d1283
+    modified: 1646175885695
+    created: 1642085818533
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Projects
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query projects($id: UUID) {\n\tprojects(id: $id)
+        {\n\t\tid\n\t\tname\n\t\triskLevel\n\t\tstartDate\n\t\tendDate\n\t\tstatus\n\t\tmanager
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t\tsupervisor
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t\tadditionalSupervisors
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t\tcontractor
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t\tlocations
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}\n","variables":{},"operationName":"projects"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642081210917.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_8fcb83f4915345b3a706d4465c854104
+    parentId: fld_b9000bc26ebc42cb89d14498e03d1283
+    modified: 1643369859062
+    created: 1642085686584
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Get Project
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"query project($projectId: UUID!, $taskOrderBy:
+        [TaskOrderBy!], $orderBy: [OrderBy!]) {\\n\\tproject(projectId:
+        $projectId)
+        {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tnumber\\n\\t\\triskLevel\\n\\t\\tstar\
+        tDate\\n\\t\\tendDate\\n\\t\\tstatus\\n\\t\\tmanager
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tsupervisor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tadditionalSupervisors
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tcontractor
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t}\\n\\t\\tlocations (orderBy:
+        $orderBy) {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t\\tsupervisor
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\tadditiona\
+        lSupervisors
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t\\ttasks
+        (orderBy: $taskOrderBy)
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t\\thazards (orderBy:
+        $orderBy)
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\tcontrols
+        (orderBy: $orderBy)
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\t}\\n\
+        \\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tsiteConditions (orderBy: $orderBy)
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\
+        \\n\",\"variables\":{\"projectId\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QuaWQ=::46b', 'never', 60
+        %}\",\"taskOrderBy\":[{\"field\":\"CATEGORY\",\"direction\":\"ASC\"},{\
+        \"field\":\"NAME\",\"direction\":\"ASC\"}],\"orderBy\":[{\"field\":\"NA\
+        ME\",\"direction\":\"ASC\"}]},\"operationName\":\"project\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642078861057
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2740c436a3fb4a00902c10e15acbbe40
+    parentId: fld_2ed5566f0a49411b9417da8c6b3b6739
+    modified: 1644966511062
+    created: 1644966417258
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List tasks
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query tasks ($taskOrderBy: [TaskOrderBy!], $orderBy:
+        [OrderBy!]) {\n\ttasks (orderBy: $taskOrderBy)
+        {\n\t\tid\n\t\tname\n\t\tlibraryTask
+        {\n\t\t\tcategory\n\t\t}\n\t\thazards (orderBy: $orderBy)
+        {\n\t\t\tid\n\t\t\tname\n\t\t}\n\t}\n}","variables":{"taskOrderBy":[{"field":"CATEGORY","direction":"ASC"},{"field":"NAME","direction":"ASC"}],"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"tasks"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642678079395
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_2ed5566f0a49411b9417da8c6b3b6739
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1642679470459
+    created: 1642678071156
+    name: Tasks
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642083553378.75
+    _type: request_group
+  - _id: req_f88816cf2cb748f88b4b1ee3b7c15635
+    parentId: fld_7e612994d6da4d1fa029e2532f43ea8b
+    modified: 1646229396317
+    created: 1642678086990
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Create Task
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation createTask($taskData: CreateTaskInput!)
+        {\\n\\tcreateTask(taskData: $taskData)
+        {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tstatus\\n\\t\\triskLevel\\n\\t\\tstar\
+        tDate\\n\\t\\tendDate\\n\\t\\tlibraryTask
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t\\thazards
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t\\tisApplicable\\n\\t\
+        \\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\tisApplicab\
+        le\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t\\thazards
+        {\\n\\t\\t\\tid\\n\\t\\t\\tname\\n\\t\\t\\tisApplicable\\n\\t\\t\\tcrea\
+        tedBy {\\n\\t\\t\\t\\tid\\n\\t\\t\\t}\\n\\t\\t\\tlibraryHazard
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\tisApplicab\
+        le\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t\\tname\\n\\t\\t\\t\\tisApplicable\\n\\t\
+        \\t\\t\\tcreatedBy
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\tlibraryControl
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\tisApplicab\
+        le\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\",\"variables\":{\
+        \"taskData\":{\"libraryTaskId\":\"{% response 'body',
+        'req_771bf7725c8e4cd2b1470602d6ad2bc4',
+        'b64::JC5kYXRhLnRhc2tzTGlicmFyeVswXS5pZA==::46b', 'no-history', 60
+        %}\",\"projectLocationId\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QubG9jYXRpb25zWzBdLmlk::46b', 'never',
+        60
+        %}\",\"startDate\":\"2022-01-01\",\"endDate\":\"2022-01-01\",\"status\":\
+        \"NOT_STARTED\",\"hazards\":[{\"isApplicable\":true,\"libraryHazardId\":\
+        \"{% response 'body', 'req_039d52097588421f8c819e79d6454348',
+        'b64::JC5kYXRhLmhhemFyZHNMaWJyYXJ5WzBdLmlk::46b', 'no-history', 60
+        %}\",\"controls\":[{\"libraryControlId\":\"{% response 'body',
+        'req_039d52097588421f8c819e79d6454348',
+        'b64::JC5kYXRhLmhhemFyZHNMaWJyYXJ5WzBdLmNvbnRyb2xzWzBdLmlk::46b',
+        'no-history', 60
+        %}\",\"isApplicable\":true}]}]}},\"operationName\":\"createTask\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6efff656ff414bcfabaa04c2476a017e
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642678086990
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_7e612994d6da4d1fa029e2532f43ea8b
+    parentId: fld_2ed5566f0a49411b9417da8c6b3b6739
+    modified: 1642678079345
+    created: 1642678079345
+    name: Mutations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642678079345
+    _type: request_group
+  - _id: req_7f0b4042e6be46478bc1d56983fa7128
+    parentId: fld_bdefb4e5e4e0495e8be5df1a117953be
+    modified: 1646176012742
+    created: 1645194255517
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Create Site Condition
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation CreateSiteConditions($data:
+        CreateSiteConditionInput!) {\\n\\tcreateSiteCondition (data: $data)
+        {\\n\\t\\tid\\n\\t\\tname\\n\\t\\tdate\\n\\t\\thazards
+        {\\n\\t\\t\\tid\\n\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\tid\\n\\t\\t\\t}\\n\\t\\t}\\n\\t}\\n}\\n\",\"variables\"\
+        :{\"data\":{\"projectLocationId\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QubG9jYXRpb25zWzBdLmlk::46b', 'never',
+        60 %}\",\"librarySiteConditionId\":\"{% response 'body',
+        'req_5c19a460dad14d6285c54070fe7edc49',
+        'b64::JC5kYXRhLnNpdGVDb25kaXRpb25zTGlicmFyeVsxXS5pZA==::46b', 'never',
+        60
+        %}\",\"date\":\"2022-01-01\",\"hazards\":[{\"isApplicable\":true,\"libr\
+        aryHazardId\":\"{% response 'body',
+        'req_5c19a460dad14d6285c54070fe7edc49',
+        'b64::JC5kYXRhLnNpdGVDb25kaXRpb25zTGlicmFyeVsxXS5oYXphcmRzWzBdLmlk::46b\
+        ', 'no-history', 60 %}\",\"controls\":[{\"libraryControlId\":\"{%
+        response 'body', 'req_5c19a460dad14d6285c54070fe7edc49',
+        'b64::JC5kYXRhLnNpdGVDb25kaXRpb25zTGlicmFyeVsxXS5oYXphcmRzWzBdLmNvbnRyb\
+        2xzWzBdLmlk::46b', 'no-history', 60
+        %}\",\"isApplicable\":true}]}]}},\"operationName\":\"CreateSiteConditio\
+        ns\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6efff656ff414bcfabaa04c2476a017e
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642678086990
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_bdefb4e5e4e0495e8be5df1a117953be
+    parentId: fld_fe8c9d7f812549aabbc04da5efd3d029
+    modified: 1645194258840
+    created: 1645194255514
+    name: Mutations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642550060770
+    _type: request_group
+  - _id: fld_fe8c9d7f812549aabbc04da5efd3d029
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1645194244993
+    created: 1645194241236
+    name: Site Conditions
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642083553353.75
+    _type: request_group
+  - _id: req_306f0b395cd5467aa81b79ee8e47938b
+    parentId: fld_66d9343251e84144b5f3c89a94fd70d1
+    modified: 1646175957292
+    created: 1644966563800
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List site conditions
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: '{"query":"query siteConditions ($orderBy: [OrderBy!]) {\n\tsiteConditions
+        (orderBy: $orderBy)
+        {\n\t\tid\n\t\tname\n\t}\n}","variables":{"orderBy":[{"field":"NAME","direction":"ASC"}]},"operationName":"siteConditions"}'
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642083553341.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_66d9343251e84144b5f3c89a94fd70d1
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1644966557061
+    created: 1644966540646
+    name: Site conditions
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642083553353.75
+    _type: request_group
+  - _id: req_8a1386118dbd419382d3ffbfc101580d
+    parentId: fld_8c897b8bbeba44028e0359127a1c9635
+    modified: 1646247288048
+    created: 1643824585345
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Save Daily Report
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation saveDailyReport($data: SaveDailyReportInput!)
+        {\\n\\tsaveDailyReport(dailyReportInput: $data)
+        {\\n\\t\\tid\\n\\t\\tstatus\\n\\t\\tcreatedBy
+        {\\n\\t\\t\\tid\\n\\t\\t\\tfirstName\\n\\t\\t\\tlastName\\n\\t\\t}\\n\\t\
+        \\tcreatedAt\\n\\t\\tcompletedBy
+        {\\n\\t\\t\\tid\\n\\t\\t\\tfirstName\\n\\t\\t\\tlastName\\n\\t\\t}\\n\\t\
+        \\tcompletedAt\\n\\t\\tsectionsJSON\\n\\t\\tsections
+        {\\n\\t\\t\\tworkSchedule
+        {\\n\\t\\t\\t\\tstartDate\\n\\t\\t\\t\\tstartTime\\n\\t\\t\\t\\tendDate\
+        \\n\\t\\t\\t\\tendTime\\n\\t\\t\\t}\\n\\t\\t\\ttaskSelection
+        {\\n\\t\\t\\t\\tselectedTasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\triskLevel\
+        \\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tjobHazardAnalysis
+        {\\n\\t\\t\\t\\tsiteConditions
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\\tha\
+        zards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\ttasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tnotes\\n\\t\\t\\t\\t\\tperformed\
+        \\n\\t\\t\\t\\t\\thazards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t},\\n\\t\\t\\tsafetyAndCompliance\\n\\t\
+        \\t\\tcrew
+        {\\n\\t\\t\\t\\tcontractor\\n\\t\\t\\t\\tforemanName\\n\\t\\t\\t\\tnWel\
+        ders\\n\\t\\t\\t\\tnSafetyProf\\n\\t\\t\\t\\tnOperators\\n\\t\\t\\t\\tn\
+        Flaggers\\n\\t\\t\\t\\tnLaborers\\n\\t\\t\\t\\tnOtherCrew\\n\\t\\t\\t}\
+        \\n      additionalInformation
+        {\\n        progress\\n        lessons\\n      }\\n\\t\\t}\\n\\t}\\n}\\n\
+        \",\"variables\":{\"data\":{\"projectLocationId\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QubG9jYXRpb25zWzBdLmlk::46b', 'never',
+        60
+        %}\",\"date\":\"2022-01-01\",\"workSchedule\":null,\"taskSelection\":{\
+        \"selectedTasks\":[{\"id\":\"{% response 'body',
+        'req_f88816cf2cb748f88b4b1ee3b7c15635',
+        'b64::JC5kYXRhLmNyZWF0ZVRhc2suaWQ=::46b', 'no-history', 60
+        %}\",\"name\":\"{% response 'body',
+        'req_f88816cf2cb748f88b4b1ee3b7c15635',
+        'b64::JC5kYXRhLmNyZWF0ZVRhc2submFtZQ==::46b', 'no-history', 60
+        %}\",\"riskLevel\":\"HIGH\"}]},\"jobHazardAnalysis\":{\"siteConditions\
+        \":[{\"id\":\"{% response 'body',
+        'req_7f0b4042e6be46478bc1d56983fa7128',
+        'b64::JC5kYXRhLmNyZWF0ZVNpdGVDb25kaXRpb24uaWQ=::46b', 'no-history', 60
+        %}\",\"isApplicable\":true,\"hazards\":[{\"id\":\"{% response 'body',
+        'req_7f0b4042e6be46478bc1d56983fa7128',
+        'b64::JC5kYXRhLmNyZWF0ZVNpdGVDb25kaXRpb24uaGF6YXJkc1swXS5pZA==::46b',
+        'no-history', 60 %}\",\"isApplicable\":true,\"notApplicableReason\":\"{%
+        faker 'lorem', '', '', '', '', '', '', '', '', '', 'paragraph', '', '',
+        '', '', '', 'en' %}\",\"controls\":[{\"id\":\"{% response 'body',
+        'req_7f0b4042e6be46478bc1d56983fa7128',
+        'b64::JC5kYXRhLmNyZWF0ZVNpdGVDb25kaXRpb24uaGF6YXJkc1swXS5jb250cm9sc1swX\
+        S5pZA==::46b', 'no-history', 60
+        %}\",\"implemented\":true,\"notImplementedReason\":\"{% faker 'lorem',
+        '', '', '', '', '', '', '', '', '', 'paragraph', '', '', '', '', '',
+        'en' %}\"}]}]}],\"tasks\":[{\"id\":\"{% response 'body',
+        'req_f88816cf2cb748f88b4b1ee3b7c15635',
+        'b64::JC5kYXRhLmNyZWF0ZVRhc2suaWQ=::46b', 'no-history', 60
+        %}\",\"notes\":\"{% faker 'lorem', '', '', '', '', '', '', '', '', '',
+        'paragraph', '', '', '', '', '', 'en'
+        %}\",\"performed\":true,\"hazards\":[{\"id\":\"{% response 'body',
+        'req_f88816cf2cb748f88b4b1ee3b7c15635',
+        'b64::JC5kYXRhLmNyZWF0ZVRhc2suaGF6YXJkc1swXS5pZA==::46b', 'no-history',
+        60 %}\",\"isApplicable\":true,\"notApplicableReason\":\"{% faker
+        'lorem', '', '', '', '', '', '', '', '', '', 'paragraph', '', '', '',
+        '', '', 'en' %}\",\"controls\":[{\"id\":\"{% response 'body',
+        'req_f88816cf2cb748f88b4b1ee3b7c15635',
+        'b64::JC5kYXRhLmNyZWF0ZVRhc2suaGF6YXJkc1swXS5jb250cm9sc1swXS5pZA==::46b\
+        ', 'no-history', 60
+        %}\",\"implemented\":true,\"notImplementedReason\":\"\"}]}]}]},\"safety\
+        AndCompliance\":{\"integer\":2,\"float\":2.1,\"ceanas\":false},\"crew\"\
+        :{\"contractor\":\"1\",\"foremanName\":\"2\",\"nWelders\":1,\"nSafetyPr\
+        of\":1,\"nOperators\":1,\"nFlaggers\":1,\"nLaborers\":1,\"nOtherCrew\":\
+        1},\"additionalInformation\":{\"progress\":\"1\",\"lessons\":\"2\"}}},\
+        \"operationName\":\"saveDailyReport\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6efff656ff414bcfabaa04c2476a017e
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642550398227.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_8c897b8bbeba44028e0359127a1c9635
+    parentId: fld_e2d5676ab5f247af82bba1b545ac5aa7
+    modified: 1643905133233
+    created: 1643905102897
+    name: Mutations
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1643905102997
+    _type: request_group
+  - _id: fld_e2d5676ab5f247af82bba1b545ac5aa7
+    parentId: fld_46bec79f84ea409a8a0f8fee26079f6c
+    modified: 1643819432704
+    created: 1643819418088
+    name: Daily report
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1642083553328.75
+    _type: request_group
+  - _id: req_b864bf8a7bc8455e821598db50aaf166
+    parentId: fld_8c897b8bbeba44028e0359127a1c9635
+    modified: 1645445167037
+    created: 1645182587915
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Delete Daily Report
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"mutation DeleteDailyReport($id: UUID!)
+        {\\n\\tdeleteDailyReport(id: $id) \\n}\",\"variables\":{\"id\":\"{%
+        response 'body', 'req_8a1386118dbd419382d3ffbfc101580d',
+        'b64::JC5kYXRhLnNhdmVEYWlseVJlcG9ydC5pZA==::46b', 'never', 60
+        %}\"},\"operationName\":\"DeleteDailyReport\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_6efff656ff414bcfabaa04c2476a017e
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1642486553846.25
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9541833a05bb4333aa0651b218f5c91f
+    parentId: fld_e2d5676ab5f247af82bba1b545ac5aa7
+    modified: 1643905274502
+    created: 1643905117442
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: Get Daily Report
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"query dailyReport($id: UUID!) {\\n\\tdailyReport(id: $id)
+        {\\n\\t\\tid\\n\\t\\tsections {\\n\\t\\t\\tworkSchedule
+        {\\n\\t\\t\\t\\tstartDate\\n\\t\\t\\t\\tstartTime\\n\\t\\t\\t\\tendDate\
+        \\n\\t\\t\\t\\tendTime\\n\\t\\t\\t}\\n\\t\\t\\ttaskSelection
+        {\\n\\t\\t\\t\\tselectedTasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\triskLevel\
+        \\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tjobHazardAnalysis
+        {\\n\\t\\t\\t\\tsiteConditions
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\\tha\
+        zards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\ttasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tnotes\\n\\t\\t\\t\\t\\tperformed\
+        \\n\\t\\t\\t\\t\\thazards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tsafetyAndCompliance\\n\\t\
+        \\t\\tcrew
+        {\\n\\t\\t\\t\\tcontractor\\n\\t\\t\\t\\tforemanName\\n\\t\\t\\t\\tnWel\
+        ders\\n\\t\\t\\t\\tnSafetyProf\\n\\t\\t\\t\\tnOperators\\n\\t\\t\\t\\tn\
+        Flaggers\\n\\t\\t\\t\\tnLaborers\\n\\t\\t\\t\\tnOtherCrew\\n\\t\\t\\t}\
+        \\n      additionalInformation
+        {\\n        progress\\n        lessons\\n      }\\n\\t\\t}\\n\\t}\\n}\\n\
+        \",\"variables\":{\"id\":\"{% response 'body',
+        'req_8a1386118dbd419382d3ffbfc101580d',
+        'b64::JC5kYXRhLnNhdmVEYWlseVJlcG9ydC5pZA==::46b', 'never', 60
+        %}\"},\"operationName\":\"dailyReport\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1643905102947
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_864501131f2840a78242dfaab28bedfd
+    parentId: fld_e2d5676ab5f247af82bba1b545ac5aa7
+    modified: 1645444568179
+    created: 1645201581544
+    url: "{{ _.services.graphql.urls.graphql }}"
+    name: List Daily Report
+    description: ""
+    method: POST
+    body:
+      mimeType: application/graphql
+      text: "{\"query\":\"query ListDailyReports($projectLocationId: UUID!, $date:
+        Date!) {\\n\\tdailyReports(projectLocationId: $projectLocationId, date:
+        $date) {\\n\\t\\tid\\n\\t\\tsections {\\n\\t\\t\\tworkSchedule
+        {\\n\\t\\t\\t\\tstartDate\\n\\t\\t\\t\\tstartTime\\n\\t\\t\\t\\tendDate\
+        \\n\\t\\t\\t\\tendTime\\n\\t\\t\\t}\\n\\t\\t\\ttaskSelection
+        {\\n\\t\\t\\t\\tselectedTasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tname\\n\\t\\t\\t\\t\\triskLevel\
+        \\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tjobHazardAnalysis
+        {\\n\\t\\t\\t\\tsiteConditions
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\\tha\
+        zards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t\\ttasks
+        {\\n\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\tnotes\\n\\t\\t\\t\\t\\tperformed\
+        \\n\\t\\t\\t\\t\\thazards
+        {\\n\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\tisApplicable\\n\\t\\t\\t\\t\
+        \\t\\tnotApplicableReason\\n\\t\\t\\t\\t\\t\\tcontrols
+        {\\n\\t\\t\\t\\t\\t\\t\\tid\\n\\t\\t\\t\\t\\t\\t\\timplemented\\n\\t\\t\
+        \\t\\t\\t\\t\\tnotImplementedReason\\n\\t\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t\
+        \\t}\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t\\tsafetyAndCompliance\\n\\t\
+        \\t\\tcrew
+        {\\n\\t\\t\\t\\tcontractor\\n\\t\\t\\t\\tforemanName\\n\\t\\t\\t\\tnWel\
+        ders\\n\\t\\t\\t\\tnSafetyProf\\n\\t\\t\\t\\tnOperators\\n\\t\\t\\t\\tn\
+        Flaggers\\n\\t\\t\\t\\tnLaborers\\n\\t\\t\\t\\tnOtherCrew\\n\\t\\t\\t}\
+        \\n      additionalInformation
+        {\\n        progress\\n        lessons\\n      }\\n\\t\\t}\\n\\t}\\n}\\n\
+        \",\"variables\":{\"projectLocationId\":\"{% response 'body',
+        'req_f335f91482984ee3a33ef759f33a635c',
+        'b64::JC5kYXRhLmNyZWF0ZVByb2plY3QubG9jYXRpb25zWzBdLmlk::46b', 'never',
+        60
+        %}\",\"date\":\"2022-01-01\"},\"operationName\":\"ListDailyReports\"}"
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_aa319fd70e344a289b7d61eb8cefa399
+    authentication:
+      type: bearer
+      token: "{{ _.current_auth_token }}"
+    metaSortKey: -1643291594968.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_a961c5c28b7fcc35ae3d9426da107da9c6c12a9e
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1643370169665
+    created: 1641566652287
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: {}
+    color: null
+    isPrivate: false
+    metaSortKey: 1641566652287
+    _type: environment
+  - _id: jar_a961c5c28b7fcc35ae3d9426da107da9c6c12a9e
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1646250295394
+    created: 1641566652289
+    name: Default Jar
+    cookies:
+      - key: KC_RESTART
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/Tenant1/
+        httpOnly: true
+        extensions:
+          - Version=1
+        hostOnly: true
+        creation: 2022-01-17T12:23:24.112Z
+        lastAccessed: 2022-01-17T12:37:38.707Z
+        id: "1597934309493838"
+      - key: KEYCLOAK_LOCALE
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/Tenant1/
+        httpOnly: true
+        extensions:
+          - Version=1
+          - Comment=Expiring cookie
+        hostOnly: true
+        creation: 2022-01-17T12:37:38.706Z
+        lastAccessed: 2022-01-17T12:37:38.706Z
+        id: "8951273210833248"
+      - key: KEYCLOAK_LOCALE
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/tenant1/
+        httpOnly: true
+        extensions:
+          - Version=1
+          - Comment=Expiring cookie
+        hostOnly: true
+        creation: 2022-01-17T18:46:58.023Z
+        lastAccessed: 2022-01-21T10:53:31.232Z
+        id: "34392161190852333"
+      - key: KC_RESTART
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/tenant1/
+        httpOnly: true
+        extensions:
+          - Version=1
+        hostOnly: true
+        creation: 2022-01-17T18:46:58.023Z
+        lastAccessed: 2022-01-21T10:53:31.232Z
+        id: "4064233103548134"
+      - key: KC_RESTART
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/strickland/
+        httpOnly: true
+        extensions:
+          - Version=1
+        hostOnly: true
+        creation: 2022-01-21T16:38:38.419Z
+        lastAccessed: 2022-01-25T10:59:53.534Z
+        id: "21223318871596009"
+      - key: KEYCLOAK_LOCALE
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/strickland/
+        httpOnly: true
+        extensions:
+          - Version=1
+          - Comment=Expiring cookie
+        hostOnly: true
+        creation: 2022-01-21T16:39:24.138Z
+        lastAccessed: 2022-01-25T10:59:53.533Z
+        id: "33147991193300586"
+      - key: KEYCLOAK_LOCALE
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/asgard/
+        httpOnly: true
+        extensions:
+          - Version=1
+          - Comment=Expiring cookie
+        hostOnly: true
+        creation: 2022-01-25T11:05:31.249Z
+        lastAccessed: 2022-03-02T19:44:55.394Z
+        id: "27969326315905363"
+      - key: KC_RESTART
+        expires: 1970-01-01T00:00:10.000Z
+        maxAge: 0
+        domain: localhost
+        path: /auth/realms/asgard/
+        httpOnly: true
+        extensions:
+          - Version=1
+        hostOnly: true
+        creation: 2022-01-25T11:05:31.249Z
+        lastAccessed: 2022-03-02T19:44:55.394Z
+        id: "4490064837450174"
+    _type: cookie_jar
+  - _id: spc_32a7d16a257a42ad8e401ab3fe916c8f
+    parentId: wrk_3affa006eeb24bfa8db0b3e3d11f8ecc
+    modified: 1641566652279
+    created: 1641566652279
+    fileName: Worker Safety
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: env_bd9fee3808774a75a6b6d97c36533150
+    parentId: env_a961c5c28b7fcc35ae3d9426da107da9c6c12a9e
+    modified: 1646247286943
+    created: 1641567313824
+    name: Local
+    data:
+      services:
+        graphql:
+          method: http
+          host: localhost
+          port: "8001"
+          urls:
+            base: "{{ _.services.graphql.method }}://{{ _.services.graphql.host }}:{{
+              _.services.graphql.port }}/"
+            graphql: "{{ _.services.graphql.urls.base }}graphql"
+        world-data:
+          method: https
+          host: world-data.urbinternal.com
+          urls:
+            base: "{{ _.services.graphql.method }}://{{ _.services.graphql.host }}/"
+        keycloak:
+          method: http
+          host: localhost
+          port: "8080"
+          urls:
+            base: "{{ _.services.keycloak.method }}://{{ _.services.keycloak.host }}:{{
+              _.services.keycloak.port }}/"
+          realms:
+            asgard:
+              name: asgard
+              client_id: local-dev
+              client_secret: XErS42uXDD2uJIcDrvjhchw2daeO5XdT
+              logins:
+                admin:
+                  username: super
+                  password: password
+                  token: "{% response 'body', 'req_b7148c83e0594101824ee0e2efc4b80f',
+                    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'always', 60 %}"
+                manager:
+                  username: bill
+                  password: password
+                  token: "{% response 'body', 'req_6462af4c4e10408c932a413b46d571dd',
+                    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+                supervisor:
+                  username: peggy
+                  password: password
+                  token: "{% response 'body', 'req_3235d6ff03e8473fa87cf08763b74d87',
+                    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+                viewer:
+                  username: dale
+                  password: password
+                  token: "{% response 'body', 'req_280e5bc1a7bd495cb85dd3573a082ea1',
+                    'b64::JC5hY2Nlc3NfdG9rZW4=::46b', 'never', 60 %}"
+    dataPropertyOrder:
+      "&":
+        - services
+      "&~|services":
+        - graphql
+        - world-data
+        - keycloak
+      "&~|services~|graphql":
+        - method
+        - host
+        - port
+        - urls
+      "&~|services~|graphql~|urls":
+        - base
+        - graphql
+      "&~|services~|world-data":
+        - method
+        - host
+        - urls
+      "&~|services~|world-data~|urls":
+        - base
+      "&~|services~|keycloak":
+        - method
+        - host
+        - port
+        - urls
+        - realms
+      "&~|services~|keycloak~|urls":
+        - base
+      "&~|services~|keycloak~|realms":
+        - asgard
+      "&~|services~|keycloak~|realms~|asgard":
+        - name
+        - client_id
+        - client_secret
+        - logins
+      "&~|services~|keycloak~|realms~|asgard~|logins":
+        - admin
+        - manager
+        - supervisor
+        - viewer
+      "&~|services~|keycloak~|realms~|asgard~|logins~|admin":
+        - username
+        - password
+        - token
+      "&~|services~|keycloak~|realms~|asgard~|logins~|manager":
+        - username
+        - password
+        - token
+      "&~|services~|keycloak~|realms~|asgard~|logins~|supervisor":
+        - username
+        - password
+        - token
+      "&~|services~|keycloak~|realms~|asgard~|logins~|viewer":
+        - username
+        - password
+        - token
+    color: "#6bc787"
+    isPrivate: false
+    metaSortKey: 1641567313824
+    _type: environment

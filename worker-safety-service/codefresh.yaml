@@ -1,0 +1,408 @@
+version: "1.0"
+
+indicators:
+  - build_image_step_template: &build_image_step_template
+      type: "build"
+      stage: "build"
+      disable_push: true
+      no_cache: false
+      working_directory: "${{clone}}"
+      tag: main
+      build_arguments:
+        - "APP_COMMIT_SHA=${{CF_REVISION}}"
+      dockerfile: "Dockerfile"
+      target: runtime
+  - push_image_step_template: &push_image_step_template
+      stage: "push"
+      type: "push"
+      arguments: &push_image_args_template
+        tags:
+          - "${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}"
+          - "${{CF_REVISION}}"
+          - latest
+      when:
+        branch:
+          only:
+            - tg/imp/docker-file-improvements
+            - main
+            - /^release\/\d+\.\d+\.\d+/
+            - /^testingWithDeployToInteg\/.*\/.*/
+
+hooks:
+  on_elected:
+    exec:
+      image: alpine:3.15.5
+      fail_fast: false
+      commands:
+        - echo "Build started!"
+        - echo "CF_PIPELINE_NAME=${{CF_PIPELINE_NAME}}"
+  on_success:
+    steps:
+      SetColorStatus:
+        image: alpine:3.15.5
+        commands:
+          - echo "on_success started"
+          - cf_export SLACK_COLOR_STATUS=good
+      SendToSlack:
+        title: Sending message to slack
+        image: codefreshplugins/slacknotifier
+        environment:
+          - "SLACK_HOOK_URL=${{ws-notifications-webhook}}"
+          - "SLACK_TEXT=`${{CF_PIPELINE_NAME}}` build passed! :white_check_mark:"
+          - "SLACK_ATTACHMENTS=${{CF_SLACK_ATTACHMENTS}}"
+        when:
+          branch:
+            only:
+              - main
+              - /^release\/\d+\.\d+\.\d+/
+              - /^testingWithDeployToInteg\/.*\/.*/
+  on_fail:
+    steps:
+      SetColorStatus:
+        image: alpine:3.15.5
+        commands:
+          - echo "on_fail started"
+          - cf_export SLACK_COLOR_STATUS=bad
+      SendToSlack:
+        title: Sending message to slack
+        image: codefreshplugins/slacknotifier
+        environment:
+          - "SLACK_HOOK_URL=${{ws-notifications-webhook}}"
+          - "SLACK_TEXT=`${{CF_PIPELINE_NAME}}` build failed! :x:"
+          - "SLACK_ATTACHMENTS=${{CF_SLACK_ATTACHMENTS}}"
+        when:
+          branch:
+            only:
+              - main
+              - /^release\/\d+\.\d+\.\d+/
+              - /^testingWithDeployToInteg\/.*\/.*/
+  on_finish:
+    - echo "Build finished!"
+
+stages:
+  - clone
+  - setup
+  - unit-linting-checks
+  - integration-checks
+  - build
+  - push
+  - deploy
+  - e2e
+
+services:
+  name: "worker_safety"
+  composition:
+    postgres:
+      image: postgis/postgis:13-master
+      ports:
+        - 5432
+      environment:
+        - POSTGRES_PASSWORD=password
+    redis:
+      image: redis:6
+      ports:
+        - 6379
+
+steps:
+  clone:
+    title: "Cloning repository"
+    stage: "clone"
+    type: "git-clone"
+    repo: "urbint/worker-safety-service"
+    # CF_BRANCH value is auto set when pipeline is triggered
+    # Learn more at codefresh.io/docs/docs/codefresh-yaml/variables/
+    revision: "${{CF_BRANCH}}"
+    git: "github"
+
+  setup:
+    title: "Install dependencies"
+    stage: "setup"
+    type: "freestyle"
+    image: "python:3.10.10-slim"
+    working_directory: "${{clone}}"
+    environment:
+      - "pip_default_timeout=100"
+      - "pip_disable_pip_version_check=1"
+      - "pip_no_cache_dir=1"
+    commands:
+      - "apt-get update"
+      - "apt-get install -y gcc"
+      - "apt-get clean"
+      - "pip install --upgrade pip"
+      - "pip install poetry==1.7.1"
+      - "poetry config virtualenvs.in-project true"
+      - "poetry install"
+      - ". .venv/bin/activate"
+      - "pip install pytest-rerunfailures"
+
+  unit-linting-checks:
+    title: "Unit tests and linting"
+    stage: "unit-linting-checks"
+    type: "parallel"
+    steps:
+      black:
+        title: "Black"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        commands:
+          - ". .venv/bin/activate"
+          - "black --check ."
+      flake8:
+        title: "Flake8"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        commands:
+          - ". .venv/bin/activate"
+          - "flake8 ."
+      isort:
+        title: "Isort"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        commands:
+          - ". .venv/bin/activate"
+          - "isort --check ."
+      test:
+        title: "Unit Tests"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        commands:
+          - ". .venv/bin/activate"
+          - "pytest -n auto --maxprocesses=2 ./tests/unit/ ./tests/test_migrations.py"
+        environment:
+          - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+      mypy:
+        title: "Mypy"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        commands:
+          - ". .venv/bin/activate"
+          - "mypy ."
+
+  integration-checks:
+    title: "Integration & migration tests"
+    type: "parallel"
+    stage: "integration-checks"
+    steps:
+      run_migrations:
+        title: "Test Migrations"
+        type: "freestyle"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        environment:
+          - POSTGRES_HOST=postgres
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASS=password
+          - POSTGRES_DB=postgres
+          - REDIS_HOST=redis
+        services:
+          - worker_safety
+        commands:
+          - ". .venv/bin/activate"
+          - "alembic upgrade head"
+          - "alembic downgrade -1"
+      run_integration_tests:
+        title: "Integration Tests"
+        type: "freestyle"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        environment:
+          - POSTGRES_HOST=postgres
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASS=password
+          - POSTGRES_DB=postgres_test
+          - POSTGRES_DISABLE_JIT=true
+          - REDIS_HOST=redis
+          - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+        services:
+          - worker_safety
+        commands:
+          - ". .venv/bin/activate"
+          - "apt-get update && apt-get -y install libpq-dev && apt-get clean"
+          - "pytest --reruns 1 --durations=30 -n auto --maxprocesses=8 -k 'not test_project_number_as_alphanumeric' --ignore=tests/integration/risk_model/explain_functions/test_explain_methods_no_exception.py"
+          - "pytest --reruns 1 --durations=5 -v tests/integration/risk_model/explain_functions/test_explain_methods_no_exception.py"
+          - "pytest -v tests/integration/mutations/test_projects.py"
+      run_seed_backup:
+        title: "Test Seed Data Generation, Backup, and Restoration"
+        type: "freestyle"
+        image: "python:3.10.10-slim"
+        working_directory: "${{clone}}"
+        environment:
+          - POSTGRES_HOST=postgres
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASS=password
+          - POSTGRES_DB=postgres_seed_creation
+          - POSTGRES_DISABLE_JIT=true
+          - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+        services:
+          - worker_safety
+        commands:
+          - "apt-get update"
+          - "apt-get install -y postgresql-common gnupg"
+          - "sh /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh -y"
+          - "apt-get update"
+          - "apt-get install -y postgresql-client-13"
+          - ". .venv/bin/activate"
+          - "python ./support/scripts/seed/main.py recreate-backup"
+          - "python ./support/scripts/seed/main.py restore-from-backup"
+  #      run_seed_restoration:
+  #        title: "Test Seed Restoration from current seed backup"
+  #        type: "freestyle"
+  #        image: "python:3.10.4-slim"
+  #        working_directory: "${{clone}}"
+  #        environment:
+  #          - POSTGRES_HOST=postgres
+  #          - POSTGRES_USER=postgres
+  #          - POSTGRES_PASS=password
+  #          - POSTGRES_DB=postgres_seed_restoration
+  #          - POSTGRES_DISABLE_JIT=true
+  #        services:
+  #          - worker_safety
+  #        commands:
+  #          - "apt-get update"
+  #          - "apt-get install -y postgresql-client"
+  #          - ". .venv/bin/activate"
+  #          - "python ./support/scripts/seed/main.py create-from-backup"
+
+  build_app_image:
+    <<: *build_image_step_template
+    title: "Building Runtime Docker image (Backwards Compatible)"
+    image_name: "worker-safety-service"
+    target: runtime
+
+  build_uvicorn_image:
+    <<: *build_image_step_template
+    title: "Building uvicorn Docker image"
+    image_name: "worker-safety-service-uvicorn"
+    target: uvicorn
+
+  build_migrations_image:
+    <<: *build_image_step_template
+    title: "Building migration docker image"
+    image_name: "worker-safety-service-migrations"
+    target: migrations
+
+  set_image_tag:
+    title: "Set Image Tag"
+    image: "ubuntu:22.04"
+    stage: "push"
+    commands:
+      - case "${{CF_BRANCH_TAG_NORMALIZED}}" in release/*) IMAGE_TAG=${{CF_BRANCH_TAG_NORMALIZED}} ;; *) IMAGE_TAG="${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}" ;; esac
+      - cf_export IMAGE_TAG=$IMAGE_TAG
+
+  push_app_image:
+    <<: *push_image_step_template
+    title: "Pushing the application image"
+    arguments:
+      <<: *push_image_args_template
+      tags:
+        - "${{IMAGE_TAG}}"
+        - "${{CF_REVISION}}"
+        - latest
+      candidate: ${{build_app_image}}
+
+  push_uvicorn_image:
+    <<: *push_image_step_template
+    title: "Pushing the uvicorn image"
+    arguments:
+      <<: *push_image_args_template
+      tags:
+        - "${{IMAGE_TAG}}"
+        - "${{CF_REVISION}}"
+        - latest
+      candidate: ${{build_uvicorn_image}}
+
+  push_migrations_image:
+    <<: *push_image_step_template
+    title: "Pushing the migrations image"
+    arguments:
+      <<: *push_image_args_template
+      tags:
+        - "${{IMAGE_TAG}}"
+        - "${{CF_REVISION}}"
+        - latest
+      candidate: ${{build_migrations_image}}
+
+  trigger_staging_deploy:
+    title: "Trigger the deploy pipeline"
+    stage: "deploy"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/staging-deploy"
+      DETACH: false
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - IMAGE_NAME="worker-safety-service"
+        - MIGRATION_IMAGE_NAME="worker-safety-service-migrations"
+        - IMAGE_TAG=${{IMAGE_TAG}}
+        - ARGOCD_APP="worker-safety-staging"
+    when:
+      branch:
+        only:
+          - /^release\/\d+\.\d+\.\d+/
+  trigger_integ_deploy:
+    title: "Trigger the integ deploy pipeline"
+    stage: "deploy"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/integ-deploy"
+      DETACH: false
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - IMAGE_NAME="worker-safety-service"
+        - MIGRATION_IMAGE_NAME="worker-safety-service-migrations"
+        - IMAGE_TAG=${{IMAGE_TAG}}
+        - ARGOCD_APP="worker-safety-integ"
+    when:
+      branch:
+        only:
+          - main
+          - /^testingWithDeployToInteg\/.*\/.*/
+  trigger_e2e_staging:
+    title: "Trigger the e2e-tests-staging pipeline"
+    stage: "e2e"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/e2e-tests-staging"
+      DETACH: true
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - TARGET_ENV="staging.admin"
+    when:
+      branch:
+        only:
+          - /^release\/\d+\.\d+\.\d+/
+  trigger_e2e_integ:
+    title: "Trigger the e2e-tests-integ pipeline"
+    stage: "e2e"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/e2e-tests-integ"
+      DETACH: true
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - TARGET_ENV="integ.admin"
+    when:
+      branch:
+        only:
+          - main
+          - /^testingWithDeployToInteg\/.*\/.*/

@@ -1,0 +1,4 @@
+class GeneralConstants:
+    NATGRID_GENERIC_JSB_CODE = "NG-JSB-GENERIC"
+    WORKOS_CREW_KEY_PREFIX = "workos_crew_data"
+    HISTORIC_INCIDENTS_LIMIT = 10

@@ -1,0 +1,102 @@
+* Create Project
+https://urbint.atlassian.net/browse/WS-200
+* Types
+** ProjectType
+#+begin_src graphql
+type ProjectType {
+  id: ID
+  name: String!
+  riskLevel: RiskLevel
+  startDate: Date!
+  endDate: Date!
+  locations(projectLocationId:ID): [ProjectLocation]
+
+  # New field
+  status: ProjectStatus
+}
+#+end_src
+** ProjectLocationInput
+#+begin_src graphql
+input ProjectLocationInput {
+  name: str!
+  latitude: str!
+  longitude: str!
+}
+#+end_src
+** CreateProjectInput
+#+begin_src graphql
+input CreateProjectInput {
+  name: str!
+  startDate: Date!
+  endDate: Date!
+  status: ProjectStatus!
+  locations: [ProjectLocationInput]
+}
+#+end_src
+** ProjectStatus enum
+#+begin_src graphql
+enum ProjectStatus {
+  PENDING
+  ACTIVE
+  COMPLETED
+}
+#+end_src
+* Interfaces
+N/A
+* Queries
+N/A
+* Mutations
+** Definition
+#+begin_src graphql
+type mutation {
+  createProject(project: CreateProjectInput!): ProjectType
+}
+#+end_src
+** Example Mutations
+*** Create Project and return its properties
+#+begin_src graphql
+mutation CreateProjectExample($project: CreateProjectInput!){
+  createProject(project: $project){
+    id
+    name
+    startDate
+    endDate
+    status
+  }
+}
+
+{
+  "project": {
+    "name": "My fun example project",
+    "startDate": "2021-12-06",
+    "endDate": "2022-01-01",
+    "status": "PENDING"
+  }
+}
+#+end_src
+*** Create Project with locations
+#+begin_src graphql
+mutation CreateProjectWithLocations($project: CreateProjectInput!){
+  createProject(project: $project){
+    id
+    name
+    startDate
+    endDate
+    status
+  }
+}
+
+{
+  "project": {
+    "name": "My fun example project",
+    "startDate": "2021-12-06",
+    "endDate": "2022-01-01",
+    "status": "PENDING",
+    "locations": [{
+        "name": "the beginning",
+        "latitude": "40.7831N",
+        "logitude": "73.9712W"
+      }]
+  }
+}
+#+end_src
