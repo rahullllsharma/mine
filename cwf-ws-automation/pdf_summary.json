@@ -1,0 +1,41 @@
+{
+  "summary": "The information below is to supporthe team read out. If any informationeeds to be updated, you can still makedits to this information by navigating back to the section. Last updated at: Wednesday, August 13, 2025, 1 23 07 AM GMT 5 30",
+  "jobInformation": "",
+  "briefingDate": "Monday, August 11, 2025",
+  "briefingTime": "02:51 PM",
+  "workLocation": "test",
+  "operatingHQ": "8th & Main",
+  "medicalEmergency": "",
+  "emergencyContact1": {
+    "name": "qwer",
+    "phone": "(123) 456-7890"
+  },
+  "emergencyContact2": {
+    "name": "wertyui",
+    "phone": "(123) 456-7890"
+  },
+  "emergencyNumbers": {
+    "c": "(478) 785 3700",
+    "y": "(470) 785 1000",
+    "emergency": "911"
+  },
+  "nearestHospital": "test",
+  "aedLocation": "Cab of truck",
+  "tasks": "Install, remove, oreplace plumbing fixtures (sink, faucet, toilet, shower) LOW",
+  "criticalRiskAreas": "Hoisted Loads Critical risk observed",
+  "workProcedures": "",
+  "distributionBulletins": "DB 8 01 Inspection Of Padmounted And Above Ground Equipment best work practice",
+  "siteConditions": "Insects, ticks, vermin, poisonous plants Insect repellant",
+  "standardRequiredPPE": "Hard Hat Glovesafety toe shoesafety glassesafety vest",
+  "attachments": {
+    "pdfs": []
+  },
+  "photos": "1",
+  "documents": "1 Test Export Urbint [shashank.pawar@urbint.com] Tuesday, May 27, 2025, 12 00 00 AM .pdf 103.634 KB 2025 08 11 2:54 PM Human Trafficking Hotline 1 (888) 373 7888",
+  "signOff": {
+    "name": "Alex Munro Apprentice",
+    "role": "function(h,o,u,n,d",
+    "id": 60162
+  },
+  "name1": "Alex Munro Apprentice, Distribution)60162 (function(h,o,u,n,d) { h=h[d]=h[d]||{q:[],on Ready:function(c){h.q.push(c)}} d=o.createlement(u);d.async=1;d.src=n=o.get Elements By Tag Name(u)[0 ;n.parent Node.insert Before(d,n) })(window,document,'script',' agent.com/datadog-rum-v4.js','DD_RUM') window.DD_RUM.on Ready(function() { window.DD_RUM.init({\"application Id\":\"1665b3e8-d999 47e0 9a95-e02c0ff962ba\",\"clientoken\":\"pub95db7817e6e7f9c1a48024fc16149701\",\"site\":\"datadoghq.com\",\"env\":\"integ\",\"service\":\"worker-safety- client\",\"version\":\"UNKNOWN\",\"silent Multiple Init\":true,\"sample Rate\" 100,\"premium Sample Rate\" 100,\"track Interactions\":true,\"default Privacy Level\" user-input\"}); DD_RUM.start Session Replay Recording(); })"
+}

@@ -1,0 +1,45 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - text: Worker Safety
+  - tablist:
+    - tab "Work Orders"
+    - tab "Map"
+    - tab "V1 Forms" [selected]
+    - tab "CWF Forms"
+    - tab "Insights"
+    - tab "Templates"
+    - tab "Admin"
+  - button "VK":
+    - img "VK"
+- main:
+  - link "All V1 Forms":
+    - /url: /forms
+  - heading "Job Safety Briefing" [level=4]
+  - note: UNKNOWN
+  - button
+  - tablist:
+    - tab "Form" [selected]
+    - tab "History"
+  - navigation:
+    - button "Job Information"
+    - button "Medical & Emergency"
+    - button "Tasks & Critical Risks"
+    - button "Energy Source Controls"
+    - button "Work Procedures"
+    - button "Site Conditions"
+    - button "Controls Assessment"
+    - button "Attachments"
+    - button "JSB Summary"
+    - button "Sign-Off"
+  - heading "Sign-Off" [level=2]
+  - button "Add Name"
+  - img
+  - button "share Share":
+    - img "share"
+    - text: Share
+  - text: Name * Search by Name or Employee ID Number
+  - button "Save and Complete"
+- alert: Worker Safety | Urbint
+```
