@@ -1,0 +1,3 @@
+mutation DeleteActivity($id: UUID!) {
+  deleteActivity(id: $id)
+}

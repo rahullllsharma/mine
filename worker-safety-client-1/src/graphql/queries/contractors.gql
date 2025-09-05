@@ -1,0 +1,6 @@
+query Contractors($orderBy: [OrderBy!]) {
+  contractors(orderBy: $orderBy) {
+    id
+    name
+  }
+}

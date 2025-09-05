@@ -1,0 +1,33 @@
+query LastAddedJobSafetyBriefing(
+  $projectLocationId: UUID
+  $filterOn: JSBFiltersOnEnum!
+) {
+  lastAddedJobSafetyBriefing(
+    filterOn: $filterOn
+    projectLocationId: $projectLocationId
+  ) {
+    contents {
+      workLocation {
+        address
+        description
+      }
+      nearestMedicalFacility {
+        address
+        description
+        city
+        distanceFromJob
+        phoneNumber
+        state
+        zip
+      }
+      aedInformation {
+        location
+      }
+      emergencyContacts {
+        name
+        phoneNumber
+        primary
+      }
+    }
+  }
+}

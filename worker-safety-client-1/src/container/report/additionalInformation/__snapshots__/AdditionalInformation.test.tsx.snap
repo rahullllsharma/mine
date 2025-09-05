@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdditionalInformation when the component renders should display two textarea fields 1`] = `
+<DocumentFragment>
+  <section>
+    <h5
+      class="font-semibold mb-4"
+    >
+      Progress Updates
+    </h5>
+    <div
+      class="mb-4"
+    >
+      <label
+        class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+      >
+        Comments
+      </label>
+      <textarea
+        aria-label="FieldTextArea"
+        class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+        name="additionalInformation.progress"
+      />
+    </div>
+  </section>
+  <section>
+    <h5
+      class="font-semibold mb-4"
+    >
+      Lessons Learned
+    </h5>
+    <div>
+      <label
+        class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+      >
+        Comments
+      </label>
+      <textarea
+        aria-label="FieldTextArea"
+        class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+        name="additionalInformation.lessons"
+      />
+    </div>
+  </section>
+</DocumentFragment>
+`;

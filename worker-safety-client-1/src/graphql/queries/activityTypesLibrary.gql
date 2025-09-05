@@ -1,0 +1,6 @@
+query ActivityTypesLibrary($orderBy: [OrderBy!]) {
+  activityTypesLibrary(orderBy: $orderBy) {
+    id
+    name
+  }
+}

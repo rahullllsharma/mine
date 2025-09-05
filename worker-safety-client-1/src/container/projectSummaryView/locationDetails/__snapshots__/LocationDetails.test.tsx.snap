@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationDetails should render correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <section>
+      <button
+        aria-controls="headlessui-disclosure-panel-3"
+        aria-expanded="true"
+        class="flex justify-between items-center w-full"
+        id="headlessui-disclosure-button-2"
+        type="button"
+      >
+        <header
+          class="text-brand-urbint-60 py-4"
+        >
+          <h5
+            class="font-semibold"
+          >
+            Daily Inspection Reports (2)
+          </h5>
+        </header>
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_down text-[1.375rem] leading-0 rotate-0"
+        />
+      </button>
+      <div>
+        <div
+          id="headlessui-disclosure-panel-3"
+        >
+          <div
+            class="bg-white shadow-10 rounded-lg mb-2.5 border-l-8 whitespace-break-spaces border-brand-gray-60"
+            data-testid="taskCard"
+          >
+            <header
+              class="flex justify-between items-center"
+            >
+              <div
+                class="flex flex-1 items-stretch h-auto p-3"
+              >
+                <div
+                  class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none cursor-default"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-pie_chart_25 text-xl text-brand-gray-60"
+                    />
+                    <div>
+                      <span
+                        class="text-action-label font-action-label text-neutrals-primary font-semibold"
+                      >
+                        Daily Inspection Report
+                      </span>
+                      <span
+                        class="text-tiny font-medium text-neutral-shade-58"
+                      >
+                        Created on 2 February 2022 at 09:32 by Test User
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+          <div
+            class="bg-white shadow-10 rounded-lg mb-2.5 border-l-8 whitespace-break-spaces border-brand-urbint-40"
+            data-testid="taskCard"
+          >
+            <header
+              class="flex justify-between items-center"
+            >
+              <div
+                class="flex flex-1 items-stretch h-auto p-3"
+              >
+                <div
+                  class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none cursor-default"
+                  role="button"
+                  tabindex="0"
+                >
+                  <div
+                    class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-circle_check text-xl text-brand-urbint-40"
+                    />
+                    <div>
+                      <span
+                        class="text-action-label font-action-label text-neutrals-primary font-semibold"
+                      >
+                        Daily Inspection Report
+                      </span>
+                      <span
+                        class="text-tiny font-medium text-neutral-shade-58"
+                      >
+                        Completed 2 February 2022 at 09:32 by Test User
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="grid gap-6 grid-cols-1 col-span-2 xl:grid-cols-auto-fit-list-card mt-6 xl:mt-4"
+    >
+      <section>
+        <button
+          aria-controls="headlessui-disclosure-panel-6"
+          aria-expanded="true"
+          class="flex justify-between items-center w-full"
+          id="headlessui-disclosure-button-5"
+          type="button"
+        >
+          <header
+            class="text-brand-urbint-60 py-4"
+          >
+            <h5
+              class="font-semibold"
+            >
+              Site Conditions (1)
+            </h5>
+          </header>
+          <i
+            aria-hidden="true"
+            class="ci-chevron_big_down text-[1.375rem] leading-0 rotate-0"
+          />
+        </button>
+        <div>
+          <div
+            id="headlessui-disclosure-panel-6"
+          >
+            <div
+              class="bg-white shadow-10 rounded-lg mb-2.5 border-l-8 whitespace-break-spaces border-data-blue-30"
+              data-testid="taskCard"
+            >
+              <header
+                class="flex justify-between items-center"
+              >
+                <div
+                  class="flex flex-1 items-stretch h-auto p-3"
+                >
+                  <div
+                    class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none"
+                    role="button"
+                    tabindex="0"
+                  >
+                    <div
+                      class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="ci-chevron_big_right text-xl"
+                      />
+                      <div>
+                        <span
+                          class="text-action-label font-action-label text-neutrals-primary font-semibold"
+                        >
+                          High Heat Index
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      class="flex flex-1 justify-start md:justify-center ml-2"
+                    >
+                      <div
+                        class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 mr-2"
+                        role="note"
+                      >
+                        <span
+                          class="flex items-center px-1"
+                        >
+                          <span
+                            class="text-tiny mx-1"
+                          >
+                            1H
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 undefined"
+                        role="note"
+                      >
+                        <span
+                          class="flex items-center px-1"
+                        >
+                          <span
+                            class="text-tiny mx-1"
+                          >
+                            1C
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </header>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <button
+          aria-controls="headlessui-disclosure-panel-9"
+          aria-expanded="true"
+          class="flex justify-between items-center w-full"
+          id="headlessui-disclosure-button-8"
+          type="button"
+        >
+          <header
+            class="text-brand-urbint-60 py-4"
+          >
+            <h5
+              class="font-semibold"
+            >
+              Activities (0)
+            </h5>
+          </header>
+          <i
+            aria-hidden="true"
+            class="ci-chevron_big_down text-[1.375rem] leading-0 rotate-0"
+          />
+        </button>
+        <div>
+          <div
+            id="headlessui-disclosure-panel-9"
+          >
+            <div
+              class="flex items-center py-2 text-neutral-shade-100 text-base"
+            >
+              <p
+                class="flex-1"
+              >
+                There are no activities scheduled for today
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldMultiSelect should render an empty paragraph if no default options is given when the "readOnly" is set 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Project managers
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FieldMultiSelect should render with the "MultiSelect" component 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 0 0 0;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.emotion-5 {
+  color: hsl(0, 0%, 50%);
+  grid-area: 1/1/2/3;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-6 {
+  background: 0;
+  border: 0;
+  caret-color: transparent;
+  font-size: inherit;
+  grid-area: 1/1/2/3;
+  outline: 0;
+  padding: 0;
+  width: 1px;
+  color: transparent;
+  left: -100px;
+  opacity: 0;
+  position: relative;
+  -webkit-transform: scale(.01);
+  -moz-transform: scale(.01);
+  -ms-transform: scale(.01);
+  transform: scale(.01);
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.emotion-8 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-8:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+<div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Project managers
+    </label>
+    <div
+      class=" emotion-0"
+    >
+      <span
+        class="emotion-1"
+        id="react-select-2-live-region"
+      />
+      <span
+        aria-atomic="false"
+        aria-live="polite"
+        aria-relevant="additions text"
+        class="emotion-1"
+      />
+      <div
+        class="w-full pr-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 cursor-pointer border-neutral-shade-26 text-neutral-shade-58 pl-3 emotion-3"
+        role="button"
+      >
+        <div
+          class=" emotion-4"
+        >
+          <div
+            class=" emotion-5"
+            id="react-select-2-placeholder"
+          >
+            Select...
+          </div>
+          <input
+            aria-autocomplete="list"
+            aria-controls="react-select-2-listbox"
+            aria-describedby="react-select-2-placeholder"
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-owns="react-select-2-listbox"
+            aria-readonly="true"
+            class="emotion-6"
+            id="react-select-2-input"
+            inputmode="none"
+            role="combobox"
+            tabindex="0"
+            value=""
+          />
+        </div>
+        <div
+          class=" emotion-7"
+        >
+          <div
+            aria-hidden="true"
+            class=" emotion-8"
+          >
+            <i
+              aria-hidden="true"
+              class="ci-chevron_down text-neutral-shade-58 text-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

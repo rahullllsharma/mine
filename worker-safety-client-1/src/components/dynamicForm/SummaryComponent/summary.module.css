@@ -1,0 +1,46 @@
+/* Summary component styles */
+
+/* Content background class to be applied only to content areas */
+.contentBackground {
+  background-color: #f3f4f6; /* gray-100 in Tailwind */
+}
+
+/* Container for summary elements */
+.summaryElementContainer {
+  margin-bottom: 1.5rem;
+}
+
+/* Style for the content area only (excluding title) */
+.summaryContent {
+  background-color: #f3f4f6; /* gray-100 in Tailwind */
+}
+
+/* Ensure section headings/titles are not affected */
+.summaryTitle {
+  background-color: transparent !important;
+}
+
+/* Ensure labels and titles are not affected */
+.fieldWrapper label,
+.fieldWrapper .text-lg,
+.fieldWrapper .text-xl {
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* Handle form inputs to maintain white background */
+.fieldWrapper input,
+.fieldWrapper select,
+.fieldWrapper textarea {
+  background-color: white !important;
+}
+
+/* Target form field value displays, not their labels */
+.fieldWrapper > div > div:not(label) {
+  background-color: #f3f4f6; /* gray-100 in Tailwind */
+}
+
+/* Handle hazards, tasks, and other complex components */
+.fieldWrapper > div > div:not(.text-lg):not(label) {
+  background-color: #f3f4f6; /* gray-100 in Tailwind */
+}

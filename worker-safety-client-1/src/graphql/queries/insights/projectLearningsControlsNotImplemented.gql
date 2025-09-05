@@ -1,0 +1,11 @@
+query ProjectLearningsControlsNotImplemented($filters: ProjectLearningsInput!) {
+  projectLearnings(projectLearningsInput: $filters) {
+    notImplementedControls {
+      percent
+      libraryControl {
+        id
+        name
+      }
+    }
+  }
+}

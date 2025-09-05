@@ -1,0 +1,12 @@
+query TasksLibrary($orderBy: [LibraryTaskOrderBy!]) {
+  tasksLibrary(orderBy: $orderBy) {
+    id
+    name
+    activitiesGroups {
+      name
+    }
+    workTypes {
+      name
+    }
+  }
+}

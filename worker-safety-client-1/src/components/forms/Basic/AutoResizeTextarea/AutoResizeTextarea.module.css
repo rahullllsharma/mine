@@ -1,0 +1,17 @@
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+.autoResizeTextArea {
+  grid-area: 1 / 1 / 2 / 2;
+  @apply resize-none overflow-hidden;
+}
+
+.autoResizeTextAreaContainer {
+  @apply grid;
+}
+
+.autoResizeTextAreaContainer::after {
+  content: attr(data-replicated-value) " " !important;
+  grid-area: 1 / 1 / 2 / 2;
+  @apply whitespace-pre-wrap invisible break-all;
+}

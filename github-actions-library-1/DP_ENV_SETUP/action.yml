@@ -1,0 +1,51 @@
+name: "DP_ENV_SETUP"
+description: "Set up environment variables for Django"
+
+inputs:
+  POSTGRES_HOST:
+    description: "Postgres host"
+    required: true
+  POSTGRES_PORT:
+    description: "Postgres port"
+    required: true
+  REDIS_HOST:
+    description: "Redis host"
+    required: true
+  REDIS_PORT:
+    description: "Redis port"
+    required: true
+  DEBUG:
+    description: "Debug mode"
+    required: true
+  TEST:
+    description: "Test mode"
+    required: true
+  CI:
+    description: "CI mode"
+    required: true
+  ENABLE_GCS:
+    description: "Enable Google Cloud Storage"
+    required: true
+  PROJECT:
+    description: "Project name"
+    required: true
+  DJANGO_SETTINGS_MODULE:
+    description: "Django settings module"
+    required: true  # Add this input
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set Environment Variables
+      run: |
+        echo "POSTGRES_HOST=${{ inputs.POSTGRES_HOST }}" >> $GITHUB_ENV
+        echo "POSTGRES_PORT=${{ inputs.POSTGRES_PORT }}" >> $GITHUB_ENV
+        echo "REDIS_HOST=${{ inputs.REDIS_HOST }}" >> $GITHUB_ENV
+        echo "REDIS_PORT=${{ inputs.REDIS_PORT }}" >> $GITHUB_ENV
+        echo "DEBUG=${{ inputs.DEBUG }}" >> $GITHUB_ENV
+        echo "TEST=${{ inputs.TEST }}" >> $GITHUB_ENV
+        echo "CI=${{ inputs.CI }}" >> $GITHUB_ENV
+        echo "ENABLE_GCS=${{ inputs.ENABLE_GCS }}" >> $GITHUB_ENV
+        echo "PROJECT=${{ inputs.PROJECT }}" >> $GITHUB_ENV
+        echo "DJANGO_SETTINGS_MODULE=${{ inputs.DJANGO_SETTINGS_MODULE }}" >> $GITHUB_ENV  # Set the DJANGO_SETTINGS_MODULE
+      shell: bash

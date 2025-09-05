@@ -1,0 +1,11 @@
+mutation saveTemplateFormFilters($userId: UUID!, $data: String!) {
+  saveUserPreferences(
+    data: $data
+    userId: $userId
+    entityType: CWFTemplateFormFilters
+  ) {
+    id
+    contents
+    entityType
+  }
+}

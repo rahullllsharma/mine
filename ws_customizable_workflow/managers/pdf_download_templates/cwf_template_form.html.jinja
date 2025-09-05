@@ -1,0 +1,1687 @@
+{% set energy_colors = { "SOUND": "#72BF4B", "RADIATION": "#F1A224",
+"BIOLOGICAL": "#5CC9E6", "CHEMICAL": "#B7D771", "TEMPERATURE": "#E55142",
+"GRAVITY": "#28B895", "MOTION": "#FADB08", "MECHANICAL": "#C61D62",
+"ELECTRICAL": "#F7B219", "PRESSURE": "#AA509E", "UNSPECIFIED": "#C0C7C9" } %} {%
+macro render_question(section_item, component_data, energy_colors) %} {% set
+image_types = ['image', 'photo', 'picture'] %} {% set document_types =
+['document', 'file', 'pdf', 'doc', 'docx'] %} {% set attachment_types =
+['attachment'] %} {% set choice_types = ['choice', 'dropdown', 'yes_or_no'] %}
+{# Remove 'activities_and_tasks' and 'site_conditions' from special_types #} {%
+set special_types = ['contractor', 'report_date', 'summary',
+'hazards_and_controls', 'personnel_component'] %} {% set rich_text_types = ['rich_text_editor'] %} {#
+Skip rendering for activities_and_tasks and site_conditions as general questions
+#} {% if section_item.type in ['activities_and_tasks', 'site_conditions', 'personnel_component'] %} {#
+Do not render as a general question, handled elsewhere #} {% elif
+section_item.type == 'hazards_and_controls' %} {{
+render_component(component_data, energy_colors) }} {% elif section_item.type in
+['input_text', 'input_number', 'input_phone_number', 'input_email'] %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  {% if section_item.properties.hint_text %}
+  <div class="question-hint">{{ section_item.properties.hint_text }}</div>
+  {% endif %} {% if section_item.properties.description %}
+  <div class="question-description">
+    {{ section_item.properties.description }}
+  </div>
+  {% endif %}
+  <div class="question-answer">
+    {% if section_item.type == 'input_phone_number' and
+    section_item.properties.user_value %}
+    <!-- Phone SVG Icon -->
+    <svg
+      style="vertical-align: middle; margin-right: 6px"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="#007899"
+    >
+      <path
+        d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4.5A1 1 0 013 3.5h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"
+        fill="#007899"
+      />
+    </svg>
+    <span style="color: #007899">{{ section_item.properties.user_value }}</span>
+    {% elif section_item.type == 'input_email' and
+    section_item.properties.user_value %}
+    <!-- Email SVG Icon -->
+    <svg
+      style="vertical-align: middle; margin-right: 6px"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <rect
+        x="3"
+        y="5"
+        width="18"
+        height="14"
+        rx="2"
+        stroke="#007899"
+        stroke-width="2"
+        fill="none"
+      />
+      <path
+        d="M3 7l9 6 9-6"
+        stroke="#007899"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        fill="none"
+      />
+    </svg>
+    <span style="color: #007899">{{ section_item.properties.user_value }}</span>
+    {% elif section_item.properties.user_value is iterable and
+    section_item.properties.user_value is not string %} {{
+    section_item.properties.user_value | join(', ') }} {% elif
+    section_item.properties.user_value is boolean %} {{
+    section_item.properties.user_value | string }} {% elif
+    section_item.properties.user_value %} {{ section_item.properties.user_value
+    }} {% else %}
+    <em>No answer provided</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %} {% if section_item.properties.user_attachments %}
+  <div class="question-attachments">
+    <strong>Attachments:</strong>
+    <div class="attachment-links">
+      {% for url in section_item.properties.user_attachments %}
+      <span style="font-size: 1.5em; vertical-align: middle">•</span>
+      <a href="{{ url }}" target="_blank" class="attachment-link">
+        Download Attachment {{ loop.index }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type == 'input_location' %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  {% if section_item.properties.hint_text %}
+  <div class="question-hint">{{ section_item.properties.hint_text }}</div>
+  {% endif %} {% if section_item.properties.description %}
+  <div class="question-description">
+    {{ section_item.properties.description }}
+  </div>
+  {% endif %}
+  <div class="question-answer">
+    {{ render_location_field(section_item.properties.user_value) }}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %} {% if section_item.properties.user_attachments %}
+  <div class="question-attachments">
+    <strong>Attachments:</strong>
+    <div class="attachment-links">
+      {% for url in section_item.properties.user_attachments %}
+      <span style="font-size: 1.5em; vertical-align: middle">•</span>
+      <a href="{{ url }}" target="_blank" class="attachment-link">
+        Download Attachment {{ loop.index }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type == 'location' %}
+  {{ render_location_component(component_data.location_data, section_item.properties.title) }}
+
+{% elif section_item.type == 'nearest_hospital' %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  {% if section_item.properties.hint_text %}
+  <div class="question-hint">{{ section_item.properties.hint_text }}</div>
+  {% endif %} {% if section_item.properties.description %}
+  <div class="question-description">
+    {{ section_item.properties.description }}
+  </div>
+  {% endif %}
+  <div class="question-answer">
+    {{ render_nearest_hospital_field(component_data.nearest_hospital) }}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %} {% if section_item.properties.user_attachments %}
+  <div class="question-attachments">
+    <strong>Attachments:</strong>
+    <div class="attachment-links">
+      {% for url in section_item.properties.user_attachments %}
+      <span style="font-size: 1.5em; vertical-align: middle">•</span>
+      <a href="{{ url }}" target="_blank" class="attachment-link">
+        Download Attachment {{ loop.index }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type in ['input_date_time', 'report_date'] %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  <div class="question-answer">
+    {% set val = section_item.properties.user_value %} 
+    {% if val %} 
+      {# Handle date range: from/to #} 
+      {% if val.from is defined and val.to is defined %}
+        <span>
+          <small style="color:#3c4f55"><strong>From</strong></small><br/>
+          {{ val.from | datetimeformat('%b %d, %Y, %H:%M %p') }} <br/>
+          <small style="color:#3c4f55"><strong>To</strong></small><br/> 
+          {{ val.to | datetimeformat('%b %d, %Y, %H:%M %p') }}
+        </span>
+      {# Handle value property (single date/datetime) #} 
+      {% elif val.value is defined %}
+        {% if section_item.properties.selected_type == 'date_only' %}
+          {{ val.value | datetimeformat('%b %d, %Y') }}
+        {% elif section_item.properties.selected_type == 'time_only' %}
+          {{ val.value | datetimeformat('%I:%M %p') }}
+        {% else %}
+          {{ val.value | datetimeformat('%b %d, %Y, %H:%M %p') }}
+        {% endif %}
+      {# Handle direct string or datetime #} 
+      {% else %} 
+        {% if section_item.properties.selected_type == 'date_only' %}
+          {{ val | datetimeformat('%b %d, %Y') }}
+        {% elif section_item.properties.selected_type == 'time_only' %}
+          {{ val | datetimeformat('%I:%M %p') }}
+        {% else %}
+          {{ val | datetimeformat('%b %d, %Y, %H:%M %p') }}
+        {% endif %}
+      {% endif %} 
+    {% else %}
+      <em>No date/time provided</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type in ['choice', 'dropdown', 'yes_or_no'] %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  <div class="question-answer">
+    {% if section_item.type == 'dropdown' and section_item.properties.user_value %}
+      {% for val in section_item.properties.user_value %}
+        {% if val == 'other' and section_item.properties.user_other_value %}
+          <div class="answer-title"><strong>Other:</strong> {{ section_item.properties.user_other_value }}</div>
+        {% else %}
+          <div>{{ val }}</div>
+        {% endif %}
+      {% endfor %}
+    {% elif section_item.properties.user_value is iterable and section_item.properties.user_value is not string %}
+      <ul style="margin: 0; padding-left: 20px;">
+        {% for val in section_item.properties.user_value %}
+          <li>{{ val }}</li>
+        {% endfor %}
+      </ul>
+    {% elif section_item.properties.user_value is boolean %}
+      {{ section_item.properties.user_value | string }}
+    {% elif section_item.properties.user_value %}
+      {{ section_item.properties.user_value }}
+    {% else %}
+      <em>No answer provided</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+  {% if section_item.properties.user_attachments %}
+  <div class="question-attachments">
+    <strong>Attachments:</strong>
+    <div class="attachment-links">
+      {% for url in section_item.properties.user_attachments %}
+      <span style="font-size: 1.5em; vertical-align: middle">•</span>
+      <a href="{{ url }}" target="_blank" class="attachment-link">
+        Download Attachment {{ loop.index }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type == 'checkbox' %}
+<div class="question">
+  <div class="question-title">{{ section_item.properties.title }}</div>
+  {% if section_item.properties.hint_text %}
+  <div class="question-hint">{{ section_item.properties.hint_text }}</div>
+  {% endif %}
+  {% if section_item.properties.description %}
+  <div class="question-description">
+    {{ section_item.properties.description }}
+  </div>
+  {% endif %}
+  <div class="question-answer">
+    {% if section_item.properties.user_value and section_item.properties.user_value|length > 0 %}
+      {% for selected_value in section_item.properties.user_value %}
+        {% for option in section_item.properties.options %}
+          {% if option.value == selected_value %}
+            <div class="checkbox-item" style="margin-bottom: 8px;">
+              <span style="color: #007899; font-weight: 600;">✓</span>
+              {% if option.label %}
+                {{ option.label }}
+              {% else %}
+                {% if option.url and option.url_display_text %}
+                  <a href="{{ option.url }}" target="_blank" style="color: #007899; text-decoration: none;">
+                    {{ option.url_display_text }}
+                  </a>
+                {% elif option.url %}
+                  <a href="{{ option.url }}" target="_blank" style="color: #007899; text-decoration: none;">
+                    {{ option.url }}
+                  </a>
+                {% else %}
+                  Option {{ option.value }}
+                {% endif %}
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    {% else %}
+      <em>No options selected</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+  {% if section_item.properties.user_attachments %}
+  <div class="question-attachments">
+    <strong>Attachments:</strong>
+    <div class="attachment-links">
+      {% for url in section_item.properties.user_attachments %}
+      <span style="font-size: 1.5em; vertical-align: middle">•</span>
+      <a href="{{ url }}" target="_blank" class="attachment-link">
+        Download Attachment {{ loop.index }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type in image_types or (section_item.type == 'attachment'
+and section_item.properties.attachment_type == 'photo') %}
+<div class="question image-question" style="page-break-inside: avoid">
+  <div class="question-title">
+    {{ section_item.properties.title or 'Image' }}
+  </div>
+  <div class="question-answer">
+    {% set images = section_item.properties.user_attachments if
+    section_item.properties.user_attachments else
+    section_item.properties.user_value %} {% if images %} {% for img in images
+    %} {% if img.signed_url %}
+    <img
+      src="{{ img.signed_url }}"
+      alt="{{ img.display_name or 'Image ' ~ loop.index }}"
+      style="
+        max-width: 350px;
+        max-height: 350px;
+        display: block;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      "
+    />
+    {% if img.description %}
+    <div>{{ img.description }}</div>
+    {% endif %} {% else %}
+    <img
+      src="{{ img }}"
+      alt="Image {{ loop.index }}"
+      style="
+        max-width: 350px;
+        max-height: 350px;
+        display: block;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      "
+    />
+    {% endif %} {% endfor %} {% else %}
+    <em>No image provided</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type in document_types or (section_item.type ==
+'attachment' and section_item.properties.attachment_type == 'document') %}
+<div class="question document-question">
+  <div class="question-title">
+    {{ section_item.properties.title or 'Document' }}
+  </div>
+  <div class="question-answer">
+    {% set docs = section_item.properties.user_attachments if
+    section_item.properties.user_attachments else
+    section_item.properties.user_value %} {% if docs %} {% for doc in docs %} {%
+    if doc.signed_url %}
+    <a href="{{ doc.signed_url }}" target="_blank">
+      <span style="font-size: 1.5em; vertical-align: middle">&bull;</span>
+      {{ doc.display_name or 'Document ' ~ loop.index }} </a
+    ><br />
+    {% else %}
+    <a href="{{ doc }}" target="_blank">
+      <span style="font-size: 1.5em, vertical-align: middle">&bull;</span>
+      Document {{ loop.index }} </a
+    ><br />
+    {% endif %} {% endfor %} {% else %}
+    <em>No document provided</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+</div>
+
+{% elif section_item.type in rich_text_types %}
+<div class="question rich-text">
+  <div class="question-answer">{{ section_item.properties.data | safe }}</div>
+</div>
+
+{% elif section_item.type in special_types and section_item.type != 'summary' %}
+<div class="question">
+  <div class="question-title">
+    {% if section_item.properties.title %}
+      {{ section_item.properties.title }}
+    {% elif section_item.type == 'contractor' %}
+      Contractor
+    {% elif section_item.type == 'region' %}
+      Region
+    {% elif section_item.type == 'report_date' %}
+      Report Date
+    {% elif section_item.type == 'personnel_component' %}
+      Personnel
+    {% else %}
+      {{ section_item.type|replace('_', ' ')|title }}
+    {% endif %}
+  </div>
+  <div class="question-answer">
+    {% if section_item.type == 'contractor' %}
+      {% if section_item.properties.user_value %}
+        {% if section_item.properties.user_value is iterable and section_item.properties.user_value is not string %}
+          {% if section_item.properties.user_value|length > 0 %}
+            {% set contractor = section_item.properties.user_value[0] %}
+            {% if contractor is mapping %}
+              {% if contractor.label %}
+                {{ contractor.label }}
+              {% elif contractor.name %}
+                {{ contractor.name }}
+              {% elif contractor.value %}
+                {{ contractor.value }}
+              {% else %}
+                {{ contractor }}
+              {% endif %}
+            {% else %}
+              {{ contractor }}
+            {% endif %}
+          {% else %}
+            <em>No contractor selected</em>
+          {% endif %}
+        {% elif section_item.properties.user_value is mapping %}
+          {% if section_item.properties.user_value.label %}
+            {{ section_item.properties.user_value.label }}
+          {% elif section_item.properties.user_value.name %}
+            {{ section_item.properties.user_value.name }}
+          {% elif section_item.properties.user_value.value %}
+            {{ section_item.properties.user_value.value }}
+          {% else %}
+            {{ section_item.properties.user_value }}
+          {% endif %}
+        {% else %}
+          {{ section_item.properties.user_value }}
+        {% endif %}
+      {% else %}
+        <em>No contractor selected</em>
+      {% endif %}
+    {% elif section_item.type == 'region' %}
+      {% if section_item.properties.user_value %}
+        {% if section_item.properties.user_value is iterable and section_item.properties.user_value is not string %}
+          {% if section_item.properties.user_value|length > 0 %}
+            {% set region = section_item.properties.user_value[0] %}
+            {% if region is mapping %}
+              {% if region.label %}
+                {{ region.label }}
+              {% elif region.name %}
+                {{ region.name }}
+              {% elif region.value %}
+                {{ region.value }}
+              {% else %}
+                {{ region }}
+              {% endif %}
+            {% else %}
+              {{ region }}
+            {% endif %}
+          {% else %}
+            <em>No region selected</em>
+          {% endif %}
+        {% elif section_item.properties.user_value is mapping %}
+          {% if section_item.properties.user_value.label %}
+            {{ section_item.properties.user_value.label }}
+          {% elif section_item.properties.user_value.name %}
+            {{ section_item.properties.user_value.name }}
+          {% elif section_item.properties.user_value.value %}
+            {{ section_item.properties.user_value.value }}
+          {% else %}
+            {{ section_item.properties.user_value }}
+          {% endif %}
+        {% else %}
+          {{ section_item.properties.user_value }}
+        {% endif %}
+      {% else %}
+        <em>No region selected</em>
+      {% endif %}
+    {% elif section_item.properties.user_value is iterable and
+    section_item.properties.user_value is not string %} {{
+    section_item.properties.user_value | join(', ') }} {% elif
+    section_item.properties.user_value %} {{ section_item.properties.user_value
+    }} {% else %}
+    <em>No data provided</em>
+    {% endif %}
+  </div>
+</div>
+
+{% elif section_item.type == 'sub_page' %}
+<div
+  class="sub-page-section"
+  style="margin-top: 24px; margin-bottom: 24px"
+>
+  {% if section_item.properties.description %}
+  <p style="margin-bottom: 12px">{{ section_item.properties.description }}</p>
+  {% endif %}
+  {{ render_page_items(section_item.contents, component_data, energy_colors, false) }}
+</div>
+
+{% else %} {% if section_item.type != 'summary' %}
+<div class="question">
+  <div class="question-title">
+    {{ section_item.properties.title or section_item.type|capitalize }} Field
+  </div>
+  <div class="question-answer">
+    {% if section_item.properties.user_value %} {{
+    section_item.properties.user_value }} {% elif
+    section_item.properties.user_attachments %} {% for url in
+    section_item.properties.user_attachments %}
+    <a href="{{ url }}" target="_blank">Download File {{ loop.index }}</a><br />
+    {% endfor %} {% else %}
+    <em>Unsupported or empty field type: {{ section_item.type }}</em>
+    {% endif %}
+  </div>
+  {% if section_item.properties.user_comments %}
+  <div class="question-comments">
+    <strong>Comments:</strong> {{ section_item.properties.user_comments }}
+  </div>
+  {% endif %}
+</div>
+{% endif %} {% endif %} {% endmacro %} {% macro render_component(component_data, energy_colors) %} 
+  {{ render_hazards_controls(component_data, energy_colors) }}
+{% endmacro %} {% macro
+render_summary(items, component_data, energy_colors) %}
+  {% for item in items %}
+    {% if item.properties.include_in_summary %}
+      {{ render_question(item, component_data, energy_colors) }}
+    {% endif %}
+    {% if item.contents is defined and item.contents %}
+      {{ render_summary(item.contents, component_data, energy_colors) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %} {% macro render_summary_items(items, component_data, energy_colors) %}
+  {% for item in items %}
+    {% if item.type == 'site_conditions' %}
+      {% if component_data.site_conditions is defined %}
+        <div class="site-conditions-list">
+          <div class="question-title">Site Conditions</div>
+          {% for cond in component_data.site_conditions if cond.selected %}
+            <div class="site-condition-card">
+              <div class="site-condition-title">
+                {{ cond.librarySiteCondition.name if cond.librarySiteCondition and cond.librarySiteCondition.name else cond.name }}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% elif item.type == 'activities_and_tasks' %}
+      {% if component_data.activities_tasks is defined %}
+        <div class="activities-tasks-list">
+          <h4 style="margin-bottom: 10px; color: #041e25">Activities & Tasks</h4>
+          {% for activity in component_data.activities_tasks %}
+            <div class="activity-group">
+              <div class="activity-title">{{ activity.name }}</div>
+              {% for task in activity.tasks %}
+                {% set risk = task.riskLevel|upper %}
+                {% if risk == 'LOW' %}
+                  {% set risk_class = 'risk-low' %}
+                  {% set risk_label = '^LOW' %}
+                {% elif risk == 'MEDIUM' %}
+                  {% set risk_class = 'risk-medium' %}
+                  {% set risk_label = '~ MEDIUM' %}
+                {% elif risk == 'HIGH' %}
+                  {% set risk_class = 'risk-high' %}
+                  {% set risk_label = '^ HIGH' %}
+                {% else %}
+                  {% set risk_class = 'risk-default' %}
+                  {% set risk_label = risk %}
+                {% endif %}
+                <div class="activity-task-card {{ risk_class }}">
+                  <span style="font-weight: 600">{{ task.name }}</span>
+                  <span class="risk-label {{ risk_class }}-label">
+                    {{ risk_label }}
+                  </span>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% elif item.type == 'hazards_and_controls' %}
+      {{ render_component(component_data, energy_colors) }}
+    {% elif item.type == 'personnel_component' %}
+      {{ render_personnel_component(item.properties.user_value, item.properties.attributes) }}
+    {% elif item.type == 'section' or item.type == 'sub_page' %}
+      {{ render_summary_items(item.contents, component_data, energy_colors) }}
+    {% elif item.type != 'summary' %}
+      {{ render_question(item, component_data, energy_colors) }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{# --- Macros for special components --- #}
+{% macro render_site_conditions(site_conditions) %}
+  {% if site_conditions | selectattr('selected') | list | length > 0 %}
+    <div class="site-conditions-list">
+      <div class="question-title">Site Conditions</div>
+      {% for cond in site_conditions if cond.selected %}
+        <div class="site-condition-card">
+          <div class="site-condition-title">
+            {{ cond.librarySiteCondition.name if cond.librarySiteCondition and cond.librarySiteCondition.name else cond.name }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="site-conditions-list">
+      <div class="question-title">Site Conditions</div>
+      <div style="color: #839296; font-style: italic; padding: 12px 0 0 2px;">
+        There are currently no Site Conditions for the selected Work Dates and Times.
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro render_activities_tasks(activities_tasks) %}
+  {% if activities_tasks | length > 0 %}
+    <div class="activities-tasks-list">
+      <h4 style="margin-bottom: 10px; color: #041e25">Activities & Tasks</h4>
+      {% for activity in activities_tasks %}
+        <div class="activity-group">
+          <div class="activity-title">{{ activity.name }}</div>
+          {% for task in activity.tasks %}
+            {% set risk = task.riskLevel|upper %}
+            {% if risk == 'LOW' %}
+              {% set risk_class = 'risk-low' %}
+              {% set risk_label = '^LOW' %}
+            {% elif risk == 'MEDIUM' %}
+              {% set risk_class = 'risk-medium' %}
+              {% set risk_label = '~ MEDIUM' %}
+            {% elif risk == 'HIGH' %}
+              {% set risk_class = 'risk-high' %}
+              {% set risk_label = '^ HIGH' %}
+            {% else %}
+              {% set risk_class = 'risk-default' %}
+              {% set risk_label = risk %}
+            {% endif %}
+            <div class="activity-task-card {{ risk_class }}">
+              <span style="font-weight: 600">{{ task.name }}</span>
+              <span class="risk-label {{ risk_class }}-label">
+                {{ risk_label }}
+              </span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="activities-tasks-list">
+      <h4 style="margin-bottom: 10px; color: #041e25">Activities & Tasks</h4>
+      <div style="color: #839296; font-style: italic; padding: 12px 0 0 2px;">
+        There are currently no Activities or Tasks for the selected Work Dates and Times.
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro render_hazards_controls(component_data, energy_colors) %}
+  {# Check if component_data and hazards_controls exist #}
+  {% if not component_data or not component_data.hazards_controls %}
+    <div class="hazards-section">
+      <h3 style="font-weight: 700; margin-bottom: 18px">Hazards and Controls</h3>
+      <div style="color: #839296; font-style: italic; padding: 12px 0 0 2px;">
+        No hazards and controls data available.
+      </div>
+    </div>
+    {% set macro_return = '' %}
+    {{ macro_return }}
+  {% else %}
+  {# Define which energy types should be considered "High Energy" #}
+  {% set high_energy_types = ['ELECTRICAL', 'MECHANICAL', 'TEMPERATURE', 'PRESSURE', 'RADIATION'] %}
+  
+  {# Collect High Energy Hazards from tasks #}
+  {% set high_energy_hazards = [] %}
+  {% set seen_hazard_ids = [] %}
+  {% if component_data.hazards_controls and component_data.hazards_controls.tasks %}
+    {% for task in component_data.hazards_controls.tasks %}
+      {% for hazard in task.hazards %}
+        {% if hazard.isApplicable and hazard.id not in seen_hazard_ids %}
+          {# Check if hazard is high energy (either by level OR by energy type) #}
+          {% set is_high_energy = (hazard.selected != false and (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types)) %}
+          {% if is_high_energy %}
+            {# Include hazards that have selected controls OR have no controls implemented #}
+            {% set ns = namespace(has_selected=false) %}
+            {% for control in hazard.controls %}
+              {% if control.selected == true %}
+                {% set ns.has_selected = true %}
+              {% endif %}
+            {% endfor %}
+            {% if ns.has_selected or hazard.noControlsImplemented %}
+              {% set _ = high_energy_hazards.append(hazard) %}
+              {% set _ = seen_hazard_ids.append(hazard.id) %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  {# Collect High Energy Hazards from manually added hazards #}
+  {% if component_data.hazards_controls and component_data.hazards_controls.manually_added_hazards %}
+    {% for hazard in component_data.hazards_controls.manually_added_hazards %}
+      {% if hazard.id not in seen_hazard_ids %}
+        {# Check if hazard is high energy (either by level OR by energy type) #}
+        {% set is_high_energy = (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types) %}
+        {% if is_high_energy %}
+          {# Include hazards that have selected controls OR have no controls implemented #}
+          {% set ns = namespace(has_selected=false) %}
+          {% for control in hazard.controls %}
+            {% if control.selected == true %}
+              {% set ns.has_selected = true %}
+            {% endif %}
+          {% endfor %}
+          {% if ns.has_selected or hazard.noControlsImplemented %}
+            {% set _ = high_energy_hazards.append(hazard) %}
+            {% set _ = seen_hazard_ids.append(hazard.id) %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {# Collect High Energy Hazards from site conditions #}
+  {% if component_data.hazards_controls and component_data.hazards_controls.site_conditions %}
+    {% for hazard in component_data.hazards_controls.site_conditions %}
+      {% if hazard.id not in seen_hazard_ids %}
+        {# Check if hazard is high energy (either by level OR by energy type) #}
+        {% set is_high_energy = (hazard.selected != false and (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types)) %}
+        {% if is_high_energy %}
+          {# Include hazards that have selected controls OR have no controls implemented #}
+          {% set ns = namespace(has_selected=false) %}
+          {% for control in hazard.controls %}
+            {% if control.selected == true %}
+              {% set ns.has_selected = true %}
+            {% endif %}
+          {% endfor %}
+          {% if ns.has_selected or hazard.noControlsImplemented %}
+            {% set _ = high_energy_hazards.append(hazard) %}
+            {% set _ = seen_hazard_ids.append(hazard.id) %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {# Collect Other Hazards from tasks #}
+  {% set other_hazards = [] %}
+  {% if component_data.hazards_controls and component_data.hazards_controls.tasks %}
+    {% for task in component_data.hazards_controls.tasks %}
+      {% for hazard in task.hazards %}
+        {% if hazard.isApplicable and hazard.id not in seen_hazard_ids %}
+          {# Check if hazard is NOT high energy #}
+          {% set is_high_energy = (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types) %}
+          {% if not is_high_energy %}
+            {# Include hazards that have selected controls OR have no controls implemented #}
+            {% set ns = namespace(has_selected=false) %}
+            {% for control in hazard.controls %}
+              {% if control.selected == true %}
+                {% set ns.has_selected = true %}
+              {% endif %}
+            {% endfor %}
+            {% if ns.has_selected or hazard.noControlsImplemented %}
+              {% set _ = other_hazards.append(hazard) %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}
+  {% endif %}
+
+  {# Collect Other Hazards from manually added hazards #}
+  {% if component_data.hazards_controls and component_data.hazards_controls.manually_added_hazards %}
+    {% for hazard in component_data.hazards_controls.manually_added_hazards %}
+      {% if hazard.id not in seen_hazard_ids %}
+        {# Check if hazard is NOT high energy #}
+        {% set is_high_energy = (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types) %}
+        {% if not is_high_energy %}
+          {# Include hazards that have selected controls OR have no controls implemented #}
+          {% set ns = namespace(has_selected=false) %}
+          {% for control in hazard.controls %}
+            {% if control.selected == true %}
+              {% set ns.has_selected = true %}
+            {% endif %}
+          {% endfor %}
+          {% if ns.has_selected or hazard.noControlsImplemented %}
+            {% set _ = other_hazards.append(hazard) %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  {# Collect Other Hazards from site conditions #}
+  {% if component_data.hazards_controls and component_data.hazards_controls.site_conditions %}
+    {% for hazard in component_data.hazards_controls.site_conditions %}
+      {% if hazard.id not in seen_hazard_ids %}
+        {# Check if hazard is NOT high energy #}
+        {% set is_high_energy = (hazard.energyLevel == 'HIGH_ENERGY' or hazard.energyType in high_energy_types) %}
+        {% if not is_high_energy %}
+          {# Include hazards that have selected controls OR have no controls implemented #}
+          {% set ns = namespace(has_selected=false) %}
+          {% for control in hazard.controls %}
+            {% if control.selected == true %}
+              {% set ns.has_selected = true %}
+            {% endif %}
+          {% endfor %}
+          {% if ns.has_selected or hazard.noControlsImplemented %}
+            {% set _ = other_hazards.append(hazard) %}
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <div class="hazards-section">
+    <h3 style="font-weight: 700; margin-bottom: 18px">Hazards and Controls</h3>
+    
+    {# HIGH ENERGY HAZARDS Section #}
+    {% if high_energy_hazards|length > 0 %}
+      <div style="margin-bottom: 24px;">
+        <h4 style="font-weight: 600; margin-bottom: 12px; color: #041e25; font-size: 1.1em;">High Energy Hazards</h4>
+        {% set grouped_high_energy = {} %}
+        {% for hazard in high_energy_hazards %}
+          {% set etype = hazard.energyType|upper %}
+          {% if grouped_high_energy[etype] is not defined %}
+            {% set _ = grouped_high_energy.update({etype: []}) %}
+          {% endif %}
+          {% set _ = grouped_high_energy[etype].append(hazard) %}
+        {% endfor %}
+        
+        {% for etype, hazards in grouped_high_energy.items() %}
+          <div class="hazard-card" style="border: 1.5px solid {{ energy_colors.get(etype, 'rgb(242, 193, 75)') }}; border-radius: 12px; margin-bottom: 18px; background: #fff; page-break-inside: avoid; break-inside: avoid;">
+            <div class="hazard-header" style="background: {{ energy_colors.get(etype, 'rgb(242, 193, 75)') }};">
+              <img src="{{ hazards[0].imageUrl or 'https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg' }}" alt="Hazard Icon" style="width: 28px; height: 28px;"/>
+              {{ etype|replace("_", " ")|capitalize }}
+            </div>
+            {% for hazard in hazards %}
+              <div class="hazard-content-container">
+                <div class="hazard-title" style="display: flex; align-items: center; gap: 8px;">
+                  <img src="{{ hazard.imageUrl or 'https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg' }}" alt="Hazard Icon" style="width: 20px; height: 20px;"/>
+                  {{ hazard.name }}
+                </div>
+                <div class="hazard-controls-label">Controls</div>
+                {% if hazard.noControlsImplemented %}
+                  <div class="hazard-no-controls">No controls implemented</div>
+                {% else %}
+                  <div class="hazard-controls-list">
+                    {% for control in hazard.controls %}
+                      {% if control.selected == true %}
+                        <div class="hazard-control" style="background: {{ energy_colors.get(etype, '#eee') }}20; border: 1px solid {{ energy_colors.get(etype, '#eee') }};">
+                          {{ control.name }}
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              </div>
+              {% if not loop.last %}
+                <div class="hazard-separator" style="border-bottom: 1px solid #e3e6ea; margin: 12px 18px;"></div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# OTHER HAZARDS Section #}
+    {% if other_hazards|length > 0 %}
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px; color: #041e25; font-size: 1.1em;">Other Hazards</h4>
+        {% set grouped_other = {} %}
+        {% for hazard in other_hazards %}
+          {% set etype = hazard.energyType|upper %}
+          {% if grouped_other[etype] is not defined %}
+            {% set _ = grouped_other.update({etype: []}) %}
+          {% endif %}
+          {% set _ = grouped_other[etype].append(hazard) %}
+        {% endfor %}
+        
+        {% for etype, hazards in grouped_other.items() %}
+          {% if etype == 'NOT_DEFINED' or etype == 'UNSPECIFIED' %}
+            {# Display NOT_DEFINED hazards without energy type header #}
+                         {% for hazard in hazards %}
+               <div class="hazard-card" style="border: 1.5px solid #C0C7C9; border-radius: 12px; margin-bottom: 18px; background: #fff; page-break-inside: avoid; break-inside: avoid;">
+                 <div class="hazard-content-container" style="padding-top: 18px;">
+                   <div class="hazard-title" style="display: flex; align-items: center; gap: 8px;">
+                     {{ hazard.name }}
+                   </div>
+                   <div class="hazard-controls-label">Controls</div>
+                   {% if hazard.noControlsImplemented %}
+                     <div class="hazard-no-controls">No controls implemented</div>
+                   {% else %}
+                     <div class="hazard-controls-list">
+                       {% for control in hazard.controls %}
+                         {% if control.selected == true %}
+                           <div class="hazard-control" style="background: #C0C7C920; border: 1px solid #C0C7C9;">
+                             {{ control.name }}
+                           </div>
+                         {% endif %}
+                       {% endfor %}
+                     </div>
+                   {% endif %}
+                 </div>
+               </div>
+             {% endfor %}
+          {% else %}
+            {# Display other energy types with header #}
+            <div class="hazard-card" style="border: 1.5px solid {{ energy_colors.get(etype, 'rgb(242, 193, 75)') }}; border-radius: 12px; margin-bottom: 18px; background: #fff; page-break-inside: avoid; break-inside: avoid;">
+              <div class="hazard-header" style="background: {{ energy_colors.get(etype, 'rgb(242, 193, 75)') }};">
+                <img src="{{ hazards[0].imageUrl or 'https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg' }}" alt="Hazard Icon" style="width: 28px; height: 28px;"/>
+                {{ etype|replace("_", " ")|capitalize }}
+              </div>
+              {% for hazard in hazards %}
+                <div class="hazard-content-container">
+                  <div class="hazard-title" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="{{ hazard.imageUrl or 'https://storage.googleapis.com/worker-safety-public-icons/DefaultHazardIcon.svg' }}" alt="Hazard Icon" style="width: 20px; height: 20px;"/>
+                    {{ hazard.name }}
+                  </div>
+                  <div class="hazard-controls-label">Controls</div>
+                  {% if hazard.noControlsImplemented %}
+                    <div class="hazard-no-controls">No controls implemented</div>
+                  {% else %}
+                    <div class="hazard-controls-list">
+                      {% for control in hazard.controls %}
+                        {% if control.selected == true %}
+                          <div class="hazard-control" style="background: {{ energy_colors.get(etype, '#eee') }}20; border: 1px solid {{ energy_colors.get(etype, '#eee') }};">
+                            {{ control.name }}
+                          </div>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                </div>
+                {% if not loop.last %}
+                  <div class="hazard-separator" style="border-bottom: 1px solid #e3e6ea; margin: 12px 18px;"></div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# Show message if no hazards #}
+    {% if high_energy_hazards|length == 0 and other_hazards|length == 0 %}
+      <div style="color: #839296; font-style: italic; padding: 12px 0 0 2px;">
+        No hazards and controls have been identified for this work.
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro render_personnel_component(personnel_data, attributes) %}
+  {% if personnel_data and personnel_data|length > 0 %}
+    <div class="personnel-section">
+      <h4 style="margin-bottom: 10px; color: #041e25; font-weight: 600;">Personnel Sign-Off</h4>
+      {% for person in personnel_data %}
+        <div class="personnel-card" style="border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-bottom: 12px; background-color: #f9f9f9; page-break-inside: avoid; break-inside: avoid;">
+          <div class="personnel-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <div class="personnel-name" style="font-weight: 600; color: #041e25;">
+              {{ person.crew_details.name or person.crew_details.display_name }}
+            </div>
+            <div class="personnel-type" style="font-size: 0.9em; color: #666;">
+              {{ person.crew_details.type }}
+            </div>
+          </div>
+          
+          {% if person.crew_details.job_title %}
+            <div class="personnel-job-title" style="margin-bottom: 4px; color: #666;">
+              {{ person.crew_details.job_title }}
+            </div>
+          {% endif %}
+          
+          {% if person.crew_details.employee_number %}
+            <div class="personnel-employee-number" style="margin-bottom: 4px; color: #66;">
+              Employee #: {{ person.crew_details.employee_number }}
+            </div>
+          {% endif %}
+          
+          {% if person.crew_details.department %}
+            <div class="personnel-department" style="margin-bottom: 4px; color: #666;">
+              Department: {{ person.crew_details.department }}
+            </div>
+          {% endif %}
+          
+          {% if person.crew_details.company_name %}
+            <div class="personnel-company" style="margin-bottom: 4px; color: #666;">
+              Company: {{ person.crew_details.company_name }}
+            </div>
+          {% endif %}
+          
+          {% if person.selected_attribute_ids and person.selected_attribute_ids|length > 0 %}
+            <div class="personnel-attributes" style="margin-top: 8px;">
+              <div class="attributes-label" style="font-weight: 600; color: #041e25; margin-bottom: 4px;">Sign-Off Items:</div>
+              <div class="attributes-list">
+                {% for attr_id in person.selected_attribute_ids %}
+                  {% for attr in attributes %}
+                    {% if attr.attribute_id == attr_id %}
+                      <div class="attribute-item" style="display: inline-block; background-color: #e3f2fd; color: #1976d2; padding: 4px 8px; border-radius: 4px; margin-right: 8px; margin-bottom: 4px; font-size: 0.9em;">
+                        {{ attr.attribute_name }}
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            </div>
+          {% endif %}
+          
+          {% if person.crew_details.signature %}
+            <div class="personnel-signature" style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #eee; page-break-inside: avoid; break-inside: avoid;">
+              <div class="signature-info" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.9em; color: #666;">
+                <span>Signed: {{ person.crew_details.signature.date }}</span>
+                <span>Time: {{ person.crew_details.signature.time }}</span>
+              </div>
+              {% if person.crew_details.signature.signedUrl %}
+                <div class="signature-image" style="margin-top: 4px;">
+                  <img src="{{ person.crew_details.signature.signedUrl }}" alt="Signature" style="max-width: 200px; max-height: 80px; border: 1px solid #ddd; border-radius: 4px;" />
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="personnel-section">
+      <h4 style="margin-bottom: 10px; color: #041e25; font-weight: 600;">Personnel Sign-Off</h4>
+      <div style="color: #839296; font-style: italic; padding: 12px 0 0 2px;">
+        No personnel have signed off on this form.
+      </div>
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{# --- Macro for rendering all items in order --- #}
+{% macro render_page_items(items, component_data, energy_colors, summary_only=false) %}
+  {# 1. Site Conditions #}
+  {% for item in items if item.type == 'site_conditions' %}
+    {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+      {{ render_site_conditions(component_data.site_conditions) }}
+    {% endif %}
+  {% endfor %}
+  {# 2. Activities & Tasks #}
+  {% for item in items if item.type == 'activities_and_tasks' %}
+    {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+      {{ render_activities_tasks(component_data.activities_tasks) }}
+    {% endif %}
+  {% endfor %}
+  {# 3. Hazards & Controls #}
+  {% for item in items if item.type == 'hazards_and_controls' %}
+    {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+      {{ render_hazards_controls(component_data, energy_colors) }}
+    {% endif %}
+  {% endfor %}
+  {# 4. Personnel Components #}
+  {% for item in items if item.type == 'personnel_component' %}
+    {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+      {{ render_personnel_component(item.properties.user_value, item.properties.attributes) }}
+    {% endif %}
+  {% endfor %}
+  {# 5. General Questions and Sections #}
+  {% for item in items %}
+    {% if item.type not in ['site_conditions', 'activities_and_tasks', 'hazards_and_controls', 'personnel_component', 'section', 'sub_page'] %}
+      {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+        {{ render_question(item, component_data, energy_colors) }}
+      {% endif %}
+    {% elif item.type in ['section', 'sub_page'] %}
+      {% if not summary_only or (item.properties.include_in_summary if item.properties is defined and item.properties.include_in_summary is defined else false) %}
+        {% if item.type == 'section' and (item.properties.is_repeatable is not defined or not item.properties.is_repeatable) %}
+          <h3>{{ item.properties.title }}</h3>
+        {% endif %}
+        {% if (item.type == 'section' and (item.properties.is_repeatable is not defined or not item.properties.is_repeatable)) or  item.type == 'sub_page' %}
+          <div class="section">
+            {{ render_page_items(item.contents, component_data, energy_colors, summary_only) }}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+
+{# Add macro for location component #}
+{% macro render_location_component(location_data, title="Location") %}
+  <div class="question">
+    <div class="question-title">{{ title }}</div>
+    <div class="question-answer">
+      {% if location_data %}
+        {% if location_data.name %}<div><strong class="answer-title">Name:</strong> {{ location_data.name }}</div>{% endif %}
+        {% if location_data.gps_coordinates %}
+          <div >
+            <strong class="answer-title" >Coordinates:</strong>
+            {{ location_data.gps_coordinates.latitude }}, {{ location_data.gps_coordinates.longitude }}
+          </div>
+        {% endif %}
+        {% if location_data.description %}<div class="answer-title"><strong>Description:</strong> {{ location_data.description }}</div>{% endif %}
+        {% if location_data.manual_location is defined %}
+          <div class="answer-title"><strong>Manual Location:</strong> {{ location_data.manual_location | string }}</div>
+        {% endif %}
+      {% else %}
+        <em>No location provided</em>
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}
+
+{# --- Macro for rendering location fields --- #}
+{% macro render_location_field(location_data) %}
+  {% if location_data %}
+    {% if location_data.name %}
+      <div class="location-info">
+        <div class="location-name" style="font-weight: 600; color: #041e25; font-size: 1.2rem; margin-bottom: 4px;">
+          {{ location_data.name }}
+        </div>
+        {% if location_data.gps_coordinates %}
+          <div class="location-coordinates" style="color: #3c4f55; font-size: 1em;">
+            <span style="font-weight: 500;">Coordinates:</span> 
+            {{ "%.6f"|format(location_data.gps_coordinates.latitude) }}, {{ "%.6f"|format(location_data.gps_coordinates.longitude) }}
+          </div>
+        {% endif %}
+        {% if location_data.description %}
+          <div class="location-description" style="color: #3c4f55; font-size: 1em; margin-top: 4px;">
+            <span style="font-weight: 500;">Description:</span> {{ location_data.description }}
+          </div>
+        {% endif %}
+      </div>
+    {% elif location_data.gps_coordinates %}
+      <div class="location-info">
+        <div class="location-coordinates" style="color: #3c4f55; font-size: 1em;">
+          <span style="font-weight: 500;">Coordinates:</span> 
+          {{ "%.6f"|format(location_data.gps_coordinates.latitude) }}, {{ "%.6f"|format(location_data.gps_coordinates.longitude) }}
+        </div>
+        {% if location_data.description %}
+          <div class="location-description" style="color: #3c4f55; font-size: 1em; margin-top: 4px;">
+            <span style="font-weight: 500;">Description:</span> {{ location_data.description }}
+          </div>
+        {% endif %}
+      </div>
+    {% else %}
+      <em style="color: #839296; font-style: italic;">No location provided</em>
+    {% endif %}
+  {% else %}
+    <em style="color: #839296; font-style: italic;">No location provided</em>
+  {% endif %}
+{% endmacro %}
+
+{# --- Macro for rendering nearest hospital fields --- #}
+{% macro render_nearest_hospital_field(hospital_data) %}
+  {% if hospital_data %}
+    {% if hospital_data.name %}<div><strong class="answer-title">Name:</strong> {{ hospital_data.name }}</div>{% endif %}
+    {% if hospital_data.description %}<div><strong class="answer-title">Address:</strong> {{ hospital_data.description }}</div>{% endif %}
+    {% if hospital_data.phone_number %}<div><strong class="answer-title" >Phone:</strong> {{ hospital_data.phone_number }}</div>{% endif %}
+    {% if hospital_data.distance %}<div><strong class="answer-title" >Distance:</strong> {{ hospital_data.distance }}</div>{% endif %}
+    {% if hospital_data.gps_coordinates %}
+      <div>
+        <strong class="answer-title">Coordinates:</strong>
+        {{ hospital_data.gps_coordinates.latitude }}, {{ hospital_data.gps_coordinates.longitude }}
+      </div>
+    {% endif %}
+  {% else %}
+    <em>No hospital information provided</em>
+  {% endif %}
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ template_name }}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.5;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+      }
+      .header {
+        height: 50px;
+        border-bottom: 1px solid #bdc1c3;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .header-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #003f53;
+      }
+      .form-header-info {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #bdc1c3;
+      }
+      .form-header-info h2 {
+        font-weight: 400;
+        margin: 10px 0px;
+        padding-top: 10px;
+        font-size: 1.9em;
+      }
+      .form-header-info p {
+        font-size: 1.1em;
+        margin: 10px 0px;
+      }
+
+      .form-details-data {
+        color: #3c4f55;
+        font-size: 1em;
+        margin: 5px 0px;
+      }
+      .form-status {
+        padding: 3px 10px;
+        color: #ffffff;
+        background: #00a0cc;
+        border-radius: 30px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .page-break {
+        page-break-before: always;
+        clear: both;
+        display: block;
+      }
+
+      .question {
+        padding: 10px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .question-title {
+        color: #3c4f55;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+       .answer-title {
+        color: #3c4f55;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .question-hint {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 5px;
+        font-size: 0.9em;
+      }
+
+      .question-answer {
+        font-weight: 400;
+        font-size: 1.2rem;
+        color: #041e25;
+      }
+      .question-answer a {
+        text-decoration: none;
+        color: #041e25;
+        font-size: 0.9em;
+      }
+
+      .section {
+        margin-bottom: 30px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+      }
+
+      .rich-text {
+        margin: 15px 0;
+      }
+
+      .rich-text p {
+        margin: 8px 0;
+      }
+
+      .rich-text img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .rich-text figure {
+        max-width: 100%;
+        margin: 10px 0;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .rich-text figure img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .image-question img {
+        max-width: 350px;
+        max-height: 350px;
+        display: block;
+        margin-bottom: 10px;
+        page-break-inside: avoid;
+      }
+
+      .header-info-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #f5f8fa;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(60, 72, 88, 0.06);
+        overflow: hidden;
+      }
+
+      .header-info-table th,
+      .header-info-table td {
+        padding: 12px 18px;
+        text-align: left;
+        font-size: 1em;
+      }
+
+      .header-info-table th {
+        background: #e8f0fe;
+        color: #041e25;
+        font-weight: 600;
+        width: 180px;
+        border-right: 1px solid #dadce0;
+      }
+
+      .header-info-table td {
+        background: #fff;
+        color: #333;
+      }
+
+      .header-info-table tr:not(:last-child) td,
+      .header-info-table tr:not(:last-child) th {
+        border-bottom: 1px solid #e3e6ea;
+      }
+      .attachment-links a {
+        text-decoration: none;
+        color: #00a0cc;
+        font-size: 0.9em;
+      }
+      .image-question {
+        background: #f8f8f8;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 30px;
+      }
+
+      .site-conditions-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 32px 0 24px 0;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        padding: 15px;
+      }
+
+      .site-condition-card {
+        border-left: 8px solid #1976d2;
+        background: #fff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px 0 rgba(60, 72, 88, 0.08);
+      }
+
+      .site-condition-title {
+        font-weight: 600;
+        color: #041e25;
+      }
+
+      .hazards-section {
+        margin: 32px 0;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        padding: 15px;
+      }
+
+      .hazard-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px 0 rgba(60, 72, 88, 0.06);
+        margin-bottom: 16px;
+        overflow: hidden;
+        padding-bottom:10px; 
+        padding-right: 10px;
+      }
+
+      .hazard-header {
+        padding: 12px 18px;
+        font-weight: 600;
+        color: #041e25;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+      }
+
+      .hazard-header img {
+        height: 24px;
+        width: 24px;
+        margin-right: 10px;
+      }
+
+      .hazard-title {
+        padding: 12px 18px;
+        font-size: 1.2em;
+        font-weight: 600;
+        color: #041e25;
+      }
+
+      .hazard-controls-label {
+        font-weight: 600;
+        padding-bottom: 10px;
+        color: #3c4f55;
+        margin-top: 8px;
+        padding-left: 18px;
+      }
+      .hazard-controls-list {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        padding-left: 18px;
+      }
+
+      .hazard-no-controls {
+        padding: 12px 18px;
+        color: #839296;
+        font-weight: 500;
+        font-style: italic;
+        padding-left: 18px;
+      }
+
+      .hazard-control {
+        background: #e8f0fe;
+        color: #041e25;
+        padding: 5px 10px !important;
+        border-radius: 4px;
+        font-size: 0.9em;
+        margin-bottom: 2px;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .summary-question {
+        padding: 10px;
+        border-bottom: 1px solid #e3e6ea;
+      }
+
+      .summary-question:last-child {
+        border-bottom: none;
+      }
+      .section-container {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .hazard-content-container,
+      .site-condition-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .activities-tasks-list {
+        margin: 32px 0 24px 0;
+        border-radius: 10px;
+        background-color: #f8f8f8;
+        padding: 15px;
+      }
+      .activity-group {
+        margin-bottom: 18px;
+      }
+      .activity-title {
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: #041e25;
+      }
+      .activity-task-card {
+        border-left: 8px solid #1976d2;
+        background: #fff;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 12px 16px;
+        display: grid;
+        grid-template-columns: 3fr 0.9fr;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 8px 0 rgba(60, 72, 88, 0.08);
+      }
+      .risk-low {
+        border-left: 8px solid #2e9b38;
+      }
+      .risk-medium {
+        border-left: 8px solid #f1c40f;
+      }
+      .risk-high {
+        border-left: 8px solid #e74c3c;
+      }
+      .risk-default {
+        border-left: 8px solid #1976d2;
+      }
+      .risk-label {
+        font-size: 0.95em;
+        font-weight: 600;
+        border-radius: 15px;
+        padding: 4px 12px;
+        display: inline-block;
+      }
+      .risk-default-label {
+        background: #1976d2;
+        color: #fff;
+      }
+      .risk-low-label {
+        background: #2e9b38;
+        color: #fff;
+      }
+      .risk-medium-label {
+        background: #f1c40f;
+        color: #fff;
+      }
+              .risk-high-label {
+          background: #e74c3c;
+          color: #fff;
+        }
+        
+        .location-info {
+          padding: 8px 0;
+        }
+        
+        .location-name {
+          font-weight: 600;
+          color: #041e25;
+          font-size: 1.2rem;
+          margin-bottom: 4px;
+        }
+        
+        .location-coordinates {
+          color: #3c4f55;
+          font-size: 1em;
+          margin-bottom: 4px;
+        }
+        
+        .location-description {
+          color: #3c4f55;
+          font-size: 1em;
+          margin-top: 4px;
+        }
+        
+        .hospital-info {
+          padding: 8px 0;
+        }
+        
+        .hospital-name {
+          font-weight: 600;
+          color: #041e25;
+          font-size: 1.2rem;
+          margin-bottom: 4px;
+        }
+        
+        .hospital-address {
+          color: #3c4f55;
+          font-size: 1em;
+          margin-bottom: 4px;
+        }
+        
+        .hospital-phone {
+          color: #3c4f55;
+          font-size: 1em;
+          margin-bottom: 4px;
+        }
+        
+        .hospital-distance {
+          color: #3c4f55;
+          font-size: 1em;
+          margin-bottom: 4px;
+        }
+        
+        .hospital-coordinates {
+          color: #3c4f55;
+          font-size: 1em;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="full-page">
+      <!-- Header -->
+      <div class="header">
+        <svg
+          width="30"
+          height="30"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.9834 2.0625C16.1542 2.0625 19.9385 5.82112 19.9385 11C19.9385 16.1789 16.1722 19.9375 10.9834 19.9375C5.81271 19.9374 2.0625 16.1788 2.0625 11C2.0625 5.82118 5.81271 2.06259 10.9834 2.0625ZM10.5654 3.32715C6.2847 3.51664 3.33203 6.61685 3.33203 11C3.33203 15.4509 6.55003 18.6815 10.9834 18.6816C15.5069 18.6816 18.6689 15.5245 18.6689 11C18.6689 6.47545 15.5069 3.31836 10.9834 3.31836L10.5654 3.32715ZM10.9834 5.2959C14.2842 5.2959 16.7061 7.70297 16.7061 11C16.7061 14.297 14.3019 16.7041 10.9883 16.7041H10.9834C7.68263 16.7041 5.28613 14.3046 5.28613 11C5.28613 7.69536 7.68263 5.29591 10.9834 5.2959ZM10.9834 6.55957C8.37642 6.55968 6.55584 8.39017 6.55566 11.0098C6.55566 13.6296 8.3763 15.4608 10.9834 15.4609C13.5906 15.4609 15.4502 13.6199 15.4502 11C15.4502 8.38013 13.6084 6.54883 10.9883 6.54883L10.9834 6.55957ZM9.75293 8.88281C10.5191 8.44608 11.4633 8.44608 12.2295 8.88281C12.9956 9.31955 13.4678 10.1265 13.4678 11C13.4853 11.655 13.231 12.2887 12.7646 12.7549C12.2983 13.2209 11.6596 13.4799 10.9961 13.4707L10.9834 13.4805C10.3181 13.4905 9.67729 13.2313 9.21094 12.7627C8.74451 12.294 8.49376 11.6567 8.51562 11C8.51563 10.1267 8.98698 9.31959 9.75293 8.88281ZM10.9834 9.79297C10.4828 9.78379 10.0262 10.0743 9.82812 10.5283C9.63008 10.9823 9.72961 11.5094 10.0801 11.8623C10.4308 12.2152 10.9632 12.3237 11.4268 12.1367C11.8903 11.9497 12.1933 11.5042 12.1934 11.0098C12.2192 10.6853 12.1035 10.3654 11.875 10.1309C11.6462 9.89621 11.3257 9.76888 10.9961 9.78223L10.9834 9.79297Z"
+            fill="#00A0CC"
+          />
+        </svg>
+        <div class="header-title">WORKER SAFETY</div>
+      </div>
+      <section class="form-header-info">
+        <h2>{{ template_name }}</h2>
+        <p>
+          {{ form_data.metadata.work_package.name if form_data.metadata and
+          form_data.metadata.work_package.name else "Adhoc" }} &bull; {{
+          form_data.metadata.location.name if form_data.metadata and
+          form_data.metadata.location.name else "" }}
+        </p>
+        <div><span class="form-status">{{ status }}</span></div>
+        <div class="form-details-status">
+          <p class="form-details-data">
+            Last Updated By {{ form_data.updated_by.user_name if
+            form_data.updated_by and form_data.updated_by.user_name else "N/A"
+            }}
+          </p>
+         <p class="form-details-data">
+            Last Updated At: {% if form_data.updated_at %} {{
+            form_data.updated_at | datetimeformat('%A, %B %d, %Y %I:%M %p') }} {% else
+            %} N/A {% endif %}
+          </p>
+        </div>
+      </section>
+
+      {# Main Form Contents #}
+      {% if render_form_block %}
+        {% for page in form_data.contents %}
+          {% set _page_content %}{% filter trim %}{{ render_page_items(page.contents, form_data.component_data, energy_colors, false) }}{% endfilter %}{% endset %}
+          {% if _page_content.strip() %}
+            {% if not loop.first %}
+              <div class="page-break"></div>
+            {% endif %}
+            {% if page.properties.description %}
+              <p>{{ page.properties.description }}</p>
+            {% endif %}
+            {{ _page_content }}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {# Summary Section #}
+      {% if render_summary_block %}
+        {% set summary_items = [] %}
+        {% for page in form_data.contents %}
+          {% for section_item in page.contents %}
+            {% if section_item.properties.include_in_summary %}
+              {% set _ = summary_items.append(section_item) %}
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+        {% if summary_items | length > 0 %}
+          <div class="section-container">
+            <div class="question-title">Summary</div>
+            <div class="section" style="background: #f8f8f8; border: 1px solid #e3e6ea; margin-bottom: 32px;">
+              {{ render_page_items(summary_items, form_data.component_data, energy_colors, true) }}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </body>
+</html>

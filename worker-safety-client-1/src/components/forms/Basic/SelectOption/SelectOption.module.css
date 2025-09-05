@@ -1,0 +1,24 @@
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer components {
+  .option {
+    @apply cursor-default;
+    @apply py-1 px-2;
+    @apply text-base;
+    @apply flex justify-between;
+    @apply break-words;
+  }
+
+  .option:hover {
+    @apply bg-brand-urbint-40 text-white;
+  }
+
+  .selected {
+    @apply bg-brand-urbint-40 text-white;
+  }
+
+  .selectPlaceholder {
+    @apply text-brand-gray-60;
+  }
+}

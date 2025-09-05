@@ -1,0 +1,12 @@
+query ActivityTasks($orderBy: [LibraryTaskOrderBy!]) {
+  tasksLibrary(orderBy: $orderBy) {
+    id
+    name
+    category
+    activitiesGroups {
+      id
+      name
+    }
+    isCritical
+  }
+}

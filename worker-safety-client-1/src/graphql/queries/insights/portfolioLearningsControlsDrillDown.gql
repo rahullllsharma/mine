@@ -1,0 +1,34 @@
+query PortfolioLearningsControlsDrillDown(
+  $filters: PortfolioLearningsInput!
+  $libraryControlId: UUID!
+) {
+  portfolioLearnings(portfolioLearningsInput: $filters) {
+    notImplementedControlsByProject(libraryControlId: $libraryControlId) {
+      percent
+      project {
+        name
+      }
+    }
+
+    notImplementedControlsByHazard(libraryControlId: $libraryControlId) {
+      percent
+      libraryHazard {
+        name
+      }
+    }
+
+    notImplementedControlsByTask(libraryControlId: $libraryControlId) {
+      percent
+      libraryTask {
+        name
+      }
+    }
+
+    notImplementedControlsByTaskType(libraryControlId: $libraryControlId) {
+      percent
+      libraryTask {
+        category
+      }
+    }
+  }
+}

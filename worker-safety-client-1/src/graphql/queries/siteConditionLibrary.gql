@@ -1,0 +1,21 @@
+query SiteConditionsLibrary(
+  $siteConditionsLibraryId: UUID
+  $orderBy: [OrderBy!]
+  $hazardsOrderBy: [OrderBy!]
+  $controlsOrderBy: [OrderBy!]
+) {
+  siteConditionsLibrary(id: $siteConditionsLibraryId, orderBy: $orderBy) {
+    id
+    name
+    hazards(orderBy: $hazardsOrderBy) {
+      id
+      name
+      isApplicable
+      controls(orderBy: $controlsOrderBy) {
+        id
+        name
+        isApplicable
+      }
+    }
+  }
+}

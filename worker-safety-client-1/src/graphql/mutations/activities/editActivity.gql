@@ -1,0 +1,25 @@
+mutation EditActivity(
+  $id: UUID!
+  $name: String!
+  $startDate: Date!
+  $endDate: Date!
+  $status: ActivityStatus = NOT_STARTED
+  $libraryActivityTypeId: UUID
+  $isCritical: Boolean
+  $criticalDescription: String
+) {
+  editActivity(
+    activityData: {
+      id: $id
+      name: $name
+      startDate: $startDate
+      endDate: $endDate
+      status: $status
+      libraryActivityTypeId: $libraryActivityTypeId
+      isCritical: $isCritical
+      criticalDescription: $criticalDescription
+    }
+  ) {
+    id
+  }
+}

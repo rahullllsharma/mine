@@ -1,0 +1,53 @@
+query Tasks(
+  $tasksId: UUID
+  $locationId: UUID
+  $date: Date
+  $filterTenantSettings: Boolean
+) {
+  tasks(
+    id: $tasksId
+    locationId: $locationId
+    date: $date
+    filterTenantSettings: $filterTenantSettings
+  ) {
+    id
+    name
+    activity {
+      id
+      name
+      status
+      # startDate
+      # endDate
+      taskCount
+      # tasks {
+      #  id
+      # }
+      # location
+    }
+    riskLevel(date: $date)
+    hazards {
+      id
+      isApplicable
+      name
+      createdBy {
+        id
+        name
+      }
+      libraryHazard {
+        id
+      }
+      controls {
+        name
+        isApplicable
+        id
+        createdBy {
+          id
+          name
+        }
+        libraryControl {
+          id
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`undefined should be rendered correctly 1`] = `
+<DocumentFragment>
+  <a
+    class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40"
+  >
+    <span
+      class="truncate"
+    >
+      Button link
+    </span>
+  </a>
+</DocumentFragment>
+`;
+
+exports[`undefined should display an icon 1`] = `
+<DocumentFragment>
+  <a
+    class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-chevron_big_left text-lg leading-5 mr-1"
+    />
+    <span
+      class="truncate"
+    >
+      Back to projects
+    </span>
+  </a>
+</DocumentFragment>
+`;

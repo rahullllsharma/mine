@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskHeader when a riskLevel is passed should render a risk badge 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-1 items-stretch h-auto p-3"
+  >
+    <div
+      class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_down text-xl"
+        />
+        <div>
+          <span
+            class="text-action-label font-action-label text-neutrals-primary font-semibold"
+          >
+            Above Ground Welding
+          </span>
+        </div>
+      </div>
+      <span
+        class="inline-flex items-center"
+      >
+        <span
+          class="inline-flex items-center w-full"
+        >
+          <div
+            class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-risk-high text-white"
+            role="note"
+          >
+            <span
+              class="flex items-center px-1"
+            >
+              <i
+                aria-hidden="true"
+                class="ci-chevron_up"
+              />
+              <span
+                class="text-tiny mr-1"
+              >
+                HIGH
+              </span>
+            </span>
+          </div>
+        </span>
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TaskHeader when contain sub-header should render an icon with header and sub-header text 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-1 items-stretch h-auto p-3"
+  >
+    <div
+      class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_down text-xl"
+        />
+        <div>
+          <span
+            class="text-action-label font-action-label text-neutrals-primary font-semibold"
+          >
+            Above Ground Welding
+          </span>
+          <span
+            class=" pl-1 text-tiny font-medium text-neutral-shade-58"
+          >
+            sub Above Ground Welding
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TaskHeader when we want to show the summary count should render two badges 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-1 items-stretch h-auto p-3"
+  >
+    <div
+      class="flex flex-1 flex-wrap items-stretch gap-y-3 gap-x-6 md:gap-0 md:flex-row md:flex-nowrap md:items-center mr-6 outline-none"
+      role="button"
+      tabindex="0"
+    >
+      <div
+        class="text-left text-base text-neutral-shade-100 font-bold flex flex-auto m-0 items-center gap-3 w-full md:flex-initial md:gap-4 md:w-auto md:ml-3 md:mr-4"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_down text-xl"
+        />
+        <div>
+          <span
+            class="text-action-label font-action-label text-neutrals-primary font-semibold"
+          >
+            Above Ground Welding
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex flex-1 justify-start md:justify-center ml-2"
+      >
+        <div
+          class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 mr-2"
+          role="note"
+        >
+          <span
+            class="flex items-center px-1"
+          >
+            <span
+              class="text-tiny mx-1"
+            >
+              0H
+            </span>
+          </span>
+        </div>
+        <div
+          class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 undefined"
+          role="note"
+        >
+          <span
+            class="flex items-center px-1"
+          >
+            <span
+              class="text-tiny mx-1"
+            >
+              0C
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

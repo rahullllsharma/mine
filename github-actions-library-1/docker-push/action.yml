@@ -1,0 +1,47 @@
+name: 'Docker Push to GCR'
+description: 'Builds and pushes a Docker image to Google Container Registry'
+inputs:
+  tag:
+    description: 'Tag for the Docker image (e.g., latest or commit SHA)'
+    required: true
+  gcr_sa_key:
+    description: 'GCP Service Account JSON key for authentication'
+    required: true
+  dockerfile:
+    description: 'Path to the Dockerfile (default: Dockerfile)'
+    required: false
+    default: 'Dockerfile'
+
+  image_name:
+    description: 'Name of the Docker image (default: my-local-image)'
+    required: false
+    default: 'my-local-image'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Authenticate to Google Cloud
+      id: auth
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ inputs.gcr_sa_key }}
+        token_format: "access_token"  
+
+    - name: Log into Google Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: gcr.io
+        username: oauth2accesstoken
+        password: ${{ steps.auth.outputs.access_token }}
+
+
+    - name: Build and Push Docker Image
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        file: ${{ inputs.dockerfile }}  
+        push: true
+        tags: gcr.io/urbint-1259/${{ inputs.image_name }}:${{ inputs.tag }} 

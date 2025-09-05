@@ -1,0 +1,10 @@
+query ProjectLearningsReasonsNotImplementedCount(
+  $filters: ProjectLearningsInput!
+) {
+  projectLearnings(projectLearningsInput: $filters) {
+    reasonsControlsNotImplemented {
+      count
+      reason
+    }
+  }
+}

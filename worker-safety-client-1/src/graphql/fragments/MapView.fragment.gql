@@ -1,0 +1,9 @@
+fragment MapLocation on ProjectLocation {
+  id
+  riskLevel
+  latitude
+  longitude
+  activities(date: $date) {
+    isCritical
+  }
+}

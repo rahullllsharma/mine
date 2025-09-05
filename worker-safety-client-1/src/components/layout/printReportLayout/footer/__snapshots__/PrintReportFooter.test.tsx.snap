@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PrintReportFooter when it renders without "note" and "pageCount" should match the snapshot 1`] = `
+<DocumentFragment>
+  <footer
+    class="flex items-center text-neutral-shade-100 font-sans font-normal text-base px-[12px] w-full"
+  >
+    <p
+      class="text-tiny ml-auto pageNumber"
+      data-testid="print-report-footer-pagination"
+    />
+  </footer>
+</DocumentFragment>
+`;

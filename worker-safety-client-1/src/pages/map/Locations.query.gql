@@ -1,0 +1,12 @@
+#import "src/graphql/fragments/Locations.fragment.gql"
+
+query locationsMapView(
+  $filterBy: [LocationFilterBy!]
+  $search: String
+  $orderBy: [ProjectLocationOrderBy!]
+  $date: Date
+) {
+  projectLocations(filterBy: $filterBy, search: $search, orderBy: $orderBy) {
+    ...Locations_MapView
+  }
+}

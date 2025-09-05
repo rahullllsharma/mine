@@ -1,0 +1,80 @@
+version: "3"
+
+volumes:
+  wss-pgdata:
+
+services:
+  graphql:
+    image: gcr.io/urbint-1259/worker-safety-service:latest
+    ports:
+      - "8001:8000"
+    command:
+      /venv/bin/uvicorn --reload --host=0.0.0.0
+      worker_safety_service.graphql.main:app
+    environment:
+      - APP_APM_ENABLED=False
+      - CORS_ORIGINS=["http://localhost", "https://studio.apollographql.com",
+        "http://localhost:3000"]
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - KEYCLOAK_BASE_URL=http://keycloak:8080
+    depends_on:
+      - postgres
+    tty: true
+    stdin_open: true
+
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - type: volume
+        source: wss-pgdata
+        target: /var/lib/postgresql/data
+      - .:/app
+      - ./support/docker/postgres-dev/init-docker-databases.sh:/docker-entrypoint-initdb.d/init-dbs.sh
+    healthcheck:
+      test: pg_isready -U postgres
+      interval: 3s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  alembic:
+    build:
+      context: "git@github.com:urbint/worker-safety-service.git#main"
+      dockerfile: ./support/migrations/Dockerfile
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+    command: upgrade head
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  keycloak:
+    build:
+      context: "https://github.com/keycloak/keycloak-containers.git#16.1.0:server"
+    volumes:
+      - ./support/keycloak-dev/realms:/realms
+    environment:
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_PASSWORD: password
+      DB_SCHEMA: public
+      DB_USER: postgres
+      DB_VENDOR: POSTGRES
+      KEYCLOAK_PASSWORD: admin
+      KEYCLOAK_USER: admin
+      KEYCLOAK_IMPORT: /realms/asgard.json
+    ports:
+      - 8080:8080
+    depends_on:
+      postgres:
+        condition: service_healthy

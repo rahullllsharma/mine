@@ -1,0 +1,21 @@
+query WorkosDirectoryUsers($directoryIds: [String!]!) {
+  workosDirectoryUsers(directoryIds: $directoryIds) {
+    data {
+      id
+      idpId
+      directoryId
+      organizationId
+      firstName
+      lastName
+      jobTitle
+      username
+      state
+      customAttributes
+      rawAttributes
+      role
+      slug
+      createdAt
+      updatedAt
+    }
+  }
+}

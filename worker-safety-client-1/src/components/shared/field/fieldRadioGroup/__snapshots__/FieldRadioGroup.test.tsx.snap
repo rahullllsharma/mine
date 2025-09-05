@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldRadioGroup should render a paragraph with the default option when the "readOnly" is set 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Lorem ipsum
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    >
+      Two
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FieldRadioGroup should render with the "RadioGroup" component 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Lorem ipsum
+    </label>
+    <div
+      class="flex flex-wrap flex-row gap-6"
+      id="headlessui-radiogroup-7"
+      role="radiogroup"
+    >
+      <div
+        aria-checked="false"
+        aria-labelledby="headlessui-label-1"
+        class="flex items-center"
+        id="headlessui-radiogroup-option-2"
+        role="radio"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+        />
+        <label
+          class="text-neutral-shade-100 text-base ml-2"
+          id="headlessui-label-1"
+        >
+          One
+        </label>
+      </div>
+      <div
+        aria-checked="false"
+        aria-labelledby="headlessui-label-3"
+        class="flex items-center"
+        id="headlessui-radiogroup-option-4"
+        role="radio"
+        tabindex="-1"
+      >
+        <div
+          class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+        />
+        <label
+          class="text-neutral-shade-100 text-base ml-2"
+          id="headlessui-label-3"
+        >
+          Two
+        </label>
+      </div>
+      <div
+        aria-checked="true"
+        aria-labelledby="headlessui-label-5"
+        class="flex items-center"
+        id="headlessui-radiogroup-option-6"
+        role="radio"
+        tabindex="0"
+      >
+        <div
+          class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+        >
+          <div
+            class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+          />
+        </div>
+        <label
+          class="text-neutral-shade-100 text-base ml-2"
+          id="headlessui-label-5"
+        >
+          Three
+        </label>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

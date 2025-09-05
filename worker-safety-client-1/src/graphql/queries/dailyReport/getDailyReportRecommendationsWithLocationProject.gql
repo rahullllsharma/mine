@@ -1,0 +1,9 @@
+#import "./fragments/recommendations.fragment.gql"
+
+query GetDailyReportRecommendationsWithLocationProject(
+  $projectLocationId: UUID!
+) {
+  recommendations {
+    ...Recommendations
+  }
+}

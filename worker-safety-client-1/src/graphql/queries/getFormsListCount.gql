@@ -1,0 +1,43 @@
+query GetFormsListCount(
+  $createdByIds: [UUID!]
+  $formName: [String!]
+  $formId: [String!]
+  $locationIds: [UUID!]
+  $formStatus: [FormStatus!]
+  $projectIds: [UUID!]
+  $startCreatedAt: Date
+  $endCreatedAt: Date
+  $startUpdatedAt: Date
+  $endUpdatedAt: Date
+  $search: String
+  $adHoc: Boolean
+  $updatedByIds: [UUID!]
+  $startCompletedAt: Date
+  $endCompletedAt: Date
+  $startReportDate: Date
+  $endReportDate: Date
+  $operatingRegionNames: [String!]
+  $managerIds: [String!]
+) {
+  formsListCount(
+    createdByIds: $createdByIds
+    formName: $formName
+    formId: $formId
+    locationIds: $locationIds
+    formStatus: $formStatus
+    projectIds: $projectIds
+    startCreatedAt: $startCreatedAt
+    endCreatedAt: $endCreatedAt
+    startUpdatedAt: $startUpdatedAt
+    endUpdatedAt: $endUpdatedAt
+    updatedByIds: $updatedByIds
+    search: $search
+    adHoc: $adHoc
+    startCompletedAt: $startCompletedAt
+    endCompletedAt: $endCompletedAt
+    startReportDate: $startReportDate
+    endReportDate: $endReportDate
+    operatingRegionNames: $operatingRegionNames
+    managerIds: $managerIds
+  )
+}

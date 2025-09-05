@@ -1,0 +1,42 @@
+name: "Cache dependencies or install dependencies"
+description: "Use yarn.lock hash to check existing cache and if it doesn't exist, install dependencies"
+inputs:
+  build_frontend:
+    description: Should we generate a Frontend Production build?
+    required: false
+    default: "false"
+  upload_buid:
+    description: Should we cache the Production build to be used while the pipeline is running?
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Cache yarn dependencies
+      uses: actions/cache@v3
+      with:
+        path: "**/node_modules"
+        key: node-modules-${{hashFiles('**/yarn.lock')}}
+      id: cache
+    - name: Authenticate with private NPM package
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: echo "//npm.pkg.github.com/:_authToken=$AUTH_TOKEN" > ~/.npmrc
+      shell: bash
+    - name: Install dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: yarn install --frozen-lockfile
+      shell: bash
+      working-directory: client
+    - name: Build application
+      if: ${{ inputs.build_frontend == 'true'}}
+      run: yarn build
+      shell: bash
+      working-directory: client
+    - name: Upload Build application
+      uses: actions/upload-artifact@v4
+      if: ${{ inputs.upload_buid == 'true' }}
+      with:
+        name: frontend-build
+        path: ./client/build
+        retention-days: 1

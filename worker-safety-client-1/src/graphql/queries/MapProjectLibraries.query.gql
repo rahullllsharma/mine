@@ -1,0 +1,32 @@
+#import "src/graphql/fragments/ProjectType.fragment.gql"
+#import "src/graphql/fragments/Region.fragment.gql"
+#import "src/graphql/fragments/Division.fragment.gql"
+#import "src/graphql/fragments/Contractor.fragment.gql"
+#import "src/graphql/fragments/Supervisor.fragment.gql"
+
+query mapFilters($orderBy: [OrderBy!]) {
+  projects {
+    name
+    id
+  }
+
+  divisionsLibrary(orderBy: $orderBy) {
+    ...Division
+  }
+
+  regionsLibrary(orderBy: $orderBy) {
+    ...Region
+  }
+
+  projectTypesLibrary(orderBy: $orderBy) {
+    ...ProjectType
+  }
+
+  contractors(orderBy: $orderBy) {
+    ...Contractor
+  }
+
+  supervisors(orderBy: $orderBy) {
+    ...Supervisor
+  }
+}

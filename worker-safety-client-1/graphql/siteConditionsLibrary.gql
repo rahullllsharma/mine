@@ -1,0 +1,42 @@
+query SiteConditionsLibrary {
+  siteConditionsLibrary(allowArchived: true) {
+    id
+    name
+    archivedAt
+    hazards {
+      id
+      name
+      isApplicable
+      energyLevel
+      taskApplicabilityLevels {
+        applicabilityLevel
+        taskId
+      }
+      controls {
+        id
+        name
+        isApplicable
+        ppe
+      }
+    }
+  }
+}
+
+query SiteConditions($locationId: UUID, $date: Date) {
+  siteConditions(locationId: $locationId, date: $date) {
+    id
+    name
+    librarySiteCondition {
+      id
+    }
+  }
+}
+
+mutation CreateSiteCondition($siteConditionData: CreateSiteConditionInput!) {
+  createSiteCondition(data: $siteConditionData) {
+    id
+    location {
+      id
+    }
+  }
+}

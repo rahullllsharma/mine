@@ -1,0 +1,27 @@
+query TenantLibrarySiteConditions($tenantWorkTypeIds: [UUID!]!) {
+  tenantAndWorkTypeLinkedLibrarySiteConditions(
+    tenantWorkTypeIds: $tenantWorkTypeIds
+  ) {
+    id
+    name
+    hazards {
+      energyLevel
+      energyType
+      controls {
+        controlType
+        id
+        isApplicable
+        name
+        archivedAt
+      }
+      taskApplicabilityLevels {
+        applicabilityLevel
+      }
+      archivedAt
+      id
+      isApplicable
+      name
+      imageUrl
+    }
+  }
+}

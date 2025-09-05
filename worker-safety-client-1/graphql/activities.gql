@@ -1,0 +1,58 @@
+query Activities($projectLocationId: UUID) {
+  projectLocations(id: $projectLocationId) {
+    activities {
+      id
+      name
+      status
+      tasks {
+        id
+        name
+        riskLevel
+        status
+        libraryTask {
+          id
+        }
+      }
+      startDate
+      endDate
+    }
+  }
+}
+
+mutation CreateActivity($activityData: CreateActivityInput!) {
+  createActivity(activityData: $activityData) {
+    id
+    location {
+      id
+    }
+  }
+}
+
+mutation RemoveTasksFromActivity(
+  $id: UUID!
+  $taskIds: RemoveActivityTasksInput!
+) {
+  removeTasksFromActivity(id: $id, taskIdsToBeRemoved: $taskIds) {
+    id
+    name
+    tasks {
+      id
+      name
+    }
+  }
+}
+
+mutation AddTasksToActivity($id: UUID!, $newTasks: AddActivityTasksInput!) {
+  addTasksToActivity(id: $id, newTasks: $newTasks) {
+    id
+    name
+    tasks {
+      id
+      name
+    }
+  }
+}
+
+mutation DeleteActivity($id: UUID!) {
+  deleteActivity(id: $id)
+}

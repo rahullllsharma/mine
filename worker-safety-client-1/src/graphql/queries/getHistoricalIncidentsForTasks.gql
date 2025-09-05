@@ -1,0 +1,10 @@
+query GetHistoricIncidentsForTasks($libraryTaskIds: [UUID!]!) {
+  historicalIncidentsForTasks(libraryTaskIds: $libraryTaskIds) {
+    id
+    description
+    incidentDate
+    incidentType
+    severity
+    severityCode
+  }
+}

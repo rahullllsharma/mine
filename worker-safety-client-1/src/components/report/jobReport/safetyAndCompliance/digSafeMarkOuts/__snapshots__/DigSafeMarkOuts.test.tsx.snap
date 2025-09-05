@@ -1,0 +1,636 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DigSafeMarkOuts should display the DigsafeMarkOuts section with empty state values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-15"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-17"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-16"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-17"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-19"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-18"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-19"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-21"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-20"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-21"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-22"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-24"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-23"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-24"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-26"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-25"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-26"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-28"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-27"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-28"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DigSafeMarkOuts should display the DigsafeMarkOuts section with prefilled values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-29"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-31"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-30"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-31"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-33"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-32"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-33"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-35"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-34"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-35"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+          style="height: 0px;"
+        >
+          N/A
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-36"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-38"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-37"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-38"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-40"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-39"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-40"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-42"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-41"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-42"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+          style="height: 0px;"
+        >
+          Yes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value="No additional notes"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DigSafeMarkOuts should display the DigsafeMarkOuts section without defaults 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-7"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-1"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-2"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-1"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-3"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-4"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-3"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-5"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-6"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-5"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-14"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-8"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-9"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-8"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-10"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-11"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-10"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-12"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-13"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-12"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

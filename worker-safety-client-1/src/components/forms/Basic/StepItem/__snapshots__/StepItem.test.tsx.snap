@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StepItem renders correctly current step 1`] = `
+<DocumentFragment>
+  <button
+    class="p-3 bg-neutral-shade-3 rounded flex w-full items-center text-left border-2 border-neutral-shade-100 box-border"
+  >
+    <i
+      aria-hidden="true"
+      class="text-neutral-shade-58"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          fill="currentColor"
+          r="10"
+        />
+      </svg>
+    </i>
+    <span
+      class="ml-2 text-base font-normal text-neutral-shade-100"
+    >
+      Test
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`StepItem renders correctly default step 1`] = `
+<DocumentFragment>
+  <button
+    class="p-3 bg-neutral-shade-3 rounded flex w-full items-center text-left border-2 border-transparent box-border"
+  >
+    <i
+      aria-hidden="true"
+      class="text-neutral-shade-58"
+    >
+      <svg
+        fill="none"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          fill="currentColor"
+          r="10"
+        />
+      </svg>
+    </i>
+    <span
+      class="ml-2 text-base font-normal text-neutral-shade-100"
+    >
+      Test
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`StepItem renders correctly visited step 1`] = `
+<DocumentFragment>
+  <button
+    class="p-3 bg-neutral-shade-3 rounded flex w-full items-center text-left border-2 border-transparent bg-brand-urbint-10"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-circle_check text-brand-urbint-40"
+    />
+    <span
+      class="ml-2 text-base font-normal text-neutral-shade-100"
+    >
+      Test
+    </span>
+  </button>
+</DocumentFragment>
+`;

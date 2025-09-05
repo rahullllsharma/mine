@@ -1,0 +1,6 @@
+mutation ingestCsv($key: IngestType!, $body: String!, $delimiter: String) {
+  ingestCsv(key: $key, body: $body, delimiter: $delimiter) {
+    added
+    items
+  }
+}

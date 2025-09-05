@@ -1,0 +1,41 @@
+#import "src/graphql/fragments/ProjectType.fragment.gql"
+#import "src/graphql/fragments/AssetType.fragment.gql"
+#import "src/graphql/fragments/Contractor.fragment.gql"
+#import "src/graphql/fragments/Region.fragment.gql"
+#import "src/graphql/fragments/Division.fragment.gql"
+#import "src/graphql/fragments/Manager.fragment.gql"
+#import "src/graphql/fragments/Supervisor.fragment.gql"
+#import "src/graphql/fragments/TenantWorkTypes.fragment.gql"
+
+query projectLibraries($orderBy: [OrderBy!]) {
+  divisionsLibrary(orderBy: $orderBy) {
+    ...Division
+  }
+
+  regionsLibrary(orderBy: $orderBy) {
+    ...Region
+  }
+
+  projectTypesLibrary(orderBy: $orderBy) {
+    ...ProjectType
+  }
+
+  assetTypesLibrary(orderBy: $orderBy) {
+    ...AssetType
+  }
+
+  contractors(orderBy: $orderBy) {
+    ...Contractor
+  }
+
+  managers(orderBy: $orderBy) {
+    ...Manager
+  }
+
+  supervisors(orderBy: $orderBy) {
+    ...Supervisor
+  }
+  tenantWorkTypes {
+    ...TenantWorkTypes
+  }
+}

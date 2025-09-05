@@ -1,0 +1,6 @@
+export enum AuditObjectType {
+  TASK = "TASK",
+  SITE_CONDITION = "SITE_CONDITION",
+  PROJECT = "PROJECT",
+  DAILY_REPORT = "DAILY_REPORT",
+}

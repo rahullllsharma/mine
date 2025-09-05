@@ -1,0 +1,37 @@
+fragment Locations_MapView on ProjectLocation {
+  id
+  name
+  riskLevel
+  supervisor {
+    name
+  }
+  project {
+    id
+    name
+    libraryProjectType {
+      name
+    }
+    supervisor {
+      id
+      name
+    }
+    additionalSupervisors {
+      id
+    }
+    libraryDivision {
+      name
+    }
+    libraryRegion {
+      name
+    }
+  }
+  activities(date: $date) {
+    libraryActivityType {
+      name
+    }
+    supervisors {
+      name
+    }
+    isCritical
+  }
+}

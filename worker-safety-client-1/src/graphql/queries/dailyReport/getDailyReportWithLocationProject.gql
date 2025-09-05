@@ -1,0 +1,9 @@
+#import "./fragments/dailyReport.fragment.gql"
+#import "./fragments/locationProject.fragment.gql"
+
+query GetDailyReportWithLocationProject($id: UUID!) {
+  dailyReport(id: $id) {
+    ...DailyReportFragment
+    ...DailyReportLocationProjectFragment
+  }
+}

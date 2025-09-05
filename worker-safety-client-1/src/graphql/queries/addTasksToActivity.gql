@@ -1,0 +1,10 @@
+mutation addTasksToActivity($id: UUID!, $newTasks: AddActivityTasksInput!) {
+  addTasksToActivity(id: $id, newTasks: $newTasks) {
+    id
+    name
+    tasks {
+      id
+      name
+    }
+  }
+}

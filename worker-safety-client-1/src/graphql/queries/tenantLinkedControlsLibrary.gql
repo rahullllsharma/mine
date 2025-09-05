@@ -1,0 +1,19 @@
+query TenantLinkedControlsLibrary(
+  $type: LibraryFilterType!
+  $libraryHazardId: UUID
+  $libraryTaskId: UUID
+  $librarySiteConditionId: UUID
+  $orderBy: [OrderBy!]
+) {
+  tenantLinkedControlsLibrary(
+    type: $type
+    libraryHazardId: $libraryHazardId
+    libraryTaskId: $libraryTaskId
+    librarySiteConditionId: $librarySiteConditionId
+    orderBy: $orderBy
+  ) {
+    id
+    name
+    isApplicable
+  }
+}

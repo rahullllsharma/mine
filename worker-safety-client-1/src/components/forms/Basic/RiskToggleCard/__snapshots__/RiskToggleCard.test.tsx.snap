@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RiskToggleCard renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="max-w-[231px] shadow-10 rounded-lg cursor-pointer"
+  >
+    <div
+      class="bg-white px-4 py-2 bg-brand-gray-10"
+    >
+      <span
+        class="text-base font-semibold"
+      >
+        Arc Flash
+      </span>
+    </div>
+    <div
+      class="flex flex-col items-center p-4 bg-white"
+    >
+      <img
+        alt="Risk image"
+        class="pb-2"
+        src="/assets/JSB/ArcFlash.svg"
+      />
+      <span
+        class="pb-2 text-sm font-semibold"
+      >
+        Critical risk observed
+      </span>
+      <div>
+        <input
+          class="inputCheckbox"
+          readonly=""
+          type="checkbox"
+        />
+        <label
+          class="toggle"
+        />
+      </div>
+       
+    </div>
+  </div>
+</DocumentFragment>
+`;

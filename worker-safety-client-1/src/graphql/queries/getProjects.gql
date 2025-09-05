@@ -1,0 +1,48 @@
+query GetProjects(
+  $status: ProjectStatus
+  $search: String
+  $orderBy: [ProjectOrderBy!]
+  $limit: Int
+  $offset: Int
+  $date: Date
+) {
+  projects(
+    status: $status
+    search: $search
+    orderBy: $orderBy
+    limit: $limit
+    offset: $offset
+  ) {
+    id
+    name
+    riskLevel
+    status
+    manager {
+      id
+    }
+    supervisor {
+      id
+      name
+    }
+    additionalSupervisors {
+      id
+    }
+    libraryRegion {
+      id
+      name
+    }
+    libraryDivision {
+      id
+      name
+    }
+    libraryProjectType {
+      id
+      name
+    }
+    locations {
+      activities(date: $date) {
+        isCritical
+      }
+    }
+  }
+}

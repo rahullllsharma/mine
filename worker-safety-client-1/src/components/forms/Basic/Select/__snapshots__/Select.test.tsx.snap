@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select User interactions opens options when user clicks 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div>
+      <div
+        aria-hidden="true"
+        class="select selectPlaceholder"
+        role="select"
+        tabindex="0"
+      >
+        <div
+          class="flex flex-grow cursor-pointer"
+        >
+          <div
+            class="flex flex-1 flex-row"
+          >
+            <span
+              class="truncate"
+            >
+              <span>
+                Choose a contact
+              </span>
+            </span>
+          </div>
+        </div>
+        <i
+          aria-hidden="true"
+          class="ci-chevron_up text-base self-center cursor-pointer"
+        />
+      </div>
+      <ul
+        class="bg-white max-h-36 overflow-y-auto mt-2 rounded border-solid border-[1px] border-brand-gray-40"
+      >
+        <li
+          aria-hidden="true"
+          class="option selectPlaceholder"
+        >
+          Choose a contact
+        </li>
+        <li
+          aria-hidden="true"
+          class="option"
+        >
+          Option 1
+        </li>
+        <li
+          aria-hidden="true"
+          class="option"
+        >
+          Option 2
+        </li>
+      </ul>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Select renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <div>
+      <div
+        aria-hidden="true"
+        class="select selectPlaceholder"
+        role="select"
+        tabindex="0"
+      >
+        <div
+          class="flex flex-grow cursor-pointer"
+        >
+          <div
+            class="flex flex-1 flex-row"
+          >
+            <span
+              class="truncate"
+            >
+              <span>
+                Choose a contact
+              </span>
+            </span>
+          </div>
+        </div>
+        <i
+          aria-hidden="true"
+          class="ci-chevron_down text-base self-center cursor-pointer"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

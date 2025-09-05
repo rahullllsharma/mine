@@ -1,0 +1,4 @@
+fragment Supervisor on Supervisor {
+  id
+  name
+}

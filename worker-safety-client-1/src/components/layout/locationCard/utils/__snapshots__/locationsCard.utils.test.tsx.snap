@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Location card utils getCardOptionalProps when passing activity identifier with multiple values should return the identifier as an element 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-flex items-center"
+  >
+    <span
+      class="inline-flex items-center w-full"
+    >
+      Multiple
+    </span>
+  </span>
+</DocumentFragment>
+`;

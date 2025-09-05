@@ -1,0 +1,8 @@
+query ActivityGroupsLibrary($orderBy: [OrderBy!]) {
+  activityGroupsLibrary(orderBy: $orderBy) {
+    name
+    tasks {
+      name
+    }
+  }
+}

@@ -1,0 +1,4 @@
+fragment Division on LibraryDivision {
+  id
+  name
+}

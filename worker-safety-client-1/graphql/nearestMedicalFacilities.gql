@@ -1,0 +1,11 @@
+query NearestMedicalFacilities($latitude: Decimal!, $longitude: Decimal!) {
+  nearestMedicalFacilities(latitude: $latitude, longitude: $longitude) {
+    description
+    address
+    city
+    distanceFromJob
+    phoneNumber
+    state
+    zip
+  }
+}

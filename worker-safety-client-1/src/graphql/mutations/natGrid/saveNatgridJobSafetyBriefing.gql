@@ -1,0 +1,366 @@
+mutation SaveNatgridJobSafetyBriefing(
+  $input: NatGridJobSafetyBriefingInput!
+  $formStatus: FormStatusInput!
+  $notificationInput: FormsNotificationsInput
+) {
+  saveNatgridJobSafetyBriefing(
+    natgridJobSafetyBriefing: $input
+    formStatus: $formStatus
+    notificationInput: $notificationInput
+  ) {
+    id
+    status
+    completedAt
+    contents {
+      generalReferenceMaterials {
+        id
+        link
+        name
+        category
+      }
+      jsbId
+      taskHistoricIncidents {
+        historicIncidents
+        id
+        name
+      }
+      jsbMetadata {
+        briefingDateTime
+      }
+      workPackageMetadata {
+        workPackageLocationId
+      }
+      gpsCoordinates {
+        latitude
+        longitude
+      }
+      workLocation {
+        address
+        landmark
+        city
+        state
+        vehicleNumber
+        minimumApproachDistance
+        operatingHq
+      }
+      voltageInfo {
+        circuit
+        voltages
+      }
+      medicalInformation {
+        nearestHospital {
+          description
+          distanceFromJob
+          phoneNumber
+          address
+          city
+          state
+          zip
+        }
+        customMedicalNearestHospital {
+          address
+        }
+        firstAidKitLocation {
+          id
+          firstAidLocationName
+        }
+        customFirstAidKitLocation {
+          address
+        }
+        burnKitLocation {
+          id
+          burnKitLocationName
+        }
+        customBurnKitLocation {
+          address
+        }
+        primaryFireSupressionLocation {
+          id
+          primaryFireSupressionLocationName
+        }
+        customPrimaryFireSupressionLocation {
+          address
+        }
+
+        aedInformation {
+          id
+          aedLocationName
+        }
+        customAedLocation {
+          address
+        }
+      }
+      activities {
+        name
+        tasks {
+          id
+          name
+          riskLevel
+          fromWorkOrder
+        }
+      }
+      criticalTasksSelections {
+        jobDescription
+        taskSelections {
+          id
+          name
+          riskLevel
+          fromWorkOrder
+        }
+      }
+      hazardsControl {
+        energyTypes
+        additionalComments
+        tasks {
+          id
+          name
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+        siteConditions {
+          id
+          name
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+        manuallyAddedHazards {
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+      energySourceControl {
+        energized
+        deEnergized
+        clearanceNumber
+        controlsDescription
+        controls {
+          id
+          name
+          controlInfoValues
+        }
+        clearanceTypes {
+          id
+          clearanceTypes
+        }
+        pointsOfProtection {
+          id
+          name
+          details
+        }
+      }
+      attachmentSection {
+        descriptionDocumentProvided
+        photos {
+          id
+          signedUrl
+          exists
+          url
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          category
+        }
+        documents {
+          id
+          signedUrl
+          exists
+          url
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          category
+        }
+        documentsProvided {
+          id
+          name
+        }
+      }
+      standardOperatingProcedure {
+        id
+        name
+        sops {
+          id
+          name
+          link
+        }
+      }
+      groupDiscussion {
+        groupDiscussionNotes
+        viewed
+      }
+      crewSignOff {
+        multipleCrews {
+          multipleCrewInvolved
+          crewDiscussion
+          personIncharge {
+            id
+            name
+            email
+          }
+        }
+        crewSign {
+          otherCrewDetails
+          discussionConducted
+          crewDetails {
+            id
+            name
+            email
+          }
+          signature {
+            id
+            signedUrl
+            exists
+            url
+            name
+            displayName
+            size
+            date
+            time
+            mimetype
+            md5
+            crc32c
+            category
+          }
+        }
+      }
+      supervisorSignOff {
+        dateTime
+        supervisor {
+          supervisorInfo {
+            id
+            name
+            email
+          }
+          signature {
+            id
+            signedUrl
+            url
+            name
+            displayName
+            size
+            date
+            time
+            mimetype
+            md5
+            crc32c
+            category
+          }
+        }
+      }
+      siteConditions {
+        additionalComments
+        digSafe
+        siteConditionSelections {
+          id
+          recommended
+          selected
+          name
+        }
+      }
+      sourceInfo {
+        appVersion
+        sourceInformation
+      }
+      postJobBrief {
+        postJobDiscussionNotes
+        discussionItems {
+          nearMissOccuredDuringActivities
+          nearMissOccuredDescription
+          jobBriefAdequateCommunication
+          jobBriefAdequateCommunicationDescription
+          safetyConcernsIdentifiedDuringWork
+          safetyConcernsIdentifiedDuringWorkDescription
+          changesInProcedureWork
+          changesInProcedureWorkDescription
+          crewMemebersAdequateTrainingProvided
+          crewMemebersAdequateTrainingProvidedDescription
+          otherLessonLearnt
+          otherLessonLearntDescription
+          jobWentAsPlanned
+          jobWentAsPlannedDescription
+        }
+        supervisorApprovalSignOff {
+          id
+          name
+          email
+        }
+      }
+    }
+  }
+}

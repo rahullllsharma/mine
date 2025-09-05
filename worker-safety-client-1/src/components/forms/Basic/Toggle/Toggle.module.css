@@ -1,0 +1,38 @@
+.inputCheckbox {
+  appearance: none;
+}
+
+.inputCheckbox:disabled + .toggle {
+  opacity: 0.38;
+}
+
+.toggle {
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  border: #bdc1c3 solid 2px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #bdc1c3;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.toggleError {
+  @apply border-system-error-40;
+}
+
+.inputCheckbox:checked + .toggle::after {
+  background-color: #2ba329;
+  left: 20px;
+}

@@ -1,0 +1,9 @@
+query TenantWorkTypes {
+  tenantWorkTypes {
+    id
+    code
+    coreWorkTypeIds
+    name
+    tenantId
+  }
+}

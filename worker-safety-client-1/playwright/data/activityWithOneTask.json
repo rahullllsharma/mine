@@ -1,0 +1,63 @@
+[
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "0db44d38-fa65-4aa5-99bd-ab4a7ec0c880",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "52182601-b5ef-4526-ad02-5d63f5b75e84",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "7924f0e9-090a-4121-9e67-ad1e0a9d5998",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "0707486a-fd22-4959-887c-a0cd930ec087",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "730d586c-f9fc-48c2-bab9-018e5474b81c",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "064e56c8-0024-4cf5-8b11-8acce96c67da",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "845518bd-2a56-47c7-92d7-220087939243",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "62ca2539-c0c4-4920-aca8-60e8536e725d",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "1a5bfa7b-999f-42ca-b3a3-3ab238c8abd6",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "f52b676d-516e-4068-8878-050dfb32313f",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "62ca2539-c0c4-4920-aca8-60e8536e725d",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "2c285dc8-124f-4ebb-b913-3ca8ebf49f5a",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "223b04e9-62fa-4cf9-97f7-42d7e63994f0"
+  }
+]

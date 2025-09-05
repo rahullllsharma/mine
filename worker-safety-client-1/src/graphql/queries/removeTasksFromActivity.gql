@@ -1,0 +1,13 @@
+mutation RemoveTasksFromActivity(
+  $id: UUID!
+  $taskIds: RemoveActivityTasksInput!
+) {
+  removeTasksFromActivity(id: $id, taskIdsToBeRemoved: $taskIds) {
+    id
+    name
+    tasks {
+      id
+      name
+    }
+  }
+}

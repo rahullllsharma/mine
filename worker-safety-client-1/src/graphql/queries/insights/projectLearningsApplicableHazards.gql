@@ -1,0 +1,11 @@
+query ProjectLearningsApplicableHazards($filters: ProjectLearningsInput!) {
+  projectLearnings(projectLearningsInput: $filters) {
+    applicableHazards {
+      count
+      libraryHazard {
+        id
+        name
+      }
+    }
+  }
+}

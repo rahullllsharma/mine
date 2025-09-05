@@ -1,0 +1,26 @@
+query WorkTypeSiteConditionsLibrary(
+  $siteConditionsLibraryId: UUID
+  $orderBy: [OrderBy!]
+  $hazardsOrderBy: [OrderBy!]
+  $controlsOrderBy: [OrderBy!]
+  $workTypeIds: [UUID!]!
+) {
+  tenantAndWorkTypeLinkedLibrarySiteConditions(
+    id: $siteConditionsLibraryId
+    tenantWorkTypeIds: $workTypeIds
+    orderBy: $orderBy
+  ) {
+    id
+    name
+    hazards(orderBy: $hazardsOrderBy) {
+      id
+      name
+      isApplicable
+      controls(orderBy: $controlsOrderBy) {
+        id
+        name
+        isApplicable
+      }
+    }
+  }
+}

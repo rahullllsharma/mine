@@ -1,0 +1,127 @@
+mutation SaveDailyReport($dailyReportInput: SaveDailyReportInput!) {
+  saveDailyReport(dailyReportInput: $dailyReportInput) {
+    id
+    status
+    sections {
+      dailySourceInfo {
+        sourceInformation
+        sectionIsValid
+        appVersion
+      }
+      workSchedule {
+        sectionIsValid
+        startDatetime
+        endDatetime
+      }
+      taskSelection {
+        sectionIsValid
+        selectedTasks {
+          id
+          name
+          riskLevel
+        }
+      }
+      jobHazardAnalysis {
+        sectionIsValid
+        siteConditions {
+          id
+          isApplicable
+          hazards {
+            id
+            isApplicable
+            # notApplicableReason
+            controls {
+              id
+              implemented
+              notImplementedReason
+              furtherExplanation
+            }
+          }
+        }
+        tasks {
+          sectionIsValid
+          id
+          notes
+          performed
+          notApplicableReason
+          hazards {
+            id
+            isApplicable
+            # notApplicableReason
+            controls {
+              id
+              implemented
+              notImplementedReason
+              furtherExplanation
+            }
+          }
+        }
+      }
+      safetyAndCompliance
+      crew {
+        sectionIsValid
+        contractor
+        foremanName
+        nWelders
+        nSafetyProf
+        nOperators
+        nFlaggers
+        nLaborers
+        nOtherCrew
+        documents {
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          url
+          signedUrl
+          category
+        }
+      }
+      additionalInformation {
+        sectionIsValid
+        progress
+        lessons
+      }
+      attachments {
+        sectionIsValid
+        photos {
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          url
+          signedUrl
+          category
+          description
+        }
+        documents {
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          url
+          signedUrl
+          category
+        }
+      }
+    }
+    sectionsJSON
+    createdBy {
+      id
+      name
+    }
+  }
+}

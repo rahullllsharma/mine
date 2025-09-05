@@ -1,0 +1,41 @@
+.yesOrNoComponentParent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__textToggle {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.numberInputBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  &__unitSection {
+    padding-top: 1.5rem;
+  }
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 8px;
+}
+
+.errorInput {
+  input {
+    border: 1px solid red;
+  }
+}
+
+.errorTelephoneInput {
+  div:nth-child(2) {
+    border: 1px solid red;
+  }
+}
+
+.choiceComponentParent > div:first-child > div {
+  gap: 16px;
+}

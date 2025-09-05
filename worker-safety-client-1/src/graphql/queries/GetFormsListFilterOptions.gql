@@ -1,0 +1,27 @@
+query GetFormsListFilterOptions {
+  formsListFilterOptions {
+    createdByUsers {
+      id
+      name
+    }
+    formIds
+    formNames
+    locations {
+      id
+      name
+    }
+    operatingHqs
+    updatedByUsers {
+      id
+      name
+    }
+    workPackages {
+      id
+      name
+    }
+    supervisors {
+      id
+      name
+    }
+  }
+}

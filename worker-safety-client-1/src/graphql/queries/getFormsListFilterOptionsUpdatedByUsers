@@ -1,0 +1,16 @@
+query GetFormsListFilterOptionsUpdatedByUsers(
+  $limit: Int
+  $offset: Int
+  $filterSearch: FormListFilterSearchInput
+) {
+  formsListFilterOptions(
+    limit: $limit
+    offset: $offset
+    filterSearch: $filterSearch
+  ) {
+    updatedByUsers {
+      id
+      name
+    }
+  }
+}

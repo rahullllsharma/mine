@@ -1,0 +1,41 @@
+name: 'Check Staging Deployment'
+description: 'Checks if a release branch has passed the staging workflow.'
+
+inputs:
+  branch:
+    description: 'The branch name to check (e.g., release/v1).'
+    required: true
+  workflow_name:
+    description: 'The name of the workflow to check (e.g., Lint, Test, Build, and Deploy on Release Branch Push).'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install GitHub CLI
+      run: |
+        curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /usr/share/keyrings/github-archive-keyring.gpg >/dev/null
+        sudo apt update
+        sudo apt install gh
+      shell: bash  `
+
+    - name: Authenticate GitHub CLI
+      run: gh auth login --with-token < ${GITHUB_TOKEN}
+      shell: bash  
+
+    - name: Check if release branch has passed staging
+      id: check_staging
+      run: |
+        BRANCH_NAME="${{ inputs.branch }}"
+        WORKFLOW_NAME="${{ inputs.workflow_name }}"
+        
+        # Check GitHub Actions workflow runs for the specified workflow and branch
+        STATUS=$(gh run list --workflow="$WORKFLOW_NAME" --branch="$BRANCH_NAME" --json status --jq '.[] | select(.status == "completed" and .conclusion == "success") | .status')
+        
+        if [ -z "$STATUS" ]; then
+          echo "The staging deployment has not been completed successfully for branch $BRANCH_NAME."
+          exit 1
+        else
+          echo "The branch $BRANCH_NAME has passed staging."
+        fi
+      shell: bash  

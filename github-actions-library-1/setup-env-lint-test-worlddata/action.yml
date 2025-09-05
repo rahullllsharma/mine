@@ -1,0 +1,78 @@
+name: "Setup and Checks"
+description: "Set up environment, install dependencies, and run checks (black, flake8, isort, mypy)"
+inputs:
+  python-version:
+    description: "Python version"
+    required: true
+    default: "3.10"
+  check-types:
+    description: "Comma-separated list of checks to run (e.g., black, flake8)"
+    required: true
+  postgres-user:
+    description: "Postgres user"
+    required: true
+    default: "world_data"
+  postgres-password:
+    description: "Postgres password"
+    required: true
+    default: "world_data"
+  postgres-db:
+    description: "Postgres database name"
+    required: true
+    default: "world_data"
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install system dependencies
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y build-essential libpq-dev gcc brotli libgeos-dev proj-bin libsnappy-dev
+        sudo apt-get clean
+
+    - name: Install Poetry
+      shell: bash
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Configure Poetry
+      shell: bash
+      run: |
+        poetry config virtualenvs.in-project true
+
+    - name: Install dependencies with Poetry
+      shell: bash
+      run: |
+        poetry install --no-root
+
+    - name: Set up services (PostgreSQL & Redis)
+      shell: bash
+      run: |
+        echo "Setting up PostgreSQL and Redis services"
+      # No need to actually start services here, as they will be defined in the main workflow
+
+    - name: Run checks
+      shell: bash
+      run: |
+        . .venv/bin/activate
+        IFS=',' read -r -a checks <<< "${{ inputs.check-types }}"
+        for check in "${checks[@]}"; do
+          if [ "$check" == "black" ]; then
+            poetry run black --check .
+          elif [ "$check" == "flake8" ]; then
+            poetry run flake8 .
+          elif [ "$check" == "isort" ]; then
+            poetry run isort --check .
+          elif [ "$check" == "mypy" ]; then
+            poetry run mypy world_data tests
+          fi
+        done

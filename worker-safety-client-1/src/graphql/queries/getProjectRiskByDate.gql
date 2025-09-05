@@ -1,0 +1,5 @@
+query ProjectRiskByDate($projectId: UUID!, $date: Date) {
+  project(projectId: $projectId) {
+    riskLevel(date: $date)
+  }
+}

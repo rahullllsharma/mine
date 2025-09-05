@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkMethods should display the WorkMethods section with empty state values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-6"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-8"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-7"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-8"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-10"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-9"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-10"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WorkMethods should display the WorkMethods section with prefilled values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-11"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-13"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-12"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-13"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-15"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-14"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-15"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+          style="height: 0px;"
+        >
+          Not granted
+        </textarea>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WorkMethods should display the WorkMethods section without defaults 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-5"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-1"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-2"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-1"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-3"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-4"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-3"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,37 @@
+name: 'Terraform Plan'
+description: 'Run Terraform plan on the provided directory'
+
+inputs:
+  tfvars_file:
+    description: 'Path to Terraform variables file (e.g. env/integration.tfvars)'
+    required: true
+  plan_output:
+    description: 'Output plan file name'
+    default: 'plan.tfplan'
+    required: false
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Initialize Terraform
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform init
+
+    - name: Run Terraform plan
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform plan -var-file=${{ inputs.tfvars_file }} -out=${{ inputs.plan_output }}
+        terraform show -no-color ${{ inputs.plan_output }} > plan.txt
+        cat plan.txt
+
+    - name: Upload Terraform plan artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: terraform-plan
+        path: $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform/${{ inputs.plan_output }}

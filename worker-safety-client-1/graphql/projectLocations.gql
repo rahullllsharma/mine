@@ -1,0 +1,57 @@
+query ProjectLocations($id: UUID, $date: Date) {
+  projectLocations(id: $id) {
+    id
+    name
+    project {
+      id
+      name
+      description
+    }
+    activities(date: $date) {
+      id
+      name
+      status
+      tasks {
+        id
+        name
+        riskLevel
+        status
+        libraryTask {
+          id
+        }
+      }
+      startDate
+      endDate
+    }
+    address
+    jobSafetyBriefings {
+      id
+      name
+      status
+      completedAt
+      completedBy {
+        id
+        name
+      }
+    }
+    latitude
+    longitude
+    riskLevel
+    tasks(date: $date) {
+      id
+      name
+      riskLevel
+      status
+      libraryTask {
+        id
+      }
+    }
+    siteConditions(date: $date) {
+      id
+      name
+      librarySiteCondition {
+        id
+      }
+    }
+  }
+}

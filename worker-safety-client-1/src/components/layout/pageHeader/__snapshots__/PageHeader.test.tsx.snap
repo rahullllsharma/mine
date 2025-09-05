@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader should be rendered correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="shadow-5 py-2 px-6 bg-white relative"
+  >
+    <a
+      class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40 mb-3"
+      href="/route"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-chevron_big_left text-lg leading-5 mr-1"
+      />
+      <span
+        class="truncate"
+      >
+        some label
+      </span>
+    </a>
+    <div
+      class="flex items-center flex-wrap"
+    >
+      <div
+        class="flex w-full"
+      />
+    </div>
+  </header>
+</DocumentFragment>
+`;

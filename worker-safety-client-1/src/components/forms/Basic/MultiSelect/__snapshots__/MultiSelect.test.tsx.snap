@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSelect User interactions opens options when user click 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full"
+  >
+    <div
+      aria-hidden="true"
+      class="select selectPlaceholder"
+      role="select"
+      tabindex="0"
+    >
+      <div
+        class="flex flex-grow cursor-pointer"
+      >
+        <div
+          class="flex flex-1 flex-row"
+        >
+          <span
+            class="truncate"
+          >
+            Choose a contact
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex items-center cursor-pointer"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_up text-base self-center ml-2 cursor-pointer"
+        />
+      </div>
+    </div>
+    <ul
+      class="bg-white max-h-36 overflow-y-auto mt-2 rounded border-solid border-[1px] border-brand-gray-40"
+    >
+      <li
+        aria-hidden="true"
+        class="option"
+      >
+        <span>
+          Option 1
+        </span>
+      </li>
+      <li
+        aria-hidden="true"
+        class="option"
+      >
+        <span>
+          Option 2
+        </span>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MultiSelect renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full"
+  >
+    <div
+      aria-hidden="true"
+      class="select selectPlaceholder"
+      role="select"
+      tabindex="0"
+    >
+      <div
+        class="flex flex-grow cursor-pointer"
+      >
+        <div
+          class="flex flex-1 flex-row"
+        >
+          <span
+            class="truncate"
+          >
+            Choose a contact
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex items-center cursor-pointer"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_down text-base self-center ml-2 cursor-pointer"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

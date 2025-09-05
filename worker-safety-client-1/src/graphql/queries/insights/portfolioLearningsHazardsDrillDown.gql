@@ -1,0 +1,34 @@
+query PortfolioLearningsHazardsDrillDown(
+  $filters: PortfolioLearningsInput!
+  $libraryHazardId: UUID!
+) {
+  portfolioLearnings(portfolioLearningsInput: $filters) {
+    applicableHazardsByProject(libraryHazardId: $libraryHazardId) {
+      count
+      project {
+        name
+      }
+    }
+
+    applicableHazardsBySiteCondition(libraryHazardId: $libraryHazardId) {
+      count
+      librarySiteCondition {
+        name
+      }
+    }
+
+    applicableHazardsByTask(libraryHazardId: $libraryHazardId) {
+      count
+      libraryTask {
+        name
+      }
+    }
+
+    applicableHazardsByTaskType(libraryHazardId: $libraryHazardId) {
+      count
+      libraryTask {
+        category
+      }
+    }
+  }
+}

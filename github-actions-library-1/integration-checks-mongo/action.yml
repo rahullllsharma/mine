@@ -1,0 +1,98 @@
+name: Run Integration Checks for MongoDB
+
+description: "Run integration checks including migrations, integration tests, and seed data tests for MongoDB"
+
+inputs:
+  repository:
+    description: 'Repository to check out'
+    required: true
+    default: 'main-repo'
+  mongo_host:
+    description: 'MongoDB Host'
+    required: true
+  mongo_user:
+    description: 'MongoDB User'
+    required: true
+  mongo_pass:
+    description: 'MongoDB Password'
+    required: true
+  mongo_db:
+    description: 'MongoDB Database'
+    required: true
+  protocol_buffers_python_implementation:
+    description: 'Protocol Buffers Python Implementation'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+      with:
+        repository: ${{ inputs.repository }}
+        ref: FEATURE/PLAT-1585-github-actions
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m venv .venv
+        . .venv/bin/activate
+        python -m pip install --upgrade pip
+        pip uninstall -y typing-extensions  # Remove conflicting versions if any
+        pip install typing-extensions==4.7.1  # Only install one version
+        pip install --no-deps \
+          dnspython==2.4.2 \
+          mongoengine==0.27.0 \
+          motor==3.1.1 \
+          pytest==7.4.3 \
+          pytest-asyncio==0.23.5 \
+          pytest-rerunfailures==14.0
+      shell: bash
+
+    - name: List installed packages
+      run: |
+        . .venv/bin/activate
+        pip freeze
+      shell: bash
+
+    - name: Run Migrations
+      run: |
+        . .venv/bin/activate
+        python ./migrations/run_migrations.py upgrade
+        python ./migrations/run_migrations.py downgrade -1
+      shell: bash
+      env:
+        MONGO_HOST: ${{ inputs.mongo_host }}
+        MONGO_USER: ${{ inputs.mongo_user }}
+        MONGO_PASS: ${{ inputs.mongo_pass }}
+        MONGO_DB: ${{ inputs.mongo_db }}
+
+    - name: Run Integration Tests
+      run: |
+        . .venv/bin/activate
+        pytest --reruns 1 --durations=30 -n auto
+        pytest -v tests/integration/test_example.py
+      shell: bash
+      env:
+        MONGO_HOST: ${{ inputs.mongo_host }}
+        MONGO_USER: ${{ inputs.mongo_user }}
+        MONGO_PASS: ${{ inputs.mongo_pass }}
+        MONGO_DB: ${{ inputs.mongo_db }}
+        PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: ${{ inputs.protocol_buffers_python_implementation }}
+
+    - name: Run Seed Data Generation
+      run: |
+        . .venv/bin/activate
+        python ./support/scripts/seed/mongo_seed_main.py recreate-backup
+        python ./support/scripts/seed/mongo_seed_main.py restore-from-backup
+      shell: bash
+      env:
+        MONGO_HOST: ${{ inputs.mongo_host }}
+        MONGO_USER: ${{ inputs.mongo_user }}
+        MONGO_PASS: ${{ inputs.mongo_pass }}
+        MONGO_DB: ${{ inputs.mongo_db }}
+        PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: ${{ inputs.protocol_buffers_python_implementation }}

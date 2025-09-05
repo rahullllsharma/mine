@@ -1,0 +1,449 @@
+@import "~@urbint/silica/dist/index.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  @supports (font-variation-settings: normal) {
+    html {
+      font-family: "Inter var", sans-serif;
+    }
+  }
+
+  /* layout structure - for page layout to work properly */
+  body {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body>#__next {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    grid-template: "header" auto "content" 1fr / 1fr;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h5 {
+    @apply text-xl;
+  }
+
+  h6 {
+    @apply text-lg;
+  }
+}
+
+@layer utilities {
+  .responsive-padding-x {
+    @apply px-4 md:px-6 lg:px-8;
+  }
+
+  .responsive-padding-y {
+    @apply py-4 md:py-6 lg:py-8;
+  }
+
+  .responsive-padding-top {
+    @apply pt-4 pb-0 md:pt-6 lg:pt-8;
+  }
+
+  .sentence {
+    @apply lowercase first-letter:uppercase;
+  }
+
+  /* https://github.com/tailwindlabs/tailwindcss/discussions/2394 */
+  @variants responsive {
+
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+    }
+  }
+}
+
+/* using mapbox's control components aria-label for tooltips */
+.mapboxgl-ctrl-geolocate,
+.mapboxgl-ctrl-zoom-in,
+.mapboxgl-ctrl-zoom-out {
+  &:before {
+    content: "";
+    @apply opacity-0 scale-0 origin-right right-[38px] transition duration-100 transform-gpu;
+  }
+
+  &:hover {
+    &:before {
+      content: attr(aria-label);
+      @apply absolute bg-black shadow-xl px-3 py-1.5 text-tiny rounded-md text-white whitespace-nowrap overflow-hidden opacity-100 scale-100;
+    }
+  }
+}
+
+/*showing mapbox logo */
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl a.mapboxgl-ctrl-logo {
+  cursor: auto;
+  pointer-events: none !important;
+}
+
+
+/* for react date picker to allow only current month selection */
+.react-datepicker__day--outside-month {
+  color: #ccc !important;
+  pointer-events: none;
+}
+
+.hazard-exposure-badge {
+  &>span {
+    @apply gap-1;
+  }
+}
+
+@keyframes up-fade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    /* Moves the arrow up */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-40px);
+    /* Final upward position */
+    opacity: 0;
+    /* Fade out completely */
+  }
+}
+
+.animate-up-fade {
+  animation: up-fade 1.5s ease-in-out infinite;
+  /* Adjust duration as needed */
+}
+
+@import "react-datepicker/dist/react-datepicker.css";
+
+.custom-datepicker {
+  & .react-datepicker__current-month {
+    display: none;
+  }
+
+  .react-datepicker-wrapper {
+    min-width: 15.5rem;
+  }
+
+  & .react-datepicker__month-read-view--down-arrow {
+    display: none;
+  }
+
+  & .react-datepicker__navigation--previous {
+    top: 8px;
+  }
+
+  & .react-datepicker__navigation--next {
+    top: 8px;
+  }
+
+  & .react-datepicker__year-dropdown-container--scroll {
+    margin: 0 0px;
+  }
+
+  & .react-datepicker__month-dropdown-container--scroll {
+    margin: 0 5px;
+  }
+
+  & .react-datepicker__header {
+    background-color: unset !important;
+    border-bottom: none;
+  }
+
+  & .react-datepicker__year-read-view--down-arrow {
+    top: 3px !important;
+  }
+
+  & .react-datepicker__month-read-view--selected-month {
+    font-weight: 600 !important;
+  }
+
+  & .react-datepicker__year-read-view--selected-year {
+    font-weight: 600 !important;
+  }
+
+  & .react-datepicker-popper {
+    z-index: 2;
+  }
+
+  & .react-datepicker__month-dropdown {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px -5px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    right: 0%;
+    left: 0%;
+    z-index: 3;
+    gap: 3px;
+    padding: 10px;
+    color: grey;
+  }
+
+  & .react-datepicker__year-dropdown {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 15px -5px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    z-index: 3;
+    right: 0%;
+    left: 0%;
+    gap: 3px;
+    padding: 20px;
+    margin-top: 10px;
+    color: grey;
+  }
+
+  & .react-datepicker__month-option--selected_month {
+    border: 2px solid lightblue;
+  }
+
+  & .react-datepicker__year-option--selected_year {
+    border: 2px solid lightblue;
+  }
+
+  & .react-datepicker__month-option:hover {
+    background-color: #ececec;
+  }
+
+  & .react-datepicker__year-option:hover {
+    background-color: #ececec;
+  }
+
+  & .react-datepicker__year-option--selected {
+    display: none;
+  }
+
+  & .react-datepicker__month-option--selected {
+    display: none;
+  }
+
+  & .react-datepicker__today-button {
+    width: 20%;
+    margin: 0 4px 4px auto;
+    background: #ececec;
+    font-weight: 500;
+    border: 1px solid grey;
+    color: grey;
+    border-radius: 5px;
+  }
+
+  & .react-datepicker__today-button:hover {
+    background: #fff;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+  }
+
+  & .react-datepicker__day--selected {
+    background: #005870;
+    color: #fff;
+  }
+
+  & .react-datepicker__close-icon::after {
+    content: "×";
+    background-color: #fff !important;
+    font-size: 22px;
+    color: grey;
+  }
+
+  & .react-datepicker__day--today {
+    border: 1px solid lightblue;
+    background-color: #fff;
+    color: black;
+  }
+
+  & .react-datepicker__day--today:hover {
+    color: #fff;
+  }
+
+  & .react-datepicker__time-container--with-today-button {
+    background: #fff !important;
+    border-left: 1px solid grey !important;
+  }
+
+  & .auto-populated {
+    background-color: #f8f8f8;
+  }
+}
+
+@media (max-width: 639px) {
+  .custom-mobile-max-height {
+    max-height: 55vh;
+  }
+}
+
+/* Stronger override for Ant Design DatePicker blue focus ring globally */
+.ant-picker.ant-picker-focused,
+.ant-picker.ant-picker-focused input {
+  border-color: #bdc1c3 !important;
+}
+
+/* Override Ant Design DatePicker hover border color globally */
+.ant-picker:hover,
+.ant-picker:hover input {
+  border-color: #bdc1c3 !important;
+}
+
+/* Completely hide the default calendar picker indicator for all Ant Design DatePicker components */
+.ant-picker input::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+.ant-picker-input>input::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+/* Additional selectors to ensure complete removal across all browsers */
+.ant-picker input[type="date"]::-webkit-calendar-picker-indicator,
+.ant-picker input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.ant-picker input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0 !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute !important;
+  pointer-events: none !important;
+  background: transparent !important;
+}
+
+/* Hide Ant Design DatePicker's built-in calendar/time icons globally */
+.ant-picker .ant-picker-suffix {
+  display: none !important;
+}
+
+/* Style the dropdown panel globally */
+.ant-picker .ant-picker-dropdown {
+  z-index: 1050 !important;
+}
+
+/* Ensure the dropdown panel is visible and properly styled globally */
+.ant-picker .ant-picker-panel {
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Style the time picker panel globally */
+.ant-picker .ant-picker-time-panel {
+  border-left: 1px solid #f0f0f0 !important;
+}
+
+/* Style the time picker columns globally */
+.ant-picker .ant-picker-time-panel-column {
+  border-right: 1px solid #f0f0f0 !important;
+}
+
+/* Style the time picker cells globally */
+.ant-picker .ant-picker-time-panel-cell {
+  padding: 4px 8px !important;
+}
+
+/* Style the time picker cell when selected globally */
+.ant-picker .ant-picker-time-panel-cell-selected {
+  background: #1890ff !important;
+  color: white !important;
+}
+
+/* Style the time picker cell on hover globally */
+.ant-picker .ant-picker-time-panel-cell:hover {
+  background: #f5f5f5 !important;
+}
+
+/* Hide specific Ant Design icons globally but allow clear button */
+.ant-picker .ant-picker-suffix .anticon {
+  display: none !important;
+}
+
+/* Ensure the input takes full width and position clear icon at the end globally */
+.ant-picker .ant-picker-input {
+  padding-right: 24px !important;
+}
+
+/* Position the clear icon just a tad left from the end of the dropdown globally */
+.ant-picker .ant-picker-clear {
+  position: absolute !important;
+  right: 1px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+}
+
+/* Ensure lists in preview show numbers and bullets, even if parent has list-disc or other classes */
+.list-disc ol,
+.list-disc ul {
+  list-style: initial !important;
+  margin-left: 2em;
+  padding-left: 1.5em;
+}
+
+.list-disc ol {
+  list-style-type: decimal !important;
+}
+
+.list-disc ul {
+  list-style-type: disc !important;
+}
+
+.list-disc li {
+  margin-bottom: 0.25em;
+}

@@ -1,0 +1,43 @@
+@import "./globals.css";
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @media print {
+    .print-section {
+      page-break-before: always;
+    }
+
+    /* avoid having splinted sections after the title
+      (h2 is always the first element inside .print-section) */
+    .print-section:not(.control-assessment) > * + *,
+    /* force each common block section to break and avoid having text spited */
+    .print-section > * > section,
+    .print-section > * > div,
+    [data-print-section-unbreakable] {
+      page-break-inside: avoid;
+    }
+
+    .print-section [data-print-section]:first-child {
+      page-break-inside: auto;
+    }
+
+    /* this will force a page break even when another element, from the previous page also overlaps */
+    .print-section [data-print-section]:not(:first-child) {
+      page-break-before: always;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    /* make switch transform correctly in puppeteer */
+    .print-translate-x-6 {
+      -webkit-transform: translateX(1.5rem) !important;
+    }
+
+    .print-translate-x-0.5 {
+      -webkit-transform: translateX(0.125rem) !important;
+    }
+  }
+}

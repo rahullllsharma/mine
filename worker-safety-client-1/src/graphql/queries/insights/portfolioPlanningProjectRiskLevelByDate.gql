@@ -1,0 +1,13 @@
+query PortfolioPlanningProjectRiskLevelByDate(
+  $filters: PortfolioPlanningInput!
+) {
+  portfolioPlanning(portfolioPlanningInput: $filters) {
+    projectRiskLevelByDate {
+      projectName
+      riskLevelByDate {
+        date
+        riskLevel
+      }
+    }
+  }
+}

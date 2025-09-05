@@ -1,0 +1,16 @@
+name: "Run Tests"
+description: "Run unit tests with specified tags"
+inputs:
+  script:
+    description: "Script to run tests"
+    required: true
+  tag:
+    description: "Test tag for running tests"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Run Tests
+      run: ${{ inputs.script }} ${{ inputs.tag }}
+      shell: bash
+      working-directory: ./damage-prevention

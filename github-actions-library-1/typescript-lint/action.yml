@@ -1,0 +1,38 @@
+name: Node.js Lint
+description: Lint a Node.js application.
+author: Prakhar
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        registry-url: ${{ inputs.registry-url }}  
+
+    - name: Install dependencies
+      run: |
+        yarn install
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.node-auth-token }}
+      shell: bash
+
+    - name: Run Lint
+      run: |
+        yarn lint
+      shell: bash
+
+inputs:
+  node-version:
+    description: 'Node.js version to use'
+    required: true
+    default: '20'
+  
+  registry-url:
+    description: 'Registry URL for npm packages'
+    required: true
+    default: 'https://npm.pkg.github.com'  
+
+  node-auth-token:
+    description: 'NPM Auth Token for accessing private packages'
+    required: true  

@@ -1,0 +1,16 @@
+name: "Update GCS Tag"
+description: "This action updates the image tag in Google Cloud Storage."
+inputs:
+  bucket_path:
+    description: "The path to the GCS bucket."
+    required: true
+  image_tag:
+    description: "The image tag to be updated."
+    required: true
+  gcs_service_account_key:
+    description: "The GCS service account key in JSON format."
+    required: true  
+
+runs:
+  using: "node12"
+  main: "update-gcs-tag.js"

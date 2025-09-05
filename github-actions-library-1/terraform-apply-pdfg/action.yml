@@ -1,0 +1,25 @@
+name: 'Terraform Apply'
+description: 'Run Terraform apply with the provided plan file'
+
+inputs:
+  plan_file:
+    description: 'Path to the Terraform plan file'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Initialize Terraform
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform init
+
+    - name: Apply Terraform plan
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform apply -input=false ${{ inputs.plan_file }}

@@ -1,0 +1,27 @@
+query GetFormsListOptions {
+  formsList {
+    location {
+      name
+      id
+    }
+    createdBy {
+      name
+      id
+    }
+    workPackage {
+      id
+      name
+      libraryRegion {
+        id
+        name
+      }
+    }
+    updatedBy {
+      name
+      id
+    }
+    id
+    formId
+    operatingHq
+  }
+}

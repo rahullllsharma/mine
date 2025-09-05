@@ -1,0 +1,3 @@
+mutation DeleteProject($deleteProjectId: UUID!) {
+  deleteProject(id: $deleteProjectId)
+}

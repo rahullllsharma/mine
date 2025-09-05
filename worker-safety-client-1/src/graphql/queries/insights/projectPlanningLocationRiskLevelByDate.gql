@@ -1,0 +1,11 @@
+query ProjectPlanningLocationRiskLevelByDate($filters: ProjectPlanningInput!) {
+  projectPlanning(projectPlanningInput: $filters) {
+    locationRiskLevelByDate {
+      locationName
+      riskLevelByDate {
+        date
+        riskLevel
+      }
+    }
+  }
+}

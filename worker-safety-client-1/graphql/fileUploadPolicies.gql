@@ -1,0 +1,8 @@
+mutation FileUploadPolicies($count: Int!) {
+  fileUploadPolicies(count: $count) {
+    id
+    url
+    signedUrl
+    fields
+  }
+}

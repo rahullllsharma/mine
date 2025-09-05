@@ -1,0 +1,13 @@
+query PortfolioLearningsControlsNotImplemented(
+  $filters: PortfolioLearningsInput!
+) {
+  portfolioLearnings(portfolioLearningsInput: $filters) {
+    notImplementedControls {
+      percent
+      libraryControl {
+        id
+        name
+      }
+    }
+  }
+}

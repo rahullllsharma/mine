@@ -1,0 +1,87 @@
+name: 'Build and Scan Images'
+
+description: 'Builds Docker images and scans them for vulnerabilities.'
+inputs:
+  github_sha:
+    description: 'The Git commit SHA'
+    required: true
+  github_repo:
+    description: 'The GitHub repository'
+    required: true
+  cindy_pat:
+    description: 'GitHub Personal Access Token'
+    required: true
+  tags:
+    description: 'Docker image tags'
+    required: true
+  file:
+    description: 'Path to Dockerfile for building the first image'
+    required: true
+  context:
+    description: 'Context path for the second image (e.g., Superset)'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v3
+      with:
+        repository: ${{ inputs.github_repo }}
+        ref: ${{ inputs.github_sha }}
+
+    - name: Build Lens app
+      uses: docker/build-push-action@v4
+      with:
+        push: false  
+        tags: ${{ inputs.tags }}
+        file: ${{ inputs.file }}
+        build-args: |
+          PORT=8080
+          GITHUB_AUTH_TOKEN=${{ inputs.cindy_pat }}
+          APP_COMMIT_SHA=${{ inputs.github_sha }}
+          APP_COMMIT_URL=${{ inputs.github_repo }}/commit/${{ inputs.github_sha }}
+          APP_BUILD_URL=${{ inputs.github_repo }}/actions/runs/${{ github.run_id }}
+
+    - name: Build Superset
+      uses: docker/build-push-action@v4
+      with:
+        push: false  
+        context: ${{ inputs.context }}
+        tags: lens-superset:${{ inputs.github_sha }}
+
+    - name: Cache Trivy DB
+      id: cache-trivy-db
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/trivy
+        key: trivy-db-${{ runner.os }}-${{ inputs.github_sha }}
+        restore-keys: |
+          trivy-db-${{ runner.os }}-
+          trivy-db-
+
+    - name: Install Trivy
+      shell: bash  # Specify bash for this shell command
+      run: |
+        sudo apt-get update && sudo apt-get install wget -y
+        wget https://github.com/aquasecurity/trivy/releases/download/v0.45.1/trivy_0.45.1_Linux-64bit.deb
+        sudo dpkg -i trivy_0.45.1_Linux-64bit.deb
+
+    - name: Update Trivy DB
+      shell: bash  # Specify bash for this shell command
+      run: |
+         trivy --download-db-only || echo "Failed to update DB, using cached version."
+
+    - name: Scan Lens Image
+      continue-on-error: true
+      shell: bash  # Specify bash for this shell command
+      run: |
+        echo "Scanning Lens Docker image for vulnerabilities..."
+        trivy image --exit-code 1 --severity HIGH,CRITICAL ${{ inputs.tags }}
+
+    - name: Scan Superset Image
+      continue-on-error: true
+      shell: bash  # Specify bash for this shell command
+      run: |
+        echo "Scanning Superset Docker image for vulnerabilities..."
+        trivy image --exit-code 1 --severity HIGH,CRITICAL lens-superset:${{ inputs.github_sha }}

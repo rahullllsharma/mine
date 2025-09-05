@@ -1,0 +1,38 @@
+name: 'Run Migrations for Audit Trail Service'
+description: 'Runs migrations for the audit trail service using MongoDB'
+inputs:
+  mongodb_host:
+    description: 'MongoDB host'
+    required: true
+  mongodb_user:
+    description: 'MongoDB user'
+    required: true
+  mongodb_password:
+    description: 'MongoDB password'
+    required: true
+  mongodb_db:
+    description: 'MongoDB database'
+    required: true
+  migration_image_name:
+    description: 'Migration Docker image name'
+    required: true
+  migration_image_tag:
+    description: 'Migration Docker image tag'
+    required: true
+  app_env:
+    description: 'Application environment (optional)'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'gcr.io/urbint-1259/${{ inputs.migration_image_name }}:${{ inputs.migration_image_tag }}'
+  env:
+    MONGODB_HOST: ${{ inputs.mongodb_host }}
+    MONGODB_USER: ${{ inputs.mongodb_user }}  # Use secrets for password
+    MONGODB_PASSWORD: ${{ inputs.mongodb_password }}
+    MONGODB_DB: ${{ inputs.mongodb_db }}
+    APP_ENV: ${{ inputs.app_env }}  # Use provided value or default to empty
+  entrypoint: "/bin/bash"
+  args:
+    - "-c"
+    - "python run_migrations.py"

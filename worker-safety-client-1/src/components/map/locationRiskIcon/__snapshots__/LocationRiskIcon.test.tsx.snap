@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationRiskIcon should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="title"
+    class="flex justify-center items-center w-auto min-w-[1.25rem] h-5 text-base rounded-full shadow-10 hover:ring hover:ring-white bg-risk-high text-white"
+    role="status"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-chevron_up"
+    />
+  </div>
+</DocumentFragment>
+`;

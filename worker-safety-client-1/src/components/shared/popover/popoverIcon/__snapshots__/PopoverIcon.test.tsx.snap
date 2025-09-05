@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PopoverIcon when it renders should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <button
+      aria-expanded="false"
+      class="flex"
+      id="headlessui-popover-button-1"
+      type="button"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-chevron_big_down text-xl"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`PopoverIcon when it renders with tooltip props available should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative"
+  >
+    <button
+      aria-expanded="false"
+      class="flex"
+      id="headlessui-popover-button-3"
+      type="button"
+    >
+      <span
+        class="inline-flex items-center"
+      >
+        <span
+          class="inline-flex items-center w-full"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-chevron_big_down text-xl"
+          />
+        </span>
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

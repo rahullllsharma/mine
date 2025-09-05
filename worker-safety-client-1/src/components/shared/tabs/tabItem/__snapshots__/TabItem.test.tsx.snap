@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabItem should render with an icon if the "icon" prop is passed 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center px-2.5 py-3"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-settings_future text-xl mr-1 text-neutral-shade-75"
+    />
+    <span
+      class="text-base mx-1 truncate"
+    >
+      Lorem ipsum
+    </span>
+  </div>
+</DocumentFragment>
+`;

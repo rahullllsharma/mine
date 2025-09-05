@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavItem when an icon is passed as a prop should contain an icon before the text 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-location text-xl mr-1 text-neutral-shade-75"
+    />
+    <span
+      class="text-base mx-1 truncate"
+    >
+      Locations
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NavItem when it renders should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+  >
+    <span
+      class="text-base mx-1 truncate"
+    >
+      Locations
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`NavItem when it's selected and the marker type is "left" should render with marker on the left side 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+  >
+    <div
+      class="absolute top-0 emotion-0 bottom-0 w-1 h-full rounded-l-none rounded-r-xl bg-neutral-shade-75"
+    />
+    <span
+      class="text-base mx-1 truncate"
+    >
+      Locations
+    </span>
+  </div>
+</DocumentFragment>
+`;

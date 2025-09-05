@@ -1,0 +1,3326 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SafetyAndCompliance should display the SafetyAndCompliance section with empty state values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Plans
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive PHA conducted?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-72"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-74"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-73"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-74"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-76"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-75"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-76"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Have all crew members reviewed and signed off on the HASP?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-77"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-79"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-78"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-79"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-81"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-80"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-81"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-82"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-84"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-83"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-84"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-86"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-85"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-86"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-87"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-89"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-88"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-89"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-91"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-90"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-91"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-93"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-92"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-93"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-94"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-96"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-95"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-96"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-98"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-97"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-98"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-99"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-101"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-100"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-101"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-103"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-102"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-103"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-105"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-104"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-105"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-106"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-108"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-107"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-108"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-110"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-109"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-110"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-112"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-111"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-112"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        System Operating Procedures
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was the SOPs onsite and current? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-113"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-115"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-114"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-115"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-117"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-116"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-117"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.onSiteAndCurrentNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has Gas Controls been notified & has approval been given prior to the steps being performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-118"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-120"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-119"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-120"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-122"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-121"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-122"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.gasControlsNotifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP# *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopId"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Type *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopType"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Steps called in *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopStepsCalledIn"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Comments
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.sopComments"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Spotters/Safety Observer
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has a Safety Observer been assigned?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-123"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-125"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-124"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-125"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-127"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-126"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-127"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.spottersSafetyObserver.safetyObserverAssignedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Spotter Identified when machinery and/or equipment is backing up?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-128"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-130"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-129"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-130"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-132"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-131"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-132"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        PPE
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all crew members and visitors wearing the appropriate PPE? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-133"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-135"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-134"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-135"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-137"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-136"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-137"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.privateProtectionEquipment.wearingPPENotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Operator Qualifications
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were the Operator Qualifications verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-138"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-140"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-139"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-140"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-142"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-141"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-142"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.operatorQualifications.qualificationsVerifiedNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SafetyAndCompliance should display the SafetyAndCompliance section with prefilled values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Plans
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive PHA conducted?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-143"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-145"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-144"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-145"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-147"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-146"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-147"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Have all crew members reviewed and signed off on the HASP?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-148"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-150"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-149"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-150"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-152"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-151"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-152"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-153"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-155"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-154"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-155"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-157"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-156"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-157"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+          style="height: 0px;"
+        >
+          Conducts notes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-158"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-160"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-159"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-160"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-162"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-161"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-162"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-164"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-163"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-164"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+          style="height: 0px;"
+        >
+          After work notes
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-165"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-167"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-166"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-167"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-169"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-168"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-169"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+          style="height: 0px;"
+        >
+          Not granted
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-170"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-172"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-171"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-172"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-174"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-173"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-174"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-176"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-175"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-176"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+          style="height: 0px;"
+        >
+          N/A
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-177"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-179"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-178"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-179"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-181"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-180"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-181"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-183"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-182"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-183"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+          style="height: 0px;"
+        >
+          Yes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value="No additional notes"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        System Operating Procedures
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was the SOPs onsite and current? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-184"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-186"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-185"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-186"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-188"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-187"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-188"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.onSiteAndCurrentNotes"
+          style="height: 0px;"
+        >
+          On-site and current notes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has Gas Controls been notified & has approval been given prior to the steps being performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-189"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-191"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-190"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-191"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-193"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-192"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-193"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.gasControlsNotifiedNotes"
+          style="height: 0px;"
+        >
+          Gas control notification notes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP# *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopId"
+            type="text"
+            value="#11AA22"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Type *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopType"
+            type="text"
+            value="Unknown"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Steps called in *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopStepsCalledIn"
+            type="text"
+            value="Steps called in"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Comments
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.sopComments"
+          style="height: 0px;"
+        >
+          No additional comments
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Spotters/Safety Observer
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has a Safety Observer been assigned?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-194"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-196"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-195"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-196"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-198"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-197"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-198"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.spottersSafetyObserver.safetyObserverAssignedNotes"
+          style="height: 0px;"
+        >
+          Not yet
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Spotter Identified when machinery and/or equipment is backing up?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-199"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-201"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-200"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-201"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-203"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-202"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-203"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        PPE
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all crew members and visitors wearing the appropriate PPE? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-204"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-206"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-205"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-206"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-208"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-207"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-208"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.privateProtectionEquipment.wearingPPENotes"
+          style="height: 0px;"
+        >
+          No security/protection measures applied to any crew member nor visitors
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Operator Qualifications
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were the Operator Qualifications verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-209"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-211"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-210"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-211"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-213"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-212"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-213"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.operatorQualifications.qualificationsVerifiedNotes"
+          style="height: 0px;"
+        >
+          All ok
+        </textarea>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SafetyAndCompliance should display the SafetyAndCompliance section without defaults 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Plans
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive PHA conducted?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-5"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-1"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-2"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-1"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-3"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-4"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-3"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Have all crew members reviewed and signed off on the HASP?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-10"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-6"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-7"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-6"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-8"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-9"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-8"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-15"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-11"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-12"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-11"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-13"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-14"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-13"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-22"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-16"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-17"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-16"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-18"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-19"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-18"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-20"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-21"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-20"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Work Methods
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Could the Contractor access & navigate the NG procedures? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-27"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-23"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-24"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-23"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-25"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-26"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-25"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.workMethods.contractorAccessNotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Digsafe / Mark Outs
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Mark Outs verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-34"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-28"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-29"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-28"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-30"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-31"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-30"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-32"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-33"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-32"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.markOutsVerifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all Facilities located and exposed prior to excavation? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-41"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-35"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-36"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-35"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-37"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-38"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-37"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-39"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-40"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-39"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.digSafeMarkOuts.facilitiesLocatedAndExposedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Digsafe location? *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.digSafeMarkOuts.digSafeMarkOutsLocation"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        System Operating Procedures
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was the SOPs onsite and current? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-46"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-42"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-43"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-42"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-44"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-45"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-44"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.onSiteAndCurrentNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has Gas Controls been notified & has approval been given prior to the steps being performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-51"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-47"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-48"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-47"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-49"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-50"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-49"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.gasControlsNotifiedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP# *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopId"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Type *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopType"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Steps called in *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            name="safetyAndCompliance.systemOperatingProcedures.sopStepsCalledIn"
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          SOP Comments
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.systemOperatingProcedures.sopComments"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Spotters/Safety Observer
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Has a Safety Observer been assigned?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-56"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-52"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-53"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-52"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-54"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-55"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-54"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.spottersSafetyObserver.safetyObserverAssignedNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Spotter Identified when machinery and/or equipment is backing up?
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-61"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-57"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-58"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-57"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-59"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-60"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-59"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        PPE
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were all crew members and visitors wearing the appropriate PPE? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-66"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-62"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-63"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-62"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-64"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-65"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-64"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.privateProtectionEquipment.wearingPPENotes"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Operator Qualifications
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Were the Operator Qualifications verified? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-71"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-67"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-68"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-67"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-69"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-70"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-69"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.operatorQualifications.qualificationsVerifiedNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

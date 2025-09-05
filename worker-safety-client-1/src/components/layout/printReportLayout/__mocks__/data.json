@@ -1,0 +1,1160 @@
+{
+  "dailyReport": {
+    "completedAt": "2022-07-11T15:22:16.302460+00:00",
+    "completedBy": {
+      "id": "b6be55a6-5722-457c-8c09-388eb503a7dc",
+      "name": "Super User"
+    },
+    "createdAt": "2022-07-04T11:55:07.007430+00:00",
+    "createdBy": {
+      "id": "b6be55a6-5722-457c-8c09-388eb503a7dc",
+      "name": "Super User"
+    },
+    "id": "746948d0-88a3-4a5e-99db-a64f8a46e75e",
+    "location": {
+      "name": "054 Sawyer Plains V2",
+      "project": {
+        "additionalSupervisors": [],
+        "contractName": "99-EAB",
+        "contractReference": "5259435AE",
+        "contractor": { "name": "Lawrence Lynch" },
+        "description": "Huge ask fish own lay economic. Sing through test light green consumer debate current. Bank exactly work language present poor.",
+        "endDate": "2022-07-12",
+        "engineerName": "Jeanette Parker",
+        "libraryAssetType": { "name": "CNG" },
+        "libraryDivision": { "name": "tkaoFTRAZyRvMZpiGBsa" },
+        "libraryProjectType": { "name": "QGICXZkpBcSmOJxwnwBa" },
+        "libraryRegion": { "name": "vaBtTdGAEwsZaXKHCQAZ" },
+        "manager": { "name": "Michelle Lindsey" },
+        "name": "Pierce-Dawson V2",
+        "number": "350004957",
+        "projectZipCode": "29357",
+        "startDate": "2022-06-26",
+        "status": "ACTIVE",
+        "supervisor": { "name": "Sheila James" }
+      }
+    },
+    "sections": {
+      "additionalInformation": {
+        "lessons": "jose",
+        "progress": "ola",
+        "sectionIsValid": true
+      },
+      "attachments": {
+        "documents": [
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "sample copy.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "sample copy.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-6da39d04-0356-4fa2-bc93-9c7034aeb57e?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163508Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=46c8e21e0ed88db790377bb4a414f83edd9c9aa4c50cd3697a246f1d413e10ff1308134f56b0b6eb23c662a40867ffa2f0cca17d870bf91aa16e4e55a63cb05dd954ad398052cc46674d888d44289b5e6c3ca6d460e6a9f177e4009e4eb1095e8096dd2d9dda2fe3b0146b5b811b8efed2f8eeadc8752aef6b285fe3b5e1c3f42b4f0fed8938076c6454e0bf034ae19bf590eb917210b8254ef1d0eeea8082ff762f1cff39f5a81815d3b35df569a1bab6efb05ba4bd09a9272dc4a853b4cc2f942acabc200f275d43dc620b2e35d24f562fccfc775273e53d7bb2da73db12de46f8cef0139ff40be77092c26af3a3e73261e359fa6827201567711e047a723a",
+            "size": "3.028 KB",
+            "time": "4:20 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-6da39d04-0356-4fa2-bc93-9c7034aeb57e"
+          },
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "sample.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "sample.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-1ebc70d6-fcab-4c78-a26a-f514e8755049?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=39b3b9a5ac3da327478c76b02bb0c87abe5782e2d640b2207a39fbd88297c9bdf42c736eee7b3525ad4e6ed3e454994bcd9e02e2b68a5a2bdb568cc5392461702b7b812856ff141af3e39f085537efd3147b4a95409966ba9a6c69960ab76e7b5eef7f3e6e3f65a5eeaf7c19df9ac09ab0822b06191180cab177f632539a28168a21f187d8b2a7bd5ceb1c39293e1040fdef00574e96e79029b2e7753055499965c69011bd31de9e825fe53fce633f2539f10d6440a1c755069f6780506b6cb51a74ca08f9f7faf424d56d25f01510f92b373216d6f2046e9027ade85bfe95a4a487a91db7dc99f9264602eb78f48b5b5898b702468192f9330bf2d9ac339a96",
+            "size": "3.028 KB",
+            "time": "4:20 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-1ebc70d6-fcab-4c78-a26a-f514e8755049"
+          },
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "sample.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "sample.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-ddf685be-dd87-4930-98cc-c3d7dc2c17c8?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=4ad1814ca1a051d8c90aa276128b07af4996bc1ff54f11be3f8f8c03b596a0e1ba3613e378007c1279752a05ce98efd15323931a01225034b006f655547dac90f575b6121e56f77013a34fcb04c1801dbbb05430303a7ffc39428411adb112becab92734685de5f3cb2a71c3c5108ea36c9e2dd2d9ac8c76891bccb468d7b0932adc7d89c7618b053d7f891222224a92b1337449033da7429c06b40494eebbe0cc379cfeb1ba07401feaa0a93823ae0b8cfaa13cccc8f940568f26ed2942feeb4a9db7134fa77ff678b30bf2bc08898e38f88514e404433320aecdc0d7cc4606a26472143bae3175d23de995718bfd8043071633e21010dbb1acd68ef3c49c77",
+            "size": "3.028 KB",
+            "time": "2:44 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-ddf685be-dd87-4930-98cc-c3d7dc2c17c8"
+          }
+        ],
+        "photos": [
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "image.png",
+            "md5": null,
+            "mimetype": null,
+            "name": "image.png",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-9bffa482-9998-468b-a4ed-488aa31090af?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163508Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=44ca8442c319e3c3288f5e6ac69bfe96771b1ccd104f782cfd8a99710e4e245fde5b350668ad847e2b511109a2631482d7183526a59338e6193516b8e22506412d22aaaf069c38c758b359b3df812003c0575cc23bc8b336c4b5121d598f6df8cd2c94b90abe89bec02e97ffadd7820f7738eb74803b809225b9c8d15a7c9fbf18e0d2bf2d4aa637359406060417c8f1a4456a4ec77bffc5c986221c02d60b975fa5d80c03578d1dd9730ff70b412eb9d48d1b5941523fa42b655e2ab943ba48bc045ca8fac5006d343d3586f5add729093856b86eb08b8c34d87991d100d6445bf2158baa0e0879247b1c0adb5346a09d73cabf34bb86c765eceac4472e20ea",
+            "size": "87.721 KB",
+            "time": "4:20 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-9bffa482-9998-468b-a4ed-488aa31090af"
+          },
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "image.png",
+            "md5": null,
+            "mimetype": null,
+            "name": "image.png",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3b02de23-336d-4092-9b2c-803a445e78a3?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=2d72e829dda12e5fe86055d0d9ac306fa47dd49e6710765985f7d5354737f05885dd23c67c9c32bb330ec62ae43aad46bd5974a041571037562db7aefdc401f16023a24a6f802357cca6552c1deedd5dce56c23c5b57e150c600e32f6189faf792e4d3579ca9185825242b26e2f47aca9cb49b18d19531f964e35136bde19d4aed3cbc111f716c3c4cf9a166956a5244a3d5849fa6e154005ae52731d22ecbbec123943b5588e794e5785dfe00a74a75eb58ac12805005c4ff9d6770d128c22274bf088bb434620274b5ba75270a19f4cc79eeea794343efe8cc62bff8d0eb7dcc1572a285e87c2c3032f75d2c85cf3a2f970b5d6dc306972c93c1a8e5fe9f4f",
+            "size": "87.721 KB",
+            "time": "4:20 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3b02de23-336d-4092-9b2c-803a445e78a3"
+          },
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "Nikon-D500-Sample-Images-2.jpg",
+            "md5": null,
+            "mimetype": null,
+            "name": "Nikon-D500-Sample-Images-2.jpg",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3f60fc01-de0e-48a0-9fa6-990ec85310f8?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=809a5d96795a8b1deb685c7b13bfbf67ecd93fd63c64df03789b6165b3e5c050b69663425ee45a34d5ed25dec24655a6234aca6f897dc75c75df52877024f42880472830d20500d1fc7ef2f19e714de4ac54cc89f9bc3d29d692c088f1767ca5363b7dd429b6fe2502916efb6a98a0b6b84403a082a883c71a4e9655a08d938ba9d65aadae07a4e5f34fb34006455c9acfe3ade3ed0b9fb2d8efff1a1aed44959fb04925eddac117dda302142427747158e088205f261b22a3f3869227075afee595b6d9c9d59a47688d6e762763d445f847100573a42232fd1f24a8cecaff9b3e89fbeff80b385a72967673ae90ce81d04d4d60ee1f7ced31c6c3dd497b2c49",
+            "size": "101.723 KB",
+            "time": "4:20 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3f60fc01-de0e-48a0-9fa6-990ec85310f8"
+          },
+          {
+            "category": null,
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg",
+            "md5": null,
+            "mimetype": null,
+            "name": "bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9a0d833-ecef-482c-bb52-c967cce7deae?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=caf59fe1489325660d8bbd8c16a392515b4782e505cd97e18028ef9fa3f0efb99fc39146d48374e3a32506dd5e87084319ac54365392c58ef3f6ca7b0e2ff8fd431cb0db2ae19cfc343e6dba7048bb34bc774ed1e7c1890bafeb30d593f67f0a1fb5465e0aebb3b89a70443848c46388ccc0fcb95cc8b7f652d65630e2692a582a84a79894f745e49474bf7c62487ae4c050985f6a98fb820a929ad6d56f4686f2f24805f619655e1b21974a06cde8183bb5d320bcd1816d9c3ef7b4b379c6ddd367490b32a4f4e52a4a29c9eb2d4816ff3414ce427ce39e0187ec608e7f202cd05ddae31a09ce9cf83e3fe802f21c9a2f36c5cdccb45d01c8ebb493a6fd261a",
+            "size": "37.267 KB",
+            "time": "2:44 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9a0d833-ecef-482c-bb52-c967cce7deae"
+          }
+        ],
+        "sectionIsValid": true
+      },
+      "crew": {
+        "contractor": "AccuWeld Technologies Inc",
+        "documents": [
+          {
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "sample.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "sample.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9ad5259-20af-48a5-94fd-68ef49076364?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163509Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=4c9e09b27686864253b1a61f9d4a97e1db2dd845d275e9c250e5686c881763a38d8383da93ea6f5d1781683ac13de7ed39f9d950a77781ec7db63be9451ec9d8b6d8e81a2f9e259f7cb1f6e1f2f97da090e6e2541a92607952b3d94e597e7630a696f8ce506d9d434aa085e188f97630d9a65d8af080757534c8eadce65ef662dfeef58704ba34a2434906537049125af39d84b3982ff37da56c90795753b0824b00e9ac73d7785148b862209c9234705a78f1a2f7681974e1842297c119d0821e66fd95632f428a7f8843b3df93a7d5282d311bcf1b8fea52e8ffcea0ffb8111cbac695395f194eb2ba03115348f058025c1151d33171ad33782a2bda0685d1",
+            "size": "3.028 KB",
+            "time": "4:22 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9ad5259-20af-48a5-94fd-68ef49076364"
+          },
+          {
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "sample.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "sample.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-7cda094d-9b59-433d-acad-6dfa58909f05?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163508Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=309fe72f1b5af5522d3e3b37416cfc8cd0c53041e9dff774ca3b03a571939a2680afc0887838f36cd8310d379ab11d520dbc274efcc7cd0139c349ae246180fc5eff620b06d835fe3a25211031d4e7865a850955c918b2333d384e2b5e998428a3c0dd08243ebf6d50989651d25c60ea2dbbefc1a739ad3b3618b37d7fe472214e2ec9d074127e3c6a92e17e332c061f43dea695d43169a255b18b6634815d15d07c1e52b5868ff2272a47b7afdeb647a5f4ba1d5feae4cbbd73ff5d73585d334a03a7f98941b3fff98f4dee4457ebfd204e6efb78c03120cbfd17e9c4654d6bde68323acec85d9d4d9a38497737bc34052883d2a31631f871c238faa380ff86",
+            "size": "3.028 KB",
+            "time": "4:21 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-7cda094d-9b59-433d-acad-6dfa58909f05"
+          },
+          {
+            "crc32c": null,
+            "date": "2022-07-11",
+            "displayName": "code-example.pdf",
+            "md5": null,
+            "mimetype": null,
+            "name": "code-example.pdf",
+            "signedUrl": "https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-2ca3e079-b268-4f18-9749-6792d1351f6e?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220714%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220714T163508Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=0f134338f1ea8df2f37fedfa905b3d337d1235a7a348aca9a758841a481eed41d1ea0be089abd174894197dcb3b722b52cd854ef81c19f33f6039075bb9fb1b2e496cabddccffe00798389fddd4f393e8945b586f624bfcecc35c95324d30ebb1c985113da38c4563d585e2b49815852f374fceb537166c809ca7422beceba9a613df8ab760047abced9193067d5df2121ad3ceb3b8de516db60c9b824f23ab32bd8b58093c301584641d9f60181e940293447088e64505ff9027039740d6a1dda429c0d37851eb84f5e24333aea714918bcbb2c131419c8e27303d30e9d9d1e18b77e848b344e5793cef861566d3a60229deb26312ae3c4128ec7a80f518883",
+            "size": "834.018 KB",
+            "time": "2:44 PM",
+            "url": "https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-2ca3e079-b268-4f18-9749-6792d1351f6e"
+          }
+        ],
+        "foremanName": "jose",
+        "nFlaggers": 3,
+        "nLaborers": 4,
+        "nOperators": 3,
+        "nOtherCrew": 9,
+        "nSafetyProf": 2,
+        "nWelders": 2,
+        "sectionIsValid": true
+      },
+      "jobHazardAnalysis": {
+        "sectionIsValid": true,
+        "siteConditions": [
+          {
+            "hazards": [
+              {
+                "controls": [
+                  {
+                    "id": "ddaff0a1-b51c-48ae-a2eb-edb7334e7b70",
+                    "implemented": null,
+                    "name": "Lift plan",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "aebc7dc6-748b-4b7e-b01c-e75e78914693",
+                "isApplicable": true,
+                "name": "Moving equipment / vehicles in a congested area"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "ae9203ba-e18c-455e-9b0d-7b2ebbada226",
+                    "implemented": null,
+                    "name": "Rebar caps",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "16c2a725-eff8-4f06-95a7-284ad659017e",
+                "isApplicable": true,
+                "name": "Struck my moving equipment and material"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "a8e38c37-5ef5-4177-85ee-fcd9b15770c1",
+                    "implemented": null,
+                    "name": "Pressure relief valves",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "3850e98f-01ae-4866-9803-6308ce45c7c9",
+                "isApplicable": true,
+                "name": "Tripping on timber matting"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "3b686f22-9f60-405f-a043-66a45e972a5c",
+                    "implemented": null,
+                    "name": "Goal post",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "19358c3a-6002-4673-a8bc-f507fa3b8d00",
+                "isApplicable": true,
+                "name": "Radiation sickness / injury and / or biological changes"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "b6833f10-1750-4fab-ba5c-1ea05ba11b11",
+                    "implemented": null,
+                    "name": "Inspect equipment",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "42216bd2-ed05-43e6-9e56-5fa549a1248e",
+                "isApplicable": true,
+                "name": "Radiation sickness / injury and / or biological changes"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "e6641cb6-8044-44b2-9424-791732b21385",
+                    "implemented": null,
+                    "name": "Ensure proper benching/shoring",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "8ad73c6c-65b4-437a-ab83-7050b00b18d6",
+                "isApplicable": true,
+                "name": "Carpal tunnel in wrist"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "7b2db9e3-a974-4296-9bce-6629382fc9bb",
+                    "implemented": null,
+                    "name": "Hydro-vac",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "18cefe76-5e6d-48fc-ad93-3e2e8fdc0d81",
+                "isApplicable": true,
+                "name": "Slips, trips, falls"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "5079093c-4390-452c-96c0-357f5b4ac7f1",
+                    "implemented": null,
+                    "name": "Fill in gaps and holes in mats",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "a99dd38a-98c7-44da-818f-c321506b30eb",
+                "isApplicable": true,
+                "name": "Hands and fingers caught between torque tool and bolt"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "ac79b90c-c813-4c0f-9875-ff1cef5c2ac9",
+                    "implemented": null,
+                    "name": "Install trench boxes",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "66f9e0f7-42f8-4631-9956-c2d01ce23579",
+                "isApplicable": true,
+                "name": "Pinch point"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "1518d51b-a75e-4e3a-abea-30139ccc1e08",
+                    "implemented": null,
+                    "name": "Inspect ladders and scaffold",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "440f9dec-7e78-4534-bae0-d74b9d48093f",
+                "isApplicable": true,
+                "name": "Struck my moving equipment and material"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "de7fe8ed-0ac5-4cb6-9075-f88a89736706",
+                    "implemented": null,
+                    "name": "Life jacket / buoyancy aid",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "63ac1439-a79a-40f0-b1aa-e1daad27ad81",
+                "isApplicable": true,
+                "name": "Failure of hose fittings"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "e4189735-628e-421b-8206-ae93439b10af",
+                    "implemented": null,
+                    "name": "Training and qualification",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "74997063-f613-427f-a9f2-114353cf663e",
+                "isApplicable": true,
+                "name": "Caught in rotating equipment"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "d82b388f-0336-467d-88f6-6902a3c708e6",
+                    "implemented": null,
+                    "name": "Work rest cycle",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "e3800cdb-cb88-4850-9c85-06f3470f7c48",
+                "isApplicable": true,
+                "name": "Pinch points of hands and fingers"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "b2eb5357-2c95-4e1a-af02-12adf963f2d9",
+                    "implemented": null,
+                    "name": "Wall for public safety",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "269b309a-e452-4e81-b94b-d5b370ce9d05",
+                "isApplicable": true,
+                "name": "Overhead utilities"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "5e81a2d2-68f5-4278-ad52-8f38a1439148",
+                    "implemented": null,
+                    "name": "Fall protection / Arrest",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "72d202d5-e78b-4c5d-84f9-c800a9b80a65",
+                "isApplicable": true,
+                "name": "Pinch point"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "9bc87ee9-06cd-431b-918f-a9f4ce0c2036",
+                    "implemented": null,
+                    "name": "Use a spotter to maintain at least 12\" clearance from utilities",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "a34fe089-d0ff-4b04-88f8-66058609c5ef",
+                "isApplicable": true,
+                "name": "Pinch points"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "bdf06fd0-c461-44ac-b2bd-3c504ec378a5",
+                    "implemented": null,
+                    "name": "security presence",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "e9baf729-dcac-4f16-a495-e17e518817da",
+                "isApplicable": true,
+                "name": "Lacerations, metal debris eye hazards"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "dbcbff36-480e-471b-b7e7-f72dd27f3a0f",
+                    "implemented": null,
+                    "name": "Fall protection / Arrest",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "f84c0859-ac81-4dc7-9a7e-b8eb0bdd750b",
+                "isApplicable": true,
+                "name": "Struck by moving vehicles and equipment"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "ccf8116c-afb9-4d35-a148-3ff6abf93460",
+                    "implemented": null,
+                    "name": "Impact rated gloves",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "4d7a1336-03c3-404e-9f70-7d3b64d73807",
+                "isApplicable": true,
+                "name": "Struck by whipping hoses"
+              }
+            ],
+            "id": "e06a638f-7233-40f1-a0c1-e9c1535811d1",
+            "isApplicable": false,
+            "name": "Exposure to active roadway (exposureactiveroad)"
+          },
+          {
+            "hazards": [
+              {
+                "controls": [
+                  {
+                    "id": "c61e38d3-31bb-4d4b-adcf-a01ac110098f",
+                    "implemented": null,
+                    "name": "hydration",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "eba69e42-82e6-4620-9e02-e30e41362e10",
+                "isApplicable": true,
+                "name": "Impaled by nails"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "e050d310-6422-4251-8bb1-b6c160402bb8",
+                    "implemented": null,
+                    "name": "Whip checks",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "85473197-9d98-4451-8ce1-775c532975bf",
+                "isApplicable": true,
+                "name": "Exposure to release of stored energy"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "9c9f0019-2ddd-435a-b639-9fa07e45b9b1",
+                    "implemented": null,
+                    "name": "store food in bear-safe containers",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "41aaf87f-8570-4b0d-a015-9198abe073cb",
+                "isApplicable": true,
+                "name": "Oxygen deficient atmosphere / exposure to CO"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "7d626098-05bb-41b5-b095-9135f0e1a0cb",
+                    "implemented": null,
+                    "name": "cool down stations",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "b05642ae-a859-4b72-b6a2-bf79ebd2fb91",
+                "isApplicable": true,
+                "name": "Pinch points from pounding and prying"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "38bdf3e4-07ad-424c-9eb8-4ff099f9c7cb",
+                    "implemented": null,
+                    "name": "cool down stations",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "8f0f1151-dc05-4c44-9d13-4d85c05d72df",
+                "isApplicable": true,
+                "name": "Burns"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "6a78ebf9-8c55-493c-bfc6-113679c29400",
+                    "implemented": null,
+                    "name": "Machine guarding",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "e8adfb4a-be04-49d3-ae44-1e0d7dc3fab7",
+                "isApplicable": true,
+                "name": "Exposure to hazardous substances"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "a9b507d2-d451-429e-b156-143a4559f75d",
+                    "implemented": null,
+                    "name": "and chaps",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "98cc5b3b-4d9c-4195-bb1e-394458eb882f",
+                "isApplicable": true,
+                "name": "Lacerations, metal debris eye hazards"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "e356cefd-31ab-40e7-b435-2b795efff7f0",
+                    "implemented": null,
+                    "name": "spotters",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "3a2d706e-e08b-4c45-8d0e-9b1ff40393cc",
+                "isApplicable": true,
+                "name": "Exposure to rotating equipment"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "06cf21c1-bf7e-4a54-9f3f-61cf1169ed1d",
+                    "implemented": null,
+                    "name": "Inspect hoses and fittings",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "6f569b38-3840-4ccb-b608-07512343b655",
+                "isApplicable": true,
+                "name": "Muscle strains and sprains"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "cc07368a-5552-4d62-a9d5-874077ea4aba",
+                    "implemented": null,
+                    "name": "secure jobsite",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "1e2e1052-189b-4817-b3c7-7cdfbd372cb2",
+                "isApplicable": true,
+                "name": "Insects, plants, animals"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "6b1704e8-ca6e-44bf-ba1a-8d1ec9ddaaae",
+                    "implemented": null,
+                    "name": "Mechanical steak driver",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "f2d39723-785f-4419-a4e8-7b538690d6ab",
+                "isApplicable": true,
+                "name": "Struck by pig"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "646ff7d4-db68-46b7-b517-b535f32b63bd",
+                    "implemented": null,
+                    "name": "Handle",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "2e4efb74-3c75-42da-a024-24e29bebc007",
+                "isApplicable": true,
+                "name": "Struck by equipment / vehicles"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "29570531-0c63-424f-9c59-2787f6d81695",
+                    "implemented": null,
+                    "name": "Bend over nails",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "4d3db3b2-7eeb-413b-bfc1-71bbd3258997",
+                "isApplicable": true,
+                "name": "Hoses and pipe under pressure"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "58da0451-5b6b-49b5-83c6-ece734376b72",
+                    "implemented": null,
+                    "name": "Use a spotter to maintain at least 12\" clearance from utilities",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "cb93f623-e27b-49ec-9fd8-2a9a04b3b5a4",
+                "isApplicable": true,
+                "name": "Moving equipment"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "a6e31c30-db50-4ee0-82ce-63fef0b47d91",
+                    "implemented": null,
+                    "name": "Use a spotter to maintain at least 12\" clearance from utilities",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "9655cc34-e1d5-479d-8d1a-5cc5bf706ce7",
+                "isApplicable": true,
+                "name": "Exposure to buried high pressure utilities"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "b31414fc-ee9f-43c7-9fb6-e9a53cc131c0",
+                    "implemented": null,
+                    "name": "Work rest cycle",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "84f94cf4-d357-4063-978a-74da61e5a8d3",
+                "isApplicable": true,
+                "name": "Kick back"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "243371bc-ffc9-4c93-9f20-b6bfd1704077",
+                    "implemented": null,
+                    "name": "security presence",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "314001b0-0c7f-4054-9d7a-0bcf26fab7e2",
+                "isApplicable": true,
+                "name": "Exposure to harmful substances (e.g. asbestos)"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "eb450db2-8915-4925-89ca-3cf0c7d7ac36",
+                    "implemented": null,
+                    "name": "Proper ladder usage",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "7952e392-5919-451e-b8a8-cc29562a892f",
+                "isApplicable": true,
+                "name": "Radiation sickness / injury and / or biological changes"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "0d6b9932-27fa-4589-a5f2-7494645a5edb",
+                    "implemented": null,
+                    "name": "Continuous atmospheric monitoring",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "0dbd158f-eaff-4390-9709-0938eb5813d4",
+                "isApplicable": true,
+                "name": "Heat illness"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "527dbb85-96a9-4bfc-adc0-6883784eea01",
+                    "implemented": null,
+                    "name": "self checks",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "5fce7586-0267-40da-ac2c-090a1daac53b",
+                "isApplicable": true,
+                "name": "Struck by falling material"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "def05da3-cd25-40fa-9aa9-431ca0545d59",
+                    "implemented": null,
+                    "name": "Ensure proper benching/shoring",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "867f9cc3-7880-42fe-b142-3fa5a885e96e",
+                "isApplicable": true,
+                "name": "Shifting loads, pinch points"
+              }
+            ],
+            "id": "e6b018fe-4d25-44f4-b014-86f593bd5729",
+            "isApplicable": false,
+            "name": "Snakes"
+          },
+          {
+            "hazards": [
+              {
+                "controls": [
+                  {
+                    "id": "62885f58-5255-46f5-81d8-475d8c85e461",
+                    "implemented": null,
+                    "name": "Wind direction",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "9fafb1ce-72a0-436f-8c3d-62270167be17",
+                "isApplicable": true,
+                "name": "Damage to buried electrical utilities"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "8ae71941-5bd4-4bfb-be57-6716e37acdb5",
+                    "implemented": null,
+                    "name": "guard rails",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "384fc9e3-6f16-4798-a9d0-11bfbfed6b00",
+                "isApplicable": true,
+                "name": "Fall into water body"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "4dbbc2d1-63b7-4677-be22-45aff71328a4",
+                    "implemented": null,
+                    "name": "pre-job coordination",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "53f50f25-2bf6-4f77-ad1e-4b5d1df70945",
+                "isApplicable": true,
+                "name": "Carpal tunnel in wrist"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "24fde7bc-a451-4bee-ac0a-49778987d88f",
+                    "implemented": null,
+                    "name": "Controlled access zone",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "23179e7a-bc2d-46e5-99f0-2ae66dce4224",
+                "isApplicable": true,
+                "name": "Flammable or toxic atmosphere"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "d865b3b3-b7a3-45ed-93bf-e1b137315fbc",
+                    "implemented": null,
+                    "name": "self checks",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "ba417f3d-b4fd-435c-b733-8c26155015f9",
+                "isApplicable": true,
+                "name": "Working at heights"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "2a1eb16a-3805-4e25-a8da-b1a8fd79cd04",
+                    "implemented": null,
+                    "name": "Placement of sandbags or timber skids",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "7ab20e38-4cad-46a9-9a78-6524b32545e8",
+                "isApplicable": true,
+                "name": "Struck by rotating equipment or material"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "47759ea8-d0f1-4a31-bc50-c9f02d935aab",
+                    "implemented": null,
+                    "name": "Keep body parts away from end of hose",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "dd385050-47ef-4d1b-90c3-0f57094d6db1",
+                "isApplicable": true,
+                "name": "Overhead utilities"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "2844f2a8-fa1b-47a5-bfe2-95be2041cae4",
+                    "implemented": null,
+                    "name": "Stretch and flex",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "cb5260c7-b635-46ca-b579-8d820b46dda2",
+                "isApplicable": true,
+                "name": "Caught by rotating equipment"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "4cef5dea-59e8-49fd-a91d-36abd89b5b6c",
+                    "implemented": null,
+                    "name": "Ensure proper benching/shoring",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "5c353899-d9a3-4320-9794-eb00bba2caf5",
+                "isApplicable": true,
+                "name": "Struck by moving equipment and vehicles"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "c7274bb1-4134-4d91-acd3-c1e9d582d95c",
+                    "implemented": null,
+                    "name": "Proper body and tool position",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "a257d199-9421-401e-bcd1-587ba4cc1ef7",
+                "isApplicable": true,
+                "name": "Fall into water body"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "0de5f869-3bbe-433f-adba-0cf0052376bb",
+                    "implemented": null,
+                    "name": "Isotopes stored and handled properly",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "36dda64b-38c7-455b-950c-396fbbcdd2ad",
+                "isApplicable": true,
+                "name": "Particles in eye"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "e92c860a-f920-4b77-8f82-b7e32623c103",
+                    "implemented": null,
+                    "name": "Whip checks",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "fb4f725e-c225-4536-9764-7f52ef651b85",
+                "isApplicable": true,
+                "name": "Failure of hose fittings"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "785f54b1-d787-4bad-91b0-a2dc3459d11b",
+                    "implemented": null,
+                    "name": "Ensure proper benching/shoring",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "906c58bd-f469-472a-bb4c-344d0e44ed20",
+                "isApplicable": true,
+                "name": "Fall from heights"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "31d5a08f-f419-4400-9434-4d9cadcf0e38",
+                    "implemented": null,
+                    "name": "Proper ladder usage",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "7a4e9941-b028-46b9-bba1-53ce3b69f511",
+                "isApplicable": true,
+                "name": "Heat illness"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "3441fe1a-b6ba-40ca-a10a-bad8c5a20dd1",
+                    "implemented": null,
+                    "name": "Rebar caps",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "c9e1353d-45b1-4c70-b377-29046d6da924",
+                "isApplicable": true,
+                "name": "Tool striking foot"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "03b58658-9bf9-4c21-be70-ac0a4348a3f7",
+                    "implemented": null,
+                    "name": "Rebar caps",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "fd10cc2d-1154-4fe1-9e2b-f144aecb73f6",
+                "isApplicable": true,
+                "name": "Oxygen deficient atmosphere / exposure to CO"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "43696dfb-5d30-41ad-a625-7de403c8b78f",
+                    "implemented": null,
+                    "name": "grounding",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "296d684c-c45d-4f62-83b4-cd8e8a9d0c8b",
+                "isApplicable": true,
+                "name": "Exposure to cave-ins"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "bd0188c5-c531-4bce-b318-daa8ececf6db",
+                    "implemented": null,
+                    "name": "radio / satellite communications",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "04a1eb4c-a389-4241-b4c4-5d698292a3e0",
+                "isApplicable": true,
+                "name": "Falling pipe stems"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "f3b74aa5-85ca-4700-8eaf-3f9a664e2d7a",
+                    "implemented": null,
+                    "name": "Traffic control devices ( eg. barricades, delineators, signs)",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "e9281461-ec6c-4726-a684-6099d9cd92f8",
+                "isApplicable": true,
+                "name": "Exposure to buried facilities"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "bf7c8770-f0a7-407a-9bf5-2509a5bb1555",
+                    "implemented": null,
+                    "name": "Full sleeve natural fibers (100% cotton) or FR garment",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "b6edc5d2-cd32-49dd-8d49-fbe82bfaef21",
+                "isApplicable": true,
+                "name": "Sharp tools and edges (saws)"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "b6b942b1-df04-47b7-9341-2118a243c866",
+                    "implemented": null,
+                    "name": "Do not wear loose fitting clothes",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "898f8278-eedd-451b-bc1d-7dbb455a2eb9",
+                "isApplicable": true,
+                "name": "Lacerations"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "12a2c721-5132-4e75-8d3d-5bf94bcf77b0",
+                    "implemented": null,
+                    "name": "3 points of contact",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "f8912f8d-08b8-42bc-a6c1-c2053981d9b4",
+                "isApplicable": true,
+                "name": "Sharp tools and edges (saws)"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "a69004d5-2275-4224-b4fc-442fadba7b85",
+                    "implemented": null,
+                    "name": "Ramps placed no more than 25’ laterally from one another, Inspect daily by competent person",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "608ac187-1b0a-4ef3-9fc5-63f7db3ad067",
+                "isApplicable": true,
+                "name": "Exposure to harmful substances (e.g. asbestos)"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "fb0435a2-52d5-4058-829e-69ef2cf8ab00",
+                    "implemented": null,
+                    "name": "Fill in holes where possible",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "e71c7543-2b4b-4815-a972-3496d4ceaae3",
+                "isApplicable": true,
+                "name": "Struck by whipping hoses"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "8ea6be42-e3b1-4768-8a60-aa08c1d31856",
+                    "implemented": null,
+                    "name": "self checks",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "72d67746-7c27-4e0d-9abd-e69ea3c4b340",
+                "isApplicable": true,
+                "name": "Material handling"
+              },
+              {
+                "controls": [
+                  {
+                    "id": "32ababb3-5dd8-4098-b8e6-0a7585beb769",
+                    "implemented": null,
+                    "name": "Walk down of isolation points",
+                    "notImplementedReason": ""
+                  }
+                ],
+                "id": "95cb79a1-38b3-4da5-a346-9aa672296ef9",
+                "isApplicable": true,
+                "name": "Working at heights"
+              }
+            ],
+            "id": "b37faaff-5c23-4498-ae1d-bdfac2869671",
+            "isApplicable": false,
+            "name": "Urban density / population"
+          }
+        ],
+        "tasks": []
+      },
+      "safetyAndCompliance": {
+        "plans": {
+          "comprehensivePHAConducted": "1",
+          "membersReviewedAndSignedOff": "0"
+        },
+        "jobBrief": {
+          "jobBriefConductAfterWork": "1",
+          "comprehensiveJobBriefConduct": "1",
+          "jobBriefConductAfterWorkNotes": "eee",
+          "comprehensiveJobBriefConductNotes": "www"
+        },
+        "workMethods": {
+          "contractorAccess": "1",
+          "contractorAccessNotes": "wqrq"
+        },
+        "sectionIsValid": true,
+        "digSafeMarkOuts": {
+          "markOutsVerified": "1",
+          "digSafeMarkOutsLocation": "location",
+          "facilitiesLocatedAndExposed": "1",
+          "facilitiesLocatedAndExposedNotes": "eqwe"
+        },
+        "operatorQualifications": { "qualificationsVerified": "1" },
+        "spottersSafetyObserver": {
+          "safetyObserverAssigned": "1",
+          "spotterIdentifiedMachineryBackingUp": "0"
+        },
+        "systemOperatingProcedures": {
+          "sopId": "123",
+          "sopType": "4123",
+          "sopComments": "dadas",
+          "onSiteAndCurrent": "1",
+          "sopStepsCalledIn": "444",
+          "gasControlsNotified": "1",
+          "onSiteAndCurrentNotes": "ww",
+          "gasControlsNotifiedNotes": "ewqeq"
+        },
+        "privateProtectionEquipment": { "wearingPPE": "1" }
+      },
+      "taskSelection": { "sectionIsValid": true, "selectedTasks": [] },
+      "workSchedule": {
+        "endDatetime": "2022-07-06T08:00:00+00:00",
+        "sectionIsValid": true,
+        "startDatetime": "2022-07-04T00:00:00+00:00"
+      }
+    },
+    "sectionsJSON": "{\"work_schedule\": {\"start_datetime\": \"2022-07-04T00:00:00+00:00\", \"end_datetime\": \"2022-07-06T08:00:00+00:00\", \"section_is_valid\": true}, \"task_selection\": {\"selected_tasks\": [], \"section_is_valid\": true}, \"job_hazard_analysis\": {\"site_conditions\": [{\"id\": \"e06a638f-7233-40f1-a0c1-e9c1535811d1\", \"isApplicable\": false, \"hazards\": [{\"id\": \"aebc7dc6-748b-4b7e-b01c-e75e78914693\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"ddaff0a1-b51c-48ae-a2eb-edb7334e7b70\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"16c2a725-eff8-4f06-95a7-284ad659017e\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"ae9203ba-e18c-455e-9b0d-7b2ebbada226\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"3850e98f-01ae-4866-9803-6308ce45c7c9\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"a8e38c37-5ef5-4177-85ee-fcd9b15770c1\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"19358c3a-6002-4673-a8bc-f507fa3b8d00\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"3b686f22-9f60-405f-a043-66a45e972a5c\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"42216bd2-ed05-43e6-9e56-5fa549a1248e\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"b6833f10-1750-4fab-ba5c-1ea05ba11b11\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"8ad73c6c-65b4-437a-ab83-7050b00b18d6\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"e6641cb6-8044-44b2-9424-791732b21385\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"18cefe76-5e6d-48fc-ad93-3e2e8fdc0d81\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"7b2db9e3-a974-4296-9bce-6629382fc9bb\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"a99dd38a-98c7-44da-818f-c321506b30eb\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"5079093c-4390-452c-96c0-357f5b4ac7f1\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"66f9e0f7-42f8-4631-9956-c2d01ce23579\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"ac79b90c-c813-4c0f-9875-ff1cef5c2ac9\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"440f9dec-7e78-4534-bae0-d74b9d48093f\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"1518d51b-a75e-4e3a-abea-30139ccc1e08\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"63ac1439-a79a-40f0-b1aa-e1daad27ad81\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"de7fe8ed-0ac5-4cb6-9075-f88a89736706\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"74997063-f613-427f-a9f2-114353cf663e\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"e4189735-628e-421b-8206-ae93439b10af\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"e3800cdb-cb88-4850-9c85-06f3470f7c48\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"d82b388f-0336-467d-88f6-6902a3c708e6\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"269b309a-e452-4e81-b94b-d5b370ce9d05\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"b2eb5357-2c95-4e1a-af02-12adf963f2d9\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"72d202d5-e78b-4c5d-84f9-c800a9b80a65\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"5e81a2d2-68f5-4278-ad52-8f38a1439148\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"a34fe089-d0ff-4b04-88f8-66058609c5ef\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"9bc87ee9-06cd-431b-918f-a9f4ce0c2036\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"e9baf729-dcac-4f16-a495-e17e518817da\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"bdf06fd0-c461-44ac-b2bd-3c504ec378a5\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"f84c0859-ac81-4dc7-9a7e-b8eb0bdd750b\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"dbcbff36-480e-471b-b7e7-f72dd27f3a0f\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"4d7a1336-03c3-404e-9f70-7d3b64d73807\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"ccf8116c-afb9-4d35-a148-3ff6abf93460\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}]}, {\"id\": \"e6b018fe-4d25-44f4-b014-86f593bd5729\", \"isApplicable\": false, \"hazards\": [{\"id\": \"eba69e42-82e6-4620-9e02-e30e41362e10\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"c61e38d3-31bb-4d4b-adcf-a01ac110098f\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"85473197-9d98-4451-8ce1-775c532975bf\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"e050d310-6422-4251-8bb1-b6c160402bb8\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"41aaf87f-8570-4b0d-a015-9198abe073cb\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"9c9f0019-2ddd-435a-b639-9fa07e45b9b1\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"b05642ae-a859-4b72-b6a2-bf79ebd2fb91\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"7d626098-05bb-41b5-b095-9135f0e1a0cb\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"8f0f1151-dc05-4c44-9d13-4d85c05d72df\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"38bdf3e4-07ad-424c-9eb8-4ff099f9c7cb\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"e8adfb4a-be04-49d3-ae44-1e0d7dc3fab7\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"6a78ebf9-8c55-493c-bfc6-113679c29400\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"98cc5b3b-4d9c-4195-bb1e-394458eb882f\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"a9b507d2-d451-429e-b156-143a4559f75d\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"3a2d706e-e08b-4c45-8d0e-9b1ff40393cc\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"e356cefd-31ab-40e7-b435-2b795efff7f0\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"6f569b38-3840-4ccb-b608-07512343b655\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"06cf21c1-bf7e-4a54-9f3f-61cf1169ed1d\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"1e2e1052-189b-4817-b3c7-7cdfbd372cb2\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"cc07368a-5552-4d62-a9d5-874077ea4aba\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"f2d39723-785f-4419-a4e8-7b538690d6ab\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"6b1704e8-ca6e-44bf-ba1a-8d1ec9ddaaae\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"2e4efb74-3c75-42da-a024-24e29bebc007\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"646ff7d4-db68-46b7-b517-b535f32b63bd\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"4d3db3b2-7eeb-413b-bfc1-71bbd3258997\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"29570531-0c63-424f-9c59-2787f6d81695\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"cb93f623-e27b-49ec-9fd8-2a9a04b3b5a4\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"58da0451-5b6b-49b5-83c6-ece734376b72\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"9655cc34-e1d5-479d-8d1a-5cc5bf706ce7\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"a6e31c30-db50-4ee0-82ce-63fef0b47d91\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"84f94cf4-d357-4063-978a-74da61e5a8d3\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"b31414fc-ee9f-43c7-9fb6-e9a53cc131c0\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"314001b0-0c7f-4054-9d7a-0bcf26fab7e2\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"243371bc-ffc9-4c93-9f20-b6bfd1704077\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"7952e392-5919-451e-b8a8-cc29562a892f\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"eb450db2-8915-4925-89ca-3cf0c7d7ac36\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"0dbd158f-eaff-4390-9709-0938eb5813d4\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"0d6b9932-27fa-4589-a5f2-7494645a5edb\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"5fce7586-0267-40da-ac2c-090a1daac53b\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"527dbb85-96a9-4bfc-adc0-6883784eea01\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"867f9cc3-7880-42fe-b142-3fa5a885e96e\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"def05da3-cd25-40fa-9aa9-431ca0545d59\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}]}, {\"id\": \"b37faaff-5c23-4498-ae1d-bdfac2869671\", \"isApplicable\": false, \"hazards\": [{\"id\": \"9fafb1ce-72a0-436f-8c3d-62270167be17\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"62885f58-5255-46f5-81d8-475d8c85e461\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"384fc9e3-6f16-4798-a9d0-11bfbfed6b00\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"8ae71941-5bd4-4bfb-be57-6716e37acdb5\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"53f50f25-2bf6-4f77-ad1e-4b5d1df70945\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"4dbbc2d1-63b7-4677-be22-45aff71328a4\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"23179e7a-bc2d-46e5-99f0-2ae66dce4224\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"24fde7bc-a451-4bee-ac0a-49778987d88f\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"ba417f3d-b4fd-435c-b733-8c26155015f9\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"d865b3b3-b7a3-45ed-93bf-e1b137315fbc\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"7ab20e38-4cad-46a9-9a78-6524b32545e8\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"2a1eb16a-3805-4e25-a8da-b1a8fd79cd04\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"dd385050-47ef-4d1b-90c3-0f57094d6db1\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"47759ea8-d0f1-4a31-bc50-c9f02d935aab\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"cb5260c7-b635-46ca-b579-8d820b46dda2\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"2844f2a8-fa1b-47a5-bfe2-95be2041cae4\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"5c353899-d9a3-4320-9794-eb00bba2caf5\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"4cef5dea-59e8-49fd-a91d-36abd89b5b6c\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"a257d199-9421-401e-bcd1-587ba4cc1ef7\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"c7274bb1-4134-4d91-acd3-c1e9d582d95c\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"36dda64b-38c7-455b-950c-396fbbcdd2ad\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"0de5f869-3bbe-433f-adba-0cf0052376bb\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"fb4f725e-c225-4536-9764-7f52ef651b85\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"e92c860a-f920-4b77-8f82-b7e32623c103\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"906c58bd-f469-472a-bb4c-344d0e44ed20\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"785f54b1-d787-4bad-91b0-a2dc3459d11b\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"7a4e9941-b028-46b9-bba1-53ce3b69f511\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"31d5a08f-f419-4400-9434-4d9cadcf0e38\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"c9e1353d-45b1-4c70-b377-29046d6da924\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"3441fe1a-b6ba-40ca-a10a-bad8c5a20dd1\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"fd10cc2d-1154-4fe1-9e2b-f144aecb73f6\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"03b58658-9bf9-4c21-be70-ac0a4348a3f7\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"296d684c-c45d-4f62-83b4-cd8e8a9d0c8b\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"43696dfb-5d30-41ad-a625-7de403c8b78f\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"04a1eb4c-a389-4241-b4c4-5d698292a3e0\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"bd0188c5-c531-4bce-b318-daa8ececf6db\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"e9281461-ec6c-4726-a684-6099d9cd92f8\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"f3b74aa5-85ca-4700-8eaf-3f9a664e2d7a\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"b6edc5d2-cd32-49dd-8d49-fbe82bfaef21\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"bf7c8770-f0a7-407a-9bf5-2509a5bb1555\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"898f8278-eedd-451b-bc1d-7dbb455a2eb9\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"b6b942b1-df04-47b7-9341-2118a243c866\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"f8912f8d-08b8-42bc-a6c1-c2053981d9b4\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"12a2c721-5132-4e75-8d3d-5bf94bcf77b0\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"608ac187-1b0a-4ef3-9fc5-63f7db3ad067\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"a69004d5-2275-4224-b4fc-442fadba7b85\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"e71c7543-2b4b-4815-a972-3496d4ceaae3\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"fb0435a2-52d5-4058-829e-69ef2cf8ab00\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"72d67746-7c27-4e0d-9abd-e69ea3c4b340\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"8ea6be42-e3b1-4768-8a60-aa08c1d31856\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}, {\"id\": \"95cb79a1-38b3-4da5-a346-9aa672296ef9\", \"isApplicable\": true, \"not_applicable_reason\": null, \"controls\": [{\"id\": \"32ababb3-5dd8-4098-b8e6-0a7585beb769\", \"implemented\": null, \"not_implemented_reason\": \"\", \"further_explanation\": null}]}]}], \"tasks\": [], \"section_is_valid\": true}, \"safety_and_compliance\": {\"plans\": {\"comprehensivePHAConducted\": \"1\", \"membersReviewedAndSignedOff\": \"0\"}, \"jobBrief\": {\"jobBriefConductAfterWork\": \"1\", \"comprehensiveJobBriefConduct\": \"1\", \"jobBriefConductAfterWorkNotes\": \"eee\", \"comprehensiveJobBriefConductNotes\": \"www\"}, \"workMethods\": {\"contractorAccess\": \"1\", \"contractorAccessNotes\": \"wqrq\"}, \"sectionIsValid\": true, \"digSafeMarkOuts\": {\"markOutsVerified\": \"1\", \"digSafeMarkOutsLocation\": \"location\", \"facilitiesLocatedAndExposed\": \"1\", \"facilitiesLocatedAndExposedNotes\": \"eqwe\"}, \"operatorQualifications\": {\"qualificationsVerified\": \"1\"}, \"spottersSafetyObserver\": {\"safetyObserverAssigned\": \"1\", \"spotterIdentifiedMachineryBackingUp\": \"0\"}, \"systemOperatingProcedures\": {\"sopId\": \"123\", \"sopType\": \"4123\", \"sopComments\": \"dadas\", \"onSiteAndCurrent\": \"1\", \"sopStepsCalledIn\": \"444\", \"gasControlsNotified\": \"1\", \"onSiteAndCurrentNotes\": \"ww\", \"gasControlsNotifiedNotes\": \"ewqeq\"}, \"privateProtectionEquipment\": {\"wearingPPE\": \"1\"}}, \"crew\": {\"contractor\": \"AccuWeld Technologies Inc\", \"foreman_name\": \"jose\", \"n_welders\": 2, \"n_safety_prof\": 2, \"n_operators\": 3, \"n_flaggers\": 3, \"n_laborers\": 4, \"n_other_crew\": 9, \"documents\": [{\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9ad5259-20af-48a5-94fd-68ef49076364\", \"name\": \"sample.pdf\", \"display_name\": \"sample.pdf\", \"size\": \"3.028 KB\", \"date\": \"2022-07-11\", \"time\": \"4:22 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9ad5259-20af-48a5-94fd-68ef49076364?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152205Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=10e56acb8dd48e8cb8ea92fb62feebb09c2d85bf7b7771898b5726fc4517d90ec9960829602fe4ebf831fe6de43fddb926715f4465ccf2f8ad2b9afdbc7b42da32e1b913be2fe916265b50b120168c33e9ea9cd0d6ddee617e27aec4f8095363206ba03665a6e1c8a066c1689f7db07e89c998ab4cf21052078872ae64f237b450de2ee2890056408320122a2cde97e6aff149d9658c8d11c3fb761f42cf43a55f9408a0c9601b2e9c95bb4b1ee73779211e11eda1c45de174c7b42765f4073435ab6293b618b7dded40083032c1deb916aa30f1c6d434d9d4d7a0156886ad48d5fd1959ae8b75c8bf43010129e8119cfff4b70d65e09a89917d29b62c689122\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-7cda094d-9b59-433d-acad-6dfa58909f05\", \"name\": \"sample.pdf\", \"display_name\": \"sample.pdf\", \"size\": \"3.028 KB\", \"date\": \"2022-07-11\", \"time\": \"4:21 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-7cda094d-9b59-433d-acad-6dfa58909f05?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152149Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=5fc892f90c4341eb6d45fae13b3345e2a50911ad8fd3945488a4ae4560fda1d0f8cce42ab75605914a9b8b2223ced62594cc8e670c0b8f1f2bbfded64e7560b8718401e90262001f63efa0704afb31a6d453592816d02e90552f1b6ceeac0e1767a6476bf06c557eccb974d0e804e96f8888f654e428670df93fe5b27350c426788b991fcaedbf0e367dff349714d46c5d6570b2a10a7cf359897973436b086485352fbd26d4731144ffd490261632c28eb36ac36c8b164675e36b54a8b4bba34d923e291ef6d21205f5406a6e306d08a5afee180f7beb1e324dbf8678ca645c50821f17e65be22b664aa5d135fbca753155626496726892b33e3f932cef268e\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-2ca3e079-b268-4f18-9749-6792d1351f6e\", \"name\": \"code-example.pdf\", \"display_name\": \"code-example.pdf\", \"size\": \"834.018 KB\", \"date\": \"2022-07-11\", \"time\": \"2:44 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-2ca3e079-b268-4f18-9749-6792d1351f6e?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152006Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=32ac37ce2e4725e13cb6e122379dbbaa5a9a8ef503bd7cc6196e15f6e8c2b678d5b1dafac3683e40b7787ccc62c955293ff41d307ad33d312cc35cf708a012b1517916d18362b8daf0b78cc8f63b4fa427a0e2b178dfc307fe34fb68b96c19dfde53c72282168d585ebc3f7f0e80f95d6f04f64670a8d1af9ae84e3b7e1b14f944110ed8e05b665f68174b8e9b4caaf921ef1e128db7ff7bac0861c8ff966f3df06679f27e7f71e9722a2a824acd3a95973617f1c948d50173a52f9be98b0b4275834f18efdc2b52f42e5dda2ac4b915bca3bde604604239238137d6c7ed8dfdc92ffbcebe3ee3fdf2601a96a72862d7a4296bfccbc86683ada9deadb60875f0\", \"category\": null}], \"section_is_valid\": true}, \"attachments\": {\"documents\": [{\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-6da39d04-0356-4fa2-bc93-9c7034aeb57e\", \"name\": \"sample copy.pdf\", \"display_name\": \"sample copy.pdf\", \"size\": \"3.028 KB\", \"date\": \"2022-07-11\", \"time\": \"4:20 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-6da39d04-0356-4fa2-bc93-9c7034aeb57e?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=28799703df18c8494e49b3e12ffdce296a45b8dda7243366741bd2705648f84d9acb049c7ff046903643c9c3686ed6bc9b921a59be2eb686054298c2ab1c2e74d31f8e715da3e4ba413bf8ad65cffed3b58148d9c7a7e46e24bb7815c87b556cba504eb9200fb95da97576aa7e0f52d21e7ed7d81144213e0bce51405acb7211ac2084cb449e54d3807044c3e2311217cc303b7153b5a0b372fb25e27e31f2331a1fb76181e95907306680e7acbf3c21423304df834c0bfe63a7bc5e12c7155473c18a3e1f85b503eed12322469243a7faf420894d1c445c421159e7fd37523bf2423c5a50e6381c1d717028fba08a42fe1db25220ecb1f66c42991f1a0ccaa3\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-1ebc70d6-fcab-4c78-a26a-f514e8755049\", \"name\": \"sample.pdf\", \"display_name\": \"sample.pdf\", \"size\": \"3.028 KB\", \"date\": \"2022-07-11\", \"time\": \"4:20 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-1ebc70d6-fcab-4c78-a26a-f514e8755049?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=87d7514f9473bda3c8ad8d616cafa8145df31f07f638523ce50afe36c5d355ec86a68cf528685cfa337d111171b4b1ff8ed9a531066e9a6f10b3f38720d8cc9afa5077a2bef91c2d5e6d2246f9beeccae60b5ceeabb27d6e40211672afb6e38615a7454b45521dc71149697aa6b4e74899343f06ede76a35fbc8abbbdd317edd564a87217e327ae13add6bd461c6ca87ef3495ed571717cea6d69e17261672817fbe0a32859eac3968c05c8439c77f1bfbe8c74ee567227ca26bb354bd5a5d8afb4f0817bb666317fdd972d23e9cb1145d71fb56ff8ed6737575910c08d6a93866edd83dc5bbb131c9e947c1f696e791497454daf944d1f7e8c08aff166312c4\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-ddf685be-dd87-4930-98cc-c3d7dc2c17c8\", \"name\": \"sample.pdf\", \"display_name\": \"sample.pdf\", \"size\": \"3.028 KB\", \"date\": \"2022-07-11\", \"time\": \"2:44 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-ddf685be-dd87-4930-98cc-c3d7dc2c17c8?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=0c79df9e9cb46bbd46c985d852ff0e7b125c1959bf2efa01c53e8cd7254756aa8842725117239ed9e93bcb29d969d3c2b7fc9d7a7656d974bda70e1918502438c4d4a36932990fb19379704eabc4798cbee00d7a86d5a093bba4ff83fc1e1c5d52e78b5b7a05a671f2867548f23b3e17649cf4f5651d8a1a369c204b8cc546e9029a014ad2d02e83bea4a2dbbd991a3eccdb8ee38ef371af80a2cde4df0f56cb01284df47a34cb2f1746e06ea4c8fb6b497ec9bc34ca0ef7b422c8692ce90866a839a90c552a7342cc0235806cbf1271c727be4d84e0ee1e98997da73de2b808b5642bfc1dd0eff6d7a2d9deb7d5471b8edfc14b83faa097477b6a4ee0a1cac3\", \"category\": null}], \"photos\": [{\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-9bffa482-9998-468b-a4ed-488aa31090af\", \"name\": \"image.png\", \"display_name\": \"image.png\", \"size\": \"87.721 KB\", \"date\": \"2022-07-11\", \"time\": \"4:20 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-9bffa482-9998-468b-a4ed-488aa31090af?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=91210bf5bf6bee7d41b4d91de1fa0c441aa8f82964e923294b74267ad91cd5b00bfc0921e22efa8432ca9b2f7c85ff4ab1f59e371bfb4dd5c7b9c6015dd50821eb595a62103703c3146ba7f35f9536bc03f2db3414f1d64e45745efc30c695b743db0eff493f5313d5f758d0266c406eeb2fa006219997536b48b4c00e517147d4b0b53e80247e1aa136fc08d7b73d34bc41ec42e797f02f8e7db065f285541bde051653ee3ad2eed33531335a49953fd815093d4cd3c903a1c0bac6ee3b0f9b0fe5fa6be9d78d3f33fbd2867d646b34cb1cd9c24c6c9f46c639fb00acb82e031e740f852c3378f76fcd02b3c16a908d34a34bee9402f9c1239b1a00625d28de\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3b02de23-336d-4092-9b2c-803a445e78a3\", \"name\": \"image.png\", \"display_name\": \"image.png\", \"size\": \"87.721 KB\", \"date\": \"2022-07-11\", \"time\": \"4:20 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3b02de23-336d-4092-9b2c-803a445e78a3?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=4b74a135f208a6b0266810026b206bc62a59f7c35462357b5a3affb8c6225b3f96e3da160c53232095a00913cc6a9b93e594e9d4185464321321fca38bad14d698e7b78a3533d7c280abc12c63064c72bfa84eef4670d64fa936debc500c86e09737238862d047b622d0d39b70efb4cdf695f2f4a6ce6bef39de5797a80c17281491d70894ae28414132c3b0ea0612c1c10ffaac7f5713748e3df58876d66901e77bf064319cf1a7accb4fa1ab58f495e2a5f55ce25b4985446b9927f1901ca5f840a8bc82f30b9751519404d1721aa89487c6096baf4f70deaca19ed475f33f0767dfcb157bfae8e280af67a1f17381d1b013c062170f69ff83c15677fc671d\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3f60fc01-de0e-48a0-9fa6-990ec85310f8\", \"name\": \"Nikon-D500-Sample-Images-2.jpg\", \"display_name\": \"Nikon-D500-Sample-Images-2.jpg\", \"size\": \"101.723 KB\", \"date\": \"2022-07-11\", \"time\": \"4:20 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-3f60fc01-de0e-48a0-9fa6-990ec85310f8?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=4c81698ac773a8c1c6b53083a7309d517de1e569649bc9fcdfa404954a368255b7297f5ed29245225d10d6eacf7c53a2bb62ab0d4a69c1d467f5dfc052b9e4800a1869ebb7357745fe81bace3d59d7b42b1320072baad43cabefb83299924a192e87a2a4d8385a196f984b4c631a050a917b46809b25d4aeb0c4608ec5a661bc3a4a87242dee24503fcec3e63edd8f88f1197866f4501aebfcb483a95bb1bbcdd3bf18bd211d0972e784e04fac76ad6c085180a45e0a99d3dfe429d76788dd4015fb7b1b5eeff94287d3582f6dab505982cc6a6a7dcb2a0c07e3c0c4661cc421ac6276b0507740e5a6f2e30823aa395b91eeb46df01dbdcf2d4698b3af9f01bc\", \"category\": null}, {\"url\": \"https://storage.googleapis.com/worker-safety-local-dev//beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9a0d833-ecef-482c-bb52-c967cce7deae\", \"name\": \"bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg\", \"display_name\": \"bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u2.jpg\", \"size\": \"37.267 KB\", \"date\": \"2022-07-11\", \"time\": \"2:44 PM\", \"id\": \"\", \"mimetype\": null, \"md5\": null, \"crc32c\": null, \"signed_url\": \"https://storage.googleapis.com/worker-safety-local-dev/beefa9d8-2a7d-4b37-9fec-3f2a433e7050/2022-07-11-e9a0d833-ecef-482c-bb52-c967cce7deae?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=worker-safety-local-dev%40urbint-1259.iam.gserviceaccount.com%2F20220711%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20220711T152049Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=86000402655af92c20e8668974b605cf5d33944a522333b0d72ea27f3273460b02f8f43e85e974f9232d4de8e8b7bce4b4a6050f0ba25365850f40ce7e709e255dcee5929e891a3b188b4871107e25fee5c6542cf9c93358fff6f69ab1a9795f3e29382fa9958a8b3ec11a73abac6f534cff049e7544967ec4f3ed03c6fef7043b195fbc91cdcee63c5f4167ba45f6c77dc22b5c4e8dc24dcb01d1e79e90302f5e9d12772c8b967d17fbaf3163b27cc5e8194d53916d9c8905a0f626e3c1ff4d5de3e9ae931dd35e861f5ce7681785ae70c0636cf7a886482205cef9fbd9e5db86b13efcdcdec215a76d286642f9c0402c2b71de8c4cdc5018843fe9692a5b80\", \"category\": null}], \"section_is_valid\": true}, \"additional_information\": {\"progress\": \"ola\", \"lessons\": \"jose\", \"section_is_valid\": true}}",
+    "status": "COMPLETE"
+  },
+  "user": {
+    "id": "b6be55a6-5722-457c-8c09-388eb503a7dc",
+    "name": "Super User",
+    "permissions": [
+      "VIEW_PROJECT",
+      "VIEW_TASKS",
+      "VIEW_SITE_CONDITIONS",
+      "VIEW_HAZARDS",
+      "VIEW_CONTROLS",
+      "VIEW_INSPECTIONS",
+      "VIEW_INSIGHT_REPORTS",
+      "ASSIGN_USERS_TO_PROJECTS",
+      "ASSIGN_CONTROLS",
+      "ADD_TASKS",
+      "ADD_HAZARDS",
+      "ADD_CONTROLS",
+      "ADD_SITE_CONDITIONS",
+      "ADD_REPORTS",
+      "EDIT_HAZARDS",
+      "EDIT_CONTROLS",
+      "EDIT_TASKS",
+      "EDIT_SITE_CONDITIONS",
+      "EDIT_PROJECTS",
+      "EDIT_OWN_REPORTS",
+      "DELETE_OWN_REPORTS",
+      "ADD_PROJECTS",
+      "DELETE_REPORTS",
+      "EDIT_REPORTS",
+      "VIEW_PROJECT_AUDITS",
+      "REOPEN_REPORTS",
+      "DELETE_PROJECTS",
+      "REOPEN_PROJECT",
+      "CONFIGURE_APPLICATION"
+    ],
+    "role": "administrator"
+  }
+}

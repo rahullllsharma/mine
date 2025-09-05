@@ -1,0 +1,11 @@
+query PortfolioLearningsApplicableHazards($filters: PortfolioLearningsInput!) {
+  portfolioLearnings(portfolioLearningsInput: $filters) {
+    applicableHazards {
+      count
+      libraryHazard {
+        id
+        name
+      }
+    }
+  }
+}

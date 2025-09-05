@@ -1,0 +1,8 @@
+query LocationHazardControlSettings($locationId: UUID!) {
+  locationHazardControlSettings(locationId: $locationId) {
+    id
+    libraryHazardId
+    libraryControlId
+    disabled
+  }
+}

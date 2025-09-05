@@ -1,0 +1,99 @@
+name: Setup Environment and Run Lint, Test, and Checks
+
+description: |
+  This action sets up the environment, installs dependencies, runs lint checks (black, flake8, isort, mypy), and executes unit tests.
+
+inputs:
+  python-version:
+    description: "Python version to install"
+    required: true
+    default: "3.10"
+  check-types:
+    description: "Comma-separated list of checks to run (e.g., black, flake8, isort, mypy)"
+    required: true
+  postgres-user:
+    description: "Postgres user"
+    required: true
+    default: "root"
+  postgres-password:
+    description: "Postgres password"
+    required: true
+    default: "password"
+  postgres-db:
+    description: "Postgres database name"
+    required: true
+    default: "asgard_test"
+
+runs:
+  using: "composite"
+  steps:
+    # Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Set up Python environment
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    # Install system dependencies (gcc, Poetry, etc.)
+    - name: Install system dependencies
+      shell: bash
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc libpq-dev brotli libgeos-dev proj-bin libsnappy-dev
+        sudo apt-get clean
+
+    # Install Poetry
+    - name: Install Poetry
+      shell: bash
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    # Configure Poetry
+    - name: Configure Poetry
+      shell: bash
+      run: |
+        poetry config virtualenvs.in-project true
+
+    # Install dependencies using Poetry
+    - name: Install dependencies with Poetry
+      shell: bash
+      run: |
+        poetry install --no-root
+
+    # Activate the virtual environment
+    - name: Activate the virtual environment
+      shell: bash
+      run: |
+        . .venv/bin/activate
+        pip install pytest-rerunfailures  # Install pytest rerun failures for test retries
+
+    # Run checks (black, flake8, isort, mypy)
+    - name: Run lint and type checks
+      shell: bash
+      run: |
+        . .venv/bin/activate
+        IFS=',' read -r -a checks <<< "${{ inputs.check-types }}"
+        for check in "${checks[@]}"; do
+          if [ "$check" == "black" ]; then
+            poetry run black --check .
+          elif [ "$check" == "flake8" ]; then
+            poetry run flake8 .
+          elif [ "$check" == "isort" ]; then
+            poetry run isort --check .
+          elif [ "$check" == "mypy" ]; then
+            poetry run mypy .
+          fi
+        done
+
+    # Run unit tests
+    - name: Run unit tests
+      shell: bash
+      run: |
+        . .venv/bin/activate
+        pytest -n auto --maxprocesses=2 ./tests/unit/ ./tests/test_migrations.py
+      env:
+        PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION: python

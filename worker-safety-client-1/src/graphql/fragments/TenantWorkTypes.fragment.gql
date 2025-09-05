@@ -1,0 +1,4 @@
+fragment TenantWorkTypes on WorkType {
+  id
+  name
+}

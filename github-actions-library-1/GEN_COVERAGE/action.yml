@@ -1,0 +1,57 @@
+name: "Generate Coverage"
+description: "Generates coverage reports"
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH  # Add Poetry to PATH
+      shell: bash
+      
+    - name: Install Dependencies
+      run: |
+        poetry install
+      shell: bash
+
+    - name: Generate Coverage Files
+      run: |
+        poetry run coverage xml --omit="`poetry env info -p`*,*__init__.py,**/test_*.py"
+        poetry run coverage html --omit="`poetry env info -p`*,*__init__.py,**/test_*.py"
+      shell: bash
+      env:
+        POSTGRES_HOST: postgres
+        POSTGRES_PORT: 5432
+        REDIS_HOST: redis
+        REDIS_PORT: 6379
+        DEBUG: False
+        TEST: True
+        CI: True
+        ENABLE_GCS: False
+        PROJECT: damage-prevention
+        DJANGO_SETTINGS_MODULE: core.settings
+
+    - name: Find and Replace coverage path Source to valid one
+      run: sed -i 's|/__w/lens/lens/damage-prevention|damage-prevention|g' coverage.xml
+      shell: bash
+
+    - name: Upload XML Coverage Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: Backend xml coverage
+        path: ./damage-prevention/coverage.xml
+        if-no-files-found: error
+        retention-days: 1
+        overwrite: true
+
+    - name: Upload HTML Coverage Reports
+      uses: actions/upload-artifact@v4
+      with:
+        name: Backend html coverage
+        path: ./damage-prevention/htmlcov
+        if-no-files-found: error
+        retention-days: 1
+        overwrite: true

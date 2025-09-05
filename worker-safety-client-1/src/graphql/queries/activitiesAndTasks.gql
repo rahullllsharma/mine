@@ -1,0 +1,33 @@
+query ActivitiesAndTasks(
+  $locationId: UUID
+  $date: Date
+  $filterTenantSettings: Boolean
+) {
+  activities(
+    locationId: $locationId
+    date: $date
+    filterTenantSettings: $filterTenantSettings
+  ) {
+    id
+    isCritical
+    criticalDescription
+    name
+    status
+    startDate
+    endDate
+    taskCount
+    tasks {
+      id
+      status
+      startDate
+      endDate
+      riskLevel
+      name
+      libraryTask {
+        id
+        riskLevel
+        name
+      }
+    }
+  }
+}

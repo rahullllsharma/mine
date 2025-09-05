@@ -1,0 +1,4 @@
+fragment ProjectType on LibraryProjectType {
+  id
+  name
+}

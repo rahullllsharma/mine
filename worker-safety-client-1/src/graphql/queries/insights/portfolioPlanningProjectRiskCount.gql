@@ -1,0 +1,9 @@
+query PortfolioPlanningProjectRiskCount($filters: PortfolioPlanningInput!) {
+  portfolioPlanning(portfolioPlanningInput: $filters) {
+    projectRiskLevelOverTime {
+      date
+      riskLevel
+      count
+    }
+  }
+}

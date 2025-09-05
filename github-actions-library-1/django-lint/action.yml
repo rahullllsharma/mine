@@ -1,0 +1,12 @@
+name: "Run Lint"
+description: "Runs linting on the codebase"
+inputs:
+  script:
+    description: "Script to run for linting"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Run Lint
+      run: ${{ inputs.script }}
+      shell: bash

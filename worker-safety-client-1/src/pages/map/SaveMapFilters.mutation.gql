@@ -1,0 +1,7 @@
+mutation saveMapFilters($userId: UUID!, $data: String!) {
+  saveUserPreferences(data: $data, userId: $userId, entityType: MapFilters) {
+    id
+    contents
+    entityType
+  }
+}

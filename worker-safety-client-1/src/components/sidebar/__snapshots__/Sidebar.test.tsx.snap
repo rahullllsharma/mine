@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="vertical"
+    class="flex flex-col gap-2"
+    role="tablist"
+  >
+    <button
+      aria-selected="true"
+      class="bg-neutral-shade-3"
+      id="headlessui-tabs-tab-1"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      <div
+        class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-neutral-shade-100"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-settings_filled text-xl mr-1 text-neutral-shade-75"
+        />
+        <span
+          class="text-base mx-1 truncate"
+        >
+          Project details
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="bg-neutral-shade-3"
+      id="headlessui-tabs-tab-2"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-location text-xl mr-1 text-neutral-shade-75"
+        />
+        <span
+          class="text-base mx-1 truncate"
+        >
+          Locations
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="bg-neutral-shade-3"
+      id="headlessui-tabs-tab-3"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+      >
+        <i
+          aria-hidden="true"
+          class="text-xl mr-1 text-neutral-shade-75"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M12 3.75c-2.228 0-4.25.884-5.734 2.319l-.97-.969a.707.707 0 00-1.204.436L3.77 9.092a.707.707 0 00.768.768l3.556-.323a.707.707 0 00.436-1.205l-.94-.94A6.379 6.379 0 115.621 12a.936.936 0 10-1.871 0A8.25 8.25 0 1012 3.75zm0 3.743a.936.936 0 00-.936.936V13c0 .323.166.623.44.793l2.743 1.715a.936.936 0 00.992-1.587l-2.303-1.44V8.43A.936.936 0 0012 7.493z"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </i>
+        <span
+          class="text-base mx-1 truncate"
+        >
+          History
+        </span>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

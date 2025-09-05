@@ -1,0 +1,15 @@
+query ingestOptions {
+  ingestOptions {
+    options {
+      id
+      name
+      description
+      columns {
+        attribute
+        name
+        requiredOnIngest
+        ignoreOnIngest
+      }
+    }
+  }
+}

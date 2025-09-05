@@ -1,0 +1,513 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JobBrief should display the JobBrief section without defaults 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-5"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-1"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-2"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-1"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-3"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-4"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-3"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-12"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-6"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-7"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-6"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-8"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-9"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-8"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-10"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-11"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-10"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`JobBrief should render JobBrief section component with empty state values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-13"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-15"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-14"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-15"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-17"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-16"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-17"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-18"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-20"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-19"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-20"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-22"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-21"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-22"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-24"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-23"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-24"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`JobBrief should render JobBrief section component with prefilled values 1`] = `
+<DocumentFragment>
+  <div
+    class="mb-4"
+  >
+    <div
+      class="mb-4 text-neutral-shade-100"
+    >
+      <h5
+        class="font-semibold"
+      >
+        Job Brief
+      </h5>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a comprehensive job brief conducted? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-25"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-27"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-26"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-27"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-29"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-28"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-29"
+            >
+              Yes
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.comprehensiveJobBriefConductNotes"
+          style="height: 0px;"
+        >
+          Conducts notes
+        </textarea>
+      </div>
+    </div>
+    <div
+      class="flex flex-col mb-4 gap-4 bg-brand-gray-10 p-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Was a Job Brief conducted after changes to work performed? *
+        </label>
+        <div
+          class="flex flex-wrap flex-row gap-6"
+          id="headlessui-radiogroup-30"
+          role="radiogroup"
+        >
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-32"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-31"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-32"
+            >
+              No
+            </label>
+          </div>
+          <div
+            aria-checked="false"
+            aria-labelledby="headlessui-label-34"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-33"
+            role="radio"
+            tabindex="-1"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            />
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-34"
+            >
+              Yes
+            </label>
+          </div>
+          <div
+            aria-checked="true"
+            aria-labelledby="headlessui-label-36"
+            class="flex items-center"
+            id="headlessui-radiogroup-option-35"
+            role="radio"
+            tabindex="0"
+          >
+            <div
+              class="flex items-center justify-center border rounded-xl w-5 h-5 border-neutral-shade-38 cursor-pointer hover:border-neutral-shade-58 hover:shadow-10"
+            >
+              <div
+                class="w-2.5 h-2.5 rounded-xl bg-brand-urbint-40 shadow-5"
+              />
+            </div>
+            <label
+              class="text-neutral-shade-100 text-base ml-2"
+              id="headlessui-label-36"
+            >
+              N/A
+            </label>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Notes
+        </label>
+        <textarea
+          aria-label="FieldTextArea"
+          class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+          name="safetyAndCompliance.jobBrief.jobBriefConductAfterWorkNotes"
+          style="height: 0px;"
+        >
+          After work notes
+        </textarea>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,115 @@
+name: Build and Scan Docker Image
+
+description: Build a Docker image and scan it for vulnerabilities using Trivy.
+
+inputs:
+  image_name:
+    description: 'The name and tag of the Docker image (e.g., my-image:latest).'
+    required: true
+  dockerfile:
+    description: 'Path to the Dockerfile.'
+    required: true
+    default: 'Dockerfile'
+  context:
+    description: 'Build context path.'
+    required: true
+    default: '.'  # Default to current directory
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      run: |
+        echo "Building image with target: ${{ inputs.target }}"
+        
+        # Check if target is provided. If not, run normal docker build.
+        if [ -z "${{ inputs.target }}" ]; then
+          docker build \
+            -t ${{ inputs.image_name }} \
+            -f ${{ inputs.dockerfile }} \
+            ${{
+              inputs.context
+            }}
+        else
+          docker build \
+            -t ${{ inputs.image_name }} \
+            -f ${{ inputs.dockerfile }} \
+            --target ${{ inputs.target }} \
+            ${{
+              inputs.context
+            }}
+        fi
+      shell: bash
+
+    - name: List Docker Images
+      run: docker images
+      shell: bash
+
+    # Cache Trivy DB to avoid downloading it on each run
+    - name: Cache Trivy DB
+      id: cache-trivy-db
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/trivy
+        key: trivy-db-${{ runner.os }}-${{ github.sha }}
+        restore-keys: |
+          trivy-db-${{ runner.os }}-
+          trivy-db-
+
+    - name: Install Trivy
+      run: |
+        curl -sfL https://github.com/aquasecurity/trivy/releases/download/v0.45.1/trivy_0.45.1_Linux-64bit.deb -o trivy.deb
+        sudo dpkg -i trivy.deb
+      shell: bash
+
+    # Set a custom TMPDIR to prevent "no space left on device" error
+    - name: Set TMPDIR to a larger location
+      run: |
+        mkdir -p /home/runner/tmp
+        export TMPDIR=/home/runner/tmp
+        echo "TMPDIR set to /home/runner/tmp"
+      shell: bash
+
+    # Handle retry logic for DB download due to rate-limiting
+    - name: Update Trivy DB
+      run: |
+        MAX_RETRIES=10
+        RETRY_COUNT=0
+        SUCCESS=false
+        while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+          trivy db update || echo "Failed to update DB, using cached version."
+          if [ $? -eq 0 ]; then
+            SUCCESS=true
+            break
+          else
+            RETRY_COUNT=$((RETRY_COUNT + 1))
+            WAIT_TIME=$((RETRY_COUNT * 10))  # Exponential backoff (increasing wait time between retries)
+            echo "Retrying Trivy DB update... Attempt $RETRY_COUNT of $MAX_RETRIES. Waiting $WAIT_TIME seconds."
+            sleep $WAIT_TIME
+          fi
+        done
+
+        if [ "$SUCCESS" = false ]; then
+          echo "Trivy DB update failed after $MAX_RETRIES attempts. Proceeding with cached version."
+        fi
+      shell: bash
+
+    # Run the Trivy image scan with severity filter
+    - name: Run Trivy Scan
+      id: trivy
+      run: |
+        trivy image --severity HIGH,CRITICAL ${{ inputs.image_name }}
+      continue-on-error: true  # Continue even if vulnerabilities are found
+      shell: bash
+
+    # Handle outcome of Trivy scan, but do not fail workflow
+    - name: Log Trivy Scan Outcome
+      if: ${{ steps.trivy.outcome != 'success' }}
+      run: |
+        echo "Trivy scan found vulnerabilities. Please review the results."
+        # Optionally, you can upload the scan results for further review
+        # For example: upload as an artifact or send via Slack/email
+      shell: bash

@@ -1,0 +1,33 @@
+query TenantLinkedHazardsLibrary(
+  $type: LibraryFilterType
+  $libraryTaskId: UUID
+  $librarySiteConditionId: UUID
+  $orderBy: [OrderBy!]
+  $controlsOrderBy: [OrderBy!]
+) {
+  tenantLinkedHazardsLibrary(
+    type: $type
+    libraryTaskId: $libraryTaskId
+    librarySiteConditionId: $librarySiteConditionId
+    orderBy: $orderBy
+  ) {
+    id
+    name
+    isApplicable
+    energyLevel
+    energyType
+    imageUrl
+    taskApplicabilityLevels {
+      applicabilityLevel
+      taskId
+    }
+    controls(orderBy: $controlsOrderBy) {
+      id
+      name
+      isApplicable
+      controlType
+      ppe
+      archivedAt
+    }
+  }
+}

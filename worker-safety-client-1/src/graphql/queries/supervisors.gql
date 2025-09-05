@@ -1,0 +1,6 @@
+query Supervisors($orderBy: [OrderBy!]) {
+  supervisors(orderBy: $orderBy) {
+    id
+    name
+  }
+}

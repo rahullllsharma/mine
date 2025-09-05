@@ -1,0 +1,5 @@
+mutation EditTask($taskData: EditTaskInput!) {
+  editTask(taskData: $taskData) {
+    id
+  }
+}

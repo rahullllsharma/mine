@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserAvatar should render with the "UserAvatar" component 1`] = `
+<DocumentFragment>
+  <div
+    aria-label="UB"
+    class="w-7 h-7 rounded-full flex items-center justify-center text-xl bg-gray-200 text-gray-500 border border-gray-300"
+    role="img"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-user"
+      data-testid="user-avatar-icon"
+    />
+  </div>
+</DocumentFragment>
+`;

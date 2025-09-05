@@ -1,0 +1,20 @@
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer components {
+  .select {
+    @apply py-1 px-2;
+    @apply rounded border-solid border-[1px] border-brand-gray-40;
+    @apply font-normal text-base text-brand-gray-80;
+    @apply flex flex-row items-stretch;
+    @apply bg-white;
+  }
+
+  .selectPlaceholder {
+    @apply text-brand-gray-60;
+  }
+
+  .selectError {
+    @apply border-system-error-40;
+  }
+}

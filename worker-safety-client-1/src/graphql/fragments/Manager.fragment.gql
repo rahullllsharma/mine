@@ -1,0 +1,4 @@
+fragment Manager on Manager {
+  id
+  name
+}

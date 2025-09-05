@@ -1,0 +1,7 @@
+mutation saveFormFilters($userId: UUID!, $data: String!) {
+  saveUserPreferences(data: $data, userId: $userId, entityType: FormFilters) {
+    id
+    contents
+    entityType
+  }
+}

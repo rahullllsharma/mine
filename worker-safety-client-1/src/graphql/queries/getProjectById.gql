@@ -1,0 +1,189 @@
+query Project(
+  $projectId: UUID!
+  $date: Date
+  $isApplicable: Boolean
+  $controlsIsApplicable: Boolean
+  $orderBy: [OrderBy!]
+  $activitiesOrderBy: [OrderBy!]
+  $tasksOrderBy: [OrderBy!]
+  $hazardsOrderBy: [OrderBy!]
+  $controlsOrderBy: [OrderBy!]
+  $siteConditionsOrderBy: [OrderBy!]
+  $filterTenantSettings: Boolean
+) {
+  project(projectId: $projectId, filterTenantSettings: $filterTenantSettings) {
+    id
+    description
+    name
+    startDate
+    endDate
+    riskLevel(date: $date)
+    contractor {
+      id
+      name
+    }
+    libraryRegion {
+      id
+      name
+    }
+    locations(orderBy: $orderBy) {
+      id
+      name
+      latitude
+      longitude
+      project {
+        id
+      }
+      riskLevel(date: $date)
+      riskCalculation(date: $date) {
+        totalTaskRiskLevel
+        isSupervisorAtRisk
+        isContractorAtRisk
+        isCrewAtRisk
+      }
+      siteConditions(date: $date, orderBy: $siteConditionsOrderBy) {
+        id
+        name
+        librarySiteCondition {
+          id
+        }
+        hazards(isApplicable: $isApplicable, orderBy: $hazardsOrderBy) {
+          id
+          name
+          controls(
+            isApplicable: $controlsIsApplicable
+            orderBy: $controlsOrderBy
+          ) {
+            id
+            name
+          }
+        }
+        isManuallyAdded
+        createdBy {
+          id
+        }
+      }
+      tasks(date: $date) {
+        id
+        name
+        riskLevel(date: $date)
+        libraryTask {
+          category
+        }
+        hazards(isApplicable: $isApplicable, orderBy: $hazardsOrderBy) {
+          id
+          name
+          controls(
+            isApplicable: $controlsIsApplicable
+            orderBy: $controlsOrderBy
+          ) {
+            id
+            name
+          }
+        }
+      }
+      dailyReports(date: $date) {
+        id
+        status
+        createdBy {
+          id
+          name
+        }
+        createdAt
+        completedBy {
+          id
+          name
+        }
+        completedAt
+      }
+      activities(date: $date, orderBy: $activitiesOrderBy) {
+        id
+        endDate
+        name
+        startDate
+        status
+        isCritical
+        criticalDescription
+        libraryActivityType {
+          id
+          name
+        }
+        tasks(date: $date, orderBy: $tasksOrderBy) {
+          id
+          name
+          riskLevel(date: $date)
+          status
+          startDate
+          endDate
+          hazards(isApplicable: $isApplicable, orderBy: $hazardsOrderBy) {
+            name
+            id
+            isApplicable
+            controls(
+              isApplicable: $controlsIsApplicable
+              orderBy: $controlsOrderBy
+            ) {
+              name
+              isApplicable
+              id
+            }
+          }
+          libraryTask {
+            id
+          }
+        }
+      }
+      jobSafetyBriefings(date: $date) {
+        id
+        name
+        status
+        createdAt
+        createdBy {
+          id
+          name
+        }
+        completedAt
+        completedBy {
+          id
+          name
+        }
+        contents {
+          emergencyContacts {
+            name
+            phoneNumber
+            primary
+          }
+          nearestMedicalFacility {
+            description
+            address
+            city
+            state
+            zip
+            phoneNumber
+          }
+          customNearestMedicalFacility {
+            address
+          }
+          aedInformation {
+            location
+          }
+          workLocation {
+            address
+            description
+          }
+          gpsCoordinates {
+            latitude
+            longitude
+          }
+          jsbMetadata {
+            briefingDateTime
+          }
+        }
+      }
+    }
+    workTypes {
+      id
+      name
+    }
+  }
+}

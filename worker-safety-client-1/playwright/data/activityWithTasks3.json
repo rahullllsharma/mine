@@ -1,0 +1,207 @@
+[
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "63256499-6af9-4600-8afd-3e9c24b3ea63",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "e92f3626-be91-47da-b197-77e6154f5a15",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "98d73996-ac36-4dbd-8b6c-fa2682c421d4",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "8d9dc6bf-cb00-4d8d-bcfe-9aa498fc2de3",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "016a66cb-ed49-469f-a494-facf0fddbeba",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "8aac579e-b59c-4252-8939-c799b7f9166d",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "ab2071b5-e299-454a-adf0-f42ac141c936",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "8b781386-e309-44d5-9b8d-35230f80119a",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "9071983c-5123-475f-9f1c-351c6756a5a5"
+  },
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "5a7861e6-948f-451e-8f2e-0c4fc1a2aced",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "359a02e2-7330-4175-a5b6-ef918e7d4158",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "88b99733-ead6-4278-917f-bc1b72442a35"
+  },
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "63256499-6af9-4600-8afd-3e9c24b3ea63",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "e92f3626-be91-47da-b197-77e6154f5a15",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "98d73996-ac36-4dbd-8b6c-fa2682c421d4",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "8d9dc6bf-cb00-4d8d-bcfe-9aa498fc2de3",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "17e26f9f-a273-478e-9b51-097c3f84ea94",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "42c7d15f-00c4-49cc-bcce-7e58927d09b6",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "23b011d4-4cb2-4526-9761-e247d506557a",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "d8251088-33df-44b9-8286-3e11d80645d1",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "98c1f174-ca8d-4c5a-98d7-827ebfc2a1c8",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "53a4afff-cfd5-4b30-89af-3d875f62722a",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "29ba89ae-b023-4799-a333-acce29102862",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "5ddd6a21-1f39-45fc-af9d-1dc783eba9a5",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "be591329-a272-4e0f-8277-98df369fc821",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "359a02e2-7330-4175-a5b6-ef918e7d4158",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "48253a67-cad2-4fe0-bce8-9089465936e0"
+  },
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "63256499-6af9-4600-8afd-3e9c24b3ea63",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "e92f3626-be91-47da-b197-77e6154f5a15",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "98d73996-ac36-4dbd-8b6c-fa2682c421d4",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "8d9dc6bf-cb00-4d8d-bcfe-9aa498fc2de3",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "dcf1f3c6-4e43-40da-b8cd-b9094b06cf2f",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "730d586c-f9fc-48c2-bab9-018e5474b81c",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "9445a787-c4cb-4fb2-8a49-1b9947f55876",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "cf25cc91-be50-4117-aced-c8a8f83db846",
+            "isApplicable": true
+          }
+        ]
+      },
+      {
+        "libraryHazardId": "29ba89ae-b023-4799-a333-acce29102862",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "25ae5c04-3dab-4c7d-bf0d-2317fd997619",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "6abcda1e-947c-4f1e-b913-18bc96c23334",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "66ef2d32-22fe-4a07-8d6c-2dde41a9df50"
+  },
+  {
+    "hazards": [
+      {
+        "libraryHazardId": "ab2071b5-e299-454a-adf0-f42ac141c936",
+        "isApplicable": true,
+        "controls": [
+          {
+            "libraryControlId": "23d96813-1901-4a25-b6d7-5579a2799a10",
+            "isApplicable": true
+          },
+          {
+            "libraryControlId": "8b781386-e309-44d5-9b8d-35230f80119a",
+            "isApplicable": true
+          }
+        ]
+      }
+    ],
+    "libraryTaskId": "422df780-6c14-4321-8525-32853c93b712"
+  }
+]

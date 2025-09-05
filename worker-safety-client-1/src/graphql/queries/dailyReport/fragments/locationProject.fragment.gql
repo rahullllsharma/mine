@@ -1,0 +1,41 @@
+fragment DailyReportLocationProjectFragment on DailyReport {
+  location {
+    name
+    project {
+      name
+      number
+      libraryProjectType {
+        name
+      }
+      libraryAssetType {
+        name
+      }
+      status
+      projectZipCode
+      startDate
+      endDate
+      libraryDivision {
+        name
+      }
+      libraryRegion {
+        name
+      }
+      description
+      manager {
+        name
+      }
+      supervisor {
+        name
+      }
+      engineerName
+      additionalSupervisors {
+        name
+      }
+      contractName
+      contractReference
+      contractor {
+        name
+      }
+    }
+  }
+}

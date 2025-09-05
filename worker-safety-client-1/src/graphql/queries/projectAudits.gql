@@ -1,0 +1,56 @@
+query ProjectAudits($projectId: UUID!) {
+  project(projectId: $projectId) {
+    audits {
+      transactionId
+      timestamp
+      actor {
+        id
+        name
+        role
+      }
+      actionType
+      objectType
+      objectDetails {
+        id
+        ... on Project {
+          name
+        }
+        ... on Task {
+          name
+          location {
+            id
+            name
+          }
+        }
+        ... on SiteCondition {
+          name
+          location {
+            id
+            name
+          }
+        }
+
+        ... on DailyReport {
+          location {
+            id
+            name
+          }
+        }
+      }
+      auditKey
+      diffValues {
+        type
+        ... on DiffValueLiteral {
+          oldValue
+          newValue
+        }
+        ... on DiffValueScalar {
+          oldValues
+          newValues
+          added
+          removed
+        }
+      }
+    }
+  }
+}

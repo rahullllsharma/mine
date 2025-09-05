@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectDetails should render correctly 1`] = `
+<DocumentFragment>
+  <section
+    class="pb-2"
+  >
+    <div
+      class="emotion-0"
+    >
+      <div
+        class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-white shadow-none text-risk-low text-base"
+        role="note"
+      >
+        <span
+          class="flex items-center px-1"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-chevron_down"
+          />
+          <span
+            class="text-tiny mr-1"
+          >
+            LOW risk
+          </span>
+        </span>
+      </div>
+    </div>
+    <h5
+      class="text-base font-semibold text-neutral-shade-100 pt-2"
+    >
+      Project ACME
+    </h5>
+    <span
+      class="text-sm text-neutral-shade-75 block"
+    >
+      Primary Project Supervisor: John Doe
+    </span>
+  </section>
+</DocumentFragment>
+`;

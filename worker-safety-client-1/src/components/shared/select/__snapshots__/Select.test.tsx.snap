@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders 1`] = `
+<DocumentFragment>
+  <div
+    class="relative text-neutral-shade-100"
+    data-testid="select"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-neutral-shade-26 text-neutral-shade-58"
+      id="headlessui-listbox-button-1"
+      type="button"
+    >
+      <span
+        class="truncate"
+      >
+        Select an option
+      </span>
+      <i
+        aria-hidden="true"
+        class="ci-chevron_down text-neutral-shade-58 text-xl"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

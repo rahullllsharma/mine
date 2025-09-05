@@ -1,0 +1,6 @@
+query DivisionsLibrary {
+  divisionsLibrary {
+    id
+    name
+  }
+}

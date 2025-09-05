@@ -1,0 +1,238 @@
+fragment EboContents on EnergyBasedObservationLayout {
+  activities {
+    id
+    name
+    tasks {
+      fromWorkOrder
+      riskLevel
+      id
+      name
+      instanceId
+      taskHazardConnectorId
+      hazards {
+        id
+        hazardControlConnectorId
+        taskHazardConnectorId
+        name
+        description
+        energyLevel
+        directControlsImplemented
+        indirectControls {
+          id
+          hazardControlConnectorId
+          name
+        }
+        observed
+        reason
+        directControls {
+          id
+          hazardControlConnectorId
+          name
+        }
+        limitedControls {
+          id
+          hazardControlConnectorId
+          name
+        }
+        directControlDescription
+        limitedControlDescription
+      }
+    }
+  }
+  additionalInformation
+  historicIncidents
+  details {
+    departmentObserved {
+      id
+      name
+    }
+    opcoObserved {
+      id
+      name
+      fullName
+    }
+    subopcoObserved {
+      id
+      name
+      fullName
+    }
+    observationDate
+    observationTime
+    workLocation
+    workOrderNumber
+    workType {
+      id
+      name
+    }
+  }
+  gpsCoordinates {
+    latitude
+    longitude
+  }
+  highEnergyTasks {
+    id
+    name
+    activityName
+    activityId
+    instanceId
+    taskHazardConnectorId
+    hazards {
+      id
+      hazardControlConnectorId
+      taskHazardConnectorId
+      name
+      description
+      energyLevel
+      directControlsImplemented
+      indirectControls {
+        id
+        hazardControlConnectorId
+        name
+      }
+      observed
+      reason
+      directControls {
+        id
+        hazardControlConnectorId
+        name
+      }
+      limitedControls {
+        id
+        hazardControlConnectorId
+        name
+      }
+      directControlDescription
+      limitedControlDescription
+    }
+  }
+  personnel {
+    id
+    name
+    role
+  }
+  summary {
+    viewed
+  }
+  photos {
+    id
+    category
+    crc32c
+    date
+    displayName
+    exists
+    md5
+    mimetype
+    name
+    signedUrl
+    size
+    time
+    url
+  }
+  sourceInfo {
+    sourceInformation
+    appVersion
+  }
+}
+
+query Ebo($id: UUID!) {
+  energyBasedObservation(id: $id) {
+    completedAt
+    createdAt
+    id
+    createdBy {
+      id
+      firstName
+      lastName
+      name
+    }
+    completedBy {
+      id
+    }
+    status
+    contents {
+      ...EboContents
+    }
+    updatedAt
+  }
+  me {
+    role
+  }
+}
+
+mutation SaveEbo(
+  $energyBasedObservationInput: EnergyBasedObservationInput!
+  $id: UUID
+) {
+  saveEnergyBasedObservation(
+    energyBasedObservationInput: $energyBasedObservationInput
+    id: $id
+  ) {
+    id
+    createdBy {
+      id
+      firstName
+      lastName
+      name
+    }
+    status
+    contents {
+      ...EboContents
+    }
+  }
+}
+
+mutation CompleteEbo(
+  $id: UUID!
+  $energyBasedObservationInput: EnergyBasedObservationInput!
+) {
+  completeEnergyBasedObservation(
+    id: $id
+    energyBasedObservationInput: $energyBasedObservationInput
+  ) {
+    id
+    createdBy {
+      id
+      firstName
+      lastName
+      name
+    }
+    status
+    contents {
+      ...EboContents
+    }
+  }
+}
+
+mutation ReopenEbo($id: UUID!) {
+  reopenEnergyBasedObservation(id: $id) {
+    id
+    createdBy {
+      id
+      firstName
+      lastName
+      name
+    }
+    status
+    contents {
+      ...EboContents
+    }
+  }
+}
+
+mutation DeleteEbo($id: UUID!) {
+  deleteEnergyBasedObservation(id: $id)
+}
+
+query HistoricalIncidents($libraryTaskId: UUID!) {
+  historicalIncidents(libraryTaskId: $libraryTaskId) {
+    id
+    severity
+    incidentDate
+    taskTypeId
+    taskType
+    severityCode
+    incidentType
+    incidentId
+    description
+  }
+}

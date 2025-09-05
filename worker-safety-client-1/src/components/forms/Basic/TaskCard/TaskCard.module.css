@@ -1,0 +1,17 @@
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer components {
+  .taskCard {
+    @apply bg-white;
+    @apply flex justify-between items-center;
+    @apply shadow;
+    @apply rounded-lg border-l-10;
+    @apply p-4;
+    @apply gap-2;
+  }
+
+  .taskCardTitle {
+    @apply text-base text-neutral-shade-100 font-semibold;
+  }
+}

@@ -1,0 +1,34 @@
+query ProjectLearningsHazardsDrillDown(
+  $filters: ProjectLearningsInput!
+  $libraryHazardId: UUID!
+) {
+  projectLearnings(projectLearningsInput: $filters) {
+    applicableHazardsByLocation(libraryHazardId: $libraryHazardId) {
+      count
+      location {
+        name
+      }
+    }
+
+    applicableHazardsBySiteCondition(libraryHazardId: $libraryHazardId) {
+      count
+      librarySiteCondition {
+        name
+      }
+    }
+
+    applicableHazardsByTask(libraryHazardId: $libraryHazardId) {
+      count
+      libraryTask {
+        name
+      }
+    }
+
+    applicableHazardsByTaskType(libraryHazardId: $libraryHazardId) {
+      count
+      libraryTask {
+        category
+      }
+    }
+  }
+}

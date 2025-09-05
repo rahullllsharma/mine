@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 1`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 90,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 180,
+    "risk": "medium",
+    "start": 90,
+  },
+  Object {
+    "className": "text-risk-low",
+    "end": 270,
+    "risk": "low",
+    "start": 180,
+  },
+  Object {
+    "className": "text-risk-unknown",
+    "end": 359.9,
+    "risk": "unknown",
+    "start": 270,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 2`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 119.88000000000001,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 239.76000000000002,
+    "risk": "medium",
+    "start": 119.88000000000001,
+  },
+  Object {
+    "className": "text-risk-low",
+    "end": 359.64000000000004,
+    "risk": "low",
+    "start": 239.76000000000002,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 3`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 180,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 359.9,
+    "risk": "medium",
+    "start": 180,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 4`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 359.9,
+    "risk": "high",
+    "start": 0,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 5`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 90,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 180,
+    "risk": "medium",
+    "start": 90,
+  },
+  Object {
+    "className": "text-risk-low",
+    "end": 270,
+    "risk": "low",
+    "start": 180,
+  },
+  Object {
+    "className": "text-risk-unknown",
+    "end": 359.9,
+    "risk": "unknown",
+    "start": 270,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 6`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 119.88000000000001,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 239.76000000000002,
+    "risk": "medium",
+    "start": 119.88000000000001,
+  },
+  Object {
+    "className": "text-risk-low",
+    "end": 359.64000000000004,
+    "risk": "low",
+    "start": 239.76000000000002,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 7`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 180,
+    "risk": "high",
+    "start": 0,
+  },
+  Object {
+    "className": "text-risk-medium",
+    "end": 359.9,
+    "risk": "medium",
+    "start": 180,
+  },
+]
+`;
+
+exports[`calculateFractionsPerRisk should calculate the proper paths and remove risks without scores 8`] = `
+Array [
+  Object {
+    "className": "text-risk-high",
+    "end": 359.9,
+    "risk": "high",
+    "start": 0,
+  },
+]
+`;

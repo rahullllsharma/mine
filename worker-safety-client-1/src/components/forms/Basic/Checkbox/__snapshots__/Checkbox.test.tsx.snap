@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row items-center gap-2"
+  >
+    <input
+      class="flex-shrink-0 root"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="cursor-pointer"
+    >
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Checkbox renders correctly when is checked 1`] = `
+<DocumentFragment>
+  <div
+    class="flex flex-row items-center gap-2"
+  >
+    <input
+      checked=""
+      class="flex-shrink-0 root"
+      readonly=""
+      type="checkbox"
+    />
+    <label
+      class="cursor-pointer"
+    >
+      Option 1
+    </label>
+  </div>
+</DocumentFragment>
+`;

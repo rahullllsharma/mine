@@ -1,0 +1,54 @@
+.actionButtonParent {
+  max-width: 1440px;
+  position: absolute;
+  bottom: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgba(247, 248, 248, var(--tw-bg-opacity));
+
+
+  @media screen and (max-width: 1230px) {
+    margin: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    position: fixed;
+    bottom: 0px;
+
+    background: white;
+    margin: 0px;
+  }
+}
+
+.buttonContainer {
+  width: 1440px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+  @media screen and (max-width: 1230px) {
+    width: 100%;
+    justify-content: center;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 20px;
+  }
+}
+
+.actionButtonParentPreview {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffff;
+}
+
+.buttonContainerPreview {
+  width: 1220px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 30px;
+  padding-bottom: 70px;
+}

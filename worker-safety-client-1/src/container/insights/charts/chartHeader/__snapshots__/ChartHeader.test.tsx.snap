@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChartHeader should render correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="flex flex-nowrap items-center justify-around"
+  >
+    <h2
+      class="text-center font-semibold text-xl flex-1"
+    >
+      header bar title
+    </h2>
+    <div
+      class="relative inline-block z-30 flex-0"
+      data-testid="dropdown"
+    >
+      <button
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-label="Download CSV/XLSX files"
+        class="text-xl text-neutral-shade-75 disabled:text-neutral-shade-38 disabled:cursor-not-allowed w-7 h-7 flex justify-center items-center gap-1 rounded
+        hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7"
+        id="headlessui-menu-button-1"
+        title=""
+        type="button"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-more_horizontal"
+        />
+      </button>
+    </div>
+  </header>
+</DocumentFragment>
+`;

@@ -1,0 +1,30 @@
+name: "Deploy Frontend to Google Cloud Storage environment bucket"
+description: "Download build folder, authenticate on Google and upload folder content to bucket"
+inputs:
+  bucket_path:
+    description: Name of Google Cloud Storage bucket to install the new build
+    required: true
+  AUTH_TOKEN:
+    description: Google Cloud Platform authentication access token
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: frontend-build
+        path: ./client/build
+    - name: Authenticate to Google Cloud Platform
+      id: auth
+      uses: google-github-actions/auth@v1
+      with:
+        token_format: "access_token"
+        credentials_json: "${{ inputs.AUTH_TOKEN }}"
+    - name: Upload to Google Cloud Storage
+      uses: "google-github-actions/upload-cloud-storage@v1"
+      with:
+        path: ./client/build
+        destination: ${{ inputs.bucket_path }}
+        parent: false

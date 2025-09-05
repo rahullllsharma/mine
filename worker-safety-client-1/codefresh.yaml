@@ -1,0 +1,226 @@
+version: "1.0"
+
+hooks:
+  on_elected:
+    exec:
+      image: alpine:3.15.5
+      fail_fast: false
+      commands:
+        - echo "Build started!"
+        - echo "CF_PIPELINE_NAME=${{CF_PIPELINE_NAME}}"
+  on_success:
+    steps:
+      SetColorStatus:
+        image: alpine:3.15.5
+        commands:
+          - echo "on_success started"
+          - cf_export SLACK_COLOR_STATUS=good
+      SendToSlack:
+        title: Sending message to slack
+        image: codefreshplugins/slacknotifier
+        environment:
+          - "SLACK_HOOK_URL=${{ws-notifications-webhook}}"
+          - "SLACK_TEXT=`${{CF_PIPELINE_NAME}}` build passed! :white_check_mark:"
+          - "SLACK_ATTACHMENTS=${{CF_SLACK_ATTACHMENTS}}"
+        when:
+          branch:
+            only:
+              - main
+              - /^release\/\d+\.\d+\.\d+/
+              - /^testingWithDeployToInteg\/.*\/.*/
+  on_fail:
+    steps:
+      SetColorStatus:
+        image: alpine:3.15.5
+        commands:
+          - echo "on_fail started"
+          - cf_export SLACK_COLOR_STATUS=bad
+      SendToSlack:
+        title: Sending message to slack
+        image: codefreshplugins/slacknotifier
+        environment:
+          - "SLACK_HOOK_URL=${{ws-notifications-webhook}}"
+          - "SLACK_TEXT=`${{CF_PIPELINE_NAME}}` build failed! :x:"
+          - "SLACK_ATTACHMENTS=${{CF_SLACK_ATTACHMENTS}}"
+        when:
+          branch:
+            only:
+              - main
+              - /^release\/\d+\.\d+\.\d+/
+              - /^testingWithDeployToInteg\/.*\/.*/
+  on_finish:
+    - echo "Build finished!"
+
+stages:
+  - clone
+  - setup
+  - check
+  - build
+  - deploy
+  - e2e
+
+steps:
+  clone:
+    title: "Cloning repository"
+    type: "git-clone"
+    repo: "urbint/worker-safety-client"
+    revision: "${{CF_BRANCH}}"
+    git: "github"
+    stage: "clone"
+
+  setup:
+    title: "Install dependencies"
+    type: "freestyle"
+    image: "node:20-alpine"
+    working_directory: "${{clone}}"
+    commands:
+      - echo //npm.pkg.github.com/:_authToken=${GITHUB_PAT} >> ~/.npmrc
+      - echo "@urbint:registry=https://npm.pkg.github.com/" >> ~/.npmrc
+      - "yarn install"
+    stage: "setup"
+
+  check_linting:
+    type: "freestyle"
+    stage: "check"
+    title: "Run linting steps"
+    image: "node:lts-alpine"
+    working_directory: "${{clone}}"
+    commands:
+      - "yarn lint"
+      - "yarn format"
+
+  check_tests:
+    type: "freestyle"
+    stage: "check"
+    title: "Run jest tests"
+    image: "node:lts-alpine"
+    working_directory: "${{clone}}"
+    commands:
+      - "yarn test-check"
+
+  build_fe:
+    title: "Building FE app"
+    type: "freestyle"
+    image: "node:lts-alpine"
+    working_directory: "${{clone}}"
+    commands:
+      - "yarn build"
+    stage: "build"
+
+  build:
+    title: "Building Docker image"
+    stage: "build"
+    type: "build"
+    image_name: "worker-safety-client"
+    disable_push: true
+    no_cache: false
+    working_directory: "${{clone}}"
+    tags:
+      - "${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}"
+      - "${{CF_REVISION}}"
+      - latest
+    build_arguments:
+      - "APP_COMMIT_SHA=${{CF_REVISION}}"
+    dockerfile: "Dockerfile"
+
+  push_image:
+    title: "Pushing the image"
+    stage: "deploy"
+    type: "push"
+    arguments:
+      candidate: ${{build}}
+      image_name: worker-safety-client
+      tags:
+        - "${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}"
+        - "${{CF_REVISION}}"
+        - latest
+    when:
+      branch:
+        only:
+          - main
+          - /^release\/\d+\.\d+\.\d+/
+          - /^testingWithDeployToInteg\/.*\/.*/
+
+  trigger_staging_deploy:
+    title: "Trigger the staging deploy pipeline"
+    stage: "deploy"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/staging-deploy"
+      DETACH: false
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - IMAGE_NAME="worker-safety-client"
+        - IMAGE_TAG="${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}"
+        - ARGOCD_APP="worker-safety-staging"
+    when:
+      branch:
+        only:
+          - /^release\/\d+\.\d+\.\d+/
+  trigger_integ_deploy:
+    title: "Trigger the integ deploy pipeline"
+    stage: "deploy"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/integ-deploy"
+      DETACH: false
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - IMAGE_NAME="worker-safety-client"
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - IMAGE_TAG="${{CF_BUILD_ID}}-${{CF_SHORT_REVISION}}"
+        - ARGOCD_APP="worker-safety-integ"
+    when:
+      branch:
+        only:
+          - main
+          - /^testingWithDeployToInteg\/.*\/.*/
+  trigger_e2e_staging:
+    title: "Trigger the e2e-tests-staging pipeline"
+    stage: "e2e"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/e2e-tests-staging"
+      DETACH: true
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - TARGET_ENV="staging.admin"
+    when:
+      branch:
+        only:
+          - /^release\/\d+\.\d+\.\d+/
+  trigger_e2e_integ:
+    title: "Trigger the e2e-tests-integ pipeline"
+    stage: "e2e"
+    type: "codefresh-run"
+    arguments:
+      PIPELINE_ID: "Worker Safety/e2e-tests-integ"
+      DETACH: true
+      FOLLOW_LOGS: false
+      VARIABLE:
+        - GIT_COMMIT_URL=${{CF_COMMIT_URL}}
+        - GIT_COMMIT_AUTHOR=${{CF_COMMIT_AUTHOR}}
+        - GIT_BRANCH=${{CF_BRANCH}}
+        - GIT_REVISION=${{CF_REVISION}}
+        - PARENT_CF_BUILD_URL=${{CF_BUILD_URL}}
+        - TARGET_ENV="integ.admin"
+    when:
+      branch:
+        only:
+          - main
+          - /^testingWithDeployToInteg\/.*\/.*/

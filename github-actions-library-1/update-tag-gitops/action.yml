@@ -1,0 +1,48 @@
+name: 'Update Image Tag'
+description: 'Update the Docker image tag in the GitOps repository.'
+inputs:
+  repo:
+    description: 'The GitOps repository to checkout.'
+    required: true
+  tag:
+    description: 'The Docker image tag to update.'
+    required: true
+  token:
+    description: 'GitHub token for authentication.'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout ws-customizable-workflow Repository
+      uses: actions/checkout@v4
+
+    - name: Checkout gitops Repository
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repo }}
+        token: ${{ inputs.token }}
+        path: gitops
+        ref: testbranch2
+
+    - name: Fetch and Rebase with Remote
+      run: |
+        cd gitops
+        git fetch origin
+        git rebase origin/testbranch2 || git rebase --abort
+      shell: bash
+
+    - name: Update image tag
+      run: |
+        TAG=${{ inputs.tag }}
+        FILE_PATH="worker-safety/integ/kustomization.yaml"
+        cd gitops
+        yq eval ".images[] |= select(.name == \"gcr.io/urbint-1259/ws-customizable-workflows\") |= .newTag = \"${TAG}\"" -i $FILE_PATH
+      shell: bash
+
+    - name: Commit and Push Changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ inputs.token }}
+        branch: testbranch2
+        commit_message: "Update image tag to ${{ inputs.tag }}"

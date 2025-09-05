@@ -1,0 +1,3 @@
+mutation DeleteDailyReport($deleteDailyReportId: UUID!) {
+  deleteDailyReport(id: $deleteDailyReportId)
+}

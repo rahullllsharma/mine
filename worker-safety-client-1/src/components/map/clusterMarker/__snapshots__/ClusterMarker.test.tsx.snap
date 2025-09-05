@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClusterMarker render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="inline-block shadow-20 rounded-full max-w-[400px] h-auto"
+  >
+    <svg
+      height="50"
+      viewBox="0 0 50 50"
+      width="50"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g
+        class="transform rotate-[330deg] origin-center"
+        type="rect"
+      >
+        <path
+          class="text-risk-high"
+          d="M 41.958588854417016 23.81413994634987 A 17 17 0 0 0 26.18586005365013 8.041411145582988"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="5"
+        />
+        <path
+          class="text-risk-medium"
+          d="M 26.18586005365013 41.958588854417016 A 17 17 0 0 0 41.958588854417016 26.18586005365013"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="5"
+        />
+        <path
+          class="text-risk-low"
+          d="M 8.041411145582988 26.185860053650135 A 17 17 0 0 0 23.81413994634987 41.958588854417016"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="5"
+        />
+        <path
+          class="text-risk-unknown"
+          d="M 23.784543446344323 8.043506690173956 A 17 17 0 0 0 8.041411145582988 23.81413994634988"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="5"
+        />
+      </g>
+      <text
+        class="text-base bg-neutral-shade-100 font-semibold"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        x="50%"
+        y="52%"
+      >
+        100
+      </text>
+    </svg>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,5 @@
+mutation EditSiteCondition($data: EditSiteConditionInput!) {
+  editSiteCondition(data: $data) {
+    id
+  }
+}

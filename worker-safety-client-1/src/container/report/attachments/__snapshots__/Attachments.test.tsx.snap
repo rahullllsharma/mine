@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attachments when the component renders should display the attachements section 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="flex justify-between"
+    >
+      <h6
+        class="text-xl text-neutral-shade-100 font-semibold"
+      >
+        Photos
+      </h6>
+      <button
+        class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 hidden sm:block"
+        type="button"
+      >
+        <div
+          class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-image_alt"
+          />
+          <span
+            class="mx-1 truncate"
+          >
+            Add photos
+          </span>
+        </div>
+      </button>
+      <input
+        accept=".apng,.avif,.gif,.jpg,.jpeg,.png,.svg,.webp"
+        class="hidden"
+        multiple=""
+        title="file-uploader"
+        type="file"
+      />
+    </div>
+    <div
+      class="text-xs font-normal text-neutral-shade-75 mt-0.5"
+    >
+      <p>
+        APNG, AVIF, GIF, JPG, JPEG, PNG, SVG, WEBP
+      </p>
+      <p>
+        Max file size: 10MB
+      </p>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="rounded w-full flex flex-col gap-6 items-start"
+      >
+        <p
+          class="text-base text-neutral-shade-100"
+        >
+          No Photos uploaded
+        </p>
+      </div>
+    </div>
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 block sm:hidden mt-4 w-full"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-image_alt"
+        />
+        <span
+          class="mx-1 truncate"
+        >
+          Add photos
+        </span>
+      </div>
+    </button>
+  </section>
+  <section
+    class="mt-6"
+  >
+    <div
+      class="flex justify-between"
+    >
+      <h6
+        class="text-xl text-neutral-shade-100 font-semibold"
+      >
+        Documents
+      </h6>
+      <button
+        class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 hidden sm:block"
+        type="button"
+      >
+        <div
+          class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-file_blank_outline"
+          />
+          <span
+            class="mx-1 truncate"
+          >
+            Add documents
+          </span>
+        </div>
+      </button>
+      <input
+        accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx"
+        class="hidden"
+        multiple=""
+        title="file-uploader"
+        type="file"
+      />
+    </div>
+    <div
+      class="text-xs font-normal text-neutral-shade-75 mt-0.5"
+    >
+      <p>
+        PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX
+      </p>
+      <p>
+        Max file size: 10MB
+      </p>
+    </div>
+    <div
+      class="mt-6"
+    >
+      <div
+        class="flex flex-col gap-2"
+      >
+        <p
+          class="text-base text-neutral-shade-100"
+        >
+          No documents uploaded
+        </p>
+      </div>
+    </div>
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 block sm:hidden mt-4 w-full"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-file_blank_outline"
+        />
+        <span
+          class="mx-1 truncate"
+        >
+          Add documents
+        </span>
+      </div>
+    </button>
+  </section>
+</DocumentFragment>
+`;

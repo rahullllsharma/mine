@@ -1,0 +1,59 @@
+query LocationSiteConditions(
+  $latitude: Decimal!
+  $longitude: Decimal!
+  $date: Date!
+) {
+  locationSiteConditions(
+    siteInput: { latitude: $latitude, longitude: $longitude, date: $date }
+  ) {
+    id
+    name
+    createdBy {
+      id
+      name
+    }
+    librarySiteCondition {
+      id
+      name
+    }
+    isManuallyAdded
+    hazards {
+      id
+      isApplicable
+      name
+      createdBy {
+        id
+        name
+      }
+      libraryHazard {
+        energyLevel
+        energyType
+        id
+        name
+        isApplicable
+        controls {
+          id
+          name
+          isApplicable
+          __typename
+        }
+        taskApplicabilityLevels {
+          applicabilityLevel
+          __typename
+        }
+      }
+      controls {
+        id
+        name
+        isApplicable
+        createdBy {
+          id
+          name
+        }
+        libraryControl {
+          id
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Name:
+    </label>
+    <div
+      class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+    >
+      <input
+        aria-invalid="true"
+        class="flex-auto appearance-none rounded-md min-w-0 p-2 h-9 focus:outline-none read-only:cursor-default disabled:bg-neutral-light-77 disabled:cursor-not-allowed disabled:opacity-38"
+        placeholder=""
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Input renders error message 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Name:
+    </label>
+    <div
+      class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-system-error-40 focus-within:ring-system-error-40"
+    >
+      <input
+        aria-invalid="true"
+        class="flex-auto appearance-none rounded-md min-w-0 p-2 h-9 focus:outline-none read-only:cursor-default disabled:bg-neutral-light-77 disabled:cursor-not-allowed disabled:opacity-38"
+        placeholder=""
+        type="text"
+        value=""
+      />
+    </div>
+    <span
+      class="text-sm mt-1 text-system-error-40"
+    >
+      Please provide a value
+    </span>
+  </div>
+</DocumentFragment>
+`;

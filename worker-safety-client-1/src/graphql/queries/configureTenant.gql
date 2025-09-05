@@ -1,0 +1,21 @@
+mutation configureTenant($tenantAttributes: EntityConfigurationInput!) {
+  configureTenant(entityConfiguration: $tenantAttributes) {
+    key
+    label
+    labelPlural
+    defaultLabel
+    defaultLabelPlural
+    attributes {
+      key
+      label
+      labelPlural
+      defaultLabel
+      defaultLabelPlural
+      mandatory
+      required
+      visible
+      filterable
+      mappings
+    }
+  }
+}

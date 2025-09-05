@@ -1,0 +1,9 @@
+query ProjectLearningsLocationRiskCount($filters: ProjectLearningsInput!) {
+  projectLearnings(projectLearningsInput: $filters) {
+    locationRiskLevelOverTime {
+      date
+      riskLevel
+      count
+    }
+  }
+}

@@ -1,0 +1,6 @@
+query SiteConditionsLibrary {
+  siteConditionsLibrary {
+    id
+    name
+  }
+}

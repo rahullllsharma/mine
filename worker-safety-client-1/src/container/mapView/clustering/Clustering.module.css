@@ -1,0 +1,13 @@
+.donut {
+  width: 90%;
+  height: 90%;
+
+  border-radius: 50%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}

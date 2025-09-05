@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsMenuLight should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="flex h-full w-full"
+    role="tablist"
+  >
+    <button
+      aria-selected="true"
+      class="min-w-0 z-10 outline-none w-1/3"
+      id="headlessui-tabs-tab-1"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      <div
+        class="flex items-center flex-col h-full gap-0 pt-2 text-sm text-neutral-shade-100 box-border border-t-2 border-solid border-brand-urbint-40 text-neutral-shade-100"
+      >
+        <span
+          class="text-sm truncate"
+        >
+          Active
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="min-w-0 z-10 outline-none w-1/3"
+      id="headlessui-tabs-tab-2"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="flex items-center flex-col h-full gap-0 pt-2 text-sm text-neutral-shade-100 box-border text-neutral-shade-58"
+      >
+        <span
+          class="text-sm truncate"
+        >
+          Pending
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="min-w-0 z-10 outline-none w-1/3"
+      id="headlessui-tabs-tab-3"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="flex items-center flex-col h-full gap-0 pt-2 text-sm text-neutral-shade-100 box-border text-neutral-shade-58"
+      >
+        <span
+          class="text-sm truncate"
+        >
+          Completed
+        </span>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

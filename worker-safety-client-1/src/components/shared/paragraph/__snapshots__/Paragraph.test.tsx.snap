@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paragraph when it renders should match the snapshot 1`] = `
+<DocumentFragment>
+  <p
+    class="text-base text-neutral-shade-100"
+  >
+    Lorem ipsum
+  </p>
+</DocumentFragment>
+`;

@@ -1,0 +1,131 @@
+fragment DailyReportFragment on DailyReport {
+  id
+  createdBy {
+    id
+    name
+  }
+  createdAt
+  completedBy {
+    id
+    name
+  }
+  completedAt
+  sectionsJSON
+  sections {
+    workSchedule {
+      sectionIsValid
+      startDatetime
+      endDatetime
+    }
+    taskSelection {
+      sectionIsValid
+      selectedTasks {
+        id
+        name
+        riskLevel
+      }
+    }
+    jobHazardAnalysis {
+      sectionIsValid
+      siteConditions {
+        id
+        name
+        isApplicable
+        hazards {
+          id
+          name
+          isApplicable
+          controls {
+            id
+            name
+            implemented
+            notImplementedReason
+            furtherExplanation
+          }
+        }
+      }
+      tasks {
+        sectionIsValid
+        id
+        name
+        notes
+        performed
+        notApplicableReason
+        hazards {
+          id
+          name
+          isApplicable
+          notApplicableReason
+          controls {
+            id
+            name
+            implemented
+            notImplementedReason
+            furtherExplanation
+          }
+        }
+      }
+    }
+    safetyAndCompliance
+    crew {
+      sectionIsValid
+      contractor
+      foremanName
+      nWelders
+      nSafetyProf
+      nOperators
+      nFlaggers
+      nLaborers
+      nOtherCrew
+      documents {
+        name
+        displayName
+        size
+        date
+        time
+        mimetype
+        md5
+        crc32c
+        url
+        signedUrl
+      }
+    }
+    additionalInformation {
+      sectionIsValid
+      progress
+      lessons
+    }
+    attachments {
+      sectionIsValid
+      photos {
+        name
+        displayName
+        size
+        date
+        description
+        time
+        mimetype
+        md5
+        crc32c
+        url
+        signedUrl
+        category
+      }
+      documents {
+        name
+        displayName
+        size
+        date
+        time
+        mimetype
+        md5
+        crc32c
+        url
+        signedUrl
+        category
+      }
+    }
+  }
+  status
+  updatedAt
+}

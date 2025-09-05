@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarButton should render a default calendar button 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-brand-gray-40"
+  />
+</DocumentFragment>
+`;
+
+exports[`CalendarButton should render with a blue border when "isToday" is set to true 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-brand-urbint-40"
+    data-is-today="true"
+  />
+</DocumentFragment>
+`;
+
+exports[`CalendarButton should render with a ticker and blue border when "isActive" and "isToday" are set to true 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-4 border-brand-urbint-40"
+    data-is-selected="true"
+    data-is-today="true"
+  />
+</DocumentFragment>
+`;
+
+exports[`CalendarButton should render with a ticker and darker border when "isActive" is set to true 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-4 border-4 border-brand-gray-70"
+    data-is-selected="true"
+  />
+</DocumentFragment>
+`;

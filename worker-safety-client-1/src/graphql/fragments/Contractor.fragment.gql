@@ -1,0 +1,4 @@
+fragment Contractor on Contractor {
+  id
+  name
+}

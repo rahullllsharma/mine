@@ -1,0 +1,14 @@
+fragment Recommendations on Recommendation {
+  dailyReport(projectLocationId: $projectLocationsId) {
+    crew {
+      constructionCompany
+      foremanName
+    }
+    safetyAndCompliance {
+      phaCompletion
+      sopNumber
+      sopType
+      stepsCalledIn
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query LocationSiteConditions($siteInput: SiteLocationInput!) {
+  locationSiteConditions(siteInput: $siteInput) {
+    id
+    name
+    librarySiteCondition {
+      id
+    }
+  }
+}

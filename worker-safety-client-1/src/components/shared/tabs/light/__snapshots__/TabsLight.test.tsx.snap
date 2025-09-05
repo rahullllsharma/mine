@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabsLight should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    aria-orientation="horizontal"
+    class="flex"
+    role="tablist"
+  >
+    <button
+      aria-selected="true"
+      class="min-w-0 z-10 outline-none"
+      id="headlessui-tabs-tab-1"
+      role="tab"
+      tabindex="0"
+      type="button"
+    >
+      <div
+        class="flex items-center px-2.5 py-3 text-neutral-shade-75 font-semibold active:bg-neutral-shade-3 border-b-4 border-brand-urbint-40 border-solid z-10"
+      >
+        <span
+          class="text-base mx-1 truncate"
+        >
+          Active
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="min-w-0 z-10 outline-none"
+      id="headlessui-tabs-tab-2"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="flex items-center px-2.5 py-3 text-neutral-shade-75 font-semibold active:bg-neutral-shade-3 border-b-4 opacity-75 border-transparent"
+      >
+        <span
+          class="text-base mx-1 truncate"
+        >
+          Pending
+        </span>
+      </div>
+    </button>
+    <button
+      aria-selected="false"
+      class="min-w-0 z-10 outline-none"
+      id="headlessui-tabs-tab-3"
+      role="tab"
+      tabindex="-1"
+      type="button"
+    >
+      <div
+        class="flex items-center px-2.5 py-3 text-neutral-shade-75 font-semibold active:bg-neutral-shade-3 border-b-4 opacity-75 border-transparent"
+      >
+        <span
+          class="text-base mx-1 truncate"
+        >
+          Completed
+        </span>
+      </div>
+    </button>
+  </div>
+  <hr
+    class="relative bg-neutral-shade-18 z-1 border"
+    style="bottom: 3px;"
+  />
+</DocumentFragment>
+`;

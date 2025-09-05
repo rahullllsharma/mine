@@ -1,0 +1,30 @@
+query HazardsLibrary(
+  $type: LibraryFilterType!
+  $libraryTaskId: UUID
+  $librarySiteConditionId: UUID
+  $orderBy: [OrderBy!]
+) {
+  hazardsLibrary(
+    type: $type
+    libraryTaskId: $libraryTaskId
+    librarySiteConditionId: $librarySiteConditionId
+    orderBy: $orderBy
+  ) {
+    id
+    name
+    isApplicable
+    controls {
+      id
+      name
+      isApplicable
+      controlType
+    }
+    energyType
+    energyLevel
+    imageUrl
+    taskApplicabilityLevels {
+      applicabilityLevel
+      taskId
+    }
+  }
+}

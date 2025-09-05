@@ -1,0 +1,83 @@
+name: "Deploy to ArgoCD"
+description: "Deploys an application to ArgoCD"
+
+inputs:
+  repo:
+    description: 'The GitHub repository to check out'
+    required: true
+  token:
+    description: 'GitHub token for authentication'
+    required: true
+  path:
+    description: 'Path to the repository after checkout'
+    required: true
+  ref:
+    description: 'Reference (branch/tag) to checkout'
+    required: true
+  argocd_token:
+    description: 'ArgoCD authentication token'
+    required: true
+  app_name:
+    description: 'Name of the ArgoCD application to sync'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    # Step 1: Checkout GitOps repository
+    - name: Checkout GitOps Repository
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ inputs.repo }}
+        token: ${{ inputs.token }}
+        path: ${{ inputs.path }}
+        ref: ${{ inputs.ref }}
+
+    # Step 2: Install ArgoCD CLI
+    - name: Install ArgoCD CLI
+      run: |
+        echo "Installing ArgoCD CLI..."
+        curl -sSL https://github.com/argoproj/argo-cd/releases/latest/download/argocd-linux-amd64 -o argocd
+        chmod +x argocd
+        sudo mv argocd /usr/local/bin/
+        
+      shell: bash
+
+    # Step 3: Debugging - Check network connectivity to ArgoCD
+    - name: Check network connectivity to ArgoCD
+      run: |
+      
+        echo "Checking if GitHub runner can reach the ArgoCD server..."
+        ping -c 4 argocd.urbinternal.com || echo "Ping failed. Could not reach ArgoCD server."
+      shell: bash
+
+    # Step 4: Debugging - Test DNS resolution for ArgoCD server
+    - name: Test DNS resolution for ArgoCD server
+      run: |
+        echo "Testing DNS resolution for ArgoCD server..."
+        nslookup argocd.urbinternal.com || echo "DNS resolution failed. Could not resolve ArgoCD server."
+      shell: bash
+
+    # Step 5: Debugging - Test port connectivity to ArgoCD
+    - name:  Test port connectivity to ArgoCD
+      run: |
+        echo "Testing if the ArgoCD server is reachable on port 443..."
+        nc -zv argocd.urbinternal.com 443 || echo "Could not reach ArgoCD server on port 443."
+      shell: bash
+
+    # Step 6: Check ArgoCD version and connection
+    - name: Check ArgoCD CLI version and connectivity
+      run: |
+        echo "Checking ArgoCD CLI version and server connection..."
+        argocd version --server argocd.urbinternal.com --grpc-web || echo "Failed to get ArgoCD version."
+      shell: bash
+
+    # Step 7: Log in to ArgoCD using Auth Token
+    - name: Log in to ArgoCD
+      run: |
+        echo "ArgoCD Server: ${{ inputs.argocd_server }}"
+        echo "ArgoCD Token: ${{ inputs.argocd_token }}"
+        echo "Logging in to ArgoCD using the provided auth token..."
+        argocd login argocd.urbinternal.com --server argocd.urbinternal.com --auth-token ${{ inputs.argocd_token }} --insecure --grpc-web
+        echo "Successfully logged into ArgoCD."
+      shell: bash

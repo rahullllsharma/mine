@@ -1,0 +1,3 @@
+mutation DeleteSiteCondition($deleteSiteConditionId: UUID!) {
+  deleteSiteCondition(id: $deleteSiteConditionId)
+}

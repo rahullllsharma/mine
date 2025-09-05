@@ -1,0 +1,14 @@
+query CWFActivityTasks($workTypeIds: [UUID!]!) {
+  tenantAndWorkTypeLinkedLibraryTasks(tenantWorkTypeIds: $workTypeIds) {
+    id
+    category
+    name
+    riskLevel
+    isCritical
+    activitiesGroups {
+      id
+      name
+      aliases
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "environment": "localhost",
+  "projects": {
+    "newEntries": 100,
+    "activitiesPerProject": 3,
+    "chunks": 4,
+    "chunkDelay": 2000,
+    "chunkFormationDelay": 100,
+    "projectNamePrefix": "Script dummy project"
+  }
+}

@@ -1,0 +1,10 @@
+.bottomNavBar {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+}
+.topNavBar {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

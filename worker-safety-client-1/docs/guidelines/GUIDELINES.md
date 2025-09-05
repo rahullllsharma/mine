@@ -1,0 +1,3 @@
+# Guidelines
+
+## [GraphQL](./GRAPHQL.md)

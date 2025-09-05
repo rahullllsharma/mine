@@ -1,0 +1,6 @@
+query Tasks($tasksId: UUID, $locationId: UUID, $date: Date) {
+  tasks(id: $tasksId, locationId: $locationId, date: $date) {
+    id
+    name
+  }
+}

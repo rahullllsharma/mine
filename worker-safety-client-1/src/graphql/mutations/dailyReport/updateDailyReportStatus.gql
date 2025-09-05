@@ -1,0 +1,5 @@
+mutation UpdateDailyReportStatus($id: UUID!, $status: FormStatus!) {
+  updateDailyReportStatus(id: $id, status: $status) {
+    id
+  }
+}

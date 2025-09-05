@@ -1,0 +1,6 @@
+query CrewLeaders {
+  crewLeaders {
+    id
+    name
+  }
+}

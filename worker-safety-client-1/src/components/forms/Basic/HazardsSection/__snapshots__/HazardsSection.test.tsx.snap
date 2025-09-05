@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HazardsSection renders correctly 1`] = `
+<DocumentFragment>
+  <fieldset
+    class="flex flex-col gap-3"
+  >
+    <div
+      class="p-2 sm:p-4 flex flex-col gap-3 bg-brand-gray-10"
+    >
+      <div
+        class="flex justify-between"
+      >
+        <h2
+          class="text-section-heading font-section-heading text-neutrals-primary text-lg font-semibold text-neutral-shade-75"
+        >
+          Hazards
+        </h2>
+        <button
+          class="text-brand-urbint-50 flex items-center"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-edit"
+          />
+          <span
+            class="ml-1"
+          >
+            Edit
+          </span>
+        </button>
+      </div>
+      <div
+        class="mt-4"
+      >
+        <div
+          class="flex flex-col gap-1"
+        >
+          <div
+            class="bg-white p-4 shadow-10"
+          >
+            <p
+              class="text-body-text font-body-text text-neutrals-primary text-base font-semibold text-neutral-shade-75"
+            >
+              Stuck by equipment
+            </p>
+          </div>
+          <div
+            class="bg-white p-4 shadow-10"
+          >
+            <p
+              class="text-body-text font-body-text text-neutrals-primary text-base font-semibold text-neutral-shade-75"
+            >
+              Electrical contact with source
+            </p>
+          </div>
+          <div
+            class="bg-white p-4 shadow-10"
+          >
+            <p
+              class="text-body-text font-body-text text-neutrals-primary text-base font-semibold text-neutral-shade-75"
+            >
+              Biological hazards - Insects, animals, poisonous plants
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</DocumentFragment>
+`;

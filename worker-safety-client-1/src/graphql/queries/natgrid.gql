@@ -1,0 +1,477 @@
+query NatgridJobSafetyBriefing($id: UUID!) {
+  natgridJobSafetyBriefing(id: $id) {
+    id
+    status
+    source
+    formId
+    createdAt
+    completedAt
+    date
+    operatingHq
+    barnLocation {
+      id
+      name
+    }
+    updatedAt
+    locationName
+    name
+    archivedAt
+    updatedBy {
+      name
+    }
+    contents {
+      generalReferenceMaterials {
+        id
+        link
+        name
+        category
+      }
+      jsbId
+      taskHistoricIncidents {
+        historicIncidents
+        id
+        name
+      }
+      jsbMetadata {
+        briefingDateTime
+      }
+      workPackageMetadata {
+        workPackageLocationId
+      }
+      gpsCoordinates {
+        latitude
+        longitude
+      }
+      workLocation {
+        address
+        landmark
+        city
+        state
+        vehicleNumber
+        minimumApproachDistance
+        operatingHq
+      }
+      workLocationWithVoltageInfo {
+        createdAt
+        address
+        landmark
+        city
+        state
+        gpsCoordinates {
+          latitude
+          longitude
+        }
+        circuit
+        voltageInformation {
+          voltage {
+            id
+            value
+            other
+          }
+          minimumApproachDistance {
+            phaseToPhase
+            phaseToGround
+          }
+        }
+      }
+      voltageInfo {
+        circuit
+        voltages
+      }
+      medicalInformation {
+        nearestHospital {
+          description
+          distanceFromJob
+          phoneNumber
+          address
+          city
+          state
+          zip
+        }
+        customMedicalNearestHospital {
+          address
+        }
+        firstAidKitLocation {
+          id
+          firstAidLocationName
+        }
+        customFirstAidKitLocation {
+          address
+        }
+        burnKitLocation {
+          id
+          burnKitLocationName
+        }
+        customBurnKitLocation {
+          address
+        }
+        primaryFireSupressionLocation {
+          id
+          primaryFireSupressionLocationName
+        }
+        customPrimaryFireSupressionLocation {
+          address
+        }
+        aedInformation {
+          id
+          aedLocationName
+        }
+        customAedLocation {
+          address
+        }
+        vehicleNumber
+      }
+      activities {
+        name
+        tasks {
+          id
+          name
+          riskLevel
+          fromWorkOrder
+        }
+      }
+      criticalTasksSelections {
+        jobDescription
+        specialPrecautionsNotes
+        taskSelections {
+          id
+          name
+          riskLevel
+          fromWorkOrder
+        }
+      }
+      hazardsControl {
+        energyTypes
+        additionalComments
+        customHazards {
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            controlsImplemented
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+        tasks {
+          id
+          name
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+        siteConditions {
+          id
+          name
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+        manuallyAddedHazards {
+          highEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+          lowEnergyHazards {
+            id
+            name
+            energyTypes
+            controlsImplemented
+            controls {
+              controls {
+                id
+                name
+              }
+            }
+            customControls {
+              controls {
+                id
+                name
+              }
+            }
+          }
+        }
+      }
+      energySourceControl {
+        energized
+        deEnergized
+        clearanceNumber
+        controlsDescription
+        controls {
+          id
+          name
+          controlInfoValues
+        }
+        clearanceTypes {
+          id
+          clearanceTypes
+        }
+        pointsOfProtection {
+          id
+          name
+          details
+        }
+      }
+      attachmentSection {
+        descriptionDocumentProvided
+        photos {
+          id
+          signedUrl
+          exists
+          url
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          category
+        }
+        documents {
+          id
+          signedUrl
+          exists
+          url
+          name
+          displayName
+          size
+          date
+          time
+          mimetype
+          md5
+          crc32c
+          category
+        }
+        documentsProvided {
+          id
+          name
+        }
+      }
+      standardOperatingProcedure {
+        id
+        name
+        sops {
+          id
+          name
+          link
+        }
+      }
+      groupDiscussion {
+        groupDiscussionNotes
+        viewed
+      }
+      crewSignOff {
+        creatorSign {
+          discussionConducted
+          otherCrewDetails
+          crewDetails {
+            id
+            name
+            email
+          }
+          signature {
+            id
+            signedUrl
+            url
+            name
+            displayName
+            size
+            date
+            time
+            mimetype
+            md5
+            crc32c
+            category
+          }
+        }
+        multipleCrews {
+          multipleCrewInvolved
+          crewDiscussion
+          personIncharge {
+            id
+            name
+            email
+          }
+        }
+        crewSign {
+          otherCrewDetails
+          discussionConducted
+          crewDetails {
+            id
+            name
+            email
+          }
+          signature {
+            id
+            signedUrl
+            exists
+            url
+            name
+            displayName
+            size
+            date
+            time
+            mimetype
+            md5
+            crc32c
+            category
+          }
+        }
+      }
+      supervisorSignOff {
+        dateTime
+        supervisor {
+          supervisorInfo {
+            id
+            name
+            email
+          }
+          signature {
+            id
+            signedUrl
+            url
+            name
+            displayName
+            size
+            date
+            time
+            mimetype
+            md5
+            crc32c
+            category
+          }
+        }
+      }
+      siteConditions {
+        additionalComments
+        digSafe
+        siteConditionSelections {
+          id
+          recommended
+          selected
+          name
+        }
+      }
+      sourceInfo {
+        appVersion
+        sourceInformation
+      }
+      postJobBrief {
+        postJobDiscussionNotes
+        discussionItems {
+          nearMissOccuredDuringActivities
+          nearMissOccuredDescription
+          jobBriefAdequateCommunication
+          jobBriefAdequateCommunicationDescription
+          safetyConcernsIdentifiedDuringWork
+          safetyConcernsIdentifiedDuringWorkDescription
+          changesInProcedureWork
+          changesInProcedureWorkDescription
+          crewMemebersAdequateTrainingProvided
+          crewMemebersAdequateTrainingProvidedDescription
+          otherLessonLearnt
+          otherLessonLearntDescription
+          jobWentAsPlanned
+          jobWentAsPlannedDescription
+        }
+        supervisorApprovalSignOff {
+          id
+          name
+          email
+        }
+      }
+    }
+  }
+}

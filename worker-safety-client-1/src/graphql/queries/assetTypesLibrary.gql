@@ -1,0 +1,6 @@
+query AssetTypesLibrary($orderBy: [OrderBy!]) {
+  assetTypesLibrary(orderBy: $orderBy) {
+    id
+    name
+  }
+}

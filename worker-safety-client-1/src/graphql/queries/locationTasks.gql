@@ -1,0 +1,16 @@
+query LocationTasks(
+  $locationId: UUID
+  $search: String
+  $orderBy: [TaskOrderBy!]
+) {
+  tasks(locationId: $locationId, search: $search, orderBy: $orderBy) {
+    id
+    name
+    status
+    startDate
+    endDate
+    libraryTask {
+      category
+    }
+  }
+}

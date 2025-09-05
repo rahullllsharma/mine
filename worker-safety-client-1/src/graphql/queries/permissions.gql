@@ -1,0 +1,47 @@
+query Permissions {
+  me {
+    id
+    name
+    role
+    email
+    permissions
+    opco {
+      id
+      name
+    }
+    tenant {
+      name
+      displayName
+      configurations {
+        entities {
+          defaultLabel
+          defaultLabelPlural
+          key
+          label
+          labelPlural
+          attributes {
+            defaultLabel
+            defaultLabelPlural
+            key
+            label
+            labelPlural
+            mandatory
+            mappings
+            visible
+            required
+            filterable
+          }
+        }
+      }
+      workos {
+        workosDirectoryId
+        workosOrgId
+      }
+    }
+    userPreferences {
+      id
+      entityType
+      contents
+    }
+  }
+}

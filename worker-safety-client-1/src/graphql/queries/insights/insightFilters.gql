@@ -1,0 +1,23 @@
+query InsightsFilters {
+  projects {
+    name
+    id
+    number
+    locations {
+      id
+      name
+    }
+  }
+  regionsLibrary {
+    id
+    name
+  }
+  divisionsLibrary {
+    id
+    name
+  }
+  contractors {
+    id
+    name
+  }
+}

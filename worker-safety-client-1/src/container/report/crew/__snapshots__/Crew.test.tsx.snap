@@ -1,0 +1,460 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Crew when the component renders should display the crew section 1`] = `
+<DocumentFragment>
+  <h5
+    class="font-semibold mb-6"
+  >
+    Crew Information
+  </h5>
+  .emotion-0 {
+  pointer-events: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.emotion-1 {
+  z-index: 9999;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 2px 0 0 0;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  gap: 4px;
+}
+
+.emotion-5 {
+  color: hsl(0, 0%, 50%);
+  grid-area: 1/1/2/3;
+  margin-left: 2px;
+  margin-right: 2px;
+  box-sizing: border-box;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-6 {
+  margin: 0;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  visibility: hidden;
+  color: hsl(0, 0%, 20%);
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: inline-grid;
+  grid-area: 1/1/2/3;
+  grid-template-columns: 0 min-content;
+  box-sizing: border-box;
+}
+
+.emotion-6:after {
+  content: attr(data-value) " ";
+  visibility: hidden;
+  white-space: pre;
+  grid-area: 1/2;
+  font: inherit;
+  min-width: 2px;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.emotion-7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.emotion-8 {
+  color: hsl(0, 0%, 80%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 8px;
+  -webkit-transition: color 150ms;
+  transition: color 150ms;
+  box-sizing: border-box;
+}
+
+.emotion-8:hover {
+  color: hsl(0, 0%, 60%);
+}
+
+<section
+    class="mb-6"
+  >
+    <div
+      class="mb-4"
+    >
+      <label
+        class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+      >
+        Crew member contractor company *
+      </label>
+      <div
+        class=" emotion-0"
+      >
+        <span
+          class="emotion-1"
+          id="react-select-2-live-region"
+        />
+        <span
+          aria-atomic="false"
+          aria-live="polite"
+          aria-relevant="additions text"
+          class="emotion-1"
+        />
+        <div
+          class="w-full pr-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 cursor-pointer border-neutral-shade-26 text-neutral-shade-58 bg-neutral-shade-7 cursor-not-allowed pl-3 emotion-3"
+          role="button"
+        >
+          <div
+            class=" emotion-4"
+          >
+            <div
+              class=" emotion-5"
+              id="react-select-2-placeholder"
+            >
+              No options available
+            </div>
+            <div
+              class=" emotion-6"
+              data-value=""
+            >
+              <input
+                aria-autocomplete="list"
+                aria-controls="react-select-2-listbox"
+                aria-describedby="react-select-2-placeholder"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-owns="react-select-2-listbox"
+                autocapitalize="none"
+                autocomplete="off"
+                autocorrect="off"
+                class=""
+                disabled=""
+                id="react-select-2-input"
+                role="combobox"
+                spellcheck="false"
+                style="opacity: 1; width: 100%; grid-area: 1 / 2; min-width: 2px; border: 0px; margin: 0px; outline: 0; padding: 0px;"
+                tabindex="0"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            class=" emotion-7"
+          >
+            <div
+              aria-hidden="true"
+              class=" emotion-8"
+            >
+              <i
+                aria-hidden="true"
+                class="ci-chevron_down text-neutral-shade-58 text-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label
+        class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+      >
+        Foreman Name *
+      </label>
+      <div
+        class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+      >
+        <input
+          aria-errormessage=""
+          aria-invalid="false"
+          class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+          name="crew.foremanName"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="mb-6"
+  >
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of welders"
+        >
+          # of welders *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of welders"
+            min="0"
+            name="crew.nWelders"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of safety prof."
+        >
+          # of safety prof. *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of safety prof."
+            min="0"
+            name="crew.nSafetyProf"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of flaggers"
+        >
+          # of flaggers *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of flaggers"
+            min="0"
+            name="crew.nFlaggers"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of laborers"
+        >
+          # of laborers *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of laborers"
+            min="0"
+            name="crew.nLaborers"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of operators"
+        >
+          # of operators *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of operators"
+            min="0"
+            name="crew.nOperators"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="# of other crew members"
+        >
+          # of other crew members *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            id="# of other crew members"
+            min="0"
+            name="crew.nOtherCrew"
+            type="number"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-4"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+        >
+          Total # of crew members
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+            disabled=""
+            type="text"
+            value="0"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <div
+    class="flex justify-between"
+  >
+    <h6
+      class="text-xl text-neutral-shade-100 font-semibold"
+    >
+      Crew Documents
+    </h6>
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 hidden sm:block"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-group"
+        />
+        <span
+          class="mx-1 truncate"
+        >
+          Upload crew info
+        </span>
+      </div>
+    </button>
+    <input
+      accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.apng,.avif,.gif,.jpg,.jpeg,.png,.svg,.webp"
+      class="hidden"
+      title="file-uploader"
+      type="file"
+    />
+  </div>
+  <div
+    class="text-xs font-normal text-neutral-shade-75 mt-0.5"
+  >
+    <p>
+      PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX, APNG, AVIF, GIF, JPG, JPEG, PNG, SVG, WEBP
+    </p>
+    <p>
+      Max file size: 10MB
+    </p>
+  </div>
+  <div
+    class="mt-6"
+  >
+    <div
+      class="flex flex-col gap-2"
+    >
+      <p
+        class="text-base text-neutral-shade-100"
+      >
+        No documents uploaded
+      </p>
+    </div>
+  </div>
+  <button
+    class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold bg-neutral-light-100 border border-neutral-shade-26 shadow-5 hover:shadow-10 text-neutral-shade-75 block sm:hidden mt-4 w-full"
+    type="button"
+  >
+    <div
+      class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-group"
+      />
+      <span
+        class="mx-1 truncate"
+      >
+        Upload crew info
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;

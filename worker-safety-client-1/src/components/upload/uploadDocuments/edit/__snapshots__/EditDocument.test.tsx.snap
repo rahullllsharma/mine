@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EditDocument when it renders should match the snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Name
+    </label>
+    <div
+      class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+    >
+      <input
+        aria-errormessage=""
+        aria-invalid="false"
+        class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+        placeholder="Add a name"
+        type="text"
+        value="CrewMember.xls"
+      />
+    </div>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      File name
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    >
+      CrewMember.xls
+    </p>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Date / time uploaded
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    >
+      11/22/2021 10:50PM
+    </p>
+  </div>
+  <div
+    class="flex justify-end mt-10"
+  >
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold mr-3"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <span
+          class="mx-1 truncate"
+        >
+          Cancel
+        </span>
+      </div>
+    </button>
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold text-white bg-brand-urbint-40"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <span
+          class="mx-1 truncate"
+        >
+          Save document
+        </span>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`EditDocument when it renders with file type should match the snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Name
+    </label>
+    <div
+      class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+    >
+      <input
+        aria-errormessage=""
+        aria-invalid="false"
+        class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+        placeholder="Add a name"
+        type="text"
+        value="CrewMember.xls"
+      />
+    </div>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      File name
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    >
+      CrewMember.xls
+    </p>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Date / time uploaded
+    </label>
+    <p
+      class="text-base text-neutral-shade-100"
+    >
+      11/22/2021 10:50PM
+    </p>
+  </div>
+  <div
+    class="flex justify-end mt-10"
+  >
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold mr-3"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <span
+          class="mx-1 truncate"
+        >
+          Cancel
+        </span>
+      </div>
+    </button>
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold text-white bg-brand-urbint-40"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+      >
+        <span
+          class="mx-1 truncate"
+        >
+          Save document
+        </span>
+      </div>
+    </button>
+  </div>
+</DocumentFragment>
+`;

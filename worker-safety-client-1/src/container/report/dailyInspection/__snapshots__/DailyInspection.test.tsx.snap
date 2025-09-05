@@ -1,0 +1,1033 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithMultiFormStepDailyInspection should render a active daily report correctly 1`] = `
+<DocumentFragment>
+  <main
+    class="flex flex-col bg-brand-gray-10 overflow-y-auto lg:overflow-hidden w-full"
+  >
+    <header
+      class="shadow-5 py-2 px-6 bg-white relative"
+    >
+      <a
+        class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40 mb-3"
+        href="/forms"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_left text-lg leading-5 mr-1"
+        />
+        <span
+          class="truncate"
+        >
+          All forms
+        </span>
+      </a>
+      <div
+        class="flex items-center flex-wrap"
+      >
+        <div
+          class="flex w-full"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <div
+              class="flex-col"
+            >
+              <h2
+                class="block text-2xl text-neutral-shade-100"
+              >
+                Daily Inspection Report
+              </h2>
+              <h3
+                class="block text-sm text-neutral-shade-58"
+              >
+                5th Street Main Relocation • Park Avenue
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-full"
+        >
+          <div
+            class="flex"
+          >
+            <pre
+              class="text-sm text-neutral-shade-58 text-left font-sans whitespace-pre-line max-h-60 overflow-y-auto w-full"
+            />
+            <button
+              aria-expanded="false"
+              class="flex"
+              id="headlessui-disclosure-button-12"
+              type="button"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-0 border-b border-gray-200 dark:border-gray-700 w-full"
+        >
+          <ul
+            class="flex flex-wrap emotion-1 text-16px font-medium text-center w-full"
+            data-tabs-toggle="#tabs"
+            id="default-tab"
+            role="tablist"
+          >
+            <li
+              class="me-2"
+              role="presentation"
+            >
+              <button
+                aria-controls="form"
+                aria-selected="true"
+                class="inline-block p-4 border-b-2 rounded-t-lg border-brand-urbint-40"
+                data-tabs-target="#form"
+                id="form-tab"
+                role="tab"
+                type="button"
+              >
+                Form
+              </button>
+            </li>
+            <li
+              class="me-2"
+              role="presentation"
+            >
+              <button
+                aria-controls="history"
+                aria-selected="false"
+                class="inline-block p-4 border-b-2 rounded-t-lg border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                data-tabs-target="#history"
+                id="history-tab"
+                role="tab"
+                type="button"
+              >
+                History
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section
+      class="flex flex-col overflow-y-auto h-full responsive-padding-y"
+      data-testid="page-layout"
+      id="page-layout"
+    >
+      <form
+        class="grid gap-4 grid-rows-2-auto-expand md:grid-rows-none md:grid-cols-2-auto-expand h-full w-screen responsive-padding-x overflow-hidden pb-12"
+      >
+        <aside
+          class="bg-white justify-self-start w-full max-w-[240px] md:overflow-y-scroll md:col-span-1 md:py-6 md:px-3 md:justify-self-stretch md:max-w-xs md:min-w-max md:w-[33vw]"
+          data-multi-step-form-nav="true"
+          data-testid="multi-step-navigation"
+        >
+          <div
+            class="hidden md:block"
+          >
+            <div
+              aria-orientation="vertical"
+              class="flex flex-col gap-2"
+              role="tablist"
+            >
+              <button
+                aria-selected="false"
+                id="headlessui-tabs-tab-14"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer bg-brand-urbint-10 border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="ci-circle_check text-lg mr-1 text-brand-urbint-40"
+                  />
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Work Schedule
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-15"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Activity Tasks
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-16"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Controls Assessment
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-17"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Safety And Compliance
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-18"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Crew
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-19"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Additional Information
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-20"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Attachments
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative text-neutral-shade-100 md:hidden block"
+            data-testid="select"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-neutral-shade-26"
+              id="headlessui-listbox-button-21"
+              type="button"
+            >
+              <span
+                class="truncate"
+              >
+                Work Schedule
+              </span>
+              <i
+                aria-hidden="true"
+                class="ci-chevron_down text-neutral-shade-58 text-xl"
+              />
+            </button>
+          </div>
+        </aside>
+        <section
+          class="flex flex-col gap-4 bg-white pt-6 md:pt-6 sm:pt-0 md:pb-14 overflow-auto"
+        >
+          <div
+            class="h-full overflow-y-scroll px-6"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-shade-100"
+            >
+              Daily Report Details
+            </h3>
+            <div
+              class="mt-4"
+              data-testid="work-schedule-section"
+            >
+              <div
+                class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+              >
+                <div>
+                  <label
+                    class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+                    for="workSchedule.startDatetime"
+                  >
+                    Contractor Work Start Day and time *
+                  </label>
+                  <div
+                    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+                    />
+                    <input
+                      aria-errormessage=""
+                      aria-invalid="false"
+                      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+                      id="workSchedule.startDatetime"
+                      max="2022-12-31T00:00"
+                      min="2021-12-28T00:00"
+                      name="workSchedule.startDatetime"
+                      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                      type="datetime-local"
+                      value="2022-01-04T00:00"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+              >
+                <div>
+                  <label
+                    class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+                    for="workSchedule.endDatetime"
+                  >
+                    Contractor Work End Day and time *
+                  </label>
+                  <div
+                    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+                    />
+                    <input
+                      aria-errormessage=""
+                      aria-invalid="false"
+                      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+                      id="workSchedule.endDatetime"
+                      max="2022-12-31T00:00"
+                      min="2021-12-28T00:00"
+                      name="workSchedule.endDatetime"
+                      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                      type="datetime-local"
+                      value="2022-01-04T01:00"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer
+            class="flex items-center p-2 bg-brand-gray-10 absolute left-0 right-0 bottom-0"
+          >
+            <div
+              class="flex flex-1 justify-end"
+            >
+              <button
+                class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold text-white bg-brand-urbint-40"
+                type="button"
+              >
+                <div
+                  class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+                >
+                  <span
+                    class="mx-1 truncate"
+                  >
+                    Save and continue
+                  </span>
+                </div>
+              </button>
+            </div>
+          </footer>
+        </section>
+      </form>
+    </section>
+  </main>
+</DocumentFragment>
+`;
+
+exports[`WithMultiFormStepDailyInspection should render an empty daily report correctly 1`] = `
+<DocumentFragment>
+  <main
+    class="flex flex-col bg-brand-gray-10 overflow-y-auto lg:overflow-hidden w-full"
+  >
+    <header
+      class="shadow-5 py-2 px-6 bg-white relative"
+    >
+      <a
+        class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40 mb-3"
+        href="/forms"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_left text-lg leading-5 mr-1"
+        />
+        <span
+          class="truncate"
+        >
+          All forms
+        </span>
+      </a>
+      <div
+        class="flex items-center flex-wrap"
+      >
+        <div
+          class="flex w-full"
+        >
+          <div
+            class="flex items-center justify-between"
+          >
+            <div
+              class="flex-col"
+            >
+              <h2
+                class="block text-2xl text-neutral-shade-100"
+              >
+                Daily Inspection Report
+              </h2>
+              <h3
+                class="block text-sm text-neutral-shade-58"
+              >
+                5th Street Main Relocation • Park Avenue
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-3 w-full"
+        >
+          <div
+            class="flex"
+          >
+            <pre
+              class="text-sm text-neutral-shade-58 text-left font-sans whitespace-pre-line max-h-60 overflow-y-auto w-full"
+            />
+            <button
+              aria-expanded="false"
+              class="flex"
+              id="headlessui-disclosure-button-undefined"
+              type="button"
+            />
+          </div>
+        </div>
+        <div
+          class="emotion-0 border-b border-gray-200 dark:border-gray-700 w-full"
+        >
+          <ul
+            class="flex flex-wrap emotion-1 text-16px font-medium text-center w-full"
+            data-tabs-toggle="#tabs"
+            id="default-tab"
+            role="tablist"
+          >
+            <li
+              class="me-2"
+              role="presentation"
+            >
+              <button
+                aria-controls="form"
+                aria-selected="true"
+                class="inline-block p-4 border-b-2 rounded-t-lg border-brand-urbint-40"
+                data-tabs-target="#form"
+                id="form-tab"
+                role="tab"
+                type="button"
+              >
+                Form
+              </button>
+            </li>
+            <li
+              class="me-2"
+              role="presentation"
+            >
+              <button
+                aria-controls="history"
+                aria-selected="false"
+                class="inline-block p-4 border-b-2 rounded-t-lg border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+                data-tabs-target="#history"
+                id="history-tab"
+                role="tab"
+                type="button"
+              >
+                History
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section
+      class="flex flex-col overflow-y-auto h-full responsive-padding-y"
+      data-testid="page-layout"
+      id="page-layout"
+    >
+      <form
+        class="grid gap-4 grid-rows-2-auto-expand md:grid-rows-none md:grid-cols-2-auto-expand h-full w-screen responsive-padding-x overflow-hidden pb-12"
+      >
+        <aside
+          class="bg-white justify-self-start w-full max-w-[240px] md:overflow-y-scroll md:col-span-1 md:py-6 md:px-3 md:justify-self-stretch md:max-w-xs md:min-w-max md:w-[33vw]"
+          data-multi-step-form-nav="true"
+          data-testid="multi-step-navigation"
+        >
+          <div
+            class="hidden md:block"
+          >
+            <div
+              aria-orientation="vertical"
+              class="flex flex-col gap-2"
+              role="tablist"
+            >
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Work Schedule
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Activity Tasks
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Controls Assessment
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Safety And Compliance
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Crew
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Additional Information
+                  </span>
+                </div>
+              </button>
+              <button
+                aria-selected="false"
+                class="bg-neutral-shade-3"
+                id="headlessui-tabs-tab-undefined"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                <div
+                  class="relative flex items-center px-2.5 py-3 rounded h-12 w-full hover:shadow-10 border-2 text-neutral-shade-100 cursor-pointer border-transparent"
+                >
+                  <i
+                    aria-hidden="true"
+                    class="text-lg mr-1 text-neutral-shade-75"
+                  >
+                    <svg
+                      fill="none"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        fill="currentColor"
+                        r="10"
+                      />
+                    </svg>
+                  </i>
+                  <span
+                    class="text-base mx-1 truncate"
+                  >
+                    Attachments
+                  </span>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div
+            class="relative text-neutral-shade-100 md:hidden block"
+            data-testid="select"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-neutral-shade-26"
+              id="headlessui-listbox-button-undefined"
+              type="button"
+            >
+              <span
+                class="truncate"
+              >
+                Work Schedule
+              </span>
+              <i
+                aria-hidden="true"
+                class="ci-chevron_down text-neutral-shade-58 text-xl"
+              />
+            </button>
+          </div>
+        </aside>
+        <section
+          class="flex flex-col gap-4 bg-white pt-6 md:pt-6 sm:pt-0 md:pb-14 overflow-auto"
+        >
+          <div
+            class="h-full overflow-y-scroll px-6"
+          >
+            <h3
+              class="text-xl font-semibold text-neutral-shade-100"
+            >
+              Daily Report Details
+            </h3>
+            <div
+              class="mt-4"
+              data-testid="work-schedule-section"
+            >
+              <div
+                class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+              >
+                <div>
+                  <label
+                    class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+                    for="workSchedule.startDatetime"
+                  >
+                    Contractor Work Start Day and time *
+                  </label>
+                  <div
+                    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+                    />
+                    <input
+                      aria-errormessage=""
+                      aria-invalid="false"
+                      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+                      id="workSchedule.startDatetime"
+                      max="2022-12-31T00:00"
+                      min="2021-12-28T00:00"
+                      name="workSchedule.startDatetime"
+                      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                      type="datetime-local"
+                      value="2022-01-24T00:00"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+              >
+                <div>
+                  <label
+                    class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+                    for="workSchedule.endDatetime"
+                  >
+                    Contractor Work End Day and time *
+                  </label>
+                  <div
+                    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+                  >
+                    <i
+                      aria-hidden="true"
+                      class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+                    />
+                    <input
+                      aria-errormessage=""
+                      aria-invalid="false"
+                      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+                      id="workSchedule.endDatetime"
+                      max="2022-12-31T00:00"
+                      min="2021-12-28T00:00"
+                      name="workSchedule.endDatetime"
+                      pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+                      type="datetime-local"
+                      value="2022-01-24T00:00"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer
+            class="flex items-center p-2 bg-brand-gray-10 absolute left-0 right-0 bottom-0"
+          >
+            <div
+              class="flex flex-1 justify-end"
+            >
+              <button
+                class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold text-white bg-brand-urbint-40"
+                type="button"
+              >
+                <div
+                  class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+                >
+                  <span
+                    class="mx-1 truncate"
+                  >
+                    Save and continue
+                  </span>
+                </div>
+              </button>
+            </div>
+          </footer>
+        </section>
+      </form>
+    </section>
+  </main>
+</DocumentFragment>
+`;

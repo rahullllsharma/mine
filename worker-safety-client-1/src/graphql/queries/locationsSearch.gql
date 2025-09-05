@@ -1,0 +1,55 @@
+query LocationsSearch(
+  $limit: Int
+  $offset: Int
+  $search: String
+  $filterBy: [LocationFilterBy!]
+) {
+  filterLocationDateRange(
+    filterBy: $filterBy
+    search: $search
+    limit: $limit
+    offset: $offset
+  ) {
+    locationsCount
+    filterLocationsDateRange {
+      id
+      name
+      riskLevel
+      latitude
+      longitude
+      project {
+        id
+        name
+        description
+        startDate
+        endDate
+        manager {
+          id
+        }
+        libraryProjectType {
+          id
+          name
+        }
+        supervisor {
+          id
+          name
+        }
+        additionalSupervisors {
+          id
+        }
+        libraryDivision {
+          id
+          name
+        }
+        libraryRegion {
+          id
+          name
+        }
+        contractor {
+          id
+          name
+        }
+      }
+    }
+  }
+}

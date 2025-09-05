@@ -1,0 +1,12 @@
+mutation UpdateLocationRecommendationSettings(
+  $locationHazardControlSettingsData: [LocationHazardControlSettingsInput!]!
+  $locationHazardControlSettingIds: [UUID!]!
+) {
+  addLocationHazardControlSettings(
+    locationHazardControlSettingInputs: $locationHazardControlSettingsData
+  )
+
+  removeLocationHazardControlSettings(
+    locationHazardControlSettingIds: $locationHazardControlSettingIds
+  )
+}

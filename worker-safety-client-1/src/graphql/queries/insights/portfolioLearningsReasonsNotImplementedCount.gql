@@ -1,0 +1,10 @@
+query PortfolioLearningsReasonsNotImplementedCount(
+  $filters: PortfolioLearningsInput!
+) {
+  portfolioLearnings(portfolioLearningsInput: $filters) {
+    reasonsControlsNotImplemented {
+      count
+      reason
+    }
+  }
+}

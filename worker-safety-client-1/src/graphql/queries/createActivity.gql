@@ -1,0 +1,6 @@
+mutation CreateActivity($activityData: CreateActivityInput!) {
+  createActivity(activityData: $activityData) {
+    id
+    name
+  }
+}

@@ -1,0 +1,21 @@
+query GetProjectDetails(
+  $projectId: UUID!
+  $locationId: UUID!
+  $filterTenantSettings: Boolean
+) {
+  project(projectId: $projectId, filterTenantSettings: $filterTenantSettings) {
+    id
+    name
+    description
+    locations(id: $locationId) {
+      id
+      name
+    }
+    libraryRegion {
+      id
+      name
+    }
+    endDate
+    startDate
+  }
+}

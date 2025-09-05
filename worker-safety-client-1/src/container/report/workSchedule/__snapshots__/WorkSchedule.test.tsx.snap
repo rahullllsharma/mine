@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WorkSchedule should render correctly 1`] = `
+<DocumentFragment>
+  <h3
+    class="text-xl font-semibold text-neutral-shade-100"
+  >
+    Daily Report Details
+  </h3>
+  <div
+    class="mt-4"
+    data-testid="work-schedule-section"
+  >
+    <div
+      class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="workSchedule.startDatetime"
+        >
+          Contractor Work Start Day and time *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+          />
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+            id="workSchedule.startDatetime"
+            max="2022-02-01T23:59"
+            min="2021-12-01T00:00"
+            name="workSchedule.startDatetime"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+            type="datetime-local"
+            value="2022-01-01T00:01"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-4 p-4 bg-brand-gray-10"
+    >
+      <div>
+        <label
+          class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+          for="workSchedule.endDatetime"
+        >
+          Contractor Work End Day and time *
+        </label>
+        <div
+          class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+        >
+          <i
+            aria-hidden="true"
+            class="ci-calendar ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+          />
+          <input
+            aria-errormessage=""
+            aria-invalid="false"
+            class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 root p-2"
+            id="workSchedule.endDatetime"
+            max="2022-02-01T23:59"
+            min="2021-12-01T00:00"
+            name="workSchedule.endDatetime"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}"
+            type="datetime-local"
+            value="2022-01-10T23:59"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

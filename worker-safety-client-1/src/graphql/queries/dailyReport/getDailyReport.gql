@@ -1,0 +1,10 @@
+#import "./fragments/dailyReport.fragment.gql"
+
+query GetDailyReport($id: UUID!) {
+  dailyReport(id: $id) {
+    ...DailyReportFragment
+  }
+  me {
+    role
+  }
+}

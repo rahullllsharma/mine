@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FieldTextArea should be readonly and not have borders if the property "readOnly" is set 1`] = `
+<DocumentFragment>
+  <div>
+    <p
+      class="text-base text-neutral-shade-100 whitespace-pre-wrap"
+    >
+      Lorem ipsum
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FieldTextArea should render with the "TextArea" component 1`] = `
+<DocumentFragment>
+  <div>
+    <label
+      class="block text-tiny md:text-sm text-neutral-shade-75 font-semibold mb-2 leading-normal"
+    >
+      Lorem ipsum
+    </label>
+    <textarea
+      aria-label="FieldTextArea"
+      class="w-full max-h-36 text-base text-neutral-shade-100 outline-none focus:border-brand-gray-60 disabled:cursor-not-allowed min-h-12 border border-neutral-shade-37 rounded resize-y py-1 px-2"
+    />
+  </div>
+</DocumentFragment>
+`;

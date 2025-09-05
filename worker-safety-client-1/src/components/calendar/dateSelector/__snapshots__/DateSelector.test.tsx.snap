@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateSelector when component renders should render with the today button and a date 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center"
+  >
+    <button
+      class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-sm rounded-md font-semibold bg-brand-urbint-10 border border-brand-urbint-40 shadow-5 hover:shadow-10 text-neutral-shade-75"
+      type="button"
+    >
+      <div
+        class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2 py-1"
+      >
+        <span
+          class="mx-1 truncate"
+        >
+          Today
+        </span>
+      </div>
+    </button>
+    <p
+      class="text-lg md:text-xl ml-4 text-neutral-shade-100 truncate"
+    >
+      January 12, 2022
+    </p>
+    <div
+      class="flex ml-4 md:hidden text-neutral-shade-75"
+    >
+      <button
+        class="text-xl text-neutral-shade-75 disabled:text-neutral-shade-38 disabled:cursor-not-allowed"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_left"
+        />
+      </button>
+      <button
+        class="text-xl text-neutral-shade-75 disabled:text-neutral-shade-38 disabled:cursor-not-allowed ml-4"
+      >
+        <i
+          aria-hidden="true"
+          class="ci-chevron_big_right"
+        />
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarDayButton should render a calendar day button 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-brand-gray-40"
+  >
+    <span
+      class="text-base font-semibold text-brand-urbint-60"
+    >
+      19
+    </span>
+    <div
+      class="flex"
+    >
+      <span
+        class="mt-1 text-tiny font-medium text-neutral-shade-100"
+      >
+        Sun
+      </span>
+    </div>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`CalendarDayButton should render without text content if an invalid date is passed 1`] = `
+<DocumentFragment>
+  <button
+    class="h-20 w-20 flex flex-col items-center justify-center disabled:opacity-30 disabled:cursor-not-allowed border rounded-xl border rounded-xl border-brand-gray-40"
+  >
+    <span
+      class="text-base font-semibold text-brand-urbint-60"
+    />
+    <div
+      class="flex"
+    >
+      <span
+        class="mt-1 text-tiny font-medium text-neutral-shade-100"
+      />
+    </div>
+  </button>
+</DocumentFragment>
+`;

@@ -1,0 +1,18 @@
+query HazardsControlsLibrary($orderBy: [OrderBy!], $type: LibraryFilterType!) {
+  hazardsLibrary(type: $type, orderBy: $orderBy) {
+    id
+    name
+    isApplicable
+    controls(orderBy: $orderBy) {
+      id
+      name
+      isApplicable
+    }
+  }
+
+  controlsLibrary(type: $type, orderBy: $orderBy) {
+    id
+    name
+    isApplicable
+  }
+}

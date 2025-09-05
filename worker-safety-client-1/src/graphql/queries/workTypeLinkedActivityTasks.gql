@@ -1,0 +1,19 @@
+query WorkTypeLinkedActivityTasks(
+  $orderBy: [LibraryTaskOrderBy!]
+  $workTypeIds: [UUID!]!
+) {
+  tenantAndWorkTypeLinkedLibraryTasks(
+    orderBy: $orderBy
+    tenantWorkTypeIds: $workTypeIds
+  ) {
+    id
+    name
+    category
+    activitiesGroups {
+      id
+      name
+      aliases
+    }
+    isCritical
+  }
+}

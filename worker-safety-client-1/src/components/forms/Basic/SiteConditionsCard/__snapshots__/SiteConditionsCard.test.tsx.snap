@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SiteConditionsCard renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-white flex items-center shadow rounded-lg px-4 py-6 border-l-10 border-data-blue-30"
+  >
+    <span
+      class="font-semibold"
+    >
+      traffic density
+    </span>
+  </div>
+</DocumentFragment>
+`;

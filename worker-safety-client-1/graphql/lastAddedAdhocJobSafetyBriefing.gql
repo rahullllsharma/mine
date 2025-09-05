@@ -1,0 +1,28 @@
+query LastAddedAdhocJobSafetyBriefing {
+  lastAddedAdhocJobSafetyBriefing
+   {
+    contents {
+      workLocation {
+        address
+        operatingHq
+      }
+      nearestMedicalFacility {
+        address
+        description
+        city
+        distanceFromJob
+        phoneNumber
+        state
+        zip
+      }
+      aedInformation {
+        location
+      }
+      emergencyContacts {
+        name
+        phoneNumber
+        primary
+      }
+    }
+  }
+}

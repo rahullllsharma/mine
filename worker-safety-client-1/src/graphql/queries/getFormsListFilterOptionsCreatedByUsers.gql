@@ -1,0 +1,16 @@
+query GetFormsListFilterOptionsCreatedByUsers(
+  $limit: Int
+  $offset: Int
+  $filterSearch: FormListFilterSearchInput
+) {
+  formsListFilterOptions(
+    limit: $limit
+    offset: $offset
+    filterSearch: $filterSearch
+  ) {
+    createdByUsers {
+      id
+      name
+    }
+  }
+}

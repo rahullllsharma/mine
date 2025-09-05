@@ -1,0 +1,6 @@
+query ProjectTypesLibrary {
+  projectTypesLibrary {
+    id
+    name
+  }
+}

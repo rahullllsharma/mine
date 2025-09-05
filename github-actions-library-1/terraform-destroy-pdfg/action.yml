@@ -1,0 +1,25 @@
+name: 'Terraform Destroy'
+description: 'Run Terraform destroy to tear down infrastructure'
+
+inputs:
+  tfvars_file:
+    description: 'Path to Terraform variables file (e.g. env/integration.tfvars)'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Initialize Terraform
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform init
+
+    - name: Destroy Terraform infrastructure
+      shell: bash
+      run: |
+        cd $GITHUB_WORKSPACE/Terraform_cloud_function/integration_tests/terraform
+        terraform destroy -var-file=${{ inputs.tfvars_file }} -auto-approve

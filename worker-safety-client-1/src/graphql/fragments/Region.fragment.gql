@@ -1,0 +1,4 @@
+fragment Region on LibraryRegion {
+  id
+  name
+}

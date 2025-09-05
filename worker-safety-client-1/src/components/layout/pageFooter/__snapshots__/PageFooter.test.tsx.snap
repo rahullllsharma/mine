@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageFooter should be rendered correctly 1`] = `
+<DocumentFragment>
+  <footer
+    class="flex items-center p-2 bg-brand-gray-10"
+  >
+    <div
+      class="flex flex-1 justify-end"
+    >
+      <button
+        class="text-center truncate disabled:opacity-38 disabled:cursor-not-allowed text-base rounded-md font-semibold text-white bg-brand-urbint-40"
+        type="button"
+      >
+        <div
+          class="flex items-center justify-center h-full hover:bg-neutral-light-16 focus:bg-neutral-shade-7 active:bg-neutral-shade-7 px-2.5 py-2"
+        >
+          <span
+            class="mx-1 truncate"
+          >
+            save
+          </span>
+        </div>
+      </button>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

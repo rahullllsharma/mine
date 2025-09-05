@@ -1,0 +1,451 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-y-auto"
+  >
+    <div
+      class="hidden lg:flex"
+    >
+      <div
+        class="w-full flex bg-white"
+      >
+        <div
+          class="flex-1 flex flex-col overflow-y-auto"
+          role="table"
+          style="min-width: 0px;"
+        >
+          <div
+            class="_thead bg-white z-10 border-b border-gray-200 divide-y divide-brand-gray-20 sticky top-0 px-4"
+            data-testid="table-header"
+          >
+            <div
+              class="_tr justify-between"
+              role="row"
+              style="display: flex; flex: 1 0 auto; min-width: 0px;"
+            >
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-workPackageName"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 180 0 auto; min-width: 0px; width: 180px;"
+              >
+                Project Name
+              </div>
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-todayRisk"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 140 0 auto; min-width: 0px; width: 140px;"
+              >
+                Todays risk
+              </div>
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-supervisor"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                Supervisor
+              </div>
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-libraryRegion"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                Region
+              </div>
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-libraryProjectType"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 100 0 auto; min-width: 0px; width: 100px;"
+              >
+                Project Type
+              </div>
+              <div
+                class="_th pt-5 pb-3 font-bold uppercase text-neutral-shade-75 truncate"
+                colspan="1"
+                data-testid="table-header-libraryDivision"
+                role="columnheader"
+                style="box-sizing: border-box; flex: 60 0 auto; min-width: 0px; width: 60px;"
+              >
+                Division
+              </div>
+            </div>
+          </div>
+          <div
+            class="_tbody flex flex-col gap-2.5"
+            data-testid="table-body"
+            role="rowgroup"
+          >
+            <div
+              class="_tr px-4 py-1 min-h-[3.5rem] bg-white  flex items-center"
+              id="0"
+              index="0"
+              role="row"
+              style="display: flex; flex: 1 0 auto; min-width: 0px;"
+            >
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 180 0 auto; min-width: 0px; width: 180px;"
+              >
+                <a
+                  class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40"
+                  href="/projects/7114445f-966a-42e2-aa3b-0e4d5365075d"
+                >
+                  <span
+                    class=""
+                  >
+                    5th Street Main Relocation
+                  </span>
+                </a>
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 140 0 auto; min-width: 0px; width: 140px;"
+              >
+                <span
+                  class="inline-flex items-center"
+                >
+                  <span
+                    class="inline-flex items-center w-full"
+                  >
+                    <div
+                      class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-risk-high text-white"
+                      role="note"
+                    >
+                      <span
+                        class="flex items-center px-1"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="ci-chevron_up"
+                        />
+                        <span
+                          class="text-tiny mr-1"
+                        >
+                          HIGH
+                        </span>
+                      </span>
+                    </div>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                Jakob Aminoff
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                NE (New England)
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 100 0 auto; min-width: 0px; width: 100px;"
+              >
+                Main replacement
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 60 0 auto; min-width: 0px; width: 60px;"
+              >
+                Gas
+              </div>
+            </div>
+            <div
+              class="_tr px-4 py-1 min-h-[3.5rem] bg-white  flex items-center"
+              id="1"
+              index="1"
+              role="row"
+              style="display: flex; flex: 1 0 auto; min-width: 0px;"
+            >
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 180 0 auto; min-width: 0px; width: 180px;"
+              >
+                <a
+                  class="font-medium text-brand-urbint-50 leading-5 cursor-pointer inline-flex items-center active:text-brand-urbint-60 hover:text-brand-urbint-40"
+                  href="/projects/7114445f-966a-42e2-aa3b-0e4d53650751a"
+                >
+                  <span
+                    class=""
+                  >
+                    N. Washington Street Bridge
+                  </span>
+                </a>
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 140 0 auto; min-width: 0px; width: 140px;"
+              >
+                <span
+                  class="inline-flex items-center"
+                >
+                  <span
+                    class="inline-flex items-center w-full"
+                  >
+                    <div
+                      class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-risk-low text-white"
+                      role="note"
+                    >
+                      <span
+                        class="flex items-center px-1"
+                      >
+                        <i
+                          aria-hidden="true"
+                          class="ci-chevron_down"
+                        />
+                        <span
+                          class="text-tiny mr-1"
+                        >
+                          LOW
+                        </span>
+                      </span>
+                    </div>
+                  </span>
+                </span>
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                Jakob Aminoff
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 120 0 auto; min-width: 0px; width: 120px;"
+              >
+                NE (New England)
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 100 0 auto; min-width: 0px; width: 100px;"
+              >
+                Bridge replacement
+              </div>
+              <div
+                class="_td text-sm pr-4 last:pr-0"
+                role="cell"
+                style="box-sizing: border-box; flex: 60 0 auto; min-width: 0px; width: 60px;"
+              >
+                Gas
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lg:hidden grid gap-4 grid-cols-auto-fill-list-card pb-16"
+    >
+      <div
+        class="flex rounded bg-white shadow-5"
+      >
+        <button
+          class="flex-1 p-6 text-left"
+        >
+          <header
+            class="text-neutral-shade-100 text-lg font-semibold"
+          >
+            5th Street Main Relocation
+          </header>
+          <div
+            class="mt-4"
+          >
+            <div
+              class="flex text-sm items-center py-1.5"
+            >
+              <span
+                class="flex-1 text-neutral-shade-100 text-sm font-semibold"
+              >
+                Project Risk
+              </span>
+              <span
+                class="inline-flex items-center"
+              >
+                <span
+                  class="inline-flex items-center w-full"
+                >
+                  <div
+                    class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-risk-high text-white"
+                    role="note"
+                  >
+                    <span
+                      class="flex items-center px-1"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="ci-chevron_up"
+                      />
+                      <span
+                        class="text-tiny mr-1"
+                      >
+                        HIGH
+                      </span>
+                    </span>
+                  </div>
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Region
+              </span>
+              NE (New England)
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Supervisor
+              </span>
+              Jakob Aminoff
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Project Type
+              </span>
+              Main replacement
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Division
+              </span>
+              Gas
+            </div>
+          </div>
+        </button>
+      </div>
+      <div
+        class="flex rounded bg-white shadow-5"
+      >
+        <button
+          class="flex-1 p-6 text-left"
+        >
+          <header
+            class="text-neutral-shade-100 text-lg font-semibold"
+          >
+            N. Washington Street Bridge
+          </header>
+          <div
+            class="mt-4"
+          >
+            <div
+              class="flex text-sm items-center py-1.5"
+            >
+              <span
+                class="flex-1 text-neutral-shade-100 text-sm font-semibold"
+              >
+                Project Risk
+              </span>
+              <span
+                class="inline-flex items-center"
+              >
+                <span
+                  class="inline-flex items-center w-full"
+                >
+                  <div
+                    class="flex items-center font-bold shadow-5 h-5 rounded-full p-0.5 w-max uppercase bg-brand-gray-20 whitespace-nowrap bg-risk-low text-white"
+                    role="note"
+                  >
+                    <span
+                      class="flex items-center px-1"
+                    >
+                      <i
+                        aria-hidden="true"
+                        class="ci-chevron_down"
+                      />
+                      <span
+                        class="text-tiny mr-1"
+                      >
+                        LOW
+                      </span>
+                    </span>
+                  </div>
+                </span>
+              </span>
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Region
+              </span>
+              NE (New England)
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Supervisor
+              </span>
+              Jakob Aminoff
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Project Type
+              </span>
+              Bridge replacement
+            </div>
+            <div
+              class="flex items-center border-solid border-t py-1.5 text-sm text-neutral-shade-75"
+            >
+              <span
+                class="flex-1 font-semibold"
+              >
+                Division
+              </span>
+              Gas
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

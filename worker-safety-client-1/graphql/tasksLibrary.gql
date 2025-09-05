@@ -1,0 +1,43 @@
+query TasksLibrary(
+  $tasksLibraryId: [UUID!]
+  $orderBy: [LibraryTaskOrderBy!]
+  $hazardsOrderBy: [OrderBy!]
+  $controlsOrderBy: [OrderBy!]
+) {
+  tasksLibrary(ids: $tasksLibraryId, orderBy: $orderBy) {
+    id
+    name
+    riskLevel
+    hespScore
+    category
+    workTypes {
+      id
+      name
+    }
+    hazards(orderBy: $hazardsOrderBy) {
+      id
+      name
+      isApplicable
+      controls(orderBy: $controlsOrderBy) {
+        id
+        name
+        isApplicable
+        ppe
+      }
+      energyType
+      energyLevel
+      taskApplicabilityLevels {
+        applicabilityLevel
+        taskId
+      }
+      archivedAt
+    }
+    activitiesGroups {
+      id
+      name
+      tasks {
+        id
+      }
+    }
+  }
+}

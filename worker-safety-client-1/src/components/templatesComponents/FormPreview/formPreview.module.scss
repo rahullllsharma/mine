@@ -1,0 +1,86 @@
+.formPreviewHeading {
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > div {
+    border: none;
+  }
+
+  &__headingPreview {
+    font-size: 20px;
+    padding: 0.5rem;
+    margin: 0px;
+  }
+
+  & > input {
+    font-size: 20px;
+  }
+
+  & > i {
+    font-size: 20px;
+    position: absolute;
+    width: 30px;
+    top: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+  }
+}
+
+.formViewLayout {
+  max-width: 1220px;
+  gap: 20px;
+
+  &__leftSide {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    min-width: 220px;
+  }
+
+  &__rightSide {
+    flex: 4;
+    background-color: white;
+    padding: 20px;
+    min-width: 900px;
+  }
+}
+
+.submitButtonParent {
+  max-width: 1220px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.saveAsDraftParent {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.formContentWidth {
+  min-width: 100vw;
+
+  @media (min-width: 890px) {
+    min-width: 550px;
+    max-width: 550px;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 690px;
+    max-width: 690px;
+  }
+}

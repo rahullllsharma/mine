@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Insights when it renders should match the snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="relative mb-8"
+  >
+    <button
+      class="text-xl text-neutral-shade-75 disabled:text-neutral-shade-38 disabled:cursor-not-allowed absolute top-0 right-4"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-expand"
+      />
+    </button>
+  </section>
+  <main
+    class="flex flex-col bg-brand-gray-10 overflow-y-auto lg:overflow-hidden w-full"
+  >
+    <section
+      class="flex flex-col overflow-y-auto h-full responsive-padding-y responsive-padding-x bg-white"
+      data-testid="page-layout"
+      id="page-layout"
+    >
+      <div
+        class="h-full hidden lg:block"
+      >
+        <div
+          aria-orientation="horizontal"
+          class="flex"
+          role="tablist"
+        >
+          <button
+            aria-selected="true"
+            class="min-w-0 z-10 outline-none"
+            id="headlessui-tabs-tab-1"
+            role="tab"
+            tabindex="0"
+            type="button"
+          >
+            <div
+              class="flex items-center px-2.5 py-3 text-neutral-shade-75 font-semibold active:bg-neutral-shade-3 border-b-4 border-brand-urbint-40 border-solid z-10"
+            >
+              <span
+                class="text-base mx-1 truncate"
+              >
+                Portfolio
+              </span>
+            </div>
+          </button>
+          <button
+            aria-selected="false"
+            class="min-w-0 z-10 outline-none"
+            id="headlessui-tabs-tab-2"
+            role="tab"
+            tabindex="-1"
+            type="button"
+          >
+            <div
+              class="flex items-center px-2.5 py-3 text-neutral-shade-75 font-semibold active:bg-neutral-shade-3 border-b-4 opacity-75 border-transparent"
+            >
+              <span
+                class="text-base mx-1 truncate"
+              >
+                Project
+              </span>
+            </div>
+          </button>
+        </div>
+        <hr
+          class="relative bg-neutral-shade-18 z-1 border"
+          style="bottom: 3px;"
+        />
+        <div
+          class="flex flex-wrap bg-white rounded-xl p-6 mt-5 "
+        >
+          <div
+            class="lg:w-full pr-4 pl-4"
+          >
+            <div
+              class="sticky top-0"
+            />
+          </div>
+        </div>
+        <div
+          class="flex mt-6 pb-6 gap-x-8 "
+        >
+          <div
+            class="bg-white rounded-xl flex flex-1 items-center justify-center min-h-[130px] max-h-48"
+          >
+            <div
+              class="flex flex-col items-center w-full text-center px-6"
+            >
+              <p
+                class="text-neutral-shade-100 text-xl font-semibold mb-2"
+              />
+              <p
+                class="text-brand-gray-70 text-sm max-w-md"
+              >
+                Try adjusting your filters, to return more data
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="h-2/3 w-full flex items-center lg:hidden"
+      >
+        <div
+          class="flex flex-col items-center w-full text-center px-6"
+        >
+          <p
+            class="text-neutral-shade-100 text-xl font-semibold mb-2"
+          >
+            Your screen size is not large enough to support this feature
+          </p>
+          <p
+            class="text-brand-gray-70 text-sm max-w-md"
+          >
+            Please increase your screen size to access the content
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</DocumentFragment>
+`;

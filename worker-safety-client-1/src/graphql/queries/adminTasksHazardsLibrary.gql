@@ -1,0 +1,9 @@
+query TasksHazardsLibraryAdmin($orderBy: [LibraryTaskOrderBy!]) {
+  tasksLibrary(orderBy: $orderBy) {
+    name
+    hazards {
+      id
+      name
+    }
+  }
+}

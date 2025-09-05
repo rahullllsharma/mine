@@ -1,0 +1,6 @@
+query RegionsLibrary {
+  regionsLibrary {
+    id
+    name
+  }
+}

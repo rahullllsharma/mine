@@ -1,0 +1,15 @@
+query ProjectPlanningTaskRiskLevelByDate(
+  $filters: ProjectPlanningInput!
+  $taskOrderBy: [TaskOrderBy!]
+) {
+  projectPlanning(projectPlanningInput: $filters) {
+    taskRiskLevelByDate(orderBy: $taskOrderBy) {
+      taskName
+      locationName
+      riskLevelByDate {
+        date
+        riskLevel
+      }
+    }
+  }
+}

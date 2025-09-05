@@ -1,0 +1,65 @@
+query SiteConditions(
+  $siteConditionsId: UUID
+  $locationId: UUID
+  $date: Date
+  $isApplicable: Boolean
+  $controlsIsApplicable: Boolean
+  $filterTenantSettings: Boolean
+) {
+  siteConditions(
+    id: $siteConditionsId
+    locationId: $locationId
+    date: $date
+    filterTenantSettings: $filterTenantSettings
+  ) {
+    id
+    name
+    createdBy {
+      id
+      name
+    }
+    librarySiteCondition {
+      id
+      name
+    }
+    isManuallyAdded
+    hazards(isApplicable: $isApplicable) {
+      id
+      isApplicable
+      name
+      createdBy {
+        id
+        name
+      }
+      libraryHazard {
+        energyLevel
+        energyType
+        id
+        name
+        isApplicable
+        controls {
+          id
+          name
+          isApplicable
+          __typename
+        }
+        taskApplicabilityLevels {
+          applicabilityLevel
+          __typename
+        }
+      }
+      controls(isApplicable: $controlsIsApplicable) {
+        id
+        name
+        isApplicable
+        createdBy {
+          id
+          name
+        }
+        libraryControl {
+          id
+        }
+      }
+    }
+  }
+}

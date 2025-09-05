@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserAvatar should render with the "UserAvatar" component 1`] = `
+<DocumentFragment>
+  <p
+    class="text-sm font-light border rounded-md bg-black text-white w-max px-2 py-1"
+  >
+    User added control
+  </p>
+</DocumentFragment>
+`;

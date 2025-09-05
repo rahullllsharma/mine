@@ -1,0 +1,12 @@
+query ProjectLocationsWithCritical(
+  $projectLocationId: UUID
+  $dateRange: DateRangeInput!
+) {
+  projectLocations(id: $projectLocationId) {
+    id
+    dailySnapshots(dateRange: $dateRange) {
+      date
+      isCritical
+    }
+  }
+}

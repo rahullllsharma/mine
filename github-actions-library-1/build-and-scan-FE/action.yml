@@ -1,0 +1,98 @@
+name: Build and Scan Docker Image
+
+description: Build a Docker image and scan it for vulnerabilities using Trivy.
+
+inputs:
+  image_name:
+    description: 'The name and tag of the Docker image (e.g., my-image:latest).'
+    required: true
+  dockerfile:
+    description: 'Path to the Dockerfile.'
+    required: true
+    default: 'Dockerfile'
+  context:
+    description: 'Build context path.'
+    required: true
+    default: '.'  # Default to current directory
+  node-version:
+    description: 'Node.js version to use'
+    required: true
+    default: '20'  # Default Node.js version
+  registry-url:
+    description: 'Registry URL for NPM packages'
+    required: true
+    default: 'https://npm.pkg.github.com'  # Default registry URL
+  node-auth-token:
+    description: 'NPM Auth Token for accessing private packages'
+    required: true
+    default: ''  # Default can be blank
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        registry-url: ${{ inputs.registry-url }}  # Pass the registry URL
+
+    - name: Install dependencies
+      run: |
+        yarn install
+      env:
+        NODE_AUTH_TOKEN: ${{ inputs.node-auth-token }}  # Use the provided auth token
+      shell: bash  # Specify the shell for this step
+
+    - name: Build the application
+      run: |
+        yarn build  # Add the build step
+      shell: bash  # Specify the shell for this step
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build Docker image
+      id: build
+      shell: bash  # Specify the shell for this step
+      run: |
+        docker build -t ${{ inputs.image_name }} -f ${{ inputs.dockerfile }} ${{ inputs.context }}
+
+    - name: List Docker Images
+      shell: bash  # Specify the shell for this step
+      run: docker images
+
+    - name: Cache Trivy DB
+      id: cache-trivy-db
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/trivy
+        key: trivy-db-${{ runner.os }}-${{ github.sha }}
+        restore-keys: |
+          trivy-db-${{ runner.os }}-
+          trivy-db-
+
+    - name: Install Trivy
+      shell: bash  # Specify the shell for this step
+      run: |
+        sudo apt-get update && sudo apt-get install wget -y
+        wget https://github.com/aquasecurity/trivy/releases/download/v0.45.1/trivy_0.45.1_Linux-64bit.deb
+        sudo dpkg -i trivy_0.45.1_Linux-64bit.deb
+
+    - name: Update Trivy DB
+      shell: bash  # Specify the shell for this step
+      run: |
+        trivy db update || echo "Failed to update DB, using cached version."
+
+    - name: Trivy Scan
+      id: trivy
+      shell: bash  # Specify the shell for this step
+      run: |
+        trivy image --severity HIGH,CRITICAL ${{ inputs.image_name }}
+      continue-on-error: true
+
+    - name: Fail if Trivy Scan Fails
+      if: ${{ steps.trivy.outcome != 'success' }}
+      shell: bash  # Specify the shell for this step
+      run: |
+        echo "Trivy scan failed, cannot proceed."
+        exit 1

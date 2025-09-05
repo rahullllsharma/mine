@@ -1,0 +1,6 @@
+query Managers($orderBy: [OrderBy!]) {
+  managers(orderBy: $orderBy) {
+    id
+    name
+  }
+}

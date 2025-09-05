@@ -1,0 +1,9 @@
+#import "src/graphql/fragments/Locations.fragment.gql"
+#import "src/graphql/fragments/MapView.fragment.gql"
+
+query locationById($id: UUID!, $date: Date) {
+  projectLocations(id: $id) {
+    ...Locations_MapView
+    ...MapLocation
+  }
+}

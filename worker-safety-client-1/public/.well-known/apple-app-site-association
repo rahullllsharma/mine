@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "V2X3GY37LK.com.urbint.workersafety-dev",
+          "V2X3GY37LK.com.urbint.workersafety-int",
+          "V2X3GY37LK.com.urbint.workersafety"
+        ],
+        "components": [
+          {
+            "/": "/login",
+            "?": {
+              "tenantURL": "*"
+            },
+            "comment": "Matches any URL with a path that starts with /login?tenantURL= and instructs the system to open it as a universal link."
+          }
+        ]
+      }
+    ]
+  }
+}

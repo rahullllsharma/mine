@@ -1,0 +1,74 @@
+query Project($projectId: UUID!) {
+  project(projectId: $projectId) {
+    id
+    name
+    status
+    startDate
+    endDate
+    riskLevel
+    externalKey
+    description
+    engineerName
+    projectZipCode
+    contractReference
+    contractName
+    minimumTaskDate
+    maximumTaskDate
+    libraryAssetType {
+      id
+      name
+    }
+    manager {
+      id
+      name
+    }
+    supervisor {
+      id
+      name
+    }
+    additionalSupervisors {
+      id
+      name
+    }
+    contractor {
+      id
+      name
+    }
+    locations {
+      id
+      name
+      latitude
+      longitude
+      externalKey
+      supervisor {
+        id
+      }
+      additionalSupervisors {
+        id
+      }
+      dailyReports {
+        id
+      }
+      activities {
+        id
+        status
+      }
+    }
+    libraryDivision {
+      id
+      name
+    }
+    libraryRegion {
+      id
+      name
+    }
+    libraryProjectType {
+      id
+      name
+    }
+    workTypes {
+      id
+      name
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "tailwindcss/utilities";
+@import "tailwindcss/components";
+
+@layer components {
+  .root {
+    @apply relative bg-transparent min-h-[36px];
+  }
+
+  /* only omit the native elements for Chromium-based browers for the custom pickers */
+  .root::-webkit-calendar-picker-indicator {
+    @apply absolute top-0 right-0 bottom-0 w-auto h-auto text-transparent;
+    /* with 0, it would not be above the dd selector */
+    left: -5%;
+    /* reset all properties for the background property besides the background-color */
+    background: transparent;
+  }
+  .root::-webkit-date-and-time-value {
+    text-align: left;
+  }
+}

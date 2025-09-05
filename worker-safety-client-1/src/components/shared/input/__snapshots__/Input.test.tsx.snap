@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`undefined should render an icon when passed as prop 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+  >
+    <i
+      aria-hidden="true"
+      class="ci-dashboard ml-2 pointer-events-none w-6 h-6 text-xl leading-none bg-white text-neutral-shade-58"
+    />
+    <input
+      aria-errormessage=""
+      aria-invalid="false"
+      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`undefined should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+  >
+    <input
+      aria-errormessage=""
+      aria-invalid="false"
+      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`undefined when input is disabled should render the input text disabled 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid border-neutral-shade-26 rounded-md focus-within:ring-1 focus-within:ring-brand-gray-60 bg-neutral-light-100"
+  >
+    <input
+      aria-errormessage=""
+      aria-invalid="false"
+      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 p-2"
+      disabled=""
+      type="text"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`undefined when input is readOnly should be readonly and not have borders 1`] = `
+<DocumentFragment>
+  <div
+    class="relative flex w-full items-center text-base font-normal text-neutral-shade-100 rounded-md border border-solid bg-transparent border-none"
+  >
+    <input
+      aria-errormessage=""
+      aria-invalid="false"
+      class="flex-auto rounded-md appearance-none focus:outline-none disabled:bg-neutral-light-77 read-only:cursor-default disabled:cursor-not-allowed disabled:opacity-38 min-w-0 bg-transparent"
+      readonly=""
+      type="text"
+      value="Lorem ipsum"
+    />
+  </div>
+</DocumentFragment>
+`;

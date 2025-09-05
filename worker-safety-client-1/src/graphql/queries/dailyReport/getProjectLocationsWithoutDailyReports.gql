@@ -1,0 +1,51 @@
+#import "./fragments/recommendations.fragment.gql"
+
+query GetProjectLocationsWithoutDailyReports(
+  $projectLocationsId: UUID!
+  $date: Date
+  $isApplicable: Boolean
+  $controlsIsApplicable: Boolean
+) {
+  projectLocations(id: $projectLocationsId) {
+    id
+    name
+    siteConditions(date: $date) {
+      id
+      name
+      hazards(isApplicable: $isApplicable) {
+        id
+        name
+        isApplicable
+        controls(isApplicable: $controlsIsApplicable) {
+          id
+          name
+          isApplicable
+        }
+      }
+    }
+    tasks(date: $date) {
+      id
+      name
+      riskLevel(date: $date)
+      startDate
+      endDate
+      hazards(isApplicable: $isApplicable) {
+        id
+        name
+        isApplicable
+        controls(isApplicable: $controlsIsApplicable) {
+          id
+          name
+          isApplicable
+        }
+      }
+      activity {
+        id
+        name
+      }
+    }
+  }
+  recommendations {
+    ...Recommendations
+  }
+}

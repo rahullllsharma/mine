@@ -1,0 +1,27 @@
+name: "Install BE"
+description: "Install Poetry and Python and cache poetry dependencies, install GDAL lib, run bootstrap script"
+inputs:
+  bootstrap_script:
+    description: "Path to the bootstrap script to run after installing dependencies"
+    required: true
+    default: "./support/scripts/bootstrap.sh"  # Optional default value
+  working_directory:
+    description: "Directory to run the commands in"
+    required: true
+    default: "damage-prevention"  
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.9
+        cache: "poetry"
+    - name: Install dependencies
+      run: poetry install
+      working-directory: ${{ inputs.working_directory }} 
+      shell: bash
+    - name: Run bootstrap script
+      run: ${{ inputs.bootstrap_script }}
+      working-directory: ${{ inputs.working_directory }} 
+      shell: bash

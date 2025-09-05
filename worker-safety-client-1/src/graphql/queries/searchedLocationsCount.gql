@@ -1,0 +1,5 @@
+query SearchedLocationsCount($filterBy: [LocationFilterBy!], $search: String) {
+  filterLocationDateRange(filterBy: $filterBy, search: $search) {
+    locationsCount
+  }
+}

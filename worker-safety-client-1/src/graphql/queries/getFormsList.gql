@@ -1,0 +1,81 @@
+query GetFormsList(
+  $limit: Int
+  $offset: Int
+  $createdByIds: [UUID!]
+  $formName: [String!]
+  $formId: [String!]
+  $locationIds: [UUID!]
+  $formStatus: [FormStatus!]
+  $projectIds: [UUID!]
+  $startCreatedAt: Date
+  $endCreatedAt: Date
+  $startUpdatedAt: Date
+  $endUpdatedAt: Date
+  $search: String
+  $adHoc: Boolean
+  $updatedByIds: [UUID!]
+  $orderBy: [FormListOrderBy!]
+  $startCompletedAt: Date
+  $endCompletedAt: Date
+  $startReportDate: Date
+  $endReportDate: Date
+  $operatingRegionNames: [String!]
+  $managerIds: [String!]
+) {
+  formsList(
+    limit: $limit
+    offset: $offset
+    createdByIds: $createdByIds
+    formName: $formName
+    formId: $formId
+    locationIds: $locationIds
+    formStatus: $formStatus
+    projectIds: $projectIds
+    startCreatedAt: $startCreatedAt
+    endCreatedAt: $endCreatedAt
+    startUpdatedAt: $startUpdatedAt
+    endUpdatedAt: $endUpdatedAt
+    updatedByIds: $updatedByIds
+    search: $search
+    adHoc: $adHoc
+    orderBy: $orderBy
+    startCompletedAt: $startCompletedAt
+    endCompletedAt: $endCompletedAt
+    startReportDate: $startReportDate
+    endReportDate: $endReportDate
+    operatingRegionNames: $operatingRegionNames
+    managerIds: $managerIds
+  ) {
+    id
+    status
+    completedAt
+    formId
+    multipleLocation
+    createdAt
+    workPackage {
+      id
+      name
+    }
+    location {
+      id
+      name
+    }
+    locationName
+    createdBy {
+      id
+      name
+    }
+    updatedAt
+    date
+    updatedBy {
+      id
+      name
+    }
+    operatingHq
+    supervisor {
+      id
+      name
+      email
+    }
+  }
+}

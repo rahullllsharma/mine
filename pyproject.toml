@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "ws-customizable-workflow"
+version = "1.0.0"
+description = "Worker-safety customisable workflow"
+authors = ["Urbint Engineering <engineering@urbint.com>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+dev = "support.scripts.dev.main:app"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.104.1"
+uvicorn = {extras = ["standard"],version = "^0.24.0.post1"}
+pydantic = "^2.5.2"
+motor = "^3.7.0"
+beanie = "^1.23.6"
+typer = "^0.9.0"
+pydantic-settings = "^2.1.0"
+pytest-asyncio = "^0.23.4"
+httpx = "^0.28.1"
+ddtrace = "^3.2.1"
+structlog = "^25.2.0"
+sqlalchemy = {extras = ["mypy"], version = "^2.0.39"}
+weasyprint = "^65.1"
+jinja2 = "^3.1.6"
+google-cloud-storage = "^3.1.0"
+google-auth = "^2.40.3"
+redis = "^6.2.0"
+phonenumbers = "^9.0.13"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+mypy = "^1.7.1"
+autohooks-plugin-black = "^23.10.0"
+autohooks-plugin-flake8 = "^23.10.0"
+autohooks-plugin-isort = "^23.10.0"
+autohooks-plugin-mypy = "^23.10.0"
+autohooks-plugin-pytest = "^23.10.0"
+pytest = "^7.4.4"
+polyfactory = "^2.14.1"
+pytest-asyncio = "^0.23.5"
+mongomock-motor = "^0.0.29"
+setuptools = "^76.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.autohooks]
+mode = "poetry"
+pre-commit = [
+    "autohooks.plugins.black",
+    "autohooks.plugins.flake8",
+    "autohooks.plugins.isort",
+    "autohooks.plugins.mypy"
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.autohooks.plugins.flake8]
+arguments = ["--config=setup.cfg"]
+
+[tool.autohooks.plugins.mypy]
+arguments = ["--config-file=setup.cfg"]
+
+[tool.autohooks.plugins.pytest]
+arguments = ["tests/unit"]
+
+[tool.pytest.ini_options]
+timeout = 20
+timeout_method = 'thread'
+asyncio_mode = 'auto'

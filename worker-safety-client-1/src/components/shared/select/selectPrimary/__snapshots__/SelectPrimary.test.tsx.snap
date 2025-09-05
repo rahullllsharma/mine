@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectPrimary renders currently 1`] = `
+<DocumentFragment>
+  <div
+    class="relative text-neutral-shade-100"
+    data-testid="select"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-neutral-shade-26 text-neutral-shade-58"
+      id="headlessui-listbox-button-1"
+      type="button"
+    >
+      <span
+        class="truncate"
+      >
+        Select an option
+      </span>
+      <i
+        aria-hidden="true"
+        class="ci-chevron_down text-neutral-shade-58 text-xl"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectPrimary should render the list items correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="relative text-neutral-shade-100"
+    data-testid="select"
+  >
+    <button
+      aria-controls="headlessui-listbox-options-4"
+      aria-expanded="true"
+      aria-haspopup="true"
+      class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-brand-gray-60 text-neutral-shade-58"
+      id="headlessui-listbox-button-3"
+      type="button"
+    >
+      <span
+        class="truncate"
+      >
+        Select an option
+      </span>
+      <i
+        aria-hidden="true"
+        class="ci-chevron_down text-neutral-shade-58 text-xl"
+      />
+    </button>
+    <ul
+      aria-labelledby="headlessui-listbox-button-3"
+      aria-orientation="vertical"
+      class="absolute z-10 w-full mt-2 max-h-60 overflow-auto shadow-20 rounded bg-white outline-none py-2"
+      id="headlessui-listbox-options-4"
+      role="listbox"
+      tabindex="0"
+    >
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-5"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 1
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-6"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 2
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-7"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 3
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-8"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 4
+        </span>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SelectPrimary when an option has a tooltio should include an icon that will show a tooltip 1`] = `
+<DocumentFragment>
+  <div
+    class="relative text-neutral-shade-100"
+    data-testid="select"
+  >
+    <button
+      aria-controls="headlessui-listbox-options-16"
+      aria-expanded="true"
+      aria-haspopup="true"
+      class="w-full px-2 py-0.5 flex items-center justify-between bg-white text-base rounded border border-solid outline-none focus-within:ring-1 focus-within:ring-brand-gray-60 border-brand-gray-60 text-neutral-shade-58"
+      id="headlessui-listbox-button-15"
+      type="button"
+    >
+      <span
+        class="truncate"
+      >
+        Select an option
+      </span>
+      <i
+        aria-hidden="true"
+        class="ci-chevron_down text-neutral-shade-58 text-xl"
+      />
+    </button>
+    <ul
+      aria-labelledby="headlessui-listbox-button-15"
+      aria-orientation="vertical"
+      class="absolute z-10 w-full mt-2 max-h-60 overflow-auto shadow-20 rounded bg-white outline-none py-2"
+      id="headlessui-listbox-options-16"
+      role="listbox"
+      tabindex="0"
+    >
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-17"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 1
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-18"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 2
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate justify-between"
+        id="headlessui-listbox-option-19"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 3
+        </span>
+        <span
+          class="inline-flex items-center"
+        >
+          <span
+            class="inline-flex items-center w-full"
+          >
+            <i
+              aria-hidden="true"
+              class="ci-info_circle_outline text-xl text-neutral-shade-75"
+            />
+          </span>
+        </span>
+      </li>
+      <li
+        class="flex items-center h-10 px-3 text-base cursor-pointer truncate"
+        id="headlessui-listbox-option-20"
+        role="option"
+        tabindex="-1"
+      >
+        <span
+          class="truncate"
+        >
+          Location 4
+        </span>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

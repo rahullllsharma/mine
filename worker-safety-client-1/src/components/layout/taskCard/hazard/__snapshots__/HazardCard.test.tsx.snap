@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HazardCard when we have a set of controls should render a list of controls 1`] = `
+<DocumentFragment>
+  <div
+    class="text-base text-neutral-shade-100 mb-2"
+    data-testid="hazardCard"
+  >
+    <header
+      class="flex flex-1 text-brand-gray-80 py-2 pr-2 mr-1 font-semibold"
+    >
+      Lorem ipsum
+    </header>
+    <div
+      class="flex text-base text-neutral-shade-100 p-3 border-dashed border border-brand-gray-30 rounded"
+      data-testid="controlCard"
+    >
+      <span
+        class="flex-1"
+      >
+        Situational Jobsite Awareness
+      </span>
+    </div>
+    <div
+      class="flex text-base text-neutral-shade-100 p-3 border-dashed border border-brand-gray-30 rounded"
+      data-testid="controlCard"
+    >
+      <span
+        class="flex-1"
+      >
+        Trained and Qualified
+      </span>
+    </div>
+    <div
+      class="flex text-base text-neutral-shade-100 p-3 border-dashed border border-brand-gray-30 rounded"
+      data-testid="controlCard"
+    >
+      <span
+        class="flex-1"
+      >
+        Erection of Proper Barricades and Warning Signs
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;

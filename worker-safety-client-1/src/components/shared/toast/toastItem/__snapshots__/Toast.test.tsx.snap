@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toast when it renders with a type should render an error icon when type is "error" 1`] = `
+<DocumentFragment>
+  <button
+    class="px-3 py-2 bg-brand-urbint-60 inline-flex items-center rounded shadow-30"
+  >
+    <div
+      class="mr-2 w-6 h-6 rounded flex items-center justify-center flex-shrink-0 bg-system-error-40"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-error text-lg text-white"
+      />
+    </div>
+    <p
+      class="text-neutral-light-100 text-base text-left"
+    >
+      Lorem Ipsum
+    </p>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toast when it renders with a type should render an info icon when type is "info" 1`] = `
+<DocumentFragment>
+  <button
+    class="px-3 py-2 bg-brand-urbint-60 inline-flex items-center rounded shadow-30"
+  >
+    <div
+      class="mr-2 w-6 h-6 rounded flex items-center justify-center flex-shrink-0 bg-system-info-40"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-info_circle text-lg text-white"
+      />
+    </div>
+    <p
+      class="text-neutral-light-100 text-base text-left"
+    >
+      Lorem Ipsum
+    </p>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toast when it renders with a type should render an warning icon when type is "warning" 1`] = `
+<DocumentFragment>
+  <button
+    class="px-3 py-2 bg-brand-urbint-60 inline-flex items-center rounded shadow-30"
+  >
+    <div
+      class="mr-2 w-6 h-6 rounded flex items-center justify-center flex-shrink-0 bg-system-warning-40"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-warning text-lg text-white"
+      />
+    </div>
+    <p
+      class="text-neutral-light-100 text-base text-left"
+    >
+      Lorem Ipsum
+    </p>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toast when it renders with a type should render an warning success when type is "success" 1`] = `
+<DocumentFragment>
+  <button
+    class="px-3 py-2 bg-brand-urbint-60 inline-flex items-center rounded shadow-30"
+  >
+    <div
+      class="mr-2 w-6 h-6 rounded flex items-center justify-center flex-shrink-0 bg-system-success-40"
+    >
+      <i
+        aria-hidden="true"
+        class="ci-circle_check text-lg text-white"
+      />
+    </div>
+    <p
+      class="text-neutral-light-100 text-base text-left"
+    >
+      Lorem Ipsum
+    </p>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`Toast when it renders without a type shouldn't render without an icon 1`] = `
+<DocumentFragment>
+  <button
+    class="px-3 py-2 bg-brand-urbint-60 inline-flex items-center rounded shadow-30"
+  >
+    <p
+      class="text-neutral-light-100 text-base text-left"
+    >
+      Lorem Ipsum
+    </p>
+  </button>
+</DocumentFragment>
+`;

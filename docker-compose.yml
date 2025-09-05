@@ -1,0 +1,57 @@
+version: "3.8"
+
+networks:
+  worker-safety-service_wss_network:
+    external: true
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb-dev
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", 'print("waited for connection")']
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - worker-safety-service_wss_network
+    volumes:
+      - mongodbdata:/data/db
+
+  rest:
+    build:
+      context: .
+      target: uvicorn
+    container_name: rest-api
+    command: --reload ws_customizable_workflow.main:app --port 5001
+    volumes:
+      - .google-dev-service-account.json:/app/.google-dev-service-account.json
+      - ./ws_customizable_workflow:/app/ws_customizable_workflow
+      - ./support/uvicorn/mute.logging.conf:/app/uvicorn.logging.conf
+    ports:
+      - "5001:5001"
+    depends_on:
+      - mongodb
+    environment:
+      - CORS_ORIGINS=["http://localhost:3000", "http://localhost:5001", "http://localhost"]
+      - MONGO_HOST=mongodb
+      - MONGO_USER=root
+      - MONGO_PASSWORD=password
+      - MONGO_DB=asgard
+      - MONGO_PORT=27017
+      # These urls work only if they are in the same network
+      # The network is created in wss docker-compose file
+      - WORKER_SAFETY_SERVICE_REST_URL=http://rest:8000
+      - WORKER_SAFETY_SERVICE_GQL_URL=http://graphql:8000
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/.google-dev-service-account.json
+      - REDIS_HOST=redis
+    networks:
+      - worker-safety-service_wss_network
+
+volumes:
+  mongodbdata:

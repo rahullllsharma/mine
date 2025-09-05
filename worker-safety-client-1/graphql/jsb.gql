@@ -1,0 +1,208 @@
+fragment JsbContents on JobSafetyBriefingLayout {
+  controlAssessmentSelections {
+    hazardId
+    controlIds
+    controlSelections {
+      id
+      selected
+      recommended
+    }
+  }
+  emergencyContacts {
+    name
+    phoneNumber
+    primary
+  }
+  jsbId
+  jsbMetadata {
+    briefingDateTime
+  }
+  nearestMedicalFacility {
+    description
+    address
+    city
+    distanceFromJob
+    phoneNumber
+    state
+    zip
+  }
+  customNearestMedicalFacility {
+    address
+  }
+  aedInformation {
+    location
+  }
+  activities {
+    name
+    tasks {
+      id
+    }
+  }
+  taskSelections {
+    id
+    fromWorkOrder
+  }
+  recommendedTaskSelections {
+    id
+    fromWorkOrder
+    recommended
+    selected
+  }
+  workLocation {
+    address
+    city
+    description
+    state
+    operatingHq
+  }
+  gpsCoordinates {
+    latitude
+    longitude
+  }
+  workProcedureSelections {
+    id
+    values
+  }
+  otherWorkProcedures
+  energySourceControl {
+    arcFlashCategory
+    clearancePoints
+    ewp {
+      id
+      metadata {
+        completed
+        issued
+        issuedBy
+        procedure
+        receivedBy
+        remote
+      }
+      equipmentInformation {
+        circuitBreaker
+        switch
+        transformer
+      }
+      referencePoints
+    }
+    transferOfControl
+    voltages {
+      type
+      unit
+      valueStr
+    }
+  }
+  siteConditionSelections {
+    id
+    recommended
+    selected
+  }
+  criticalRiskAreaSelections {
+    name
+  }
+  crewSignOff {
+    name
+    type
+    externalId
+    signature {
+      id
+      name
+      displayName
+      size
+      url
+      signedUrl
+    }
+    employeeNumber
+    jobTitle
+  }
+  hazardsAndControlsNotes
+  photos {
+    id
+    category
+    crc32c
+    date
+    displayName
+    exists
+    md5
+    mimetype
+    name
+    signedUrl
+    size
+    time
+    url
+  }
+  sourceInfo {
+    sourceInformation
+    appVersion
+  }
+  documents {
+    id
+    category
+    crc32c
+    date
+    displayName
+    exists
+    md5
+    mimetype
+    name
+    signedUrl
+    size
+    time
+    url
+  }
+  groupDiscussion {
+    viewed
+  }
+}
+
+fragment JsbData on JobSafetyBriefing {
+  id
+  updatedAt
+  workPackage {
+    id
+    locations {
+      name
+    }
+  }
+  contents {
+    ...JsbContents
+  }
+  createdBy {
+    id
+    name
+  }
+  completedBy {
+    id
+  }
+  createdAt
+}
+
+query Jsb($id: UUID!) {
+  jobSafetyBriefing(id: $id) {
+    ...JsbData
+  }
+  me {
+    role
+  }
+}
+
+mutation SaveJsb($input: SaveJobSafetyBriefingInput!) {
+  saveJobSafetyBriefing(jobSafetyBriefingInput: $input) {
+    ...JsbData
+  }
+}
+
+mutation CompleteJsb($input: SaveJobSafetyBriefingInput!) {
+  completeJobSafetyBriefing(jobSafetyBriefingInput: $input) {
+    ...JsbData
+  }
+}
+
+mutation DeleteJsb($id: UUID!) {
+  deleteJobSafetyBriefing(id: $id)
+}
+
+mutation ReopenJsb($id: UUID!) {
+  reopenJobSafetyBriefing(id: $id) {
+    ...JsbData
+  }
+}

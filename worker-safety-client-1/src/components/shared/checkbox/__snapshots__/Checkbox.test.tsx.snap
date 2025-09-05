@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`undefined should render correctly 1`] = `
+<DocumentFragment>
+  <input
+    class="flex-shrink-0 root"
+    type="checkbox"
+  />
+</DocumentFragment>
+`;

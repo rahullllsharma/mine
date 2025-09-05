@@ -1,0 +1,8 @@
+# This is a temporary file that should be removed once feature flags are in use
+query TenantName {
+  me {
+    tenant {
+      name
+    }
+  }
+}

@@ -1,0 +1,14 @@
+query LocationsCount(
+  $filterBy: [LocationFilterBy!]
+  $minX: Float!
+  $maxX: Float!
+  $maxY: Float!
+  $minY: Float!
+) {
+  filterLocationDateRange(
+    filterBy: $filterBy
+    mapExtent: { xMin: $minX, xMax: $maxX, yMax: $maxY, yMin: $minY }
+  ) {
+    locationsCount
+  }
+}

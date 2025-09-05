@@ -1,0 +1,65 @@
+name: "Generate Coverage and Reports"
+description: "Generates coverage reports, runs SonarCloud, and generates artifacts"
+inputs:
+  coverage_format:
+    description: "The format for the coverage report (html/xml)"
+    required: true
+    default: "html"
+  sonarqube_token:
+    description: "SonarCloud token"
+    required: true
+  script_path:
+    description: "The path to the script directory"
+    required: true
+  artifact_dir:
+    description: "The directory where the artifacts are stored"
+    required: true
+  python_version:
+    description: "Python version to be used"
+    required: true
+    default: "3.9"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ inputs.python_version }}
+
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        export PATH="$HOME/.local/bin:$PATH"
+      shell: bash
+
+    - name: Install dependencies
+      run: |
+        poetry install
+      shell: bash
+
+    - name: Generate Coverage Report (HTML/XML)
+      run: |
+        if [[ "${{ inputs.coverage_format }}" == "html" ]]; then
+          echo "Generating HTML coverage report..."
+          poetry run coverage html --omit="`poetry env info -p`*,*__init__.py,**/test_*.py"
+          mkdir -p $GITHUB_WORKSPACE/coverage
+          cp -r ./htmlcov $GITHUB_WORKSPACE/coverage
+        elif [[ "${{ inputs.coverage_format }}" == "xml" ]]; then
+          echo "Generating XML coverage report..."
+          poetry run coverage xml --omit="`poetry env info -p`*,*__init__.py,**/test_*.py"
+        fi
+      shell: bash
+
+    - name: Generate Allure Docs
+      run: |
+        echo "Generating Allure docs and artifacts..."
+        python ${{ inputs.script_path }}/generate_dir_tree.py ${{ inputs.artifact_dir }}
+        mkdir -p $GITHUB_WORKSPACE/artifacts
+        cp -r ${{ inputs.artifact_dir }} $GITHUB_WORKSPACE/artifacts
+      shell: bash
+
+    
